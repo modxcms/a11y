@@ -28,9 +28,6 @@ MODx.menuEntry = function(config) {
             ,tabindex: 1
         }
         ,headerCssClass: 'x-panel-header'
-        //,bodyCfg: {
-        //    tag: 'ul'
-        //}
         ,stateEvents: ['collapse', 'expand']
     });
     MODx.menuEntry.superclass.constructor.call(this, config);
@@ -62,7 +59,7 @@ Ext.extend(MODx.menuEntry, Ext.Panel, {
 Ext.reg('modx-menu-entry', MODx.menuEntry);
 
 
-// MODx.Layout to support vertical navigation
+// Override MODx.Layout to support vertical navigation
 Ext.override(MODx.Layout, {
 
     getWest: function(config) {
@@ -134,6 +131,7 @@ Ext.override(MODx.Layout, {
             ,id: 'modx-leftbar-tabs'
             ,stateId: this.getStateKey('modx-leftbar-tabs')
             ,split: true
+            // @TODO : make use of original config (MODx.Layout), requires some PR
             ,width: 310
             ,minSize: 195
             ,autoScroll: true
@@ -229,6 +227,7 @@ Ext.override(MODx.Layout, {
                 nav.insert(index, item);
                 index += 1;
             }, this);
+
             this.onAfterLeftBarAdded(nav, items);
         }
     }
@@ -277,6 +276,14 @@ Ext.override(MODx.Layout, {
         nav.doLayout();
     }
 
+    /**
+     * Override to prevent error caused by not existing tab panel
+     *
+     * @see MODx.Layout#onBeforeStateSave
+     *
+     * @param {Ext.Component} component
+     * @param {Object} state
+     */
     ,onBeforeStateSave: function(component, state) {
         var collapsed = state.collapsed;
         if (collapsed && !this.stateSave) {

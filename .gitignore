@@ -1,0 +1,5 @@
+_build/build.config.php
+_build/vendor/
+core/components/verticalnavigation/vendor/
+config.core.php
+.idea
