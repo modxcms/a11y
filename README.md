@@ -6,9 +6,10 @@ Works well with "Tree Menu" component (to add extra menu records).
 
 ## Requirements
 
+* PHP >= 5.3
 * MODX Revolution 2.3+
 
-Note : the component might not work with custom manager themes overriding `MODx.Layout#getWest`, `MODx.Layout#getLeftBar` or `MODx.Layout#addToLeftBar`, since those methods are overrided to handle vertical menu entries.
+Note : the component might not work with custom manager themes overriding `MODx.Layout#getWest`, `MODx.Layout#getLeftBar` or `MODx.Layout#addToLeftBar`, since those methods are overridden to handle vertical menu entries.
 
 
 ## DOM structure & technical details
