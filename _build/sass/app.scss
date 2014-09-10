@@ -1,16 +1,16 @@
 @charset "UTF-8";
+//
+// some color variables (darker to lighter)
+//
 
-/**
- * some color variables (darker to lighter)
- */
 $border: #2f4150;
 $hover: #3e5268;
 $action: #1a7fb8;
 $bg: #f2f2f2;
 
-/**
- * First, reset some default theme styles
- */
+//
+// First, reset some default theme styles
+//
 
 // Full container as gradient (mimic top nav gradient)
 #modx-container {
@@ -42,9 +42,9 @@ $bg: #f2f2f2;
 }
 
 
-/**
- * Real vertical nav stying
- */
+//
+// Real vertical nav stying
+//
 
 // Menu records (li)
 .menu-section {
