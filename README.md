@@ -21,13 +21,13 @@ The panel title is used to display the container label (ie. Resources, Elements,
 
 The DOM structure is :
 
-* div#modx-leftbar (whole west region)
-    * div.x-plain-bwrap (west region wrapper)
-        * ul (all menu entries container)
-            * li.x-panel.menu-section (menu entry container)
-                * a.x-panel-header (title container)
-                    * span.x-panel-header-text (title text wrapper)
-                        * i.icon (title icon)
-                        * span.title (title label)
-                * div.x-panel-bwrap (content wrapper)
-                    * div.x-panel-body (content container)
+* `div#modx-leftbar` (whole west region)
+    * `div.x-plain-bwrap` (west region wrapper)
+        * `ul` (all menu entries container)
+            * `li.x-panel.menu-section` (menu entry container)
+                * `a.x-panel-header` (title container)
+                    * `span.x-panel-header-text` (title text wrapper)
+                        * `i.icon` (title icon)
+                        * `span.title` (title label)
+                * `div.x-panel-bwrap` (content wrapper)
+                    * `div.x-panel-body` (content container)
