@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+$bg: #f2f2f2;
+//$leftbar: rgb(43, 57, 72);
+$leftbar: #3f4850;
+$hover: #3e5268;
+$action: #1a7fb8;
+$border: #2f4150;
+
+// First, reset some default theme styles
+
+// Full container as gradient
+#modx-container {
+    background-image: linear-gradient(to right,#3f4850 0,#365462 46%,#3e5554 60%,#42554d 68%,#573d4e 100%);
+}
+
+// Content bg & split area "grey"
+#modx-content,
+.x-layout-split {
+    background: $bg;
+}
+
+// Split/collapsible area tweak
+.x-layout-split {
+    .x-layout-mini {
+        left: 0;
+        top: 48%;
+    }
+}
+#modx-leftbar-tabs-xcollapsed {
+    .x-layout-mini {
+        top: 48%;
+    }
+}
+// Remove shadow from top menu
+#modx-navbar {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+// Real vertical nav stying
+
+// Menu records
+.menu-section {
+
+    & > a {
+        // Header link
+        text-decoration: none;
+        display: block;
+    }
+
+    + .menu-section {
+        border-top: 1px solid $border;
+    }
+
+    > .x-panel-bwrap > .x-panel-body {
+        // Give some space to the menu content
+        padding: 10px 0 0;
+        background: #fff;
+        border: 0 none;
+        border-radius: 0;
+    }
+
+    // Expanded "active"
+    // Click-able header
+    .x-panel-header {
+        font-size: inherit;
+        font-weight: inherit;
+        padding: 0;
+        border: 0 none;
+        border-radius: 0;
+        color: $action;
+        background: $bg;
+        text-align: right;
+        border-left: 4px solid $action;
+    }
+
+    // Real header container
+    .x-panel-header-text {
+        line-height: 30px;
+
+        // FA icon
+        &> i.icon {
+            display: inline-block !important;
+            //color: #fff;
+            opacity: 1 !important;
+            width: 20px;
+            float: right;
+            line-height: 2;
+        }
+
+        .title {}
+    }
+
+    // Collapsed
+    &.x-panel-collapsed {
+//        padding-bottom: 0;
+//        border-bottom: 0;
+
+        .x-panel-header {
+            //color: $hover;
+            color: #fff;
+            background: transparent;
+//            background: $navbarBg;
+//            color: $navbarText;
+            border-left: 4px solid transparent;
+            text-align: left;
+
+            &:hover,
+            &:focus {
+                //background: $hover;
+                background: rgba(0, 0, 0, .2);
+                //background: #fff;
+                //color: #fff;
+                border-left: 15px solid transparent;
+            }
+        }
+
+        .x-panel-header-text {
+            &> i.icon {
+                float: left;
+                //color: $borderColor;
+            }
+        }
+    }
+}
