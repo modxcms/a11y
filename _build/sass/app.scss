@@ -1,20 +1,23 @@
 @charset "UTF-8";
 
-$bg: #f2f2f2;
-//$leftbar: rgb(43, 57, 72);
-$leftbar: #3f4850;
+/**
+ * some color variables (darker to lighter)
+ */
+$border: #2f4150;
 $hover: #3e5268;
 $action: #1a7fb8;
-$border: #2f4150;
+$bg: #f2f2f2;
 
-// First, reset some default theme styles
+/**
+ * First, reset some default theme styles
+ */
 
-// Full container as gradient
+// Full container as gradient (mimic top nav gradient)
 #modx-container {
     background-image: linear-gradient(to right,#3f4850 0,#365462 46%,#3e5554 60%,#42554d 68%,#573d4e 100%);
 }
 
-// Content bg & split area "grey"
+// Content bg & split area "grey" (to fake "transparency")
 #modx-content,
 .x-layout-split {
     background: $bg;
@@ -39,9 +42,11 @@ $border: #2f4150;
 }
 
 
-// Real vertical nav stying
+/**
+ * Real vertical nav stying
+ */
 
-// Menu records
+// Menu records (li)
 .menu-section {
 
     & > a {
@@ -54,16 +59,17 @@ $border: #2f4150;
         border-top: 1px solid $border;
     }
 
+    // Entry/menu content
     > .x-panel-bwrap > .x-panel-body {
+        // Reset
+        border: 0 none;
+        border-radius: 0;
         // Give some space to the menu content
         padding: 10px 0 0;
         background: #fff;
-        border: 0 none;
-        border-radius: 0;
     }
 
-    // Expanded "active"
-    // Click-able header
+    // Expanded/"active" click-able header
     .x-panel-header {
         font-size: inherit;
         font-weight: inherit;
@@ -87,32 +93,25 @@ $border: #2f4150;
             opacity: 1 !important;
             width: 20px;
             float: right;
+            // To make it vertically centered
             line-height: 2;
         }
 
+        // Title label (text only)
         .title {}
     }
 
-    // Collapsed
+    // Collapsed header
     &.x-panel-collapsed {
-//        padding-bottom: 0;
-//        border-bottom: 0;
-
         .x-panel-header {
-            //color: $hover;
             color: #fff;
             background: transparent;
-//            background: $navbarBg;
-//            color: $navbarText;
             border-left: 4px solid transparent;
             text-align: left;
 
             &:hover,
             &:focus {
-                //background: $hover;
                 background: rgba(0, 0, 0, .2);
-                //background: #fff;
-                //color: #fff;
                 border-left: 15px solid transparent;
             }
         }
@@ -120,7 +119,6 @@ $border: #2f4150;
         .x-panel-header-text {
             &> i.icon {
                 float: left;
-                //color: $borderColor;
             }
         }
     }
