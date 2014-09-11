@@ -13,14 +13,13 @@
   top: 48%; }
 
 #modx-navbar {
-  -webkit-box-shadow: none;
-  box-shadow: none; }
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
 
 .menu-section > a {
   text-decoration: none;
   display: block; }
 .menu-section + .menu-section {
-  border-top: 1px solid #2f4150; }
+  border-top: 1px solid rgba(0, 0, 0, 0.2); }
 .menu-section > .x-panel-bwrap > .x-panel-body {
   border: 0 none;
   border-radius: 0;

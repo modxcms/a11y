@@ -37,8 +37,9 @@ $bg: #f2f2f2;
 }
 // Remove shadow from top menu
 #modx-navbar {
-    -webkit-box-shadow: none;
-    box-shadow: none;
+//    -webkit-box-shadow: none;
+//    box-shadow: none;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .2);
 }
 
 
@@ -48,6 +49,7 @@ $bg: #f2f2f2;
 
 // Menu records (li)
 .menu-section {
+    //border-right: 0 none;
 
     & > a {
         // Header link
@@ -56,8 +58,14 @@ $bg: #f2f2f2;
     }
 
     + .menu-section {
-        border-top: 1px solid $border;
+        //border-top: 1px solid $border;
+        border-top: 1px solid rgba(0, 0, 0, .2);
     }
+
+//    &.x-panel-collapsed {
+//        border-right: 1px solid rgba(0, 0, 0, .2);
+//        //border-right: 1px solid red;
+//    }
 
     // Entry/menu content
     > .x-panel-bwrap > .x-panel-body {
@@ -80,6 +88,8 @@ $bg: #f2f2f2;
         background: $bg;
         text-align: right;
         border-left: 4px solid $action;
+
+        //border-right: 0 none;
     }
 
     // Real header container
@@ -108,6 +118,8 @@ $bg: #f2f2f2;
             background: transparent;
             border-left: 4px solid transparent;
             text-align: left;
+
+            //border-right: 1px solid rgba(0, 0, 0, .2);
 
             &:hover,
             &:focus {
