@@ -20,6 +20,8 @@
   display: block; }
 .menu-section + .menu-section {
   border-top: 1px solid rgba(0, 0, 0, 0.2); }
+.menu-section + .menu-section:not(.x-panel-collapsed) {
+  border-top: 1px solid #1a7fb8; }
 .menu-section > .x-panel-bwrap > .x-panel-body {
   border: 0 none;
   border-radius: 0;
