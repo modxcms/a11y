@@ -38,7 +38,8 @@
   text-align: right;
   border-left: 4px solid #1a7fb8; }
 .menu-section .x-panel-header-text {
-  line-height: 30px; }
+  line-height: 30px;
+  margin: 0 5px; }
   .menu-section .x-panel-header-text > i.icon {
     display: inline-block !important;
     opacity: 1 !important;

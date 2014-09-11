@@ -99,12 +99,14 @@ $bg: #f2f2f2;
     // Real header container
     .x-panel-header-text {
         line-height: 30px;
+        margin: 0 5px;
 
         // FA icon
         &> i.icon {
             display: inline-block !important;
             //color: #fff;
             opacity: 1 !important;
+            //background-color: rgba(0, 0, 0, .5) !important;
             width: 20px;
             float: right;
             // To make it vertically centered
@@ -135,6 +137,7 @@ $bg: #f2f2f2;
         .x-panel-header-text {
             &> i.icon {
                 float: left;
+                //background-color: transparent !important;
             }
         }
     }
