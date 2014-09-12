@@ -37,17 +37,43 @@ MODx.menuEntry = function(config) {
         // Display the content when appropriate
         if (!this.collapsed) {
             this.getLayout().setActiveItem(0);
+
+            //this.on('collapse', function(me) {
+            //    console.log('collapsed, so expand again!');
+            //    this.expand();
+            //    this.collapsed = false;
+            //}, this, {single: true});
+            //this.collapse();
         }
     }, this);
 };
 Ext.extend(MODx.menuEntry, Ext.Panel, {
     onCollapse : function(doAnim, animArg) {
+        //var center = Ext.getCmp('center-nav');
+        //center.hide();
+
         MODx.menuEntry.superclass.onCollapse.call(this, doAnim, animArg);
         // Force layout to have no active item
         this.getLayout().setActiveItem(null);
     }
-    ,onExpand : function(doAnim, animArg) {
+    ,onExpand: function(doAnim, animArg) {
+        //var center = Ext.getCmp('center-nav');
+        //center.removeAll();
+        //// Collapse all expanded
+        //var nav = Ext.getCmp('nav-one');
+        //nav.items.each(function(item) {
+        //    if (item.id !== this.id && !item.collapsed && typeof item.collapse === 'function') {
+        //        item.collapse();
+        //        console.log('item to be collapsed', item);
+        //        //item.fireEvent('collapse');
+        //    }
+        //}, this);
+        //center.add(this.initialConfig.items);
+        //center.doLayout();
+        //center.show();
         MODx.menuEntry.superclass.onExpand.call(this, doAnim, animArg);
+
+        //return;
         // Force layout to display its item
         this.getLayout().setActiveItem(0);
     }
@@ -135,7 +161,6 @@ Ext.override(MODx.Layout, {
             ,split: true
             // @TODO : make use of original config (MODx.Layout), requires some PR
             ,width: 310
-            ,minSize: 195
             ,autoScroll: true
             ,unstyled: true
             ,collapseMode: 'mini'
@@ -144,6 +169,23 @@ Ext.override(MODx.Layout, {
             ,layout: 'anchor'
             ,items: items
             ,defaultType: 'modx-menu-entry'
+            ,minSize: 195
+            //,minSize: 50
+            //,layout: 'border'
+            //,items: [{
+            //    region: 'west'
+            //    ,items: items
+            //    ,itemId: 'nav'
+            //    ,defaultType: 'modx-menu-entry'
+            //    ,width: '50px'
+            //    ,id: 'nav-one'
+            //},{
+            //    region: 'center'
+            //    ,hidden: true
+            //    ,items: []
+            //    ,id: 'center-nav'
+            //    //,width: 0
+            //}]
             ,bodyCfg: {
                 tag: 'ul'
             }
@@ -181,6 +223,7 @@ Ext.override(MODx.Layout, {
      * @returns {Ext.Panel}
      */
     ,getLeftBar: function() {
+        //var nav = Ext.getCmp('modx-leftbar-tabs').getComponent('nav');
         var nav = Ext.getCmp('modx-leftbar-tabs');
         if (nav) {
             return nav;
