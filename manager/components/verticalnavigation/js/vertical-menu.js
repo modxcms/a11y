@@ -26,6 +26,8 @@ MODx.menuEntry = function(config) {
             tag: 'a'
             ,href: 'javascript:;'
             ,tabindex: 1
+            //,'data-qtip': 'Test'
+            ,title: config.description || ''
         }
         ,headerCssClass: 'x-panel-header'
         ,stateEvents: ['collapse', 'expand']
