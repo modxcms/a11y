@@ -33,47 +33,16 @@ MODx.menuEntry = function(config) {
         ,stateEvents: ['collapse', 'expand']
     });
     MODx.menuEntry.superclass.constructor.call(this, config);
-    this.on('afterrender', function() {
-        // Display the content when appropriate
-        if (!this.collapsed) {
-            this.getLayout().setActiveItem(0);
-
-            //this.on('collapse', function(me) {
-            //    console.log('collapsed, so expand again!');
-            //    this.expand();
-            //    this.collapsed = false;
-            //}, this, {single: true});
-            //this.collapse();
-        }
-    }, this);
+    this.on('afterrender', this.onAfterRender, this);
 };
 Ext.extend(MODx.menuEntry, Ext.Panel, {
     onCollapse : function(doAnim, animArg) {
-        //var center = Ext.getCmp('center-nav');
-        //center.hide();
-
         MODx.menuEntry.superclass.onCollapse.call(this, doAnim, animArg);
         // Force layout to have no active item
         this.getLayout().setActiveItem(null);
     }
     ,onExpand: function(doAnim, animArg) {
-        //var center = Ext.getCmp('center-nav');
-        //center.removeAll();
-        //// Collapse all expanded
-        //var nav = Ext.getCmp('nav-one');
-        //nav.items.each(function(item) {
-        //    if (item.id !== this.id && !item.collapsed && typeof item.collapse === 'function') {
-        //        item.collapse();
-        //        console.log('item to be collapsed', item);
-        //        //item.fireEvent('collapse');
-        //    }
-        //}, this);
-        //center.add(this.initialConfig.items);
-        //center.doLayout();
-        //center.show();
         MODx.menuEntry.superclass.onExpand.call(this, doAnim, animArg);
-
-        //return;
         // Force layout to display its item
         this.getLayout().setActiveItem(0);
     }
@@ -83,9 +52,86 @@ Ext.extend(MODx.menuEntry, Ext.Panel, {
             collapsed: this.collapsed
         };
     }
+
+    ,onAfterRender: function(me) {
+        if (!me.collapsed) {
+            me.getLayout().setActiveItem(0);
+        }
+    }
 });
 Ext.reg('modx-menu-entry', MODx.menuEntry);
 
+
+// PoC to use border layout
+MODx.menuBorder = function(config) {
+    config = config || {};
+
+    Ext.applyIf(config, {
+        test: true
+    });
+    MODx.menuBorder.superclass.constructor.call(this, config);
+};
+Ext.extend(MODx.menuBorder, MODx.menuEntry, {
+    onCollapse : function(doAnim, animArg) {
+        var center = Ext.getCmp('center-nav');
+        center.hide();
+        center.removeAll();
+
+        //Ext.defer(function() {
+            //if (center.items.items.length < 1) {
+                var west = Ext.getCmp('modx-leftbar-tabs');
+                west.setWidth('50px');
+                west.doLayout();
+        Ext.getCmp('modx-layout').doLayout();
+            //}
+       // }, 250);
+
+        MODx.menuEntry.superclass.onCollapse.call(this, doAnim, animArg);
+    }
+    ,onExpand: function(doAnim, animArg) {
+        var center = Ext.getCmp('center-nav');
+        center.removeAll();
+
+        // Collapse all expanded
+        var nav = Ext.getCmp('nav-one');
+        nav.items.each(function(item) {
+            if (item.id !== this.id && !item.collapsed && typeof item.collapse === 'function') {
+                console.log('item to be collapsed', item);
+                item.collapse();
+                //item.fireEvent('collapse');
+            }
+        }, this);
+
+        center.add(this.initialConfig.items);
+
+        var west = Ext.getCmp('modx-leftbar-tabs');
+        west.setWidth('230px');
+
+        center.doLayout();
+        center.show();
+
+        west.doLayout();
+        Ext.getCmp('modx-layout').doLayout();
+
+        MODx.menuEntry.superclass.onExpand.call(this, doAnim, animArg);
+    }
+
+    ,onAfterRender: function(me) {
+        if (!me.collapsed) {
+            me.on('collapse', function(elem) {
+                console.log('collapsed, so expand again!');
+                elem.expand();
+                elem.collapsed = false;
+            }, me, {single: true});
+
+            me.collapse();
+        }
+    }
+});
+Ext.reg('modx-menu-border-entry', MODx.menuBorder);
+
+
+var useBorder = false;
 
 // Override MODx.Layout to support vertical navigation
 Ext.override(MODx.Layout, {
@@ -153,7 +199,7 @@ Ext.override(MODx.Layout, {
             config.showTree = true;
         }
 
-        return {
+        var content = {
             region: 'west'
             ,applyTo: 'modx-leftbar'
             ,id: 'modx-leftbar-tabs'
@@ -170,22 +216,6 @@ Ext.override(MODx.Layout, {
             ,items: items
             ,defaultType: 'modx-menu-entry'
             ,minSize: 195
-            //,minSize: 50
-            //,layout: 'border'
-            //,items: [{
-            //    region: 'west'
-            //    ,items: items
-            //    ,itemId: 'nav'
-            //    ,defaultType: 'modx-menu-entry'
-            //    ,width: '50px'
-            //    ,id: 'nav-one'
-            //},{
-            //    region: 'center'
-            //    ,hidden: true
-            //    ,items: []
-            //    ,id: 'center-nav'
-            //    //,width: 0
-            //}]
             ,bodyCfg: {
                 tag: 'ul'
             }
@@ -200,6 +230,40 @@ Ext.override(MODx.Layout, {
                 };
             }
         };
+
+        if (useBorder) {
+            Ext.apply(content, {
+                minSize: 50
+                ,layout: 'border'
+                ,defaultType: 'panel'
+                ,items: [{
+                    region: 'west'
+                    ,items: items
+                    ,defaultType: 'modx-menu-border-entry'
+                    ,width: '50px'
+                    ,id: 'nav-one'
+                    //,collapsed: false
+                    //,split: false
+                    //,layout: 'fit'
+                    //,autohide: false
+                    ,stateful: false
+                },{
+                    region: 'center'
+                    //,hidden: true
+                    //,layout: 'fit'
+                    //,xtype: 'container'
+                    //,cls: 'x-panel-body'
+                    ,items: []
+                    ,id: 'center-nav'
+                    //,width: 0
+                    ,stateful: false
+                }]
+            });
+
+            console.log('content', content);
+        }
+
+        return content;
     }
 
     /**
@@ -223,8 +287,10 @@ Ext.override(MODx.Layout, {
      * @returns {Ext.Panel}
      */
     ,getLeftBar: function() {
-        //var nav = Ext.getCmp('modx-leftbar-tabs').getComponent('nav');
         var nav = Ext.getCmp('modx-leftbar-tabs');
+        if (useBorder) {
+            nav = Ext.getCmp('nav-one');
+        }
         if (nav) {
             return nav;
         }
@@ -330,6 +396,7 @@ Ext.override(MODx.Layout, {
      * @param {Object} state
      */
     ,onBeforeStateSave: function(component, state) {
+        return;
         var collapsed = state.collapsed;
         if (collapsed && !this.stateSave) {
             this.stateSave = true;
