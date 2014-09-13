@@ -73,20 +73,14 @@ MODx.menuBorder = function(config) {
 };
 Ext.extend(MODx.menuBorder, MODx.menuEntry, {
     onCollapse : function(doAnim, animArg) {
-        var center = Ext.getCmp('center-nav');
-        center.hide();
-        center.removeAll();
-
-        //Ext.defer(function() {
-            //if (center.items.items.length < 1) {
-                var west = Ext.getCmp('modx-leftbar-tabs');
-                west.setWidth('50px');
-                west.doLayout();
-        Ext.getCmp('modx-layout').doLayout();
-            //}
-       // }, 250);
+        this.animate('50px');
 
         MODx.menuEntry.superclass.onCollapse.call(this, doAnim, animArg);
+
+        var center = Ext.getCmp('center-nav');
+        //center.hide();
+        center.removeAll();
+
     }
     ,onExpand: function(doAnim, animArg) {
         var center = Ext.getCmp('center-nav');
@@ -104,16 +98,19 @@ Ext.extend(MODx.menuBorder, MODx.menuEntry, {
 
         center.add(this.initialConfig.items);
 
-        var west = Ext.getCmp('modx-leftbar-tabs');
-        west.setWidth('230px');
-
-        center.doLayout();
-        center.show();
-
-        west.doLayout();
-        Ext.getCmp('modx-layout').doLayout();
+        this.animate('230px', true);
 
         MODx.menuEntry.superclass.onExpand.call(this, doAnim, animArg);
+    }
+
+    ,animate: function(width) {
+        var west = Ext.getCmp('modx-leftbar-tabs')
+            ,center = Ext.getCmp('center-nav');
+
+        west.setWidth(width);
+
+        //west.doLayout();
+        Ext.getCmp('modx-layout').doLayout();
     }
 
     ,onAfterRender: function(me) {
@@ -236,6 +233,7 @@ Ext.override(MODx.Layout, {
                 minSize: 50
                 ,layout: 'border'
                 ,defaultType: 'panel'
+                //,split: false
                 ,items: [{
                     region: 'west'
                     ,items: items
@@ -255,8 +253,9 @@ Ext.override(MODx.Layout, {
                     //,cls: 'x-panel-body'
                     ,items: []
                     ,id: 'center-nav'
-                    //,width: 0
+                    //,width: 180
                     ,stateful: false
+                    //,split: true
                 }]
             });
 
