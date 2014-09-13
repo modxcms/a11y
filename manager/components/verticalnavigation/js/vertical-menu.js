@@ -90,7 +90,7 @@ Ext.extend(MODx.menuBorder, MODx.menuEntry, {
         var nav = Ext.getCmp('nav-one');
         nav.items.each(function(item) {
             if (item.id !== this.id && !item.collapsed && typeof item.collapse === 'function') {
-                console.log('item to be collapsed', item);
+                //console.log('item to be collapsed', item);
                 item.collapse();
                 //item.fireEvent('collapse');
             }
@@ -128,7 +128,7 @@ Ext.extend(MODx.menuBorder, MODx.menuEntry, {
 Ext.reg('modx-menu-border-entry', MODx.menuBorder);
 
 
-var useBorder = false;
+MODx.config['vnav.use_border'] = ~~MODx.config['vnav.use_border'] || false;
 
 // Override MODx.Layout to support vertical navigation
 Ext.override(MODx.Layout, {
@@ -228,41 +228,48 @@ Ext.override(MODx.Layout, {
             }
         };
 
-        if (useBorder) {
+        if (MODx.config['vnav.use_border']) {
+            content.listeners.afterrender = this.afterBorderRender;
             Ext.apply(content, {
                 minSize: 50
                 ,layout: 'border'
-                ,defaultType: 'panel'
-                //,split: false
+                ,defaultType: 'container'
+                ,bodyCfg: {
+                    tag: 'div'
+                    ,cls: 'border-nav'
+                }
+                ,defaults: {
+                    stateful: false
+                    //,autoHeight: true
+                }
                 ,items: [{
                     region: 'west'
                     ,items: items
                     ,defaultType: 'modx-menu-border-entry'
                     ,width: '50px'
                     ,id: 'nav-one'
-                    //,collapsed: false
-                    //,split: false
-                    //,layout: 'fit'
-                    //,autohide: false
-                    ,stateful: false
+                    ,itemId: 'main-nav'
+                    ,autoEl: {
+                        tag: 'ul'
+                        ,cls: 'main-nav'
+                    }
                 },{
                     region: 'center'
-                    //,hidden: true
-                    //,layout: 'fit'
-                    //,xtype: 'container'
-                    //,cls: 'x-panel-body'
-                    ,items: []
+                    ,cls: 'x-panel-body sub-nav'
                     ,id: 'center-nav'
-                    //,width: 180
-                    ,stateful: false
-                    //,split: true
+                    ,itemId: 'sub-nav'
                 }]
             });
-
-            console.log('content', content);
         }
 
         return content;
+    }
+
+    ,afterBorderRender: function() {
+        Ext.defer(function() {
+            //console.log('after border render!');
+            Ext.getCmp('modx-layout').doLayout();
+        }, 250);
     }
 
     /**
@@ -287,8 +294,8 @@ Ext.override(MODx.Layout, {
      */
     ,getLeftBar: function() {
         var nav = Ext.getCmp('modx-leftbar-tabs');
-        if (useBorder) {
-            nav = Ext.getCmp('nav-one');
+        if (MODx.config['vnav.use_border']) {
+            nav = nav.getComponent('main-nav');
         }
         if (nav) {
             return nav;
@@ -350,13 +357,25 @@ Ext.override(MODx.Layout, {
      * @returns {Object}
      */
     ,handleRecord: function(config) {
-        if (!config.titleTpl) {
-            // Default tpl
-            config.titleTpl = '<i class="icon icon-asterisk"></i><span class="title">{title}</span>';
+        if (MODx.config['vnav.use_border']) {
+            // Border nav
+            if (!config.titleTpl) {
+                // Default tpl
+                config.titleTpl = '<i class="icon icon-asterisk"></i>';
+            }
+            if (config.title) {
+                config.description = config.title;
+            }
+        } else {
+            // Regular vertical nav
+            if (!config.titleTpl) {
+                // Default tpl
+                config.titleTpl = '<i class="icon icon-asterisk"></i><span class="title">{title}</span>';
+            }
         }
         if (config.title && config.titleTpl) {
             config.title = new Ext.XTemplate(config.titleTpl).apply({
-                title: config.title
+                title: MODx.config['vnav.use_border'] ? '' : config.title
             });
         }
         if (config.stateId) {
