@@ -357,25 +357,28 @@ Ext.override(MODx.Layout, {
      * @returns {Object}
      */
     ,handleRecord: function(config) {
+        if (!config.titleTpl) {
+            // Default tpl
+            config.titleTpl = '<tpl if="icon"><i class="icon {icon}"></i></tpl><tpl if="title"><span class="title">{title}</span></tpl>';
+        }
+
+        if (!config.menuIcon) {
+            // Default icon
+            config.menuIcon = 'icon-asterisk';
+        }
+
         if (MODx.config['vnav.use_border']) {
             // Border nav
-            if (!config.titleTpl) {
-                // Default tpl
-                config.titleTpl = '<i class="icon icon-asterisk"></i>';
-            }
-            if (config.title) {
+            if (config.title && !config.description) {
                 config.description = config.title;
             }
-        } else {
-            // Regular vertical nav
-            if (!config.titleTpl) {
-                // Default tpl
-                config.titleTpl = '<i class="icon icon-asterisk"></i><span class="title">{title}</span>';
-            }
         }
+
         if (config.title && config.titleTpl) {
             config.title = new Ext.XTemplate(config.titleTpl).apply({
                 title: MODx.config['vnav.use_border'] ? '' : config.title
+                ,icon: config.menuIcon || ''
+                ,description: config.description || ''
             });
         }
         if (config.stateId) {
