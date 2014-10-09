@@ -128,6 +128,7 @@ Ext.extend(MODx.menuBorder, MODx.menuEntry, {
 Ext.reg('modx-menu-border-entry', MODx.menuBorder);
 
 
+// Define the kind of vertical navigation we want to use
 MODx.config['vnav.use_border'] = ~~MODx.config['vnav.use_border'] || false;
 
 // Override MODx.Layout to support vertical navigation
