@@ -39,6 +39,6 @@ The DOM structure is :
 1. copy folders in their appropriate locations (`core/components/verticalnavigation/` & `manager/assets/components/verticalnavigation/`)
 2. create `verticalnavigation` namespace
 3. create a plugin from `elements/plugins/plugin.php` bound to `OnBeforeManagerPageInit` system event
-4. create system setting `vnav.enable_vnav` as combo boolean & set its value to `1`
+4. create system setting `vnav.use_vnav` as combo boolean & set its value to `1`
 
 You should be ready to go
