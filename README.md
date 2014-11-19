@@ -1,3 +1,6 @@
+# Demo Manager
+http://c1560.paas2.tx.modxcloud.com/manager/
+
 # Vertical Navigation
 
 Transforms MODX Revolution west region (left navigation) into an accessible vertical navigation.
