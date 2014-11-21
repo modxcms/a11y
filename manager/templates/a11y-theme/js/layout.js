@@ -63,15 +63,11 @@ Ext.reg('modx-menu-entry', MODx.menuEntry);
 
 MODx.Layout.Default = function(config, getStore) {
     config = config || {};
-    Ext.applyIf(config,{
-    });
 
-    MODx.Layout.Default.superclass.constructor.call(this,config);
+    MODx.Layout.Default.superclass.constructor.call(this, config);
     return this;
 };
 Ext.extend(MODx.Layout.Default, MODx.Layout, {
-
-
     getWest: function(config) {
         var items = [];
 
@@ -166,13 +162,6 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
                 };
             }
         };
-    }
-
-    ,afterBorderRender: function() {
-        Ext.defer(function() {
-            //console.log('after border render!');
-            Ext.getCmp('modx-layout').doLayout();
-        }, 250);
     }
 
     /**
