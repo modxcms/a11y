@@ -18,6 +18,7 @@
 {/if}
 <script src="{$_config.manager_url}assets/modext/core/modx.js" type="text/javascript"></script>
 <script src="{$_config.manager_url}assets/modext/widgets/core/modx.searchbar.js" type="text/javascript"></script>
+<script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/aria-tree.js" type="text/javascript"></script>
 <script src="{$_config.connectors_url}lang.js.php?ctx=mgr&topic=topmenu,file,resource,{$_lang_topics}&action={$smarty.get.a|strip_tags}" type="text/javascript"></script>
 <script src="{$_config.connectors_url}modx.config.js.php?action={$smarty.get.a|strip_tags}{if $_ctx}&wctx={$_ctx}{/if}" type="text/javascript"></script>
 
@@ -44,7 +45,7 @@
 
 <div id="modx-browser"></div>
 <div id="modx-container">
-    
+
 <div id="modAB"></div>
 <div id="modx-leftbar"></div>
 <div id="modx-content">
