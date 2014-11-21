@@ -1,0 +1,203 @@
+/* Colors */
+
+$colorSplash: rgb(54, 151, 205);
+$desaturatedSplash:lighten(desaturate($colorSplash,100%),20%);
+$lightSplash:lighten($colorSplash, 42.5%);
+
+$white: white;
+$almostWhite: #FCFCFC;
+$offWhite: #F2F2F2;
+$whitishBlue: #E4E9EE;
+
+$black: #020608;
+$almostBlack: #333333;
+$darkNeutral:#53595F;
+
+$grey: #999999;
+$gainsboro: rgb(240,240,240);
+$softGrey: rgb(220, 220, 220);
+$neutral: #d4d4d4;
+
+$tan: #aca899;
+
+$softligthBlue: #ebeff3;
+$pastelLightBlue: rgb(225,236,241);
+$midsky: #a1b8c5;
+$skyBlue: #55bbe7;
+$mutedblue: #535d6c;
+$darkBlue: #2b3948;
+
+$green: #93c14e;
+$desturatedSuccess:lighten(desaturate($green,100%),10%);
+$mutedgreen: #9caf78;
+$darkGreen: #636f4c;
+$pastelGreen: rgb(88, 165, 152);
+
+$red:red;
+
+$purple: #B42260;
+
+$cThruShadow: rgba(0, 0, 0, 0.025);
+
+/*======================================================*/
+
+/* Diagram */
+
+/* A */
+$mainBg: $almostWhite;
+
+/* B - Text & More Below */
+$navbarBg: $offWhite;
+	$navbarText: $almostBlack;
+
+/* C - Text & More Below */
+$tabBg: $almostBlack;
+	$tabInactiveBg: $black;
+
+/* D */
+$resourcePanelIcons: $darkNeutral;
+	$resourcePanelIconsHover: $colorSplash;
+	
+/* E - Borders & More Below */	
+$treeHeaderText: $colorSplash;
+$treeText: darken($midsky,20%);
+	$treeNodeBg: transparent;
+	$treeNodeBgHover: darken($almostBlack, 5%);
+	$treeNodeBgSelected: darken($almostBlack, 15%);
+	
+/* F 
+	the tab active/text/bottom border is $tabBg	& $colorSplash
+	Also uses:
+	$tabInactiveText 
+	$tabHoverText
+*/
+$rscInactiveTabBg: $neutral;
+
+/* G */
+$rscDetailsBg: $softligthBlue;	
+
+/* H */	
+$saveBtnBg: $mutedgreen;
+	$saveBtnBgHover: $green;
+$buttonBackground: $white;
+$buttonText: $almostBlack;
+	
+	
+/*======================================================*/
+
+/* structures */
+$aside: darken($almostWhite,10%);
+$actionable: $almostWhite;
+$dropdownTextColor: $almostBlack;
+$dropdownBorder: $whitishBlue;
+$menuSelectedBg: $mutedblue;
+$menuTextColor: $offWhite;
+$gridsorted: $midsky;
+$griddivider: $whitishBlue;
+$gridrowalt: $offWhite;
+$searchresults: $darkBlue;
+$searchresultshead: $skyBlue;
+
+/* backgrounds */
+$dropdownSelectedBg: $pastelLightBlue;
+$dropdownBg: $white;
+$menuBg: $darkBlue;
+$lightBg: $gainsboro;
+$darkBg: $darkNeutral;
+$mediumBg:$aside;
+
+
+$labelText:$darkNeutral;
+$primaryAction: $pastelGreen;
+$success: $green;
+
+
+/* Tree menus  */
+$tipText: $gainsboro;
+$lightSplash: lighten($colorSplash, 42.5%);
+$mainText: $black;
+$headerText: lighten($almostBlack, 10%);
+$iconColor: $treeText;
+$unpublished: lighten($treeText, 20%) !important;
+$disabled: $unpublished;
+$hidden: $unpublished;
+$unpubText: italic;
+$lockedText: italic;
+$deleted: $purple !important;
+$delTextStyle: normal;
+$delTextDeco: line-through;
+$treeDivider: $darkBlue;
+
+
+/* Top Nav */
+
+/* Top navigation colors */
+$navbarHover: $colorSplash;
+$navbarDrop: $navbarBg;
+$navbarRadius: 2px;
+$navbarBorder: $darkBlue;
+
+/* Sub navigation colors */
+$subnavBg: darken($darkBlue, 10%);
+$subnavBorder: darken($mutedblue, 10%);
+$subnavSepBorder: darken($darkBlue, 20%);
+$subnavTitleColor: $softligthBlue;
+$subnavDescriptionColor: $skyBlue;
+
+/* borders */
+$borderColor: $offWhite;
+$borderShadow: $cThruShadow;
+$primaryBorder: $softGrey;
+
+$shadower: 0 1px 0 $borderShadow, -1px 0 0 $borderShadow, 1px 0 0 $borderShadow;
+
+/* C - Left Bar Tabs */
+$tabStripBg: darken($mainBg, 1%);
+$tabHoverBg: $navbarHover;
+$tabText: $colorSplash;
+$tabInactiveText: darken($grey, 15%);
+$tabHoverText: $pastelGreen;
+
+/* text colors and font stacks */
+$selected: lighten(desaturate($colorSplash,40%),40%);
+$over: $almostWhite;
+
+$bodyfonts: 'Helvetica Neue', Helvetica, arial, tahoma, sans-serif;
+$bodyFontSize: 13px;
+$altfonts: titilliumregular, $bodyfonts;
+$altfontslight: titilliumlight, $bodyfonts;
+$headfonts: $bodyfonts;
+$codefonts: "Courier New", Courier, monospace;
+$tabFont: 14px $bodyfonts;
+$buttonfonts: $bodyfonts;
+$treePseudoRootFont: normal 14px/35px $headfonts;
+$treeNodeFont: normal 13px/22px $bodyfonts;
+
+$buttonColor: darken($grey, 15%);
+$regularButtonColor: darken($grey, 15%);
+$buttonColorActive: $colorSplash;
+$buttonColorDisabled: darken($buttonColor, 20%);
+$buttonColorPrimary: $grey;
+$buttonPrimaryBg1: $pastelGreen;
+$buttonPrimaryBg2: darken($pastelGreen, 10%);
+$baseText:   normal 13px/1.4 $bodyfonts;
+$fontSmall:  normal 11px $bodyfonts;
+$fontMedium: normal 12px $bodyfonts;
+$fontNormal: normal $bodyFontSize $bodyfonts;
+$fontNavbar: normal $bodyFontSize $headfonts;
+$fontH2:     normal 25px $headfonts;
+$fontH3:       bold 15px $headfonts;
+
+$mobile: new-breakpoint(max-width 640px 4);
+$tabletP: new-breakpoint(max-width 768px 12);
+$desktop: new-breakpoint(max-width 960px 12);
+$tabletL: new-breakpoint(max-width 1024px 12);
+$cinema: new-breakpoint(max-width 1400px 12);
+
+$gtMobile: new-breakpoint(min-width 641px 12);
+$gtTabletP: new-breakpoint(min-width 769px 12);
+$gtTabletL: new-breakpoint(min-width 1025px 12);
+$gtDesktop: new-breakpoint(min-width 961px 12);
+$gtCinema: new-breakpoint(min-width 1401px 12);
+
+$imgPath: '../../default/images/';

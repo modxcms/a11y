@@ -1,0 +1,67 @@
+/* dashboard stuff */
+.dashboard {
+  overflow: visible;
+}
+
+.dashboard-block {
+  background-color: $white;
+  border-radius: 2px;
+  float: left;
+  margin: 6px 0;
+}
+
+.dashboard-block h4 {
+  color: $mutedblue;
+  font-size: 13px;
+  padding-bottom: 2px;
+}
+
+.dashboard-block em {
+  font-style: italic;
+}
+
+.dashboard-block strong {
+  font-weight: bold;
+}
+
+.dashboard-block li {
+  padding-left: 10px;
+}
+
+.dashboard-block .body {
+  color: $almostBlack;
+  font-size: 12px;
+  height: auto;
+  max-height: 300px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.dashboard-block-half {
+  width: 49%;
+    margin-left: 0;
+    float: left;
+    clear: left;
+}
+.dashboard-block-half:nth-of-type(2n+0) {
+    margin-left: 1%;
+    float: right;
+    clear: none;
+}
+
+.dashboard-block-full {
+  clear: both;
+  height: auto;
+  width: 100%;
+}
+
+.dashboard-block-double {
+  clear: both;
+  height: auto;
+  min-height: 400px;
+  width: 100%;
+}
+
+.dashboard-block-variable .body {
+  height: auto;
+}

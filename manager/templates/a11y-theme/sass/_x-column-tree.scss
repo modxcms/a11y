@@ -1,0 +1,209 @@
+/* column tree */
+.x-column-tree .x-panel-header {
+  border-bottom-width: 0px;
+  padding: 3px 0px 0px 0px;
+}
+
+.x-column-tree .x-panel-header .x-panel-header-text {
+  margin-left: 3px;
+}
+
+.x-column-tree .x-tree-node {
+  zoom: 1;
+}
+
+.x-column-tree .x-tree-node-el {
+  zoom: 1;
+}
+
+.x-column-tree .x-tree-selected {
+  background: #d9e8fb;
+}
+
+.x-column-tree .x-tree-node a {
+  line-height: 18px;
+  vertical-align: middle;
+}
+
+.x-column-tree .x-tree-node .x-tree-selected a span {
+  background: transparent;
+  color: #000;
+}
+
+.x-tree-col {
+  float: left;
+  overflow: hidden;
+  padding: 0 1px;
+  zoom: 1;
+}
+
+.x-tree-col-text,.x-tree-hd-text {
+  color: $black;
+  font: $fontSmall;
+  overflow: hidden;
+  padding: 3px 3px 3px 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.x-tree-headers {
+  cursor: default;
+  margin-top: 3px;
+  zoom: 1;
+}
+
+.x-tree-hd {
+  border-left: 1px solid #eee;
+  border-right: 1px solid #d0d0d0;
+  float: left;
+  overflow: hidden;
+}
+
+
+/* checkbox tree */
+.x-tree-checkbox {
+  background: url(../../../assets/ext3/resources/images/default/form/checkbox.gif) no-repeat 0 0;
+  height: 13px;
+  margin: 0 1px;
+  vertical-align: middle;
+  width: 13px;
+}
+
+.x-tree-checkbox-over .x-tree-checkbox {
+  background-position: -13px 0;
+}
+.x-tree-checkbox-down .x-tree-checkbox {
+  background-position: -26px 0;
+}
+.x-tree-node-disabled .x-tree-checkbox {
+  background-position: -39px 0;
+}
+.x-tree-node-checked {
+  background-position: 0 -13px;
+}
+
+.x-tree-checkbox-over .x-tree-node-checked {
+  background-position: -13px -13px;
+}
+.x-tree-checkbox-down .x-tree-node-checked {
+  background-position: -26px -13px;
+}
+.x-tree-node-disabled .x-tree-node-checked {
+  background-position: -39px -13px;
+}
+
+.x-tree-node-grayed {
+  background-position: 0 -26px;
+}
+.x-tree-checkbox-over .x-tree-node-grayed {
+  background-position: -13px -26px;
+}
+.x-tree-checkbox-down .x-tree-node-grayed {
+  background-position: -26px -26px;
+}
+.x-tree-node-disabled .x-tree-node-grayed {
+  background-position: -39px -26px;
+}
+
+.x-tree-branch-unchecked .x-tree-checkbox,.x-tree-branch-unchecked .x-tree-node-checked,.x-tree-branch-unchecked .x-tree-node-grayed {
+  background-position: 0 0;
+}
+.x-tree-branch-unchecked .x-tree-checkbox-over .x-tree-checkbox,.x-tree-branch-unchecked .x-tree-checkbox-over .x-tree-node-checked,.x-tree-branch-unchecked .x-tree-checkbox-over .x-tree-node-grayed {
+  background-position: -13px 0;
+}
+.x-tree-branch-unchecked .x-tree-checkbox-down .x-tree-checkbox,.x-tree-branch-unchecked .x-tree-checkbox-down .x-tree-node-checked,.x-tree-branch-unchecked .x-tree-checkbox-down .x-tree-node-grayed {
+  background-position: -26px 0;
+}
+.x-tree-branch-unchecked .x-tree-node-disabled .x-tree-checkbox,.x-tree-branch-unchecked .x-tree-node-disabled .x-tree-node-checked,.x-tree-branch-unchecked .x-tree-node-disabled .x-tree-node-grayed {
+  background-position: -39px 0;
+}
+
+.x-tree-branch-checked .x-tree-checkbox,.x-tree-branch-checked .x-tree-node-checked,.x-tree-branch-checked .x-tree-node-grayed {
+  background-position: 0 -13px;
+}
+.x-tree-branch-checked .x-tree-checkbox-over .x-tree-checkbox,.x-tree-branch-checked .x-tree-checkbox-over .x-tree-node-checked,.x-tree-branch-checked .x-tree-checkbox-over .x-tree-node-grayed {
+  background-position: -13px -13px;
+}
+.x-tree-branch-checked .x-tree-checkbox-down .x-tree-checkbox,.x-tree-branch-checked .x-tree-checkbox-down .x-tree-node-checked,.x-tree-branch-checked .x-tree-checkbox-down .x-tree-node-grayed {
+  background-position: -26px -13px;
+}
+.x-tree-branch-checked .x-tree-node-disabled .x-tree-checkbox,.x-tree-branch-checked .x-tree-node-disabled .x-tree-node-checked,.x-tree-branch-checked .x-tree-node-disabled .x-tree-node-grayed {
+  background-position: -39px -13px;
+}
+
+/* switchbutton */
+.x-rbtn button {
+  -moz-outline: 0 none;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0 none;
+  cursor: pointer;
+  font-size: 1px;
+  height: 16px;
+  line-height: 1px;
+  margin: 0;
+  outline: 0 none;
+  padding: 0;
+  width: 24px;
+}
+
+.x-rbtn {
+  table-layout: fixed;
+}
+
+.x-rbtn td {
+  background-image: url($imgPath + 'restyle/icons/rbtn.gif');
+  background-repeat: no-repeat;
+  border: 0 none;
+  height: 21px;
+  padding: 0;
+  vertical-align: middle;
+  width: 24px;
+}
+
+.x-rbtn td.x-rbtn-first {
+  background-position: 0 0;
+}
+
+.x-rbtn td.x-rbtn-item {
+  background-position: 0 -42px;
+}
+
+.x-rbtn td.x-rbtn-last {
+  background-position: right -21px;
+}
+
+.x-rbtn td.x-rbtn-first-active {
+  background-position: 0 -63px;
+}
+
+.x-rbtn td.x-rbtn-item-active {
+  background-position: 0 -105px;
+}
+
+.x-rbtn td.x-rbtn-last-active {
+  background-position: right -84px;
+}
+
+/* tree grid */
+.tq-treegrid .tq-treegrid-col {
+  border: none;
+}
+
+.tq-treegrid .tq-treegrid-icons {
+  float: left;
+}
+
+.tq-treegrid .x-tree-node-el {
+  line-height: 13px;
+  padding: 1px 3px 1px 5px;
+}
+
+.tq-treegrid .tq-treegrid-static .x-tree-ec-icon {
+  display: none;
+}
+
+.tq-treegrid .tq-treegrid-static .x-tree-node-el {
+  cursor: default;
+}

@@ -1,0 +1,600 @@
+@import "font-awesome/variables";
+@import "font-awesome/mixins";
+
+#modx-leftbar {
+  /* the main container + bg behind the tabs */
+  & .x-tab-panel-noborder {
+    margin: 0;
+  }
+  /* the toolbars just below the tabs */
+  & .x-toolbar {
+    padding: 4px 5px 5px;
+  }
+  /* root box contaiing a context or category */
+  & .x-tree-root-ct {
+    padding: 6px;
+  }
+  /* just the actual nodes */
+  & .x-tree .x-panel-body {
+
+  }
+}
+
+#modx-leftbar-tabpanel { width: auto !important;}
+
+/* tree menu splitter */
+.x-layout-split {
+  width: 8px;
+  z-index: 0;
+
+  &:hover {
+    background: $navbarHover;
+  }
+
+  .x-layout-mini {
+    left: -11px;
+    width: 10px;
+    height: 50px;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center left;
+    border-radius: 0;
+    opacity: 1;
+
+    &:after {
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-right: 5px solid $colorSplash;
+      position: absolute;
+      content: ' ';
+      right: 4px;
+      top: 21px;
+    }
+  }
+}
+
+.modx-tree {
+  padding: 0 5px 5px 5px;
+  #modx-file-tree & {
+    &:first-child {
+      padding-top: 5px;
+    }
+    .tree-pseudoroot-node {
+      margin-top: 0;
+    }
+  }
+}
+
+/* icons */
+.x-tree-arrows .x-tree-elbow-plus,
+.x-tree-arrows .x-tree-elbow-minus,
+.x-tree-arrows .x-tree-elbow-end-plus,
+.x-tree-arrows .x-tree-elbow-end-minus {
+  background: none;
+}
+.x-tree-arrows .x-tree-elbow-plus:before,
+.x-tree-arrows .x-tree-elbow-minus:before,
+.x-tree-arrows .x-tree-elbow-end-plus:before,
+.x-tree-arrows .x-tree-elbow-end-minus:before {
+  background: transparent 0 0;
+  display: inline-block;
+  width: 10px;
+  padding-left: 6px;
+  margin: 0 0 0 -16px;
+}
+.x-tree-arrows .x-tree-elbow-minus:before,
+.x-tree-arrows .x-tree-elbow-end-minus:before {
+  @extend %pseudo-font;
+  content:$fa-var-caret-down;
+  padding-left: 4px;
+  width: 12px;
+}
+
+/* icons for the various tree elements */
+.tree-context:before {
+  @extend %pseudo-font;
+  content:$fa-var-globe;
+}
+.x-tree-node-expanded .tree-folder:before {
+  @extend %pseudo-font;
+  content:$fa-var-folder-open;
+}
+.x-tree-node-collapsed .tree-folder:before {
+  @extend %pseudo-font;
+  content:$fa-var-folder;
+}
+.tree-resource:before {
+  @extend %pseudo-font;
+  content:$fa-var-file-o;
+}
+.tree-static-resource:before {
+  @extend %pseudo-font;
+  content:$fa-var-file-text-o;
+}
+.tree-weblink:before {
+  @extend %pseudo-font;
+  content:$fa-var-link;
+}
+.tree-symlink:before {
+  @extend %pseudo-font;
+  content:$fa-var-files-o;
+}
+
+/* tree states */
+.x-tree-node-el {
+  color: $treeText;
+  font: $treeNodeFont;
+  padding: 4px 0;
+
+  .x-btn {
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .icon-large {
+    display: inline-block;
+    width: 1em;
+  }
+
+  // For legacy icons
+  background-repeat: no-repeat;
+  background-position: 5px;
+}
+
+.x-tree-node-el a span {
+  line-height: 1.7; /* back to 18px */
+  padding-left: 7px;
+
+  & span {
+    padding-left: 0;
+  }
+}
+
+.unpublished,
+.unpublished a span {
+  color: $unpublished;
+  font-style: $unpubText;
+
+  i.icon,
+  i.icon-large {
+      color: $unpublished;
+      font-style: normal;
+  }
+}
+.hidemenu,
+.hidemenu a span {
+  color: $hidden;
+
+  i.icon,
+  i.icon-large {
+      color: $hidden;
+      font-style: normal;
+  }
+}
+.deleted {
+  color: $deleted;
+}
+.deleted a span {
+  color: $deleted;
+  text-decoration: $delTextDeco;
+  font-style: $delTextStyle;
+}
+.element-node-disabled a span {
+  color: $disabled;
+}
+.x-tree-node .x-tree-node-disabled a span {
+  color: lighten($treeText, 50%);
+}
+
+.element-node-locked a span {
+  font-style: $lockedText;
+}
+
+.x-tree-node {
+	position:relative;
+}
+
+.modx-tree-node-tool-ct {
+	position:absolute;
+	top:0;
+	right:0;
+    bottom:0;
+    line-height:1.8;
+}
+
+.x-tree-root-ct {
+  border-radius: 0;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.tree-pseudoroot-node {
+  border-radius: 0;
+  font: $treePseudoRootFont;
+  position:relative;
+  padding: 0 0 0 4px;
+  margin-top: 5px;
+
+  > .icon-large {
+    font-weight: normal;
+  }
+
+  .modx-tree-node-tool-ct {
+    line-height: 35px;
+    .x-btn {
+      margin-left: 2px;
+    }
+  }
+  &.x-tree-node-expanded, &.x-tree-node-expanded span {
+    color: $treeHeaderText;
+  }
+  &.x-tree-node-over, &.x-tree-selected {
+    background-color: $treeNodeBgHover;
+  }
+
+  + .x-tree-node-ct {
+    margin-left: -16px;
+  }
+}
+
+
+.x-tree-elbow, .x-tree-elbow-end {
+  display: inline-block;
+
+  #modx-leftbar-tabpanel & {
+    //display: inline;
+  }
+}
+
+/* miscellaneous tree styles */
+.x-tree-node-el .x-tree-node-icon {
+  display: inline-block;
+}
+.x-tree-node-loading .x-tree-node-icon {
+  background-image: url($imgPath + 'modx-theme/tree/loading.gif') !important;
+}
+.x-tree-node-loading a span {
+  color: $almostBlack;
+  font-style: italic;
+}
+.ext-ie .x-tree-node-el input {
+  height: 15px;
+  width: 15px;
+}
+
+
+
+/* drag and drop styles */
+.x-tree-node a,
+.x-dd-drag-ghost a,
+.x-tree-node a span,
+.x-dd-drag-ghost a span {
+  color: $treeText;
+}
+.x-tree-node div.x-tree-drag-insert-below {
+  border-bottom-color: darken($grey, 20%);
+}
+.x-tree-node div.x-tree-drag-insert-above {
+  border-top-color: darken($grey, 20%);
+}
+.x-tree-dd-underline .x-tree-node div.x-tree-drag-insert-below a {
+  border-bottom-color: darken($grey, 20%);
+}
+.x-tree-dd-underline .x-tree-node div.x-tree-drag-insert-above a {
+  border-top-color: darken($grey, 20%);
+}
+.x-tree-node .x-tree-drag-append a span {
+  background-color: $selected;
+  border-color: $borderColor;
+}
+.x-tree-node .x-tree-node-over {
+  background: $treeNodeBgHover;
+}
+.x-tree-node .x-tree-selected {
+  background-color: $treeNodeBgSelected;
+}
+.x-tree-drop-ok-append .x-dd-drop-icon {
+  background-image: url($imgPath + 'modx-theme/tree/drop-add.gif');
+}
+.x-tree-drop-ok-above .x-dd-drop-icon {
+  background-image: url($imgPath + 'modx-theme/tree/drop-over.gif');
+}
+.x-tree-drop-ok-below .x-dd-drop-icon {
+  background-image: url($imgPath + 'modx-theme/tree/drop-under.gif');
+}
+.x-tree-drop-ok-between .x-dd-drop-icon {
+  background-image: url($imgPath + 'modx-theme/tree/drop-between.gif');
+}
+
+
+
+/* legacy icons */
+@mixin legacy-tree-icon {
+  background-repeat: no-repeat !important;
+
+  // Set the background position to center
+  background-position: center !important;
+  // .. unless the icon is applied to the actual tree node (e.g. Gallery addon), in which case it needs
+  // .. to be in the top left a bit.
+  &.x-tree-node-el {
+    background-position: 5px 5px !important;
+  }
+  min-width: 16px;
+  min-height: 16px;
+  vertical-align: middle;
+
+  // Hides the font awesome icon
+  &::before {
+    content: ' ';
+  }
+}
+.icon-rss {
+  background-image: url($imgPath + 'restyle/icons/feed.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-cal {
+  background-image: url($imgPath + 'restyle/icons/calendar.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-sql {
+  background-image: url($imgPath + 'restyle/icons/database_table.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-db {
+  background-image: url($imgPath + 'restyle/icons/database.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-java, .icon-jar {
+  background-image: url($imgPath + 'restyle/icons/cup.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-css {
+  background-image: url($imgPath + 'restyle/icons/css.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-zip, .icon-tar, .icon-tgz, .icon-gz {
+  background-image: url($imgPath + 'restyle/icons/compress.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-jpg, .icon-jpeg, .icon-gif, .icon-png, .icon-bmp, .icon-tiff {
+  background-image: url($imgPath + 'restyle/icons/picture.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-bat, .icon-scr {
+  background-image: url($imgPath + 'restyle/icons/application_osx_terminal.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-log {
+  background-image: url($imgPath + 'restyle/icons/computer.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-html, .icon-htm {
+  background-image: url($imgPath + 'restyle/icons/html_valid.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-avi, .icon-mpg, .icon-mov {
+  background-image: url($imgPath + 'restyle/icons/film.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-rb {
+  background-image: url($imgPath + 'restyle/icons/ruby.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-doc {
+  background-image: url($imgPath + 'restyle/icons/page_white_word.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-ppt {
+  background-image: url($imgPath + 'restyle/icons/page_white_powerpoint.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-access, .icon-htaccess {
+  background-image: url($imgPath + 'restyle/icons/lock.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-php {
+  background-image: url($imgPath + 'restyle/icons/page_white_php.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-flv, .icon-swf {
+  background-image: url($imgPath + 'restyle/icons/page_white_flash.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-xls {
+  background-image: url($imgPath + 'restyle/icons/page_white_excel.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-cfm {
+  background-image: url($imgPath + 'restyle/icons/page_white_coldfusion.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-pdf {
+  background-image: url($imgPath + 'restyle/icons/page_white_acrobat.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-js {
+  background-image: url($imgPath + 'restyle/icons/javascript.png') !important;
+  @include legacy-tree-icon;
+}
+
+
+.icon-action {
+  background-image: url($imgPath + 'restyle/icons/application_osx_terminal.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-namespace {
+  background-image: url($imgPath + 'restyle/icons/computer.png') !important;
+  @include legacy-tree-icon;
+}
+/*.icon-propertyset {
+  background-image: url($imgPath + 'restyle/icons/property-set.png') !important;
+  @extend %hide-font-icon;
+}*/
+/*.icon-resourcegroup {
+  background: url($imgPath + 'restyle/icons/application_cascade.png') no-repeat left top !important;
+  @extend %hide-font-icon;
+}*/
+.icon-list-new {
+  background-image: url($imgPath + 'restyle/icons/layout_add.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-mark-active {
+  background-image: url($imgPath + 'restyle/icons/layout_edit.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-mark-complete {
+  background-image: url($imgPath + 'restyle/icons/layout_header.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-package {
+  background-image: url($imgPath + 'restyle/icons/package.png') !important;
+  padding-right: 5px !important;
+  @include legacy-tree-icon;
+}
+.icon-locked {
+  background-image: url($imgPath + 'restyle/icons/lock_edit.png') !important;
+  @include legacy-tree-icon;
+}
+.icon-lock {
+  background-image: url($imgPath + 'restyle/icons/lock.png') !important;
+  @include legacy-tree-icon;
+}
+#modx-resource-tree-panel .x-accordion-hd {
+  background-position: 0 0;
+}
+#modx-element-tree-panel .x-accordion-hd {
+  background-position: 0 -32px;
+}
+#modx-file-tree-panel .x-accordion-hd {
+  background-position: 0 -64px;
+}
+#modx-static-page-settings .x-accordion-hd {
+  background-position: 0 -96px;
+}
+
+/*
+.x-tree .x-panel-body {
+  background-color:#fff;
+  border:1px solid #E4E4E4;
+}*/
+.x-tree-node-el .x-tree-node-icon {
+  display: inline-block;
+}
+.x-tree-node-loading .x-tree-node-icon {
+  background-image: url($imgPath + 'modx-theme/tree/loading.gif') !important;
+}
+.x-tree-node-loading a span {
+  color: $almostBlack;
+  font-style: italic;
+}
+.ext-ie .x-tree-node-el input {
+  height: 15px;
+  width: 15px;
+}
+.x-tree-root-ct {
+  border-radius: 0;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.x-tree-root-node {
+  margin: 0;
+}
+
+
+.x-tree-arrows .x-tree-elbow-plus,
+.x-tree-arrows .x-tree-elbow-minus,
+.x-tree-arrows .x-tree-elbow-end-plus,
+.x-tree-arrows .x-tree-elbow-end-minus {
+  background: none;
+}
+.x-tree-arrows .x-tree-elbow-plus:before,
+.x-tree-arrows .x-tree-elbow-minus:before,
+.x-tree-arrows .x-tree-elbow-end-plus:before,
+.x-tree-arrows .x-tree-elbow-end-minus:before {
+  @extend %pseudo-font;
+  content:$fa-var-caret-right;
+  background: transparent 0 0;
+  display: inline-block;
+  width: 10px;
+  padding-left: 6px;
+  margin: 0;
+}
+.x-tree-arrows .x-tree-elbow-minus:before,
+.x-tree-arrows .x-tree-elbow-end-minus:before {
+  @extend %pseudo-font;
+  content:$fa-var-caret-down;
+  padding-left: 4px;
+  width: 12px;
+}
+
+/* icons for the various tree elements */
+.tree-context:before {
+  @extend %pseudo-font;
+  content:$fa-var-globe;
+}
+.x-tree-node-expanded .tree-folder:before {
+  @extend %pseudo-font;
+  content:$fa-var-folder-open;
+}
+.tree-folder:before {
+  @extend %pseudo-font;
+  content:$fa-var-folder;
+}
+.tree-resource:before {
+  @extend %pseudo-font;
+  content:$fa-var-file-o;
+}
+.tree-static-resource:before {
+  @extend %pseudo-font;
+  content:$fa-var-file-text-o;
+}
+.tree-weblink:before {
+  @extend %pseudo-font;
+  content:$fa-var-link;
+}
+.tree-symlink:before {
+  @extend %pseudo-font;
+  content:$fa-var-files-o;
+}
+
+.x-tree-node {
+  color: $treeText;
+}
+.x-tree-node a, .x-dd-drag-ghost a {
+  color: $treeText;
+}
+.x-tree-node a span, .x-dd-drag-ghost a span {
+  color: $treeText;
+}
+.x-tree-node .x-tree-node-disabled a span {
+  color: lighten($treeText, 50%);
+}
+.x-tree-node div.x-tree-drag-insert-below {
+  border-bottom-color: darken($grey, 20%);
+}
+.x-tree-node div.x-tree-drag-insert-above {
+  border-top-color: darken($grey, 20%);
+}
+.x-tree-dd-underline .x-tree-node div.x-tree-drag-insert-below a {
+  border-bottom-color: darken($grey, 20%);
+}
+.x-tree-dd-underline .x-tree-node div.x-tree-drag-insert-above a {
+  border-top-color: darken($grey, 20%);
+}
+.x-tree-node .x-tree-drag-append a span {
+  background-color: darken($offWhite, 20%);
+  border-color: $borderColor;
+}
+.x-tree-drop-ok-append .x-dd-drop-icon {
+  background-image: url($imgPath + 'modx-theme/tree/drop-add.gif');
+}
+.x-tree-drop-ok-above .x-dd-drop-icon {
+  background-image: url($imgPath + 'modx-theme/tree/drop-over.gif');
+}
+.x-tree-drop-ok-below .x-dd-drop-icon {
+  background-image: url($imgPath + 'modx-theme/tree/drop-under.gif');
+}
+.x-tree-drop-ok-between .x-dd-drop-icon {
+  background-image: url($imgPath + 'modx-theme/tree/drop-between.gif');
+}

@@ -3,3 +3,5 @@ _build/vendor/
 core/components/verticalnavigation/vendor/
 config.core.php
 .idea
+
+*.scssc
