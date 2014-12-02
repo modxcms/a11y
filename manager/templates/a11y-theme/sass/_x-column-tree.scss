@@ -1,4 +1,12 @@
 /* column tree */
+
+.x-panel-header {
+  background: none;
+  border-bottom: 1px solid darken($borderColor, 2%);
+  border: none;
+  font-size: 16px;
+}
+
 .x-column-tree .x-panel-header {
   border-bottom-width: 0px;
   padding: 3px 0px 0px 0px;

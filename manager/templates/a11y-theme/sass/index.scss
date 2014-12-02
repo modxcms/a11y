@@ -44,8 +44,10 @@ $fa-css-prefix:       icon;
 	
 */
 
-body *:focus {outline:2px solid #00948e !important;}
-body #modx-header *:focus {outline:2px solid #fbf5be !important;}
+body *:focus {@extend %a11y-outline;}
+#modx-header *:focus, #modx-leftbar *:focus, .x-panel-body *:focus, -webkit-tap-highlight-color 
+{@extend %a11y-outline;}
+
 
 body, body.x-border-layout-ct {
   color: $mainText;
@@ -109,14 +111,6 @@ hr {
   padding: 0;
 }
 
-.x-panel-header {
-  background: none;
-  border-bottom: 1px solid darken($borderColor, 2%);
-  border: none;
-  font-size: 16px;
-  margin: 0 0 0 15px;
-  padding: 0 0 8px;
-}
 
 /* 
 	typography
@@ -257,6 +251,9 @@ em {
 		}
 	}
 }
+
+/* firefox needs this badly or the content is pushed to the right */
+#ext-gen18{clear:left;}
 
 #modx-resource-content {
   background-color: $rscDetailsBg;

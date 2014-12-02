@@ -25,6 +25,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  height: 56px;
 
   li {
   }
@@ -148,10 +149,10 @@
 }
 
 #modx-navbar #modx-home-dashboard {
-  background-image: url($imgPath + 'modx-logo@2x.png');
-  background-position:center center;
+  background-image: url($imgPath + 'modx-icon-color.svg');
+  background-position:center right;
   background-repeat:no-repeat;
-  background-size: 45px 45px;
+  background-size: 40px 40px;
   width: 50px;
   border-right: none;
   margin-left: 21px;
