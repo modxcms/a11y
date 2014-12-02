@@ -230,10 +230,11 @@
   }
   &.x-tree-node-over, &.x-tree-selected {
     background-color: $treeNodeBgHover;
+    color: $colorSplash !important;
   }
 
   + .x-tree-node-ct {
-    margin-left: -16px;
+    //margin-left: -16px;
   }
 }
 
@@ -267,10 +268,10 @@
 /* drag and drop styles */
 .x-tree-node a,
 .x-dd-drag-ghost a,
-.x-tree-node a span,
-.x-dd-drag-ghost a span {
+.x-tree-node a span, .x-dd-drag-ghost a span {
   color: $treeText;
 }
+
 .x-tree-node div.x-tree-drag-insert-below {
   border-bottom-color: darken($grey, 20%);
 }
@@ -306,6 +307,8 @@
   background-image: url($imgPath + 'modx-theme/tree/drop-between.gif');
 }
 
+//1 over statement to rule them all
+.x-tree-node-over a span, .x-tree-node-over a, .x-tree-node-over i, .x-tree-selected a span, .x-tree-selected a, .x-tree-selected i{color: $colorSplash !important;}
 
 
 /* legacy icons */

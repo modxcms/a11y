@@ -13,6 +13,6 @@
     color: $buttonColorDisabled !important;
   }
   &.x-btn-over {
-    background: lighten($primaryAction,12%);
+    background: darken($buttonPrimaryBg1,12%);
   }
 }

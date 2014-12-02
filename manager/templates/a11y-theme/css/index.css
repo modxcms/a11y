@@ -2511,7 +2511,7 @@
 
 /* Colors */
 /* line 43, ../sass/_colors-and-vars.scss */
-body *:focus, #modx-header *:focus, #modx-leftbar *:focus, .x-panel-body *:focus, -webkit-tap-highlight-color {
+body *:focus, #modx-header *:focus, #modx-leftbar *:focus, #modx-leftbar a:focus, .x-panel-body *:focus, -webkit-tap-highlight-color {
   outline: 2px solid #63d967 !important;
 }
 
@@ -2615,9 +2615,9 @@ body *:focus, #modx-header *:focus, #modx-leftbar *:focus, .x-panel-body *:focus
 
 /* line 27, ../sass/_xtheme-modx.scss */
 .ext-el-mask-msg {
-  -moz-box-shadow: 0 1px 3px #53595f;
-  -webkit-box-shadow: 0 1px 3px #53595f;
-  box-shadow: 0 1px 3px #53595f;
+  -moz-box-shadow: 0 1px 3px #40454b;
+  -webkit-box-shadow: 0 1px 3px #40454b;
+  box-shadow: 0 1px 3px #40454b;
   background-color: #f2f2f2;
   background-image: none;
   border-color: #999999;
@@ -2631,7 +2631,7 @@ body *:focus, #modx-header *:focus, #modx-leftbar *:focus, .x-panel-body *:focus
   background-color: transparent;
   border: 0 none;
   color: #333333;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /* line 46, ../sass/_xtheme-modx.scss */
@@ -2694,7 +2694,7 @@ body *:focus, #modx-header *:focus, #modx-leftbar *:focus, .x-panel-body *:focus
 /* line 92, ../sass/_xtheme-modx.scss */
 .loading-indicator {
   background-image: url("../../default/images/modx-theme/grid/loading.gif");
-  font-size: 11px;
+  font-size: 14px;
 }
 
 /* line 97, ../sass/_xtheme-modx.scss */
@@ -2744,7 +2744,7 @@ body *:focus, #modx-header *:focus, #modx-leftbar *:focus, .x-panel-body *:focus
 /* line 133, ../sass/_xtheme-modx.scss */
 .x-toolbar td, .x-toolbar span, .x-toolbar input,
 .x-toolbar div, .x-toolbar select, .x-toolbar label {
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /* line 137, ../sass/_xtheme-modx.scss */
@@ -2953,7 +2953,7 @@ body *:focus, #modx-header *:focus, #modx-leftbar *:focus, .x-panel-body *:focus
 
 /* line 315, ../sass/_xtheme-modx.scss */
 .x-grid3-hd-row td, .x-grid3-row td, .x-grid3-summary-row td {
-  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 13px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /* line 319, ../sass/_xtheme-modx.scss */
@@ -3024,10 +3024,10 @@ body *:focus, #modx-header *:focus, #modx-leftbar *:focus, .x-panel-body *:focus
 
 /* line 375, ../sass/_xtheme-modx.scss */
 .x-grid3-row-over {
-  background-color: #ebeff3;
+  background-color: #d2dde6;
   background-image: 0 none;
   /*border: 0 none;*/
-  border-bottom: 1px solid #cbd6e0;
+  border-bottom: 1px solid #b1c4d4;
 }
 
 /* line 381, ../sass/_xtheme-modx.scss */
@@ -3142,7 +3142,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
 
 /* line 462, ../sass/_xtheme-modx.scss */
 .x-grid3-cell-selected {
-  background-color: #ebeff3 !important;
+  background-color: #d2dde6 !important;
   color: #020608;
 }
 
@@ -3158,7 +3158,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
 
 /* line 472, ../sass/_xtheme-modx.scss */
 .x-grid3-locked td.x-grid3-row-marker, .x-grid3-locked .x-grid3-row-selected td.x-grid3-row-marker {
-  background-color: #ebeff3 !important;
+  background-color: #d2dde6 !important;
   background-image: url("../../default/images/modx-theme/grid/grid-hrow.gif") !important;
   border-right-color: #999999 !important;
   border-top-color: white;
@@ -3177,7 +3177,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
 
 /* line 485, ../sass/_xtheme-modx.scss */
 .x-grid3-topbar, .x-grid3-bottombar {
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /* line 488, ../sass/_xtheme-modx.scss */
@@ -3322,14 +3322,14 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
 
 /* line 580, ../sass/_xtheme-modx.scss */
 .x-grid-group-hd {
-  border-bottom-color: #53595f;
+  border-bottom-color: #40454b;
 }
 
 /* line 583, ../sass/_xtheme-modx.scss */
 .x-grid-group-hd div.x-grid-group-title {
   background: transparent url("../../default/images/modx-theme/grid/group-collapse.png") no-repeat scroll 3px 10px;
-  color: #53595f;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  color: #40454b;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   font-weight: bold;
   padding: 10px 4px 6px 24px;
 }
@@ -3357,7 +3357,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
 /* line 602, ../sass/_xtheme-modx.scss */
 .x-grid-empty {
   color: gray;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   text-align: center;
 }
 
@@ -3382,7 +3382,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
   background-color: #fff;
   border-color: gainsboro darkgrey gainsboro darkgrey;
   color: #020608;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /* line 623, ../sass/_xtheme-modx.scss */
@@ -3416,7 +3416,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
 .x-date-middle, .x-date-left, .x-date-right {
   background-image: none;
   color: white;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   font-weight: bold;
 }
 
@@ -3458,7 +3458,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
   background-image: none;
   border-bottom-color: gainsboro;
   color: #666666;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   font-weight: bold;
 }
 
@@ -3472,7 +3472,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
 /* line 682, ../sass/_xtheme-modx.scss */
 .x-date-inner a {
   color: gray;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   font-weight: bold;
 }
 
@@ -3535,7 +3535,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
 /* line 723, ../sass/_xtheme-modx.scss */
 .x-date-mmenu .x-menu-item {
   color: #020608;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 /* line 727, ../sass/_xtheme-modx.scss */
@@ -3545,7 +3545,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
 
 /* line 730, ../sass/_xtheme-modx.scss */
 .x-date-mp td {
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /* line 733, ../sass/_xtheme-modx.scss */
@@ -3553,7 +3553,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
   background-color: #333333;
   border-color: #4d4d4d #020608 #020608 #4d4d4d;
   color: white;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /* line 739, ../sass/_xtheme-modx.scss */
@@ -3614,7 +3614,7 @@ td.x-date-mp-sep {
 
 /* line 775, ../sass/_xtheme-modx.scss */
 .x-tip .x-tip-mc {
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /* line 778, ../sass/_xtheme-modx.scss */
@@ -3631,7 +3631,7 @@ td.x-date-mp-sep {
 /* line 785, ../sass/_xtheme-modx.scss */
 .x-tip .x-tip-body {
   color: #f0f0f0;
-  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 13px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /* line 789, ../sass/_xtheme-modx.scss */
@@ -3674,7 +3674,7 @@ td.x-date-mp-sep {
 
 /* line 813, ../sass/_xtheme-modx.scss */
 .x-menu-list-item {
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /* line 816, ../sass/_xtheme-modx.scss */
@@ -3691,7 +3691,7 @@ td.x-date-mp-sep {
 /* line 823, ../sass/_xtheme-modx.scss */
 a.x-menu-item {
   color: #f2f2f2;
-  font-size: 13px;
+  font-size: 14px;
   padding: 4px 25px 4px 30px;
 }
 
@@ -3761,7 +3761,7 @@ a.x-menu-item {
   background-color: #fafafa;
   background-image: none;
   color: #393939;
-  font: normal 13px/1.4 "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 14px/1.4 "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   font-weight: bold;
 }
 
@@ -3835,7 +3835,7 @@ a.x-menu-item {
 #x-debug-browser .x-tree .x-tree-node a span {
   color: #333333;
   font-family: "Courier New", Courier, monospace;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 /* line 923, ../sass/_xtheme-modx.scss */
@@ -3899,7 +3899,7 @@ a.x-menu-item {
 
 /* line 963, ../sass/_xtheme-modx.scss */
 .x-combo-list .x-combo-selected {
-  background-color: #e1ecf1;
+  background-color: #9caf78;
   border: 0 none !important;
 }
 
@@ -3910,7 +3910,7 @@ a.x-menu-item {
 
 /* line 970, ../sass/_xtheme-modx.scss */
 .x-combo-list-small {
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /*.x-panel {
@@ -3988,7 +3988,7 @@ a.x-menu-item {
 /* line 1029, ../sass/_xtheme-modx.scss */
 .x-panel-tl .x-panel-header {
   color: #6A6A6A;
-  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 13px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   font-weight: bold;
   text-shadow: 0 1px 0 #FAFAFA;
 }
@@ -4276,7 +4276,7 @@ a.x-menu-item {
 
 /* line 1214, ../sass/_xtheme-modx.scss */
 .x-panel-fbar td, .x-panel-fbar span, .x-panel-fbar input, .x-panel-fbar div, .x-panel-fbar select, .x-panel-fbar label {
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /* line 1217, ../sass/_xtheme-modx.scss */
@@ -4307,7 +4307,7 @@ a.x-menu-item {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   border: 1px solid #c0c0c0;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   margin-top: 0;
   padding: 10px 10px 8px;
@@ -4486,7 +4486,7 @@ body.x-body-masked .x-window-plain .x-window-mc {
 /* line 1353, ../sass/_xtheme-modx.scss */
 .x-progress-text {
   color: #fff;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: bold;
 }
 
@@ -4504,12 +4504,12 @@ body.x-body-masked .x-window-plain .x-window-mc {
 /* line 1365, ../sass/_xtheme-modx.scss */
 .x-list-header-inner div em {
   border-left-color: #ddd;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /* line 1369, ../sass/_xtheme-modx.scss */
 .x-list-body dt em {
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /* line 1372, ../sass/_xtheme-modx.scss */
@@ -4558,7 +4558,7 @@ body.x-body-masked .x-window-plain .x-window-mc {
 /* line 1399, ../sass/_xtheme-modx.scss */
 .x-portal .x-panel-tl .x-panel-header {
   background: none;
-  font-size: 14px;
+  font-size: 15px;
   padding: 8px 0 8px 0;
 }
 
@@ -4590,7 +4590,7 @@ body.x-body-masked .x-window-plain .x-window-mc {
 /* line 1421, ../sass/_xtheme-modx.scss */
 .modx-combo-desc {
   color: gray;
-  font-size: .9em;
+  font-size: 1em;
   font-style: italic;
 }
 
@@ -4806,7 +4806,7 @@ body.x-body-masked .x-window-plain .x-window-mc {
 
 /* line 1582, ../sass/_xtheme-modx.scss */
 .x-window .x-window-dlg .ext-mb-text {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* line 1585, ../sass/_xtheme-modx.scss */
@@ -4924,7 +4924,7 @@ input::-moz-focus-inner {
 
 /* line 32, ../sass/_forms.scss */
 .x-form-check-wrap .x-form-cb-label {
-  color: #777;
+  color: #40454b;
   font-weight: normal;
 }
 
@@ -4936,7 +4936,7 @@ input::-moz-focus-inner {
 
 /* line 41, ../sass/_forms.scss */
 .inline-form label {
-  color: #777777;
+  color: #40454b;
   display: block;
   font-weight: bold;
   margin-bottom: 2px;
@@ -4961,7 +4961,7 @@ input::-moz-focus-inner {
 
 /* line 61, ../sass/_forms.scss */
 .x-form-field {
-  font: normal 13px/1.4 "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 14px/1.4 "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /* line 66, ../sass/_forms.scss */
@@ -5088,78 +5088,79 @@ textarea.x-form-field,
   border: 0 none !important;
   height: 30px;
   width: 32px;
+  right: 0;
 }
 
-/* line 173, ../sass/_forms.scss */
+/* line 175, ../sass/_forms.scss */
 .x-form-field-wrap .x-form-trigger-over {
   background-position: right;
 }
 
-/* line 177, ../sass/_forms.scss */
+/* line 179, ../sass/_forms.scss */
 .x-form-field-wrap .x-form-arrow-trigger {
   background: url("../../default/images/modx-theme/form/trigger.png") no-repeat scroll left center transparent;
 }
 
-/* line 181, ../sass/_forms.scss */
+/* line 183, ../sass/_forms.scss */
 .x-form-field-wrap .x-form-trigger.x-form-trigger-over {
   background-position: center center;
 }
 
-/* line 185, ../sass/_forms.scss */
+/* line 187, ../sass/_forms.scss */
 .x-form-field-wrap .x-form-trigger.x-form-trigger-click {
   background-position: right center;
 }
 
-/* line 189, ../sass/_forms.scss */
+/* line 191, ../sass/_forms.scss */
 .x-small-editor .x-form-field-wrap {
   background: #f0f0f0;
   border-radius: 2px;
 }
 
-/* line 194, ../sass/_forms.scss */
+/* line 196, ../sass/_forms.scss */
 .x-small-editor .x-form-field-wrap .x-form-trigger {
   border: 0 none !important;
   height: 32px;
   width: 32px;
 }
 
-/* line 200, ../sass/_forms.scss */
+/* line 202, ../sass/_forms.scss */
 .x-small-editor .x-form-field-wrap .x-form-trigger-over {
   background-color: #f3f3f3;
   background-position: right;
 }
 
-/* line 205, ../sass/_forms.scss */
+/* line 207, ../sass/_forms.scss */
 .x-small-editor .x-form-field-wrap .x-form-arrow-trigger {
   background: url("../../default/images/modx-theme/form/trigger.png") no-repeat scroll left center transparent;
 }
 
-/* line 209, ../sass/_forms.scss */
+/* line 211, ../sass/_forms.scss */
 .x-small-editor .x-form-field-wrap .x-form-trigger.x-form-trigger-over {
   background-position: center center;
 }
 
-/* line 213, ../sass/_forms.scss */
+/* line 215, ../sass/_forms.scss */
 .x-small-editor .x-form-field-wrap .x-form-trigger.x-form-trigger-click {
   background-position: right center;
 }
 
-/* line 217, ../sass/_forms.scss */
+/* line 219, ../sass/_forms.scss */
 .x-form-field-wrap .x-form-date-trigger, .x-small-editor .x-form-field-wrap .x-form-date-trigger {
   background-image: url("../../default/images/modx-theme/form/calendar.png");
 }
 
-/* line 221, ../sass/_forms.scss */
+/* line 223, ../sass/_forms.scss */
 .x-form-field-wrap .x-form-clear-trigger {
   background-image: url("../../default/images/modx-theme/form/clear-trigger.gif");
 }
 
-/* line 225, ../sass/_forms.scss */
+/* line 227, ../sass/_forms.scss */
 .x-form-field-wrap .x-form-search-trigger {
   background-image: url("../../default/images/modx-theme/form/search-trigger.gif");
 }
 
-/* line 229, ../sass/_forms.scss */
+/* line 231, ../sass/_forms.scss */
 .x-viewport .x-trigger-wrap-focus, .x-viewport input.x-form-focus, .x-viewport textarea.x-form-focus, .x-viewport .x-form-textarea.x-form-focus {
   border-radius: 0;
   outline-offset: 0;
@@ -5167,58 +5168,58 @@ textarea.x-form-field,
   /* #shame */
 }
 
-/* line 235, ../sass/_forms.scss */
+/* line 237, ../sass/_forms.scss */
 .x-viewport .x-trigger-wrap-focus .x-form-focus {
   outline: none !important;
 }
 
-/* line 239, ../sass/_forms.scss */
+/* line 241, ../sass/_forms.scss */
 .x-datetime-wrap {
   background: none;
 }
 
-/* line 243, ../sass/_forms.scss */
+/* line 245, ../sass/_forms.scss */
 .x-form-invalid, textarea.x-form-invalid {
   border-color: red !important;
 }
 
-/* line 247, ../sass/_forms.scss */
+/* line 249, ../sass/_forms.scss */
 .ext-strict .x-small-editor .x-form-text {
   border-radius: 2px;
   height: 20px !important;
 }
 
-/* line 252, ../sass/_forms.scss */
+/* line 254, ../sass/_forms.scss */
 .ext-gecko .x-form-text, .ext-ie8 .x-form-text {
   padding: 5px;
 }
 
-/* line 256, ../sass/_forms.scss */
+/* line 258, ../sass/_forms.scss */
 .ext-safari .x-form-invalid {
   background-color: #fee;
   border-color: #ff7870;
 }
 
-/* line 261, ../sass/_forms.scss */
+/* line 263, ../sass/_forms.scss */
 .x-form-inner-invalid, textarea.x-form-inner-invalid {
   background-color: #fff;
   background-image: url("../../default/images/modx-theme/grid/invalid_line.gif");
 }
 
-/* line 266, ../sass/_forms.scss */
+/* line 268, ../sass/_forms.scss */
 .x-form-grow-sizer {
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
-/* line 270, ../sass/_forms.scss */
+/* line 272, ../sass/_forms.scss */
 .x-form-invalid-msg {
   /*background-image: url($imgPath + 'modx-theme/shared/warning.gif');*/
   color: #c0272b;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   margin-top: 2px;
   position: relative;
 }
-/* line 276, ../sass/_forms.scss */
+/* line 278, ../sass/_forms.scss */
 .x-form-invalid-msg:before {
   content: "\f071";
   /* : "\f071" */
@@ -5228,92 +5229,92 @@ textarea.x-form-field,
   color: inherit;
 }
 
-/* line 286, ../sass/_forms.scss */
+/* line 288, ../sass/_forms.scss */
 .x-form-empty-field {
   color: gray;
 }
 
-/* line 290, ../sass/_forms.scss */
+/* line 292, ../sass/_forms.scss */
 .x-grid3 .x-small-editor .x-form-text, .x-grid3 .x-small-editor .x-form-field-wrap {
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   margin-top: 5px;
 }
 
-/* line 295, ../sass/_forms.scss */
+/* line 297, ../sass/_forms.scss */
 .x-grid3 .x-small-editor .x-form-field-wrap {
   overflow: hidden;
 }
 
-/* line 299, ../sass/_forms.scss */
+/* line 301, ../sass/_forms.scss */
 .x-grid3 .x-small-editor .x-form-field-wrap .x-form-text {
   margin-top: 0;
 }
 
-/* line 303, ../sass/_forms.scss */
+/* line 305, ../sass/_forms.scss */
 .ext-safari .x-small-editor .x-form-field {
-  font: normal 13px/1.4 "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 14px/1.4 "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
-/* line 307, ../sass/_forms.scss */
+/* line 309, ../sass/_forms.scss */
 .x-form-invalid-icon {
   background-image: url("../../default/images/modx-theme/form/exclamation.gif");
 }
 
-/* line 311, ../sass/_forms.scss */
+/* line 313, ../sass/_forms.scss */
 .x-fieldset {
   border-color: #C5C5C5;
 }
 
-/* line 315, ../sass/_forms.scss */
+/* line 317, ../sass/_forms.scss */
 .x-fieldset legend {
   color: #434343;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   font-weight: bold;
 }
 
-/* line 321, ../sass/_forms.scss */
+/* line 323, ../sass/_forms.scss */
 .ext-gecko .x-window-body .x-form-item {
   overflow: hidden;
 }
 
-/* line 324, ../sass/_forms.scss */
+/* line 326, ../sass/_forms.scss */
 .x-form-item-label {
-  color: #777;
+  color: #333333;
   font-weight: bold;
 }
 
-/* line 329, ../sass/_forms.scss */
+/* line 331, ../sass/_forms.scss */
 .x-form fieldset {
   border: 1px solid #dedede;
 }
 
-/* line 332, ../sass/_forms.scss */
+/* line 334, ../sass/_forms.scss */
 .x-form fieldset legend {
   color: #606060;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   font-weight: bold;
 }
 
-/* line 337, ../sass/_forms.scss */
+/* line 339, ../sass/_forms.scss */
 .x-fieldset-body {
   font-size: 12px;
 }
 
 /* issue #5505 */
-/* line 342, ../sass/_forms.scss */
+/* line 344, ../sass/_forms.scss */
 .x-form-text {
   min-height: 20px;
   padding: 5px;
 }
 
-/* line 346, ../sass/_forms.scss */
+/* line 348, ../sass/_forms.scss */
 .form-with-labels .x-form-label-top .x-form-element {
   padding: 0;
 }
 
-/* line 349, ../sass/_forms.scss */
+/* line 351, ../sass/_forms.scss */
 .form-with-labels .x-form-label-top .x-form-item label.x-form-item-label {
-  color: #707070;
+  color: #40454b;
   font-size: 13px;
   font-weight: bold;
   margin-bottom: 0;
@@ -5321,23 +5322,23 @@ textarea.x-form-field,
   padding: 7px 5px 4px 3px;
 }
 
-/* line 358, ../sass/_forms.scss */
+/* line 360, ../sass/_forms.scss */
 .form-with-labels .desc-under,
 .x-window .desc-under {
-  color: #aaaaaa;
+  color: #40454b;
   display: block;
-  font-size: 11px;
+  font-size: 13px;
   font-style: italic;
   margin: -8px 0 16px;
 }
 
-/* line 366, ../sass/_forms.scss */
+/* line 368, ../sass/_forms.scss */
 .form-with-labels .desc-under.desc-checkbox,
 .x-window .desc-under.desc-checkbox {
   margin: -2px 0 4px;
 }
 
-/* line 370, ../sass/_forms.scss */
+/* line 372, ../sass/_forms.scss */
 .form-with-labels .desc-under .warning,
 .x-window {
   -moz-box-shadow: 0 0 5px #A0A0A0;
@@ -5365,17 +5366,17 @@ having to do some real janky stuff to work with ExtJS markup
 
 /* line 1, ../sass/components/_primary-button.scss */
 .primary-button, .x-btn.primary-button {
-  background-color: #58a598;
-  color: #999999;
+  background-color: #93c14e;
+  color: white;
 }
 /* line 5, ../sass/components/_primary-button.scss */
 .x-item-disabled.primary-button {
   opacity: 1;
-  background: #b4b4b4;
+  background: #b6b6b6;
 }
 /* line 9, ../sass/components/_primary-button.scss */
 .primary-button button, .x-btn.primary-button button {
-  color: #999999;
+  color: white;
 }
 /* line 12, ../sass/components/_primary-button.scss */
 .x-item-disabled.primary-button * {
@@ -5383,7 +5384,7 @@ having to do some real janky stuff to work with ExtJS markup
 }
 /* line 15, ../sass/components/_primary-button.scss */
 .x-btn-over.primary-button {
-  background: #7fbbb1;
+  background: #739b36;
 }
 
 /* action buttons bar */
@@ -5503,7 +5504,7 @@ having to do some real janky stuff to work with ExtJS markup
 
 /* line 120, ../sass/_buttons.scss */
 .x-btn-over {
-  color: #3697cd !important;
+  color: #3092d7 !important;
 }
 
 /* line 124, ../sass/_buttons.scss */
@@ -5582,7 +5583,7 @@ having to do some real janky stuff to work with ExtJS markup
 
 /* line 195, ../sass/_buttons.scss */
 .x-btn-focus {
-  border: 1px solid #53595f;
+  border: 1px solid #40454b;
 }
 
 /* line 199, ../sass/_buttons.scss */
@@ -5772,7 +5773,7 @@ having to do some real janky stuff to work with ExtJS markup
   cursor: pointer;
   display: block;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fcfcfc,endColorstr=#dcdcdc,GradientType=0);
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   font-weight: bold;
   padding: 3px 5px;
   text-decoration: none;
@@ -5862,7 +5863,7 @@ having to do some real janky stuff to work with ExtJS markup
   padding: 5px;
   width: 20px;
   height: 20px;
-  border: 1px solid #53595f;
+  border: 1px solid #40454b;
   -moz-box-shadow: none;
   box-shadow: none;
   display: inline-block;
@@ -5878,15 +5879,15 @@ having to do some real janky stuff to work with ExtJS markup
   height: 25px;
   top: 3px;
   left: 3px;
-  color: #53595f;
+  color: #40454b;
 }
 /* line 464, ../sass/_buttons.scss */
 #modx-leftbar .x-toolbar-ct .x-btn > em > button:hover {
-  color: #3697cd;
+  color: #3092d7;
 }
 /* line 470, ../sass/_buttons.scss */
 #modx-leftbar .x-toolbar-ct .x-btn:hover {
-  border: 1px solid #3697cd;
+  border: 1px solid #3092d7;
 }
 /* line 474, ../sass/_buttons.scss */
 #modx-leftbar .x-toolbar-ct .x-btn span {
@@ -6007,7 +6008,7 @@ having to do some real janky stuff to work with ExtJS markup
 }
 /* line 9, ../sass/_tabs.scss */
 .x-tab-panel-noborder .x-tab-panel-body-noborder {
-  background-color: #ebeff3;
+  background-color: #d2dde6;
 }
 /* line 12, ../sass/_tabs.scss */
 #modx-leftbar .x-tab-panel-noborder .x-tab-panel-body-noborder {
@@ -6059,11 +6060,11 @@ having to do some real janky stuff to work with ExtJS markup
 }
 /* line 60, ../sass/_tabs.scss */
 .x-tab-strip li:hover {
-  color: #58a598;
+  color: #3092d7;
 }
 /* line 64, ../sass/_tabs.scss */
 .x-tab-strip li.x-tab-strip-active {
-  color: #3697cd;
+  color: #3092d7;
   background-color: #333333 !important;
   cursor: default;
   margin: 0 0 0 2px;
@@ -6378,7 +6379,7 @@ ul.x-tab-strip-bottom .x-tab-left {
     display: block;
     text-align: center;
     line-height: 55px;
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 960px) {
@@ -6445,7 +6446,7 @@ ul.x-tab-strip-bottom .x-tab-left {
 
 /* line 120, ../sass/_navbar.scss */
 #modx-navbar li:hover a:hover.modx-help {
-  color: #3697cd;
+  color: #3092d7;
 }
 
 /* line 126, ../sass/_navbar.scss */
@@ -6538,7 +6539,7 @@ ul.x-tab-strip-bottom .x-tab-left {
 /* line 204, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a {
   background-color: #182028;
-  color: #ebeff3;
+  color: #d2dde6;
   float: left;
   font-weight: bold;
   line-height: 1.5;
@@ -6579,7 +6580,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   color: #55bbe7;
   display: block;
   float: none;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1.3;
   margin-top: 6px;
@@ -6808,7 +6809,7 @@ ul.x-tab-strip-bottom .x-tab-left {
 
 /* line 145, ../sass/_uberbar.scss */
 .modx-manager-search-results i {
-  color: #3697cd;
+  color: #3092d7;
   left: 0;
   position: absolute;
   top: 2px;
@@ -6879,7 +6880,7 @@ ul.x-tab-strip-bottom .x-tab-left {
 }
 /* line 30, ../sass/_tree.scss */
 .x-layout-split:hover {
-  background: #3697cd;
+  background: #3092d7;
 }
 /* line 34, ../sass/_tree.scss */
 .x-layout-split .x-layout-mini {
@@ -6896,7 +6897,7 @@ ul.x-tab-strip-bottom .x-tab-left {
 .x-layout-split .x-layout-mini:after {
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 5px solid #3697cd;
+  border-right: 5px solid #3092d7;
   position: absolute;
   content: ' ';
   right: 4px;
@@ -6984,7 +6985,7 @@ ul.x-tab-strip-bottom .x-tab-left {
 /* tree states */
 /* line 124, ../sass/_tree.scss */
 .x-tree-node-el {
-  color: #62889e;
+  color: #1a5a87;
   font: normal 13px/22px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   padding: 4px 0;
   background-repeat: no-repeat;
@@ -7015,7 +7016,7 @@ ul.x-tab-strip-bottom .x-tab-left {
 /* line 154, ../sass/_tree.scss */
 .unpublished,
 .unpublished a span {
-  color: #a1b8c5 !important;
+  color: #3092d7 !important;
   font-style: italic;
 }
 /* line 159, ../sass/_tree.scss */
@@ -7023,21 +7024,21 @@ ul.x-tab-strip-bottom .x-tab-left {
 .unpublished i.icon-large,
 .unpublished a span i.icon,
 .unpublished a span i.icon-large {
-  color: #a1b8c5 !important;
+  color: #3092d7 !important;
   font-style: normal;
 }
 
 /* line 165, ../sass/_tree.scss */
 .hidemenu,
 .hidemenu a span {
-  color: #a1b8c5 !important;
+  color: #3092d7 !important;
 }
 /* line 169, ../sass/_tree.scss */
 .hidemenu i.icon,
 .hidemenu i.icon-large,
 .hidemenu a span i.icon,
 .hidemenu a span i.icon-large {
-  color: #a1b8c5 !important;
+  color: #3092d7 !important;
   font-style: normal;
 }
 
@@ -7055,12 +7056,12 @@ ul.x-tab-strip-bottom .x-tab-left {
 
 /* line 182, ../sass/_tree.scss */
 .element-node-disabled a span {
-  color: #a1b8c5 !important;
+  color: #3092d7 !important;
 }
 
 /* line 185, ../sass/_tree.scss */
 .x-tree-node .x-tree-node-disabled a span {
-  color: white;
+  color: #b0d6f0;
 }
 
 /* line 189, ../sass/_tree.scss */
@@ -7111,40 +7112,37 @@ ul.x-tab-strip-bottom .x-tab-left {
 }
 /* line 228, ../sass/_tree.scss */
 .tree-pseudoroot-node.x-tree-node-expanded, .tree-pseudoroot-node.x-tree-node-expanded span {
-  color: #3697cd;
+  color: #3092d7;
 }
 /* line 231, ../sass/_tree.scss */
 .tree-pseudoroot-node.x-tree-node-over, .tree-pseudoroot-node.x-tree-selected {
-  background-color: #262626;
-}
-/* line 235, ../sass/_tree.scss */
-.tree-pseudoroot-node + .x-tree-node-ct {
-  margin-left: -16px;
+  background-color: #404040;
+  color: #3092d7 !important;
 }
 
-/* line 241, ../sass/_tree.scss */
+/* line 242, ../sass/_tree.scss */
 .x-tree-elbow, .x-tree-elbow-end {
   display: inline-block;
 }
 
 /* miscellaneous tree styles */
-/* line 250, ../sass/_tree.scss */
+/* line 251, ../sass/_tree.scss */
 .x-tree-node-el .x-tree-node-icon {
   display: inline-block;
 }
 
-/* line 253, ../sass/_tree.scss */
+/* line 254, ../sass/_tree.scss */
 .x-tree-node-loading .x-tree-node-icon {
   background-image: url("../../default/images/modx-theme/tree/loading.gif") !important;
 }
 
-/* line 256, ../sass/_tree.scss */
+/* line 257, ../sass/_tree.scss */
 .x-tree-node-loading a span {
   color: #333333;
   font-style: italic;
 }
 
-/* line 260, ../sass/_tree.scss */
+/* line 261, ../sass/_tree.scss */
 .ext-ie .x-tree-node-el input {
   height: 15px;
   width: 15px;
@@ -7154,69 +7152,73 @@ ul.x-tab-strip-bottom .x-tab-left {
 /* line 271, ../sass/_tree.scss */
 .x-tree-node a,
 .x-dd-drag-ghost a,
-.x-tree-node a span,
-.x-dd-drag-ghost a span {
-  color: #62889e;
+.x-tree-node a span, .x-dd-drag-ghost a span {
+  color: #1a5a87;
 }
 
-/* line 274, ../sass/_tree.scss */
+/* line 275, ../sass/_tree.scss */
 .x-tree-node div.x-tree-drag-insert-below {
   border-bottom-color: #666666;
 }
 
-/* line 277, ../sass/_tree.scss */
+/* line 278, ../sass/_tree.scss */
 .x-tree-node div.x-tree-drag-insert-above {
   border-top-color: #666666;
 }
 
-/* line 280, ../sass/_tree.scss */
+/* line 281, ../sass/_tree.scss */
 .x-tree-dd-underline .x-tree-node div.x-tree-drag-insert-below a {
   border-bottom-color: #666666;
 }
 
-/* line 283, ../sass/_tree.scss */
+/* line 284, ../sass/_tree.scss */
 .x-tree-dd-underline .x-tree-node div.x-tree-drag-insert-above a {
   border-top-color: #666666;
 }
 
-/* line 286, ../sass/_tree.scss */
+/* line 287, ../sass/_tree.scss */
 .x-tree-node .x-tree-drag-append a span {
-  background-color: #e3e9ec;
+  background-color: #e4ebef;
   border-color: #f2f2f2;
 }
 
-/* line 290, ../sass/_tree.scss */
+/* line 291, ../sass/_tree.scss */
 .x-tree-node .x-tree-node-over {
-  background: #262626;
+  background: #404040;
 }
 
-/* line 293, ../sass/_tree.scss */
+/* line 294, ../sass/_tree.scss */
 .x-tree-node .x-tree-selected {
   background-color: #0d0d0d;
 }
 
-/* line 296, ../sass/_tree.scss */
+/* line 297, ../sass/_tree.scss */
 .x-tree-drop-ok-append .x-dd-drop-icon {
   background-image: url("../../default/images/modx-theme/tree/drop-add.gif");
 }
 
-/* line 299, ../sass/_tree.scss */
+/* line 300, ../sass/_tree.scss */
 .x-tree-drop-ok-above .x-dd-drop-icon {
   background-image: url("../../default/images/modx-theme/tree/drop-over.gif");
 }
 
-/* line 302, ../sass/_tree.scss */
+/* line 303, ../sass/_tree.scss */
 .x-tree-drop-ok-below .x-dd-drop-icon {
   background-image: url("../../default/images/modx-theme/tree/drop-under.gif");
 }
 
-/* line 305, ../sass/_tree.scss */
+/* line 306, ../sass/_tree.scss */
 .x-tree-drop-ok-between .x-dd-drop-icon {
   background-image: url("../../default/images/modx-theme/tree/drop-between.gif");
 }
 
+/* line 311, ../sass/_tree.scss */
+.x-tree-node-over a span, .x-tree-node-over a, .x-tree-node-over i, .x-tree-selected a span, .x-tree-selected a, .x-tree-selected i {
+  color: #3092d7 !important;
+}
+
 /* legacy icons */
-/* line 331, ../sass/_tree.scss */
+/* line 334, ../sass/_tree.scss */
 .icon-rss {
   background-image: url("../../default/images/restyle/icons/feed.png") !important;
   background-repeat: no-repeat !important;
@@ -7225,16 +7227,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-rss.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-rss::before {
   content: ' ';
 }
 
-/* line 335, ../sass/_tree.scss */
+/* line 338, ../sass/_tree.scss */
 .icon-cal {
   background-image: url("../../default/images/restyle/icons/calendar.png") !important;
   background-repeat: no-repeat !important;
@@ -7243,16 +7245,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-cal.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-cal::before {
   content: ' ';
 }
 
-/* line 339, ../sass/_tree.scss */
+/* line 342, ../sass/_tree.scss */
 .icon-sql {
   background-image: url("../../default/images/restyle/icons/database_table.png") !important;
   background-repeat: no-repeat !important;
@@ -7261,16 +7263,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-sql.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-sql::before {
   content: ' ';
 }
 
-/* line 343, ../sass/_tree.scss */
+/* line 346, ../sass/_tree.scss */
 .icon-db {
   background-image: url("../../default/images/restyle/icons/database.png") !important;
   background-repeat: no-repeat !important;
@@ -7279,16 +7281,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-db.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-db::before {
   content: ' ';
 }
 
-/* line 347, ../sass/_tree.scss */
+/* line 350, ../sass/_tree.scss */
 .icon-java, .icon-jar {
   background-image: url("../../default/images/restyle/icons/cup.png") !important;
   background-repeat: no-repeat !important;
@@ -7297,16 +7299,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-java.x-tree-node-el, .icon-jar.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-java::before, .icon-jar::before {
   content: ' ';
 }
 
-/* line 351, ../sass/_tree.scss */
+/* line 354, ../sass/_tree.scss */
 .icon-css {
   background-image: url("../../default/images/restyle/icons/css.png") !important;
   background-repeat: no-repeat !important;
@@ -7315,16 +7317,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-css.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-css::before {
   content: ' ';
 }
 
-/* line 355, ../sass/_tree.scss */
+/* line 358, ../sass/_tree.scss */
 .icon-zip, .icon-tar, .icon-tgz, .icon-gz {
   background-image: url("../../default/images/restyle/icons/compress.png") !important;
   background-repeat: no-repeat !important;
@@ -7333,16 +7335,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-zip.x-tree-node-el, .icon-tar.x-tree-node-el, .icon-tgz.x-tree-node-el, .icon-gz.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-zip::before, .icon-tar::before, .icon-tgz::before, .icon-gz::before {
   content: ' ';
 }
 
-/* line 359, ../sass/_tree.scss */
+/* line 362, ../sass/_tree.scss */
 .icon-jpg, .icon-jpeg, .icon-gif, .icon-png, .icon-bmp, .icon-tiff {
   background-image: url("../../default/images/restyle/icons/picture.png") !important;
   background-repeat: no-repeat !important;
@@ -7351,16 +7353,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-jpg.x-tree-node-el, .icon-jpeg.x-tree-node-el, .icon-gif.x-tree-node-el, .icon-png.x-tree-node-el, .icon-bmp.x-tree-node-el, .icon-tiff.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-jpg::before, .icon-jpeg::before, .icon-gif::before, .icon-png::before, .icon-bmp::before, .icon-tiff::before {
   content: ' ';
 }
 
-/* line 363, ../sass/_tree.scss */
+/* line 366, ../sass/_tree.scss */
 .icon-bat, .icon-scr {
   background-image: url("../../default/images/restyle/icons/application_osx_terminal.png") !important;
   background-repeat: no-repeat !important;
@@ -7369,16 +7371,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-bat.x-tree-node-el, .icon-scr.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-bat::before, .icon-scr::before {
   content: ' ';
 }
 
-/* line 367, ../sass/_tree.scss */
+/* line 370, ../sass/_tree.scss */
 .icon-log {
   background-image: url("../../default/images/restyle/icons/computer.png") !important;
   background-repeat: no-repeat !important;
@@ -7387,16 +7389,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-log.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-log::before {
   content: ' ';
 }
 
-/* line 371, ../sass/_tree.scss */
+/* line 374, ../sass/_tree.scss */
 .icon-html, .icon-htm {
   background-image: url("../../default/images/restyle/icons/html_valid.png") !important;
   background-repeat: no-repeat !important;
@@ -7405,16 +7407,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-html.x-tree-node-el, .icon-htm.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-html::before, .icon-htm::before {
   content: ' ';
 }
 
-/* line 375, ../sass/_tree.scss */
+/* line 378, ../sass/_tree.scss */
 .icon-avi, .icon-mpg, .icon-mov {
   background-image: url("../../default/images/restyle/icons/film.png") !important;
   background-repeat: no-repeat !important;
@@ -7423,16 +7425,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-avi.x-tree-node-el, .icon-mpg.x-tree-node-el, .icon-mov.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-avi::before, .icon-mpg::before, .icon-mov::before {
   content: ' ';
 }
 
-/* line 379, ../sass/_tree.scss */
+/* line 382, ../sass/_tree.scss */
 .icon-rb {
   background-image: url("../../default/images/restyle/icons/ruby.png") !important;
   background-repeat: no-repeat !important;
@@ -7441,16 +7443,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-rb.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-rb::before {
   content: ' ';
 }
 
-/* line 383, ../sass/_tree.scss */
+/* line 386, ../sass/_tree.scss */
 .icon-doc {
   background-image: url("../../default/images/restyle/icons/page_white_word.png") !important;
   background-repeat: no-repeat !important;
@@ -7459,16 +7461,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-doc.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-doc::before {
   content: ' ';
 }
 
-/* line 387, ../sass/_tree.scss */
+/* line 390, ../sass/_tree.scss */
 .icon-ppt {
   background-image: url("../../default/images/restyle/icons/page_white_powerpoint.png") !important;
   background-repeat: no-repeat !important;
@@ -7477,16 +7479,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-ppt.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-ppt::before {
   content: ' ';
 }
 
-/* line 391, ../sass/_tree.scss */
+/* line 394, ../sass/_tree.scss */
 .icon-access, .icon-htaccess {
   background-image: url("../../default/images/restyle/icons/lock.png") !important;
   background-repeat: no-repeat !important;
@@ -7495,16 +7497,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-access.x-tree-node-el, .icon-htaccess.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-access::before, .icon-htaccess::before {
   content: ' ';
 }
 
-/* line 395, ../sass/_tree.scss */
+/* line 398, ../sass/_tree.scss */
 .icon-php {
   background-image: url("../../default/images/restyle/icons/page_white_php.png") !important;
   background-repeat: no-repeat !important;
@@ -7513,16 +7515,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-php.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-php::before {
   content: ' ';
 }
 
-/* line 399, ../sass/_tree.scss */
+/* line 402, ../sass/_tree.scss */
 .icon-flv, .icon-swf {
   background-image: url("../../default/images/restyle/icons/page_white_flash.png") !important;
   background-repeat: no-repeat !important;
@@ -7531,16 +7533,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-flv.x-tree-node-el, .icon-swf.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-flv::before, .icon-swf::before {
   content: ' ';
 }
 
-/* line 403, ../sass/_tree.scss */
+/* line 406, ../sass/_tree.scss */
 .icon-xls {
   background-image: url("../../default/images/restyle/icons/page_white_excel.png") !important;
   background-repeat: no-repeat !important;
@@ -7549,16 +7551,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-xls.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-xls::before {
   content: ' ';
 }
 
-/* line 407, ../sass/_tree.scss */
+/* line 410, ../sass/_tree.scss */
 .icon-cfm {
   background-image: url("../../default/images/restyle/icons/page_white_coldfusion.png") !important;
   background-repeat: no-repeat !important;
@@ -7567,16 +7569,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-cfm.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-cfm::before {
   content: ' ';
 }
 
-/* line 411, ../sass/_tree.scss */
+/* line 414, ../sass/_tree.scss */
 .icon-pdf {
   background-image: url("../../default/images/restyle/icons/page_white_acrobat.png") !important;
   background-repeat: no-repeat !important;
@@ -7585,16 +7587,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-pdf.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-pdf::before {
   content: ' ';
 }
 
-/* line 415, ../sass/_tree.scss */
+/* line 418, ../sass/_tree.scss */
 .icon-js {
   background-image: url("../../default/images/restyle/icons/javascript.png") !important;
   background-repeat: no-repeat !important;
@@ -7603,16 +7605,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-js.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-js::before {
   content: ' ';
 }
 
-/* line 421, ../sass/_tree.scss */
+/* line 424, ../sass/_tree.scss */
 .icon-action {
   background-image: url("../../default/images/restyle/icons/application_osx_terminal.png") !important;
   background-repeat: no-repeat !important;
@@ -7621,16 +7623,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-action.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-action::before {
   content: ' ';
 }
 
-/* line 425, ../sass/_tree.scss */
+/* line 428, ../sass/_tree.scss */
 .icon-namespace {
   background-image: url("../../default/images/restyle/icons/computer.png") !important;
   background-repeat: no-repeat !important;
@@ -7639,11 +7641,11 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-namespace.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-namespace::before {
   content: ' ';
 }
@@ -7656,7 +7658,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   background: url($imgPath + 'restyle/icons/application_cascade.png') no-repeat left top !important;
   @extend %hide-font-icon;
 }*/
-/* line 437, ../sass/_tree.scss */
+/* line 440, ../sass/_tree.scss */
 .icon-list-new {
   background-image: url("../../default/images/restyle/icons/layout_add.png") !important;
   background-repeat: no-repeat !important;
@@ -7665,16 +7667,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-list-new.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-list-new::before {
   content: ' ';
 }
 
-/* line 441, ../sass/_tree.scss */
+/* line 444, ../sass/_tree.scss */
 .icon-mark-active {
   background-image: url("../../default/images/restyle/icons/layout_edit.png") !important;
   background-repeat: no-repeat !important;
@@ -7683,16 +7685,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-mark-active.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-mark-active::before {
   content: ' ';
 }
 
-/* line 445, ../sass/_tree.scss */
+/* line 448, ../sass/_tree.scss */
 .icon-mark-complete {
   background-image: url("../../default/images/restyle/icons/layout_header.png") !important;
   background-repeat: no-repeat !important;
@@ -7701,16 +7703,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-mark-complete.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-mark-complete::before {
   content: ' ';
 }
 
-/* line 449, ../sass/_tree.scss */
+/* line 452, ../sass/_tree.scss */
 .icon-package {
   background-image: url("../../default/images/restyle/icons/package.png") !important;
   padding-right: 5px !important;
@@ -7720,16 +7722,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-package.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-package::before {
   content: ' ';
 }
 
-/* line 454, ../sass/_tree.scss */
+/* line 457, ../sass/_tree.scss */
 .icon-locked {
   background-image: url("../../default/images/restyle/icons/lock_edit.png") !important;
   background-repeat: no-repeat !important;
@@ -7738,16 +7740,16 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-locked.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-locked::before {
   content: ' ';
 }
 
-/* line 458, ../sass/_tree.scss */
+/* line 461, ../sass/_tree.scss */
 .icon-lock {
   background-image: url("../../default/images/restyle/icons/lock.png") !important;
   background-repeat: no-repeat !important;
@@ -7756,31 +7758,31 @@ ul.x-tab-strip-bottom .x-tab-left {
   min-height: 16px;
   vertical-align: middle;
 }
-/* line 319, ../sass/_tree.scss */
+/* line 322, ../sass/_tree.scss */
 .icon-lock.x-tree-node-el {
   background-position: 5px 5px !important;
 }
-/* line 327, ../sass/_tree.scss */
+/* line 330, ../sass/_tree.scss */
 .icon-lock::before {
   content: ' ';
 }
 
-/* line 462, ../sass/_tree.scss */
+/* line 465, ../sass/_tree.scss */
 #modx-resource-tree-panel .x-accordion-hd {
   background-position: 0 0;
 }
 
-/* line 465, ../sass/_tree.scss */
+/* line 468, ../sass/_tree.scss */
 #modx-element-tree-panel .x-accordion-hd {
   background-position: 0 -32px;
 }
 
-/* line 468, ../sass/_tree.scss */
+/* line 471, ../sass/_tree.scss */
 #modx-file-tree-panel .x-accordion-hd {
   background-position: 0 -64px;
 }
 
-/* line 471, ../sass/_tree.scss */
+/* line 474, ../sass/_tree.scss */
 #modx-static-page-settings .x-accordion-hd {
   background-position: 0 -96px;
 }
@@ -7790,41 +7792,41 @@ ul.x-tab-strip-bottom .x-tab-left {
   background-color:#fff;
   border:1px solid #E4E4E4;
 }*/
-/* line 480, ../sass/_tree.scss */
+/* line 483, ../sass/_tree.scss */
 .x-tree-node-el .x-tree-node-icon {
   display: inline-block;
 }
 
-/* line 483, ../sass/_tree.scss */
+/* line 486, ../sass/_tree.scss */
 .x-tree-node-loading .x-tree-node-icon {
   background-image: url("../../default/images/modx-theme/tree/loading.gif") !important;
 }
 
-/* line 486, ../sass/_tree.scss */
+/* line 489, ../sass/_tree.scss */
 .x-tree-node-loading a span {
   color: #333333;
   font-style: italic;
 }
 
-/* line 490, ../sass/_tree.scss */
+/* line 493, ../sass/_tree.scss */
 .ext-ie .x-tree-node-el input {
   height: 15px;
   width: 15px;
 }
 
-/* line 494, ../sass/_tree.scss */
+/* line 497, ../sass/_tree.scss */
 .x-tree-root-ct {
   border-radius: 0;
   overflow: hidden;
   padding: 0 !important;
 }
 
-/* line 500, ../sass/_tree.scss */
+/* line 503, ../sass/_tree.scss */
 .x-tree-root-node {
   margin: 0;
 }
 
-/* line 508, ../sass/_tree.scss */
+/* line 511, ../sass/_tree.scss */
 .x-tree-arrows .x-tree-elbow-plus,
 .x-tree-arrows .x-tree-elbow-minus,
 .x-tree-arrows .x-tree-elbow-end-plus,
@@ -7832,7 +7834,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   background: none;
 }
 
-/* line 514, ../sass/_tree.scss */
+/* line 517, ../sass/_tree.scss */
 .x-tree-arrows .x-tree-elbow-plus:before,
 .x-tree-arrows .x-tree-elbow-minus:before,
 .x-tree-arrows .x-tree-elbow-end-plus:before,
@@ -7845,7 +7847,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   margin: 0;
 }
 
-/* line 524, ../sass/_tree.scss */
+/* line 527, ../sass/_tree.scss */
 .x-tree-arrows .x-tree-elbow-minus:before,
 .x-tree-arrows .x-tree-elbow-end-minus:before {
   content: "\f0d7";
@@ -7854,103 +7856,103 @@ ul.x-tab-strip-bottom .x-tab-left {
 }
 
 /* icons for the various tree elements */
-/* line 532, ../sass/_tree.scss */
+/* line 535, ../sass/_tree.scss */
 .tree-context:before {
   content: "\f0ac";
 }
 
-/* line 536, ../sass/_tree.scss */
+/* line 539, ../sass/_tree.scss */
 .x-tree-node-expanded .tree-folder:before {
   content: "\f07c";
 }
 
-/* line 540, ../sass/_tree.scss */
+/* line 543, ../sass/_tree.scss */
 .tree-folder:before {
   content: "\f07b";
 }
 
-/* line 544, ../sass/_tree.scss */
+/* line 547, ../sass/_tree.scss */
 .tree-resource:before {
   content: "\f016";
 }
 
-/* line 548, ../sass/_tree.scss */
+/* line 551, ../sass/_tree.scss */
 .tree-static-resource:before {
   content: "\f0f6";
 }
 
-/* line 552, ../sass/_tree.scss */
+/* line 555, ../sass/_tree.scss */
 .tree-weblink:before {
   content: "\f0c1";
 }
 
-/* line 556, ../sass/_tree.scss */
+/* line 559, ../sass/_tree.scss */
 .tree-symlink:before {
   content: "\f0c5";
 }
 
-/* line 561, ../sass/_tree.scss */
-.x-tree-node {
-  color: #62889e;
-}
-
 /* line 564, ../sass/_tree.scss */
-.x-tree-node a, .x-dd-drag-ghost a {
-  color: #62889e;
+.x-tree-node {
+  color: #1a5a87;
 }
 
 /* line 567, ../sass/_tree.scss */
-.x-tree-node a span, .x-dd-drag-ghost a span {
-  color: #62889e;
+.x-tree-node a, .x-dd-drag-ghost a {
+  color: #1a5a87;
 }
 
 /* line 570, ../sass/_tree.scss */
-.x-tree-node .x-tree-node-disabled a span {
-  color: white;
+.x-tree-node a span, .x-dd-drag-ghost a span {
+  color: #1a5a87;
 }
 
 /* line 573, ../sass/_tree.scss */
+.x-tree-node .x-tree-node-disabled a span {
+  color: #b0d6f0;
+}
+
+/* line 576, ../sass/_tree.scss */
 .x-tree-node div.x-tree-drag-insert-below {
   border-bottom-color: #666666;
 }
 
-/* line 576, ../sass/_tree.scss */
+/* line 579, ../sass/_tree.scss */
 .x-tree-node div.x-tree-drag-insert-above {
   border-top-color: #666666;
 }
 
-/* line 579, ../sass/_tree.scss */
+/* line 582, ../sass/_tree.scss */
 .x-tree-dd-underline .x-tree-node div.x-tree-drag-insert-below a {
   border-bottom-color: #666666;
 }
 
-/* line 582, ../sass/_tree.scss */
+/* line 585, ../sass/_tree.scss */
 .x-tree-dd-underline .x-tree-node div.x-tree-drag-insert-above a {
   border-top-color: #666666;
 }
 
-/* line 585, ../sass/_tree.scss */
+/* line 588, ../sass/_tree.scss */
 .x-tree-node .x-tree-drag-append a span {
   background-color: #bfbfbf;
   border-color: #f2f2f2;
 }
 
-/* line 589, ../sass/_tree.scss */
+/* line 592, ../sass/_tree.scss */
 .x-tree-drop-ok-append .x-dd-drop-icon {
   background-image: url("../../default/images/modx-theme/tree/drop-add.gif");
 }
 
-/* line 592, ../sass/_tree.scss */
+/* line 595, ../sass/_tree.scss */
 .x-tree-drop-ok-above .x-dd-drop-icon {
   background-image: url("../../default/images/modx-theme/tree/drop-over.gif");
 }
 
-/* line 595, ../sass/_tree.scss */
+/* line 598, ../sass/_tree.scss */
 .x-tree-drop-ok-below .x-dd-drop-icon {
   background-image: url("../../default/images/modx-theme/tree/drop-under.gif");
 }
 
-/* line 598, ../sass/_tree.scss */
+/* line 601, ../sass/_tree.scss */
 .x-tree-drop-ok-between .x-dd-drop-icon {
   background-image: url("../../default/images/modx-theme/tree/drop-between.gif");
 }
@@ -8016,10 +8018,10 @@ ul.x-tab-strip-bottom .x-tab-left {
   border-radius: 3px;
   border: 1px solid #f2f2f2;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.025);
-  color: #53595f;
+  color: #40454b;
   display: table-cell;
   /* MODX 2.x.x Manager Button Styles */
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   font-weight: bold;
   padding: 12px;
   position: relative;
@@ -8054,7 +8056,7 @@ ul.x-tab-strip-bottom .x-tab-left {
 
 /* line 85, ../sass/_help.scss */
 #managerbuttons ul li a:hover span.icon {
-  color: #3697cd;
+  color: #3092d7;
 }
 
 /* line 90, ../sass/_help.scss */
@@ -8170,13 +8172,13 @@ ul.x-tab-strip-bottom .x-tab-left {
 }
 /* line 174, ../sass/_help.scss */
 #aboutMODX a {
-  color: #3697cd;
+  color: #3092d7;
   margin: -2px -4px;
   padding: 2px 4px;
 }
 /* line 178, ../sass/_help.scss */
 #aboutMODX a:hover {
-  background-color: #3697cd;
+  background-color: #3092d7;
   color: #fff;
   text-decoration: none;
 }
@@ -8320,7 +8322,7 @@ ul.x-tab-strip-bottom .x-tab-left {
 /* line 48, ../sass/_x-column-tree.scss */
 .x-tree-col-text, .x-tree-hd-text {
   color: #020608;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   overflow: hidden;
   padding: 3px 3px 3px 5px;
   text-overflow: ellipsis;
@@ -8565,16 +8567,16 @@ ul.x-tab-strip-bottom .x-tab-left {
 /* line 52, ../sass/index.scss */
 body, body.x-border-layout-ct {
   color: #020608;
-  font: normal 13px/1.4 "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 14px/1.4 "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 /* line 57, ../sass/index.scss */
 body a, body.x-border-layout-ct a {
-  color: #3697cd;
+  color: #3092d7;
 }
 /* line 60, ../sass/index.scss */
 body a:hover, body.x-border-layout-ct a:hover {
-  color: #297aa7;
+  color: #2276b2;
 }
 
 /* line 66, ../sass/index.scss */
@@ -8586,7 +8588,7 @@ body a:hover, body.x-border-layout-ct a:hover {
 
 /* line 72, ../sass/index.scss */
 hr {
-  background-color: #b4b4b4;
+  background-color: #b6b6b6;
   border: 0;
   color: #a1b8c5;
   height: 1px;
@@ -8601,7 +8603,7 @@ hr {
 
 /* line 85, ../sass/index.scss */
 .dashed {
-  border-bottom: 1px #b4b4b4 dashed;
+  border-bottom: 1px #b6b6b6 dashed;
 }
 
 /* line 89, ../sass/index.scss */
@@ -8614,10 +8616,10 @@ hr {
 */
 /* line 97, ../sass/index.scss */
 .dashboard-block .title {
-  background: #ebeff3;
+  background: #d2dde6;
   border-radius: 2px 2px 0 0;
-  color: #53595f;
-  font-size: 12px;
+  color: #40454b;
+  font-size: 14px;
   font-weight: bold;
   margin: 0;
   padding: 15px;
@@ -8626,8 +8628,8 @@ hr {
 
 /* line 108, ../sass/index.scss */
 .x-grid3-header {
-  background: #ebeff3;
-  border-bottom: 1px solid #53595f;
+  background: #d2dde6;
+  border-bottom: 1px solid #40454b;
   padding: 0;
 }
 
@@ -8724,7 +8726,7 @@ em {
 /* line 186, ../sass/index.scss */
 .wait {
   background: transparent url("../../default/images/style/wait.gif") no-repeat scroll center 55px;
-  color: #53595f;
+  color: #40454b;
   font-size: 15px;
   font-weight: bold;
   padding: 20px 10px 60px;
@@ -8816,7 +8818,7 @@ em {
 
 /* line 258, ../sass/index.scss */
 #modx-resource-content {
-  background-color: #ebeff3;
+  background-color: #d2dde6;
 }
 /* line 261, ../sass/index.scss */
 #modx-resource-content .x-panel-header {
@@ -8933,7 +8935,7 @@ a.x-grid-link:hover, a.x-grid-link:focus {
 
 /* line 358, ../sass/index.scss */
 .news_article .content {
-  color: #53595f;
+  color: #40454b;
 }
 
 /* line 362, ../sass/index.scss */
@@ -8944,14 +8946,14 @@ a.x-grid-link:hover, a.x-grid-link:focus {
 
 /* line 367, ../sass/index.scss */
 .news_article a:hover {
-  color: #b4b4b4;
+  color: #b6b6b6;
 }
 
 /* line 371, ../sass/index.scss */
 .news_article .date_stamp {
   color: #535d6c;
   float: right;
-  font-size: 11px;
+  font-size: 13px;
   font-style: italic;
 }
 
@@ -9377,7 +9379,7 @@ ul.modx-tag-list li.modx-tag-checked {
 /* line 743, ../sass/index.scss */
 .modx-tv-th .tv-description {
   color: #333333;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: normal;
 }
 
@@ -9633,7 +9635,7 @@ body.ext-ie7 .x-superboxselect-item {
 /* line 960, ../sass/index.scss */
 .modx-tree-load-msg {
   color: #020608;
-  font-size: .9em;
+  font-size: 1em;
   line-height: 1;
   padding: 3px;
   white-space: pre-line;
@@ -9660,7 +9662,7 @@ body.ext-ie7 .x-superboxselect-item {
 .panel-desc {
   background-color: #f2f2f2;
   border: 1px solid #efefef !important;
-  color: #53595f;
+  color: #40454b;
   line-height: 1.5;
   padding: 15px !important;
 }
@@ -9698,7 +9700,7 @@ body.ext-ie7 .x-superboxselect-item {
 /* line 1023, ../sass/index.scss */
 .win-desc p {
   color: #4d4d4d;
-  font-size: 13px;
+  font-size: 15px;
   font-style: italic;
   line-height: 1.4;
   padding: 0 10px 10px;
@@ -9792,7 +9794,7 @@ body.ext-ie7 .x-superboxselect-item {
 /* line 1105, ../sass/index.scss */
 .modx-tv-description {
   color: #666;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.2;
   margin-top: 2px !important;
 }
@@ -9802,7 +9804,7 @@ body.ext-ie7 .x-superboxselect-item {
   color: #666;
   display: block;
   float: right;
-  font-size: 10px;
+  font-size: 12px;
   font-style: italic;
   line-height: 1.2;
   padding-top: 4px;
@@ -9844,7 +9846,7 @@ body.ext-ie7 .x-superboxselect-item {
 /* line 1149, ../sass/index.scss */
 .modx-permissions-list {
   color: #777;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* line 1154, ../sass/index.scss */
@@ -9884,9 +9886,9 @@ body.ext-ie7 .x-superboxselect-item {
 /* line 1185, ../sass/index.scss */
 .crumbs li {
   background: url("../../default/images/style/crumbs-bg.png") no-repeat scroll right center transparent;
-  color: #53595f;
+  color: #40454b;
   float: left;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 35px;
   padding: 0 20px 0 15px;
@@ -9897,9 +9899,9 @@ body.ext-ie7 .x-superboxselect-item {
 .crumbs li button {
   background-color: transparent;
   border: 0 none;
-  color: #53595f;
+  color: #40454b;
   cursor: pointer;
-  font: normal 13px/1.4 "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 14px/1.4 "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   font-weight: bold;
   padding: 0;
   text-decoration: none;
@@ -10043,8 +10045,8 @@ body.ext-ie7 .x-superboxselect-item {
 /* line 1314, ../sass/index.scss */
 #ux-lightbox-dataContainer {
   background-color: white;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
-  font-size: 10px;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font-size: 12px;
   overflow: auto;
 }
 
@@ -10118,7 +10120,7 @@ body.ext-ie7 .x-superboxselect-item {
 /* line 1369, ../sass/index.scss */
 .x-grid3-cell-inner.x-grid3-col-main h3 {
   color: #333333;
-  font: normal 13px/1.4 "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 14px/1.4 "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   font-size: 20px;
   line-height: 1;
   margin: 0 0 2px;
@@ -10182,7 +10184,7 @@ body.ext-ie7 .x-superboxselect-item {
 .home-panel ol li button {
   background-color: transparent;
   border: 0 none;
-  color: #53595f;
+  color: #40454b;
   cursor: pointer;
   display: block;
   font-size: 15px;
@@ -10195,7 +10197,7 @@ body.ext-ie7 .x-superboxselect-item {
 /* line 1422, ../sass/index.scss */
 .home-panel ol li:hover button {
   background: transparent url("../../default/images/style/search.png") no-repeat scroll right center;
-  color: #53595f;
+  color: #40454b;
 }
 
 /* line 1426, ../sass/index.scss */
@@ -10249,7 +10251,7 @@ body.ext-ie7 .x-superboxselect-item {
 /* line 1458, ../sass/index.scss */
 .home-panel .stats p {
   color: #666666;
-  font-size: 12px;
+  font-size: 14px;
   font-style: italic;
   line-height: 1.5;
 }
@@ -10310,7 +10312,7 @@ body.ext-ie7 .x-superboxselect-item {
 /* line 1499, ../sass/index.scss */
 .modx-pb-view-ct {
   background: white;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
 }
 
 /* line 1503, ../sass/index.scss */
@@ -10352,8 +10354,8 @@ body.ext-ie7 .x-superboxselect-item {
 
 /* line 1530, ../sass/index.scss */
 .modx-pb-view-ct .x-view-selected {
-  background: #ebeff3;
-  border: 1px solid #88c1e1;
+  background: #d2dde6;
+  border: 1px solid #85bfe8;
   padding: 4px;
 }
 
@@ -10386,7 +10388,7 @@ body.ext-ie7 .x-superboxselect-item {
 /* line 1553, ../sass/index.scss */
 .modx-pb-details-info {
   border-top: 1px solid #cccccc;
-  font: normal 11px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font: normal 12px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   margin-top: 5px;
   padding: 5px;
   text-align: left;
@@ -10444,7 +10446,7 @@ body.ext-ie7 .x-superboxselect-item {
 
 /* line 1594, ../sass/index.scss */
 .modx-template-detail .selected h5 {
-  color: #53595f;
+  color: #40454b;
   font-size: 14px;
   margin: 10px 0;
 }
@@ -10470,13 +10472,13 @@ body.ext-ie7 .x-superboxselect-item {
 
 /* line 1612, ../sass/index.scss */
 .modx-template-detail .item a {
-  color: #53595f;
+  color: #40454b;
   font-style: italic;
 }
 
 /* line 1616, ../sass/index.scss */
 .modx-template-detail h4 {
-  color: #53595f;
+  color: #40454b;
   font-size: 14px;
   margin: 10px 0;
   text-shadow: 0 1px 0 white;
@@ -10485,7 +10487,7 @@ body.ext-ie7 .x-superboxselect-item {
 
 /* line 1623, ../sass/index.scss */
 .modx-template-detail .aside-details h4 {
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 0;
 }
 
@@ -10503,7 +10505,7 @@ body.ext-ie7 .x-superboxselect-item {
   border-bottom: 1px solid #bfbfbf;
   border-top: 1px solid white;
   color: #999999;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.2;
   margin-left: 1px;
   padding: 15px;
@@ -10519,7 +10521,7 @@ body.ext-ie7 .x-superboxselect-item {
 
 /* line 1649, ../sass/index.scss */
 .modx-template-detail .infos ul li {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 /* line 1652, ../sass/index.scss */
@@ -10606,7 +10608,7 @@ body.ext-ie7 .x-superboxselect-item {
 
 /* line 1716, ../sass/index.scss */
 .thumb-wrapper .name {
-  color: #53595f;
+  color: #40454b;
   font-size: 12px;
   font-weight: bold;
   margin-top: 10px;
@@ -10651,20 +10653,20 @@ body.ext-ie7 .x-superboxselect-item {
 
 /* line 1747, ../sass/index.scss */
 .x-grid3-col-text-col {
-  font-size: 11px;
+  font-size: 13px;
   text-align: center;
 }
 
 /* line 1751, ../sass/index.scss */
 .x-grid3-col-info-col, .x-grid3-col-meta-col {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: bold;
   text-align: center;
 }
 
 /* line 1756, ../sass/index.scss */
 .x-grid3-col-meta-col {
-  color: #53595f;
+  color: #40454b;
 }
 
 /* line 1759, ../sass/index.scss */

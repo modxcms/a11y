@@ -30,7 +30,7 @@ input::-moz-focus-inner {
 }
 
 .x-form-check-wrap .x-form-cb-label {
-  color: #777;
+  color: $darkNeutral;
   font-weight: normal;
 }
 
@@ -39,7 +39,7 @@ input::-moz-focus-inner {
   padding: 15px 15px 0;
 }
 .inline-form label {
-  color: #777777;
+  color: $darkNeutral;
   display: block;
   font-weight: bold;
   margin-bottom: 2px;
@@ -168,6 +168,8 @@ textarea.x-form-field,
   border: 0 none !important;
   height: 30px;
   width: 32px;
+  //added b/c ext-all-notheme-min.css has top: 0 but no right
+  right:0;
 }
 
 .x-form-field-wrap .x-form-trigger-over {
@@ -322,7 +324,7 @@ textarea.x-form-field,
   overflow: hidden;
 }
 .x-form-item-label {
-  color: #777;
+  color: $almostBlack;
   font-weight: bold;
 }
 
@@ -347,7 +349,7 @@ textarea.x-form-field,
   padding: 0;
 }
 .form-with-labels .x-form-label-top .x-form-item label.x-form-item-label {
-  color: #707070;
+  color: $darkNeutral;
   font-size: 13px;
   font-weight: bold;
   margin-bottom: 0;
@@ -356,9 +358,9 @@ textarea.x-form-field,
 }
 .form-with-labels .desc-under,
 .x-window .desc-under {
-  color: #aaaaaa;
+  color: $darkNeutral;
   display: block;
-  font-size: 11px;
+  font-size: 13px;
   font-style: italic;
   margin: -8px 0 16px;
 }

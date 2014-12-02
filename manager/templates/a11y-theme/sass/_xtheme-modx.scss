@@ -91,7 +91,7 @@
 
 .loading-indicator {
   background-image: url($imgPath + 'modx-theme/grid/loading.gif');
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .x-spotlight {
@@ -722,7 +722,7 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
 }
 .x-date-mmenu .x-menu-item {
   color: $black;
-  font-size: 11px;
+  font-size: 13px;
 }
 .x-date-mp {
   background-color: $white;
@@ -822,7 +822,7 @@ td.x-date-mp-sep {
 }
 a.x-menu-item {
   color: $menuTextColor;
-  font-size: 13px;
+  font-size: 14px;
   padding: 4px 25px 4px 30px;
 }
 .x-menu-item-active {
@@ -918,7 +918,7 @@ a.x-menu-item {
 #x-debug-browser .x-tree .x-tree-node a span {
   color: #333333;
   font-family: $codefonts;
-  font-size: 11px;
+  font-size: 13px;
 }
 #x-debug-browser .x-tree a i {
   color: #ff4545;
@@ -1237,7 +1237,7 @@ a.x-menu-item {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   border: 1px solid #c0c0c0;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   margin-top: 0;
   padding: 10px 10px 8px;
@@ -1352,7 +1352,7 @@ body.x-body-masked .x-window-plain .x-window-mc {
 }
 .x-progress-text {
   color: #fff;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: bold;
 }
 .x-progress-text-back {
@@ -1398,7 +1398,7 @@ body.x-body-masked .x-window-plain .x-window-mc {
 /* portal */
 .x-portal .x-panel-tl .x-panel-header {
   background: none;
-  font-size: 14px;
+  font-size: 15px;
   padding: 8px 0 8px 0;
 }
 .x-portal .x-tool {
@@ -1420,7 +1420,7 @@ body.x-body-masked .x-window-plain .x-window-mc {
 /* combo tpl stuff */
 .modx-combo-desc {
   color: gray;
-  font-size: .9em;
+  font-size: 1em;
   font-style: italic;
 }
 .modx-combo-title {
@@ -1580,7 +1580,7 @@ body.x-body-masked .x-window-plain .x-window-mc {
   color: #666666;
 }
 .x-window .x-window-dlg .ext-mb-text {
-  font-size: 12px;
+  font-size: 14px;
 }
 .x-window .x-window-dlg .x-window-header-text {
   font-size: 14px;

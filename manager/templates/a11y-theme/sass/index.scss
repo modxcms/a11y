@@ -45,7 +45,7 @@ $fa-css-prefix:       icon;
 */
 
 body *:focus {@extend %a11y-outline;}
-#modx-header *:focus, #modx-leftbar *:focus, .x-panel-body *:focus, -webkit-tap-highlight-color 
+#modx-header *:focus, #modx-leftbar *:focus, #modx-leftbar a:focus, .x-panel-body *:focus, -webkit-tap-highlight-color 
 {@extend %a11y-outline;}
 
 
@@ -98,7 +98,7 @@ hr {
   background: $softligthBlue;
   border-radius: 2px 2px 0 0;
   color: $darkNeutral;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   margin: 0;
   padding: 15px;
@@ -371,7 +371,7 @@ a.x-grid-link:hover, a.x-grid-link:focus{ text-decoration: underline; }
 .news_article .date_stamp {
   color: $mutedblue;
   float: right;
-  font-size: 11px;
+  font-size: 13px;
   font-style: italic;
 }
 
@@ -742,7 +742,7 @@ ul.modx-tag-list li.modx-tag-checked {
 
 .modx-tv-th .tv-description {
   color: $almostBlack;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: normal;
 }
 
@@ -959,7 +959,7 @@ body.ext-ie7 .x-superboxselect-item {
 /* other */
 .modx-tree-load-msg {
   color: $mainText;
-  font-size: .9em;
+  font-size: 1em;
   line-height: 1;
   padding: 3px;
   white-space: pre-line;
@@ -1022,7 +1022,7 @@ body.ext-ie7 .x-superboxselect-item {
 
 .win-desc p {
   color: lighten($almostBlack, 10%);
-  font-size: 13px;
+  font-size: 15px;
   font-style: italic;
   line-height: 1.4;
   padding: 0 10px 10px;
@@ -1104,7 +1104,7 @@ body.ext-ie7 .x-superboxselect-item {
 
 .modx-tv-description {
   color: #666;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.2;
   margin-top: 2px !important;
 }
@@ -1113,7 +1113,7 @@ body.ext-ie7 .x-superboxselect-item {
   color: #666;
   display: block;
   float: right;
-  font-size: 10px;
+  font-size: 12px;
   font-style: italic;
   line-height: 1.2;
   padding-top: 4px;
@@ -1148,7 +1148,7 @@ body.ext-ie7 .x-superboxselect-item {
 
 .modx-permissions-list {
   color: #777;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .modx-permissions-list-textarea {
@@ -1186,7 +1186,7 @@ body.ext-ie7 .x-superboxselect-item {
   background: url($imgPath + 'style/crumbs-bg.png') no-repeat scroll right center transparent;
   color: $darkNeutral;
   float: left;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 35px;
   padding: 0 20px 0 15px;
@@ -1314,7 +1314,7 @@ body.ext-ie7 .x-superboxselect-item {
 #ux-lightbox-dataContainer {
   background-color: $white;
   font: $fontSmall;
-  font-size: 10px;
+  font-size: 12px;
   overflow: auto;
 }
 #ux-lightbox-data {
@@ -1457,7 +1457,7 @@ body.ext-ie7 .x-superboxselect-item {
 }
 .home-panel .stats p {
   color: darken($grey, 20%);
-  font-size: 12px;
+  font-size: 14px;
   font-style: italic;
   line-height: 1.5;
 }
@@ -1621,7 +1621,7 @@ body.ext-ie7 .x-superboxselect-item {
   text-transform: uppercase;
 }
 .modx-template-detail .aside-details h4 {
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 0;
 }
 .modx-template-detail .selected {
@@ -1635,7 +1635,7 @@ body.ext-ie7 .x-superboxselect-item {
   border-bottom: 1px solid darken($offWhite, 20%);
   border-top: 1px solid $white;
   color: $grey;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.2;
   margin-left: 1px;
   padding: 15px;
@@ -1647,7 +1647,7 @@ body.ext-ie7 .x-superboxselect-item {
   padding: 15px;
 }
 .modx-template-detail .infos ul li {
-  font-size: 10px;
+  font-size: 12px;
 }
 .modx-template-detail .infos ul li .infoname {
   color: $grey;
@@ -1745,11 +1745,11 @@ body.ext-ie7 .x-superboxselect-item {
   text-align: center;
 }
 .x-grid3-col-text-col {
-  font-size: 11px;
+  font-size: 13px;
   text-align: center;
 }
 .x-grid3-col-info-col, .x-grid3-col-meta-col {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: bold;
   text-align: center;
 }

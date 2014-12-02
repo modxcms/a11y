@@ -1,6 +1,6 @@
 /* Colors */
 
-$colorSplash: rgb(54, 151, 205);
+$colorSplash: rgb(48, 146, 215);
 $desaturatedSplash:lighten(desaturate($colorSplash,100%),20%);
 $lightSplash:lighten($colorSplash, 42.5%);
 
@@ -11,7 +11,7 @@ $whitishBlue: #E4E9EE;
 
 $black: #020608;
 $almostBlack: #333333;
-$darkNeutral:#53595F;
+$darkNeutral:#40454b;
 
 $grey: #999999;
 $gainsboro: rgb(240,240,240);
@@ -20,7 +20,7 @@ $neutral: #d4d4d4;
 
 $tan: #aca899;
 
-$softligthBlue: #ebeff3;
+$softligthBlue: #d2dde6;
 $pastelLightBlue: rgb(225,236,241);
 $midsky: #a1b8c5;
 $skyBlue: #55bbe7;
@@ -65,9 +65,9 @@ $resourcePanelIcons: $darkNeutral;
 	
 /* E - Borders & More Below */	
 $treeHeaderText: $colorSplash;
-$treeText: darken($midsky,20%);
+$treeText: darken($colorSplash,20%);
 	$treeNodeBg: transparent;
-	$treeNodeBgHover: darken($almostBlack, 5%);
+	$treeNodeBgHover: lighten($almostBlack, 5%);
 	$treeNodeBgSelected: darken($almostBlack, 15%);
 	
 /* F 
@@ -104,7 +104,7 @@ $searchresults: $darkBlue;
 $searchresultshead: $skyBlue;
 
 /* backgrounds */
-$dropdownSelectedBg: $pastelLightBlue;
+$dropdownSelectedBg: $mutedgreen;
 $dropdownBg: $white;
 $menuBg: $darkBlue;
 $lightBg: $gainsboro;
@@ -161,7 +161,7 @@ $tabStripBg: darken($mainBg, 1%);
 $tabHoverBg: $navbarHover;
 $tabText: $colorSplash;
 $tabInactiveText: darken($grey, 15%);
-$tabHoverText: $pastelGreen;
+$tabHoverText: $colorSplash;
 
 /* text colors and font stacks */
 $selected: lighten(desaturate($colorSplash,40%),40%);
@@ -182,12 +182,12 @@ $buttonColor: darken($grey, 15%);
 $regularButtonColor: darken($grey, 15%);
 $buttonColorActive: $colorSplash;
 $buttonColorDisabled: darken($buttonColor, 20%);
-$buttonColorPrimary: $grey;
-$buttonPrimaryBg1: $pastelGreen;
+$buttonColorPrimary: $white;
+$buttonPrimaryBg1: $green;
 $buttonPrimaryBg2: darken($pastelGreen, 10%);
-$baseText:   normal 13px/1.4 $bodyfonts;
-$fontSmall:  normal 11px $bodyfonts;
-$fontMedium: normal 12px $bodyfonts;
+$baseText:   normal 14px/1.4 $bodyfonts;
+$fontSmall:  normal 12px $bodyfonts;
+$fontMedium: normal 13px $bodyfonts;
 $fontNormal: normal $bodyFontSize $bodyfonts;
 $fontNavbar: normal $bodyFontSize $headfonts;
 $fontH2:     normal 25px $headfonts;
