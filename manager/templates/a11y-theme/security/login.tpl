@@ -74,14 +74,20 @@
         <div class="x-form-item login-form-item login-form-item-first">
           <label for="modx-login-username">{$_lang.login_username}</label>
           <div class="x-form-element login-form-element">
-            <input type="text" id="modx-login-username" name="username" tabindex="1" autocomplete="on" value="{$_post.username}" class="x-form-text x-form-field" placeholder="{$_lang.login_username}" />
+            <!--eliminate placeholder Issue #23
+	            <input type="text" id="modx-login-username" name="username" tabindex="1" autocomplete="on" value="{$_post.username}" class="x-form-text x-form-field" placeholder="{$_lang.login_username}" />
+	        -->    
+            <input aria-required="true" type="text" id="modx-login-username" name="username" tabindex="1" autocomplete="on" value="{$_post.username}" class="x-form-text x-form-field" />
           </div>
         </div>
 
         <div class="x-form-item login-form-item">
           <label for="modx-login-password">{$_lang.login_password}</label>
           <div class="x-form-element login-form-element">
+	        <!--eliminate placeholder Issue #23 
             <input type="password" id="modx-login-password" name="password" tabindex="2" autocomplete="on" class="x-form-text x-form-field" placeholder="{$_lang.login_password}" />
+            -->
+            <input aria-required="true" type="password" id="modx-login-password" name="password" tabindex="2" autocomplete="on" class="x-form-text x-form-field" />
           </div>
         </div>
 
@@ -111,7 +117,8 @@
 
                <div class="x-form-item login-form-item">
                   <div class="x-form-element login-form-element">
-                    <input type="text" id="modx-login-username-reset" name="username_reset" class="x-form-text x-form-field" value="{$_post.username_reset}" placeholder="{$_lang.login_username_or_email}" />
+                    <label for="modx-login-username-reset">Username or Email</label>
+                    <input type="text" id="modx-login-username-reset" name="username_reset" class="x-form-text x-form-field" value="{$_post.username_reset}" />
                   </div>
                   <div class="x-form-clear-left"></div>
                </div>

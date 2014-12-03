@@ -22,5 +22,11 @@ Ext.onReady(function() {
 
 MODx.loadFLForm = function(a) {
     Ext.get('modx-fl-link').ghost().remove();
-    Ext.get('modx-forgot-login-form').slideIn();
+    //Ext.get('modx-forgot-login-form').slideIn();
+    //document.getElementById("modx-login-username-reset").focus();
+    Ext.get('modx-forgot-login-form').slideIn('l', {
+	    callback: function(){
+			document.getElementById("modx-login-username-reset").focus();
+		}
+	});
 };
