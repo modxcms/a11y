@@ -5,13 +5,14 @@
 
 .dashboard-block {
   background-color: $white;
-  border-radius: 2px;
+  border-radius: $borderRadius;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
   float: left;
   margin: 6px 0;
 }
 
 .dashboard-block h4 {
-  color: $mutedblue;
+  color: $darkGray;
   font-size: 13px;
   padding-bottom: 2px;
 }
@@ -24,17 +25,33 @@
   font-weight: bold;
 }
 
+.dashboard-block ul {
+  list-style: circle outside;
+  padding: 0 0 0 15px;
+}
+
 .dashboard-block li {
-  padding-left: 10px;
+  /*padding-left: 10px;*/
 }
 
 .dashboard-block .body {
-  color: $almostBlack;
+  color: #444;
   font-size: 12px;
   height: auto;
   max-height: 300px;
   overflow: auto;
   padding: 10px;
+}
+
+.dashboard-block .title {
+  background: $gridHeaderBgColor;
+  border-radius: $borderRadius $borderRadius 0 0;
+  color: $darkGray;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+  padding: 15px;
+  zoom: 1;
 }
 
 .dashboard-block-half {

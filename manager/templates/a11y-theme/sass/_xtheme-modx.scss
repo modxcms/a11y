@@ -527,14 +527,28 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
 }
 .x-grid3-row-collapsed .x-grid3-row-expander {
   background-position: 5px 10px;
-  height: 30px;
-  margin-top: 6px;
+  height: 27px;
+  margin-top: 14px;
 }
+
+.x-grid3-row-collapsed .x-grid3-row-expander:before {
+   font-family:fontawesome;
+   font-size: 14px;
+   content: "\f196";
+   color: #53595f;
+ }
+
 .x-grid3-row-expanded .x-grid3-row-expander {
-  background-position: -31px 10px;
-  height: 30px;
-  margin-top: 6px;
+  height: 27px;
+  margin-top: 14px;
 }
+ .x-grid3-row-expanded .x-grid3-row-expander:before  {
+  font-family:fontawesome;
+  font-size: 14px;
+  content: "\f147";
+  color: #53595f;
+}
+
 .x-grid3-row-expander {
   background-image: url($imgPath + 'modx-theme/grid/row-expand-sprite.png');
 }
@@ -581,14 +595,24 @@ td.x-grid3-hd-menu-open .x-grid3-hd-inner {
   border-bottom-color: $darkNeutral;
 }
 .x-grid-group-hd div.x-grid-group-title {
-  background: transparent url($imgPath + 'modx-theme/grid/group-collapse.png') no-repeat scroll 3px 10px;
   color: $darkNeutral;
   font: $fontSmall;
   font-weight: bold;
-  padding: 10px 4px 6px 24px;
+  padding: 8px 4px 8px 0px;
 }
-.x-grid-group-collapsed .x-grid-group-hd div.x-grid-group-title {
-  background-image: url($imgPath + 'modx-theme/grid/group-expand.png');
+.x-grid-group-hd div.x-grid-group-title:before {
+  font-family:fontawesome;
+  font-weight:normal;
+  font-style:normal;
+  content: "\f147";
+  margin-right: 10px;
+}
+.x-grid-group-collapsed .x-grid-group-hd div.x-grid-group-title:before {
+  font-family:fontawesome;
+  font-weight:normal;
+  font-style:normal;
+  content: "\f196";
+  margin-right: 10px;
 }
 .x-group-by-icon {
   background-image: url($imgPath + 'modx-theme/grid/group-by.gif');
@@ -763,8 +787,9 @@ td.x-date-mp-sep {
 }
 .x-tip {
   background: darken($tipText, 60%);
-  border-radius: 3px;
+  border-radius: $borderRadius;
   padding: 5px;
+  width: auto !important; /* override ExtJS inline width */
 }
 .x-tip .x-tip-close {
   background-image: url($imgPath + 'modx-theme/qtip/close.gif');
@@ -785,8 +810,10 @@ td.x-date-mp-sep {
 .x-tip .x-tip-body {
   color: complement($tipText);
   font: $fontMedium;
+  width: auto !important; /* override ExtJS inline width */
 }
 .x-tip img {
+  display: block;
   min-width:240px;
   max-width:100%;
   max-width:66vw;
@@ -1064,7 +1091,12 @@ a.x-menu-item {
 }
 .x-panel-btns {
   background-color: transparent;
-  border-top: 1px solid #FAFAFA;
+  padding: 15px 0 1px 0; /* override extjs default theme rule, padding bottom 1px to not cut off buttons box-shadow */
+  //border-top: 1px solid #FAFAFA;
+  
+  td.x-toolbar-cell {
+    padding: 0; /* override extjs default theme rule */
+  }
 }
 .x-panel-mc {
   background-color: #F5F5F5;
@@ -1095,7 +1127,7 @@ a.x-menu-item {
   background-image: url($imgPath + 'modx-theme/window/icon-warning.gif');
 }
 .x-window-dlg .ext-mb-question {
-  background-image: url($imgPath + 'modx-theme/window/icon-question.gif');
+  //background-image: url($imgPath + 'modx-theme/window/icon-question.gif');
 }
 .x-window-dlg .ext-mb-error {
   background-image: url($imgPath + 'modx-theme/window/icon-error.gif');
@@ -1111,6 +1143,174 @@ a.x-menu-item {
   background-color: #f7f7f7;
 }
 .x-tool {
+  //background-image: url($imgPath + 'modx-theme/panel/tool-sprites.png');
+  background: none;
+  border-radius: 50%;
+  color: $neutral;
+  font-size: 14px;
+  margin: 0 3px 0 0;
+  position: relative;
+  transition: all 0.3s;
+  width: 18px; 
+  height: 18px;
+
+  &:after {
+    @extend %pseudo-font;
+
+    box-sizing: border-box;
+    padding-top: 2px;
+    position: absolute; top: 0; left: 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 18px; height: 18px;
+  }
+
+  &:hover {
+    color: $white;
+    background: $colorSplash;
+  }
+
+  &.x-tool-toggle {
+
+    &:after {
+      content: $fa-var-chevron-down;
+      padding-top: 1px;
+    }
+
+    &:hover {
+
+
+      &:after {
+        content: $fa-var-chevron-up;
+      }
+    }
+
+    .x-panel-collapsed & {
+      &:hover {
+
+        &:after {
+          content: $fa-var-chevron-down;
+        }
+      }
+    }
+
+    /* collapse for resource panel */
+    #modx-resource-tabs & {
+      position: absolute; top: 11px; right: 12px;
+      z-index: 10;
+    }
+  }
+
+  &.x-tool-close {
+
+    &:after {
+      content: $fa-var-times;
+    }
+  }
+
+  &.x-tool-minimize {
+
+    &:after {
+      content: $fa-var-compress;
+    }
+  }
+
+  &.x-tool-maximize {
+
+    &:after {
+      content: $fa-var-expand;
+    }
+  }
+
+  &.x-tool-restore {
+
+    &:after {
+      content: $fa-var-compress;
+    }
+  }
+
+  &.x-tool-gear {
+
+    &:after {
+      content: $fa-var-gear;
+    }
+  }
+
+  &.x-tool-pin {
+    
+    &:after {
+      content: $fa-var-circle-o;
+    }
+
+    &:hover {
+
+      &:after {
+        content: $fa-var-dot-circle-o;
+      }
+    }
+  }
+
+  &.x-tool-unpin {
+    
+    &:after {
+      content: $fa-var-dot-circle-o;
+    }
+
+    &:hover {
+
+      &:after {
+        content: $fa-var-circle-o;
+      }
+    }
+  }
+
+  &.x-tool-right {
+    
+    &:after {
+      content: $fa-var-chevron-right;
+      padding-left: 1px;
+    }
+  }
+
+  &.x-tool-left {
+    
+    &:after {
+      content: $fa-var-chevron-left;
+      padding-right: 2px;
+    }
+  }
+
+  &.x-tool-up {
+    
+    &:after {
+      content: $fa-var-chevron-up;
+      padding-top: 1px;
+    }
+  }
+
+  &.x-tool-down {
+    
+    &:after {
+      content: $fa-var-chevron-down;
+      padding-top: 1px;
+    }
+  }
+
+  &.x-tool-minus {
+    
+    &:after {
+      content: $fa-var-minus;
+    }
+  }
+
+  &.x-tool-plus {
+    
+    &:after {
+      content: $fa-var-plus;
+    }
+  }
+}
+/*.x-tool {
   background-image: url($imgPath + 'modx-theme/panel/tool-sprites.png');
   height: 16px;
   margin: 1px 2px 0 0;
@@ -1207,7 +1407,9 @@ a.x-menu-item {
   background-position: right -208px;
 }
 .x-panel-collapsed {
-}
+}*/
+
+
 .x-panel-dd-spacer {
   border-color: #DFDFDF;
 }
@@ -1336,28 +1538,6 @@ body.x-body-masked .x-window-plain .x-window-mc {
 .x-layout-cmini-south .x-layout-mini {
   background-image: url($imgPath + 'modx-theme/layout/mini-top.gif');
 }
-.x-progress-wrap {
-  border-color: #8f8f8f;
-}
-.x-progress-inner {
-  background-color: #e7e7e7;
-  background-image: url($imgPath + 'modx-theme/qtip/bg.gif');
-}
-.x-progress-bar {
-  background-color: #bcbcbc;
-  background-image: url($imgPath + 'modx-theme/progress/progress-bg.gif');
-  border-bottom-color: #a6a6a6;
-  border-right-color: #a6a6a6;
-  border-top-color: #e2e2e2;
-}
-.x-progress-text {
-  color: #fff;
-  font-size: 13px;
-  font-weight: bold;
-}
-.x-progress-text-back {
-  color: #396095;
-}
 .x-list-header {
   background-color: #f9f9f9;
   background-image: url($imgPath + 'modx-theme/grid/grid3-hrow.gif');
@@ -1451,18 +1631,282 @@ body.x-body-masked .x-window-plain .x-window-mc {
 .x-window .x-panel-br {
   background-color: $aside;
 }
+
 .x-window {
-	.x-tab-panel-body-top {
-		background:$white !important;
-	}
-	.modx-tabs {
-		background:$gainsboro;
-		.x-tab-strip-wrap {
-			border:1px solid $borderColor;
-			border-bottom-width:0;
-		}
-	}
+  box-shadow: $boxShadowWindow;
+  border-radius: $borderRadius;
+  overflow: visible; /* prevent box-shadow from tabs and panel being cut off */
+
+  /* the window header bar */
+  .x-window-tl,
+  .x-window-tr {
+    padding: 0;
+  }
+  .x-window-tc {
+    z-index: 1;
+
+    .x-window-header {
+      background-color: $coreFieldBg;
+      border-bottom: 1px solid $softGrey;
+      border-radius: $borderRadius $borderRadius 0 0;
+      color: $darkNeutral;
+      font: $fontNavbar;
+      font-weight: bold;
+      padding: 8px;
+      text-align: center;
+      z-index: 3;
+    }
+  }
+
+  /* the window content wrapper */
+  .x-window-bwrap {
+    overflow: visible; /* prevent box-shadow from tabs and panel being cut off */
+    z-index: 2;
+
+    /* the window main container */
+    .x-window-ml,
+    .x-window-mr {
+      padding: 0;
+    }
+
+    .x-window-mc {
+      /*background-color: $mainBg;*/
+      border: 0;
+      /*padding: 15px;*/
+      padding: 0;
+      z-index: 2;
+
+      .x-panel-ml,
+      .x-panel-mr,
+      .x-panel-mc,
+      .x-panel-tl,
+      .x-panel-bl {
+        background: transparent;
+        border: 0;
+        padding: 0;
+      }
+
+      .x-window-body {
+        background-color: $mainBg;
+        overflow: visible; /* prevent box-shadow from tabs and panel being cut off */
+        padding: 15px;
+      }
+    }
+
+    .x-panel-bwrap {
+      background: $white;
+      box-shadow: $boxShadow;
+      border-radius: $borderRadius;
+      overflow-y: scroll; /* make the content area of normal windows scrollable */
+      padding: 10px;
+
+      .x-panel-bwrap {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        overflow: visible;
+        padding: 0;
+      }
+
+      .x-fieldset {
+        border: 0;
+        border-radius: $borderRadius;
+        margin: 0;
+        overflow: visible;
+        padding: 0 0 10px 0;
+        position: relative;
+
+        .x-fieldset-header {
+          background: $white;
+          padding: 0 3px 0 3px;
+          position: absolute; top: -8px; left: 8px;
+        }
+
+        .x-fieldset-bwrap {
+          border: 1px solid $borderColor;
+          padding: 15px 10px 10px 10px;
+        }
+      }
+
+      .desc-under {
+        color: #aaaaaa;
+        display: block;
+        font-size: 11px;
+        font-style: italic;
+        margin: -8px 0 16px;
+
+        &.desc-checkbox {
+          margin: -2px 0 4px;
+        }
+
+        .warning {
+          color: #df8d00;
+        }
+      }
+    }
+
+    &.x-window-with-tabs {
+      .x-panel-bwrap {
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        overflow: visible;
+        padding: 0;
+      } 
+    }
+
+
+    form.x-panel-body:first-of-type {
+      overflow: visible !important; /* prevent box-shadow from tabs and panel being cut off */
+    }
+
+    /* the window tab strip if available */
+    .modx-tabs {
+      /*overflow-y: scroll;*/
+
+      .x-tab-panel-header {
+
+
+        .x-tab-strip-wrap {
+          padding-top: 3px; /* account for the 3px boxshadow for active tabs */
+
+          .x-tab-strip {
+            border: 0; /* override extjs default theme of 1px solid white */
+          }
+        }
+      }
+    }
+
+    /* the window form / content container */
+    .x-tab-panel-bwrap {
+    background: $white;
+    box-shadow: $boxShadow;
+
+      .x-tab-panel-body {
+        overflow-y: scroll; /* tabs stay, content scrolls */
+
+        .modx-panel {
+          /*overflow-y: scroll; /* tabs stay, content scrolls */
+
+          .tab-panel-wrapper {
+
+          }
+        }
+      }
+    }
+
+    .x-column-inner {
+      /* prevent second col with fields to have excessive margin on the right */
+      > .x-column {
+        margin: 0;
+
+        &:first-of-type {
+          margin-right: 10px;
+        }
+        /*&:last-of-type*/ /* somehow doesn't work */
+        &:nth-child(2) {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    /* The window bottom container */
+    .x-window-bl,
+    .x-window-br {
+      padding: 0;
+    }
+    .x-window-bc {
+      z-index: 1;
+
+      .x-window-footer {
+        background-color: $coreFieldBg;
+        border-top: 1px solid $softGrey;
+        border-radius: 0 0 3px 3px; /* TODO: replace with $borderRadius when merged */
+        box-sizing: border-box; /* don't count padding in width: 100%; */
+        padding: 5px; /* make sure the padding also stays when maximized */
+        width: 100% !important; /* override fixed width set by extjs */
+
+        .x-toolbar-right-row {
+          td {
+            &:last-of-type {
+              .x-btn {
+                @extend %primary-button
+              }
+            }
+          }
+        }
+      }
+    } /* .x-window-bc */
+  } /* .x-window-bwrap */
+
+  &.x-window-maximized {
+    margin: 15px 0 15px 0;
+
+    .x-window-tc {
+      padding: 0;
+    }
+
+    .x-window-mc {
+      padding: 0;
+    }
+  }
+} /* .x-window */
+
+/*.ext-gecko .x-window-body .x-form-item {
+  overflow: hidden;
 }
+
+.x-window-tl .x-panel-icon {
+  background-position: 0 8px;
+}
+
+.x-window-dlg .x-msg-box-wait {
+  background-image: url($imgPath + 'modx-theme/grid/loading.gif');
+}
+.x-window-dlg .ext-mb-info {
+  background-image: url($imgPath + 'modx-theme/window/icon-info.gif');
+}
+.x-window-dlg .ext-mb-warning {
+  background-image: url($imgPath + 'modx-theme/window/icon-warning.gif');
+}
+.x-window-dlg .ext-mb-question {
+  background-image: url($imgPath + 'modx-theme/window/icon-question.gif');
+}
+.x-window-dlg .ext-mb-error {
+  background-image: url($imgPath + 'modx-theme/window/icon-error.gif');
+}
+
+.x-window-proxy {
+  background-color: #dcdcdc;
+  border-color: #d0d0d0;
+}
+
+.x-panel-ghost .x-window-tl {
+  border-bottom-color: #d0d0d0;
+}
+
+body.x-body-masked .x-window-plain .x-window-mc {
+  background-color: #e2e2e2;
+}
+.x-window h2 {
+  border-bottom: 1px solid #D6DFC3;
+  color: #5e5e5e;
+  font: $fontH3;
+  font-size: 18px;
+  margin: 0 0 11px;
+  padding: 8px 15px;
+  text-shadow: 0 1px 1px #FFFFFF;
+}
+.x-window .x-panel-tl,
+.x-window .x-panel-ml,
+.x-window .x-panel-bl,
+.x-window .x-panel-mc,
+.x-window .x-panel-tr,
+.x-window .x-panel-mr,
+.x-window .x-panel-br {
+  background-color: $aside;
+}
+
 .x-window .x-tab-strip {
 	margin-left:0;
 }
@@ -1580,7 +2024,7 @@ body.x-body-masked .x-window-plain .x-window-mc {
   color: #666666;
 }
 .x-window .x-window-dlg .ext-mb-text {
-  font-size: 14px;
+  font-size: 12px;
 }
 .x-window .x-window-dlg .x-window-header-text {
   font-size: 14px;
@@ -1636,4 +2080,4 @@ body.x-body-masked .x-window-plain .x-window-mc {
 .x-window-maximized .x-window-tc {
   padding-left: 0;
   padding-right: 0;
-}
+}*/

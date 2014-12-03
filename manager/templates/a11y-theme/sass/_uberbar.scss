@@ -29,6 +29,11 @@
   padding: 9px 5px;
   width: 17px;
   background-image: none;
+  
+  &:before{
+	  top: 30%; //centers icon
+	  content: "\f002"; //search icon
+  }
 }
 
 #modx-manager-search .x-form-field-wrap {
@@ -51,7 +56,7 @@
   .x-form-text {
     text-shadow: none;
     font-weight: normal;
-    color: $white;
+    color: $black;
     letter-spacing: 0.75px;
   }
   .x-form-empty-field {

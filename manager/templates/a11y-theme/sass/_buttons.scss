@@ -336,104 +336,106 @@
   margin: 0;
   overflow: hidden;
   position: absolute;
-}
 
-.actions li {
-  float: left;
-  line-height: 0.7;
-  margin-right: 2px;
+  li {
+    float: left;
+    line-height: 0.7;
+    margin-right: 5px;
+  }
 }
 
 .actions button,
-.inline-button {
-  background: #dcdcdc;
-  background: -moz-linear-gradient(center bottom, gainsboro 0%, #fcfcfc 100%) repeat scroll 0 0 transparent;
-  background: -ms-linear-gradient(center bottom, gainsboro 0%, #fcfcfc 100%);
-  background: -o-linear-gradient(center bottom, gainsboro 0%, #fcfcfc 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, gainsboro));
-  background: -webkit-linear-gradient(center bottom, gainsboro 0%, #fcfcfc 100%);
-  background: linear-gradient(center bottom, gainsboro 0%, #fcfcfc 100%);
-  border-radius: 3px;
-  border: 1px solid #cccccc;
-  color: #888888;
-  cursor: pointer;
-  display: block;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fcfcfc,endColorstr=#dcdcdc,GradientType=0);
-  font: $fontSmall;
-  font-weight: bold;
-  padding: 3px 5px;
-  text-decoration: none;
-  /*text-shadow: 0 1px 0 #ffffff;*/
-}
+.inline-button,
+.x-superboxselect-item,
+.x-form-trigger {
+  @extend %secondary-button;
 
-.actions button:hover,
-.inline-button:hover {
-  background: #e0e0e0;
-  background: -moz-linear-gradient(center bottom, #e0e0e0 0%, #fcfcfc 100%) repeat scroll 0 0 transparent;
-  background: -ms-linear-gradient(center bottom, #e0e0e0 0%, #fcfcfc 100%);
-  background: -o-linear-gradient(center bottom, #e0e0e0 0%, #fcfcfc 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #e0e0e0));
-  background: -webkit-linear-gradient(center bottom, #e0e0e0 0%, #fcfcfc 100%);
-  background: linear-gradient(center bottom, #e0e0e0 0%, #fcfcfc 100%);
-  color: #565550;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fcfcfc,endColorstr=#e0e0e0,GradientType=0);
-}
+  //box-shadow: $shadowBorderDark;
+  padding: 5px;
 
-.actions button:active,
-.inline-button:active {
-  background-color: #ffffff;
-  background-image: none;
-  box-shadow: 0 0 3px #aaaaaa inset;
-}
+  &.yellow {
+    background: $yellow;
+    //box-shadow: 0 0 0 1px $yellow;
+    color: $buttonColor !important;
 
-.actions button.orange {
-  background: #febb4a;
-  background: -moz-linear-gradient(center bottom, #febb4a 0%, #feda71 100%) repeat scroll 0 0 transparent;
-  background: -ms-linear-gradient(center bottom, #febb4a 0%, #feda71 100%);
-  background: -o-linear-gradient(center bottom, #febb4a 0%, #feda71 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #feda71), color-stop(100%, #febb4a));
-  background: -webkit-linear-gradient(center bottom, #febb4a 0%, #feda71 100%);
-  background: linear-gradient(center bottom, #febb4a 0%, #feda71 100%);
-  border-color: #f5b74e #e7a93f #dfa138;
-  color: #996633;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#feda71,endColorstr=#febb4a,GradientType=0);
-  /*text-shadow: 0 1px 0 #fee1a0;*/
-}
+    &:hover {
+      /*background: #F4A448;*/
+      background: darken($yellow, 5%);
+      //box-shadow: 0 0 0 1px darken($yellow, 5%);
+    }
+    &:active {
+      /*background: #F49548;*/
+      background: darken($yellow, 10%);
+      //box-shadow: 0 0 0 1px darken($yellow, 10%);
+    }
+  }
 
-.actions button.orange:hover {
-  background: #fec95b;
-  background: -moz-linear-gradient(center bottom, #fec95b 0%, #fee1a0 100%) repeat scroll 0 0 transparent;
-  background: -ms-linear-gradient(center bottom, #fec95b 0%, #fee1a0 100%);
-  background: -o-linear-gradient(center bottom, #fec95b 0%, #fee1a0 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fee1a0), color-stop(100%, #fec95b));
-  background: -webkit-linear-gradient(center bottom, #fec95b 0%, #fee1a0 100%);
-  background: linear-gradient(center bottom, #fec95b 0%, #fee1a0 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fee1a0,endColorstr=#fec95b,GradientType=0);
-}
+  &.orange {
+    background: $orange;
+    //box-shadow: 0 0 0 1px $orange;
+    color: $white !important;
 
-.inline-button.green {
-  background: #9fcb57;
-  background: -moz-linear-gradient(center bottom, #9fcb57 0%, #d7e9a4 100%) repeat scroll 0 0 transparent;
-  background: -ms-linear-gradient(center bottom, #9fcb57 0%, #d7e9a4 100%);
-  background: -o-linear-gradient(center bottom, #9fcb57 0%, #d7e9a4 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d7e9a4), color-stop(100%, #9fcb57));
-  background: -webkit-linear-gradient(center bottom, #9fcb57 0%, #d7e9a4 100%);
-  background: linear-gradient(center bottom, #9fcb57 0%, #d7e9a4 100%);
-  border: 1px solid #85a948;
-  color: #556f14 !important;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#d7e9a4,endColorstr=#9fcb57,GradientType=0);
-  /*text-shadow: 0 1px 0 #d7e9a4;*/
-}
+    &:hover {
+      /*background: #F4A448;*/
+      background: darken($orange, 5%);
+      //box-shadow: 0 0 0 1px darken($orange, 5%);
+    }
+    &:active {
+      /*background: #F49548;*/
+      background: darken($orange, 10%);
+      //box-shadow: 0 0 0 1px darken($orange, 10%);
+    }
+  }
 
-.inline-button.green:hover {
-  background: #9fcb57;
-  background: -moz-linear-gradient(center bottom, #9fcb57 0%, #e6efd1 100%) repeat scroll 0 0 transparent;
-  background: -ms-linear-gradient(center bottom, #9fcb57 0%, #e6efd1 100%);
-  background: -o-linear-gradient(center bottom, #9fcb57 0%, #e6efd1 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e6efd1), color-stop(100%, #9fcb57));
-  background: -webkit-linear-gradient(center bottom, #9fcb57 0%, #e6efd1 100%);
-  background: linear-gradient(center bottom, #9fcb57 0%, #e6efd1 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e6efd1,endColorstr=#9fcb57,GradientType=0);
+  &.red {
+    background: $red;
+    //box-shadow: 0 0 0 1px $red;
+    color: $white !important;
+
+    &:hover {
+      /*background: #F4A448;*/
+      background: darken($red, 3%);
+      //box-shadow: 0 0 0 1px darken($red, 3%);
+    }
+    &:active {
+      /*background: #F49548;*/
+      background: darken($red, 6%);
+      //box-shadow: 0 0 0 1px darken($red, 6%);
+    }
+  }
+
+  &.green {
+    background: $green;
+    //box-shadow: 0 0 0 1px $green;
+    color: $white !important; /* override !important of .green class */
+
+    &:hover {
+      /*background: #6cb24a;*/
+      background: darken($green, 5%);
+      //box-shadow: 0 0 0 1px darken($green, 5%);;
+    }
+    &:active {
+      /*background: #4BA81E;*/
+      background: darken($green, 10%);
+      //box-shadow: 0 0 0 1px darken($green, 10%);
+    }
+  }
+
+  &.blue {
+    background: $blue;
+    //box-shadow: 0 0 0 1px $blue;
+    color: $white !important; /* override !important of .green class */
+
+    &:hover {
+      background: darken($blue, 5%);
+      //box-shadow: 0 0 0 1px darken($blue, 5%);;
+    }
+    &:active {
+      /*background: #4BA81E;*/
+      background: darken($blue, 10%);
+      //box-shadow: 0 0 0 1px darken($blue, 10%);
+    }
+  }
 }
 
 /* basic tree toolbar styles */

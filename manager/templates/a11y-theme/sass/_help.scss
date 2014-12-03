@@ -46,11 +46,11 @@
 }
 
 #managerbuttons ul li a {
-  @include linear-gradient(top, $white, $almostWhite);
-  border-radius: 3px;
+  @include linear-gradient(top, white, whitesmoke);
+  border-radius: $borderRadius;
   border: 1px solid $borderColor;
-  box-shadow: 0 1px 0 $borderShadow;
-  color: $darkNeutral;
+  box-shadow: 0 1px 0 $borderColor;
+  color: $darkestGray;
   display: table-cell;
   /* MODX 2.x.x Manager Button Styles */
   font: $fontSmall;
@@ -91,7 +91,7 @@
   @include box-sizing(border-box);
   background: #fff;
   border: 1px solid $borderColor;
-  box-shadow: 0 1px 0 $borderShadow;
+  box-shadow: 0 1px 0 $borderColor;
   margin: 0.75em 0 1.75em;
   padding: 18px;
   width: 100%;
@@ -103,9 +103,13 @@
 #helpBanner {
   margin-top: 1.5em;
   min-height: 112px;
-  background-repeat:no-repeat;
-  background-position:right top;
-  @include image-set($imgPath + 'modx-help-logo.png', $imgPath + 'modx-help-logo@2x.png');
+  background-color: transparent;
+  background-image: url($imgPath + 'modx-logo-color.png');
+  background-image: url($imgPath + 'modx-logo-color.svg'),none;
+  background-repeat: no-repeat;
+  background-attachment:none;
+  background-position: 97% center;
+  background-size: 200px;
   #helpLogo {
     float: right;
     height: 76px;
@@ -158,9 +162,17 @@
   }
 }
 
+#mcsignup input.x-btn {
+  padding: 10px 15px;
+}
+.icon.icon-2x {
+  width: 22px;
+  text-align: center;
+  vertical-align: text-bottom;
+}
 #aboutMODX {
   @include box-sizing(border-box);
-  background: $aside;
+  background: $lighterGray;
   float: left;
   margin: 1em 0 0 2%;
   min-height: 300px;

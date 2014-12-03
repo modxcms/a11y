@@ -1,5 +1,7 @@
 #modx-container {
-  background-image: linear-gradient(to right, #3f4850 0, #365462 46%, #3e5554 60%, #42554d 68%, #573d4e 100%); }
+  /*background-image: linear-gradient(to right, #3f4850 0, #365462 46%, #3e5554 60%, #42554d 68%, #573d4e 100%); */
+  background-color: #f2f2f2;
+}
 
 #modx-navbar #modx-home-dashboard {
   margin: 0; }
