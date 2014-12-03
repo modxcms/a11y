@@ -52,11 +52,6 @@
 
 <div id="modx-header">
     <div id="modx-navbar">
-        <ul id="modx-user-menu">
-            {* eval is used here to support nested variables *}
-            {eval var=$userNav}
-        </ul>
-
         <ul id="modx-topnav">
             <li id="modx-home-dashboard">
                 <a href="?" title="{$_lang.dashboard}">{$_lang.dashboard}</a>
@@ -65,6 +60,10 @@
             <li id="modx-manager-search"></li>
             {/if}
             {$navb}
+        </ul>
+        <ul id="modx-user-menu">
+            {* eval is used here to support nested variables *}
+            {eval var=$userNav}
         </ul>
     </div>
 </div>
