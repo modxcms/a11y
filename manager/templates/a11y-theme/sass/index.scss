@@ -1517,3 +1517,7 @@ iframe[classname="x-hidden"] {
     padding: 5px;
   }
 
+.x-toolbar .x-toolbar-cell input.x-form-text{
+	padding: 4px; //weird padding issue 
+	background-color: transparent !important; //getting tan bg from global .x-form-text
+}

@@ -1,6 +1,9 @@
 @charset "UTF-8";
 @import "colors-and-vars";
 
+body *:focus, input:focus, p:focus, checkbox:focus {@extend %a11y-outline;}
+
+
 html {
   color: #111;
   /* http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/ */

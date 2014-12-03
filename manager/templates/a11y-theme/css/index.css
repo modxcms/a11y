@@ -13244,3 +13244,9 @@ iframe[classname="x-hidden"] {
   margin-left: 0;
   padding: 5px;
 }
+
+/* line 1520, ../sass/index.scss */
+.x-toolbar .x-toolbar-cell input.x-form-text {
+  padding: 4px;
+  background-color: transparent !important;
+}
