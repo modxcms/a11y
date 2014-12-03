@@ -71,8 +71,6 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
     getWest: function(config) {
         var items = [];
 
-        this.handleLeftScroll();
-
         if (MODx.perm.resource_tree) {
             items.push(this.handleRecord({
                 title: _('resources')
@@ -135,15 +133,9 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
             region: 'west'
             ,applyTo: 'modx-leftbar'
             ,id: 'modx-leftbar-tabs'
-            ,stateId: this.getStateKey('modx-leftbar-tabs')
-            ,split: true
-            // @TODO : make use of original config (MODx.Layout), requires some PR
             ,width: 310
             ,autoScroll: true
             ,unstyled: true
-            ,collapseMode: 'mini'
-            ,useSplitTips: true
-            ,monitorResize: true
             ,layout: 'anchor'
             ,items: items
             ,defaultType: 'modx-menu-entry'
@@ -151,32 +143,49 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
             ,bodyCfg: {
                 tag: 'ul'
             }
-            ,listeners: {
-                beforestatesave: this.onBeforeStateSave
-                ,scope: this
-            }
-            ,getState: function() {
-                return {
-                    collapsed: this.collapsed
-                    ,width: this.width
-                };
-            }
+            ,collapsible: false
         };
     }
 
-    /**
-     * Dirty hack to handle scrollbar in left region
-     */
-    ,handleLeftScroll: function() {
-        var c = Ext.get('modx-leftbar');
-        c.on('DOMSubtreeModified', function(vent, elem, options) {
-            Ext.defer(function() {
-                this.getLeftBar().doLayout();
-                // Schedule again
-                this.handleLeftScroll();
-            }, 150, this);
-        }, this, {
-            single: true
+    // 'Nullification' to prevent left bar collapsing
+    ,hideLeftbar: function(anim, state) {}
+    ,toggleLeftbar: function() {}
+    ,loadKeys: function() {
+        Ext.KeyMap.prototype.stopEvent = true;
+        var k = new Ext.KeyMap(Ext.get(document));
+        // ctrl + shift + h : toggle left bar
+        //k.addBinding({
+        //    key: Ext.EventObject.H
+        //    ,ctrl: true
+        //    ,shift: true
+        //    ,fn: this.toggleLeftbar
+        //    ,scope: this
+        //    ,stopEvent: true
+        //});
+        // ctrl + shift + n : new document
+        k.addBinding({
+            key: Ext.EventObject.N
+            ,ctrl: true
+            ,shift: true
+            ,fn: function() {
+                var t = Ext.getCmp('modx-resource-tree');
+                if (t) { t.quickCreate(document,{},'modDocument','web',0); }
+            }
+            ,stopEvent: true
+        });
+        // ctrl + shift + u : clear cache
+        k.addBinding({
+            key: Ext.EventObject.U
+            ,ctrl: true
+            ,shift: true
+            ,alt: false
+            ,fn: MODx.clearCache
+            ,scope: this
+            ,stopEvent: true
+        });
+
+        this.fireEvent('loadKeyMap',{
+            keymap: k
         });
     }
     /**
@@ -288,30 +297,6 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
      */
     ,_onAfterLeftBarAdded: function(nav, items) {
         nav.doLayout();
-    }
-
-    /**
-     * Override to prevent error caused by not existing tab panel
-     *
-     * @see MODx.Layout#onBeforeStateSave
-     *
-     * @param {Ext.Component} component
-     * @param {Object} state
-     */
-    ,onBeforeStateSave: function(component, state) {
-        return;
-        var collapsed = state.collapsed;
-        if (collapsed && !this.stateSave) {
-            this.stateSave = true;
-            return false;
-        }
-        if (!collapsed) {
-            var wrap = Ext.get('modx-leftbar').down('div');
-            if (!wrap.isVisible()) {
-                // Set the "masking div" to visible
-                wrap.setVisible(true);
-            }
-        }
     }
 });
 Ext.reg('modx-layout',MODx.Layout.Default);
