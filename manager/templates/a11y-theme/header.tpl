@@ -40,8 +40,11 @@
 {foreach from=$cssjs item=scr}
 {$scr}
 {/foreach}
+
+<script src="{$_config.manager_url}templates/a11y-theme/js/init-a11y.js" type="text/javascript"></script>
+
 </head>
-<body id="modx-body-tag">
+<body id="modx-body-tag" onload="initA11y()">
 
 <div id="modx-browser"></div>
 <div id="modx-container">
@@ -52,7 +55,7 @@
 
 <div id="modx-header">
     <div id="modx-navbar">
-        <ul id="modx-topnav">
+        <ul id="modx-topnav" tabindex="2">
             <li id="modx-home-dashboard">
                 <a href="?" title="{$_lang.dashboard}">{$_lang.dashboard}</a>
             </li>

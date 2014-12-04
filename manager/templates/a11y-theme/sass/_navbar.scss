@@ -183,8 +183,9 @@
   /*background-color: $navbarHover;*/
 }
 
-#modx-navbar li:hover ul.modx-subnav {
-  display: block;
+#modx-navbar li:hover ul.modx-subnav,
+ul.modx-subnav.open {
+  display: block !important;
 }
 
 #modx-navbar ul.modx-subnav li {

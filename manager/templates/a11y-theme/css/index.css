@@ -8435,12 +8435,13 @@ ul.x-tab-strip-bottom .x-tab-left {
   /*background-color: $navbarHover;*/
 }
 
-/* line 186, ../sass/_navbar.scss */
-#modx-navbar li:hover ul.modx-subnav {
-  display: block;
+/* line 187, ../sass/_navbar.scss */
+#modx-navbar li:hover ul.modx-subnav,
+ul.modx-subnav.open {
+  display: block !important;
 }
 
-/* line 190, ../sass/_navbar.scss */
+/* line 191, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li {
   background: #182028;
   border-bottom: 1px solid #192b3e;
@@ -8454,7 +8455,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   @include background(linear-gradient($navbarHover, $navbarDrop) top repeat);
 }
 */
-/* line 204, ../sass/_navbar.scss */
+/* line 205, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a {
   background-color: #182028;
   color: #d2dde6;
@@ -8473,27 +8474,27 @@ ul.x-tab-strip-bottom .x-tab-left {
   border-bottom:1px solid $navbarDrop;
 }
 */
-/* line 224, ../sass/_navbar.scss */
+/* line 225, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a:hover {
   background: #050608;
   border-top-color: #192b3e;
   border-bottom-color: #192b3e;
   color: white;
 }
-/* line 229, ../sass/_navbar.scss */
+/* line 230, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a:hover .description {
   color: #9dd8f1;
 }
-/* line 233, ../sass/_navbar.scss */
+/* line 234, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:first-child a {
   border-top-width: 0;
 }
-/* line 236, ../sass/_navbar.scss */
+/* line 237, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:last-child a {
   border-bottom-width: 0;
 }
 
-/* line 241, ../sass/_navbar.scss */
+/* line 242, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a span {
   color: #55bbe7;
   display: block;
@@ -8505,7 +8506,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   width: 100%;
 }
 
-/* line 252, ../sass/_navbar.scss */
+/* line 253, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav ul {
   display: none;
   left: 270px;
@@ -8516,32 +8517,32 @@ ul.x-tab-strip-bottom .x-tab-left {
   z-index: 24;
 }
 
-/* line 263, ../sass/_navbar.scss */
+/* line 264, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav ul li:first-child,
 #modx-navbar ul.modx-subnav ul li:first-child a {
   border-radius: 0 2px 0 0;
 }
 
-/* line 268, ../sass/_navbar.scss */
+/* line 269, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav ul li:last-child,
 #modx-navbar ul.modx-subnav ul li:last-child a {
   border-radius: 0 0 2px 0;
 }
 
-/* line 273, ../sass/_navbar.scss */
+/* line 274, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav ul ul li:last-child,
 #modx-navbar ul.modx-subnav ul ul li:last-child a {
   border-radius: 0 0 2px 2px;
 }
 
-/* line 279, ../sass/_navbar.scss */
+/* line 280, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:hover ul ul,
 #modx-navbar ul.modx-subnav ul li:hover ul ul,
 #modx-navbar ul.modx-subnav ul ul li:hover ul ul {
   display: none;
 }
 
-/* line 286, ../sass/_navbar.scss */
+/* line 287, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:hover ul,
 #modx-navbar ul.modx-subnav ul li:hover ul,
 #modx-navbar ul.modx-subnav ul ul li:hover ul,
@@ -8549,7 +8550,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   display: block;
 }
 
-/* line 290, ../sass/_navbar.scss */
+/* line 291, ../sass/_navbar.scss */
 .ext-ie7 #modx-header {
   position: relative;
   z-index: 10;
