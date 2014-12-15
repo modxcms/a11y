@@ -324,7 +324,7 @@ ul.x-tab-strip-bottom {
 
           &.x-tab-strip-active {
             background: $white;
-            border-color: $borderColorHover;
+            border-color: #3697cd #fff #3697cd #3697cd;
             border-right-color: $white;
             box-shadow: none; /* removes the active tab strip on top */
             color: $tabActiveText;

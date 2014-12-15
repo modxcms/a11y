@@ -220,13 +220,14 @@ em {
   left: 2px;
 }
 
+/*
 #modx-resource-tabs {
   margin: 20px 0 0;
   @extend %shaded-tab-box;
   .x-tab-panel-header {
-    width:auto !important; /* #shame */
+    width:auto !important; 
     &.vertical-tabs-header {
-      width:150px !important; /* #shame */
+      width:150px !important; 
     }
     .x-tab-strip {
       li {
@@ -246,7 +247,7 @@ em {
 	.x-tab-strip {
 		margin-top:12px;
 		li {
-			width:100% !important; /* #shame */
+			width:100% !important; 
 			margin-left:0;
 			border-bottom:1px solid $borderColor;
 			&:nth-last-child(3) { border-color:transparent }
@@ -254,6 +255,7 @@ em {
 		}
 	}
 }
+*/
 
 /* firefox needs this badly or the content is pushed to the right */
 #ext-gen18{clear:left;}
@@ -330,6 +332,7 @@ a.x-grid-link:hover, a.x-grid-link:focus{ text-decoration: underline; }
 
 #modx-content form.x-panel-body {
   background-color: transparent !important;
+  padding-top: 20px;
 }
 
 #modx-mainpanel {
@@ -823,7 +826,7 @@ iframe[classname="x-hidden"] {
 
 /* Panel description text */
 .panel-desc {
-  //background-color: $offWhite;
+  background-color:  $white;
   border: 1px solid darken($mainBg, 5%) !important;
   color: $darkNeutral;
   line-height: 1.5;
@@ -869,6 +872,7 @@ iframe[classname="x-hidden"] {
 /* All the other wrapped element (forms need to be wrapped in a panel isolated from the other components) */
 .main-wrapper {
   padding: 15px;
+  background: #FFF;
 }
 
 .with-title .main-wrapper {
