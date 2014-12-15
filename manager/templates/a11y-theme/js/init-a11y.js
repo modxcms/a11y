@@ -27,4 +27,8 @@ function initA11y() {
 	document.getElementById("help-link").addEventListener("keydown", clearSubNavOpen, false);	
 	document.getElementById("modx-uberbar").addEventListener("keydown", clearSubNavOpen, false);
 	
+	//Issue #10, trying to make an override for the initial focus field 
+	var updateDiv = document.getElementById("modx-panel-resource-div");
+	console.log(updateDiv);
+	if(updateDiv){document.getElementById("modx-resource-pagetitle").focus()};
 }	
