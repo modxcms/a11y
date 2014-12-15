@@ -21,10 +21,8 @@ $controllerPathPlaceholder = MODX_MANAGER_PATH . "controllers/[+theme]/{$action}
 // Our "overriden" controller absolute path
 $controllerPath = str_replace('[+theme]', $theme, $controllerPathPlaceholder);
 
-$modx->log(modX::LOG_LEVEL_INFO, 'Controller path : '. $controllerPath);
 if (file_exists($controllerPath)) {
     // OK, override found, let's grab the response object
-    $modx->log(modx::LOG_LEVEL_INFO, 'Setting class_postfix');
     if (!$modx->getResponse('modManagerResponse')) {
         return '';
     }
