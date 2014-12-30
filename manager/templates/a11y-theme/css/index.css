@@ -2520,7 +2520,7 @@
 /* Vars 
 ======================================================*/
 /* line 81, ../sass/_colors-and-vars.scss */
-body *:focus, #modx-header *:focus, #modx-leftbar *:focus, #modx-leftbar a:focus, .x-panel-body *:focus, -webkit-tap-highlight-color, .x-btn-focus {
+body *:focus, #modx-header *:focus, #modx-leftbar *:focus, #modx-leftbar a:focus, .x-panel-body *:focus, -webkit-tap-highlight-color, .x-btn-focus, .x-btn button:focus {
   outline: 2px solid #63d967 !important;
 }
 
@@ -5449,7 +5449,7 @@ having to do some real janky stuff to work with ExtJS markup
   zoom: 1;
   border: 1px solid #c8d2dc;
 }
-/* line 41, ../sass/_buttons.scss */
+/* line 42, ../sass/_buttons.scss */
 .x-btn button {
   font-size: 13px;
   color: #737373;
@@ -5459,40 +5459,44 @@ having to do some real janky stuff to work with ExtJS markup
   vertical-align: middle;
 }
 /* line 53, ../sass/_buttons.scss */
+.x-btn:focus {
+  background: #6cb24a !important;
+}
+/* line 58, ../sass/_buttons.scss */
 #modx-leftbar .x-btn {
   border-radius: 3px;
   padding: 13px 20px;
   border: none;
 }
-/* line 57, ../sass/_buttons.scss */
+/* line 62, ../sass/_buttons.scss */
 #modx-leftbar .x-btn button {
   color: #555555;
 }
-/* line 62, ../sass/_buttons.scss */
+/* line 67, ../sass/_buttons.scss */
 #modx-action-buttons .x-btn {
   background: white;
   border-radius: 3px;
   padding: 13px 20px;
   border: none;
 }
-/* line 68, ../sass/_buttons.scss */
+/* line 73, ../sass/_buttons.scss */
 #modx-action-buttons .x-btn button {
   color: #333333;
 }
-/* line 72, ../sass/_buttons.scss */
+/* line 77, ../sass/_buttons.scss */
 #modx-action-buttons .x-btn#modx-abtn-save {
   background: #9caf78;
 }
-/* line 74, ../sass/_buttons.scss */
+/* line 79, ../sass/_buttons.scss */
 #modx-action-buttons .x-btn#modx-abtn-save:hover {
   background: #6cb24a;
 }
-/* line 79, ../sass/_buttons.scss */
+/* line 84, ../sass/_buttons.scss */
 #modx-action-buttons .x-btn.x-btn-over {
   background: #6cb24a;
 }
 
-/* line 86, ../sass/_buttons.scss */
+/* line 91, ../sass/_buttons.scss */
 .x-toolbar .x-form-field-trigger-wrap {
   background: linear-gradient(180deg, #e4e9ee 0%, #d2dbe2 100%);
   border-radius: 4px;
@@ -5507,81 +5511,81 @@ having to do some real janky stuff to work with ExtJS markup
   transition: background-color .2s;
   padding: 3px 23px 3px 0;
 }
-/* line 100, ../sass/_buttons.scss */
+/* line 105, ../sass/_buttons.scss */
 .x-toolbar .x-form-field-trigger-wrap input.x-form-text {
   font-weight: normal !important;
   padding-left: 13px !important;
 }
-/* line 104, ../sass/_buttons.scss */
+/* line 109, ../sass/_buttons.scss */
 .x-toolbar .x-form-field-trigger-wrap .x-form-trigger {
   padding-top: 2px;
 }
-/* line 108, ../sass/_buttons.scss */
+/* line 113, ../sass/_buttons.scss */
 .x-toolbar .x-form-field-trigger-wrap.x-trigger-wrap-focus {
   outline: none !important;
   border-color: #8a8a8a;
 }
-/* line 113, ../sass/_buttons.scss */
+/* line 118, ../sass/_buttons.scss */
 .x-toolbar .x-toolbar-cell input.x-form-text {
   padding: 8px 13px;
   border-radius: 4px;
   font-size: 13px !important;
 }
 
-/* line 120, ../sass/_buttons.scss */
+/* line 125, ../sass/_buttons.scss */
 .x-btn-over {
   color: #3092d7 !important;
 }
 
-/* line 124, ../sass/_buttons.scss */
+/* line 129, ../sass/_buttons.scss */
 .x-btn-icon button {
   height: 16px;
   width: 16px;
 }
 
-/* line 131, ../sass/_buttons.scss */
+/* line 136, ../sass/_buttons.scss */
 .x-btn-icon.arrow_up button {
   background: none !important;
   /* #shame */
   position: relative;
 }
-/* line 134, ../sass/_buttons.scss */
+/* line 139, ../sass/_buttons.scss */
 .x-btn-icon.arrow_up button:before {
   content: "\f148";
   top: 1px;
   bottom: auto;
 }
-/* line 143, ../sass/_buttons.scss */
+/* line 148, ../sass/_buttons.scss */
 .x-btn-icon.arrow_down button {
   background: none !important;
   /* #shame */
   position: relative;
 }
-/* line 146, ../sass/_buttons.scss */
+/* line 151, ../sass/_buttons.scss */
 .x-btn-icon.arrow_down button:before {
   content: "\f149";
   top: 1px;
   bottom: auto;
 }
-/* line 155, ../sass/_buttons.scss */
+/* line 160, ../sass/_buttons.scss */
 .x-btn-icon.refresh button {
   background: none !important;
   /* #shame */
   position: relative;
 }
-/* line 158, ../sass/_buttons.scss */
+/* line 163, ../sass/_buttons.scss */
 .x-btn-icon.refresh button:before {
   content: "\f021";
   top: 1px;
   bottom: auto;
 }
 
-/* line 168, ../sass/_buttons.scss */
+/* line 173, ../sass/_buttons.scss */
 .x-btn-text-icon button {
   padding-left: 20px !important;
 }
 
-/* line 172, ../sass/_buttons.scss */
+/* line 177, ../sass/_buttons.scss */
 .x-html-editor-tb .x-btn {
   -moz-box-shadow: none;
   -o-box-shadow: none;
@@ -5593,12 +5597,12 @@ having to do some real janky stuff to work with ExtJS markup
   margin: 0;
 }
 
-/* line 183, ../sass/_buttons.scss */
+/* line 188, ../sass/_buttons.scss */
 .x-html-editor-tb .x-btn-over {
   border: 0 none;
 }
 
-/* line 187, ../sass/_buttons.scss */
+/* line 192, ../sass/_buttons.scss */
 .x-btn-click {
   -moz-box-shadow: 0 0 3px #aaaaaa inset;
   -o-box-shadow: 0 0 3px #aaaaaa inset;
@@ -5607,12 +5611,12 @@ having to do some real janky stuff to work with ExtJS markup
   margin: 0 1px;
 }
 
-/* line 195, ../sass/_buttons.scss */
+/* line 200, ../sass/_buttons.scss */
 .x-btn-focus {
   border: 1px solid #40454b;
 }
 
-/* line 199, ../sass/_buttons.scss */
+/* line 204, ../sass/_buttons.scss */
 .x-btn-group {
   border-radius: 3px;
   border: 1px solid #dbe0e4;
@@ -5620,7 +5624,7 @@ having to do some real janky stuff to work with ExtJS markup
   padding: 0;
 }
 
-/* line 206, ../sass/_buttons.scss */
+/* line 211, ../sass/_buttons.scss */
 .x-btn-group .x-btn {
   -moz-box-shadow: transparent 0 0 1px;
   -o-box-shadow: transparent 0 0 1px;
@@ -5631,27 +5635,27 @@ having to do some real janky stuff to work with ExtJS markup
   box-shadow: transparent 0 0 1px;
 }
 
-/* line 216, ../sass/_buttons.scss */
+/* line 221, ../sass/_buttons.scss */
 .x-btn-group .x-btn button {
   color: #878b8f;
   height: auto !important;
   /*text-shadow: 0 1px 0 #ffffff;*/
 }
 
-/* line 222, ../sass/_buttons.scss */
+/* line 227, ../sass/_buttons.scss */
 .x-btn-group .x-btn-over {
   background: #dfdfdf;
   background: #f0f0f0;
   border: 1px solid #dbe0e4;
 }
 
-/* line 228, ../sass/_buttons.scss */
+/* line 233, ../sass/_buttons.scss */
 .x-btn-group .x-btn-over button {
   color: #5b7a98;
   /*text-shadow: 0 1px 0 #ffffff;*/
 }
 
-/* line 233, ../sass/_buttons.scss */
+/* line 238, ../sass/_buttons.scss */
 .x-btn-group .x-btn-click {
   background-color: #ffffff;
   background-image: none;
@@ -5659,59 +5663,59 @@ having to do some real janky stuff to work with ExtJS markup
   margin: 0 2px 0 0;
 }
 
-/* line 240, ../sass/_buttons.scss */
+/* line 245, ../sass/_buttons.scss */
 .x-btn-click .x-btn-text, .x-btn-menu-active .x-btn-text, .x-btn-pressed .x-btn-text {
   color: #73797f;
 }
 
-/* line 244, ../sass/_buttons.scss */
+/* line 249, ../sass/_buttons.scss */
 .x-btn-disabled * {
   color: gray !important;
 }
 
-/* line 248, ../sass/_buttons.scss */
+/* line 253, ../sass/_buttons.scss */
 .x-btn-group-bwrap {
   padding: 1px 0 0;
 }
 
-/* line 252, ../sass/_buttons.scss */
+/* line 257, ../sass/_buttons.scss */
 .x-btn-group-header {
   background-color: #dbe0e4;
   color: #73797f;
   text-shadow: 0 1px 0 #fafafa;
 }
 
-/* line 258, ../sass/_buttons.scss */
+/* line 263, ../sass/_buttons.scss */
 .x-btn-group-tl, .x-btn-group-tr {
   background-image: none;
   padding: 0;
 }
 
-/* line 263, ../sass/_buttons.scss */
+/* line 268, ../sass/_buttons.scss */
 .x-btn-group-tc, .x-btn-group-bc, .x-btn-group-bl, .x-btn-group-br {
   background-image: none;
 }
 
-/* line 267, ../sass/_buttons.scss */
+/* line 272, ../sass/_buttons.scss */
 .x-btn-group-ml {
   background-image: none;
   padding-left: 1px;
 }
 
-/* line 272, ../sass/_buttons.scss */
+/* line 277, ../sass/_buttons.scss */
 .x-btn-group-mr {
   background-image: none;
   padding-right: 1px;
 }
 
-/* line 277, ../sass/_buttons.scss */
+/* line 282, ../sass/_buttons.scss */
 .x-btn em.x-btn-split {
   /*background: transparent url($imgPath + 'modx-theme/button/s-arrow.gif') no-repeat right center;*/
   display: block;
   padding-right: 14px;
   position: relative;
 }
-/* line 282, ../sass/_buttons.scss */
+/* line 287, ../sass/_buttons.scss */
 .x-btn em.x-btn-split:before {
   content: "\f0d7";
   position: absolute;
@@ -5720,76 +5724,76 @@ having to do some real janky stuff to work with ExtJS markup
   color: inherit;
 }
 
-/* line 292, ../sass/_buttons.scss */
+/* line 297, ../sass/_buttons.scss */
 .x-btn em.x-btn-arrow {
   background: transparent url("../../default/images/modx-theme/button/arrow.gif") no-repeat right center;
   display: block;
   padding-right: 20px;
 }
-/* line 297, ../sass/_buttons.scss */
+/* line 302, ../sass/_buttons.scss */
 .x-btn em.x-btn-arrow button {
   padding-right: 10px !important;
   border-right: 1px solid #fff;
 }
 
-/* line 302, ../sass/_buttons.scss */
+/* line 307, ../sass/_buttons.scss */
 .x-btn-menu-active {
   background: white;
 }
-/* line 305, ../sass/_buttons.scss */
+/* line 310, ../sass/_buttons.scss */
 .x-btn-menu-active button {
   color: #555555;
 }
 
 /* //end button style */
-/* line 312, ../sass/_buttons.scss */
+/* line 317, ../sass/_buttons.scss */
 .x-btn-over em.x-btn-split, .x-btn-click em.x-btn-split, .x-btn-menu-active em.x-btn-split, .x-btn-pressed em.x-btn-split {
   /*background-image: url($imgPath + 'modx-theme/button/s-arrow-o.gif');*/
 }
 
-/* line 316, ../sass/_buttons.scss */
+/* line 321, ../sass/_buttons.scss */
 .x-btn em.x-btn-arrow-bottom {
   background-image: url("../../default/images/modx-theme/button/s-arrow-b-noline.gif");
 }
 
-/* line 320, ../sass/_buttons.scss */
+/* line 325, ../sass/_buttons.scss */
 .x-btn em.x-btn-split-bottom {
   background-image: url("../../default/images/modx-theme/button/s-arrow-b.gif");
 }
 
-/* line 324, ../sass/_buttons.scss */
+/* line 329, ../sass/_buttons.scss */
 .x-btn-over em.x-btn-split-bottom, .x-btn-click em.x-btn-split-bottom, .x-btn-menu-active em.x-btn-split-bottom, .x-btn-pressed em.x-btn-split-bottom {
   background-image: url("../../default/images/modx-theme/button/s-arrow-bo.gif");
 }
 
-/* line 328, ../sass/_buttons.scss */
+/* line 333, ../sass/_buttons.scss */
 .x-btn-group-notitle .x-btn-group-tc {
   background-image: url("../../default/images/modx-theme/button/group-tb.gif");
 }
 
 /* Action buttons */
-/* line 334, ../sass/_buttons.scss */
+/* line 339, ../sass/_buttons.scss */
 .actions {
   bottom: 8px;
   margin: 0;
   overflow: hidden;
   position: absolute;
 }
-/* line 340, ../sass/_buttons.scss */
+/* line 345, ../sass/_buttons.scss */
 .actions li {
   float: left;
   line-height: 0.7;
   margin-right: 5px;
 }
 
-/* line 350, ../sass/_buttons.scss */
+/* line 355, ../sass/_buttons.scss */
 .actions button,
 .inline-button,
 .x-superboxselect-item,
 .x-form-trigger {
   padding: 5px;
 }
-/* line 356, ../sass/_buttons.scss */
+/* line 361, ../sass/_buttons.scss */
 .actions button.yellow,
 .inline-button.yellow,
 .x-superboxselect-item.yellow,
@@ -5797,7 +5801,7 @@ having to do some real janky stuff to work with ExtJS markup
   background: #ffea80;
   color: #555555 !important;
 }
-/* line 361, ../sass/_buttons.scss */
+/* line 366, ../sass/_buttons.scss */
 .actions button.yellow:hover,
 .inline-button.yellow:hover,
 .x-superboxselect-item.yellow:hover,
@@ -5805,7 +5809,7 @@ having to do some real janky stuff to work with ExtJS markup
   /*background: #F4A448;*/
   background: #ffe666;
 }
-/* line 366, ../sass/_buttons.scss */
+/* line 371, ../sass/_buttons.scss */
 .actions button.yellow:active,
 .inline-button.yellow:active,
 .x-superboxselect-item.yellow:active,
@@ -5813,7 +5817,7 @@ having to do some real janky stuff to work with ExtJS markup
   /*background: #F49548;*/
   background: #ffe24d;
 }
-/* line 373, ../sass/_buttons.scss */
+/* line 378, ../sass/_buttons.scss */
 .actions button.orange,
 .inline-button.orange,
 .x-superboxselect-item.orange,
@@ -5821,7 +5825,7 @@ having to do some real janky stuff to work with ExtJS markup
   background: #f49548;
   color: white !important;
 }
-/* line 378, ../sass/_buttons.scss */
+/* line 383, ../sass/_buttons.scss */
 .actions button.orange:hover,
 .inline-button.orange:hover,
 .x-superboxselect-item.orange:hover,
@@ -5829,7 +5833,7 @@ having to do some real janky stuff to work with ExtJS markup
   /*background: #F4A448;*/
   background: #f38730;
 }
-/* line 383, ../sass/_buttons.scss */
+/* line 388, ../sass/_buttons.scss */
 .actions button.orange:active,
 .inline-button.orange:active,
 .x-superboxselect-item.orange:active,
@@ -5837,7 +5841,7 @@ having to do some real janky stuff to work with ExtJS markup
   /*background: #F49548;*/
   background: #f17918;
 }
-/* line 390, ../sass/_buttons.scss */
+/* line 395, ../sass/_buttons.scss */
 .actions button.red,
 .inline-button.red,
 .x-superboxselect-item.red,
@@ -5845,7 +5849,7 @@ having to do some real janky stuff to work with ExtJS markup
   background: #be0000;
   color: white !important;
 }
-/* line 395, ../sass/_buttons.scss */
+/* line 400, ../sass/_buttons.scss */
 .actions button.red:hover,
 .inline-button.red:hover,
 .x-superboxselect-item.red:hover,
@@ -5853,7 +5857,7 @@ having to do some real janky stuff to work with ExtJS markup
   /*background: #F4A448;*/
   background: #af0000;
 }
-/* line 400, ../sass/_buttons.scss */
+/* line 405, ../sass/_buttons.scss */
 .actions button.red:active,
 .inline-button.red:active,
 .x-superboxselect-item.red:active,
@@ -5861,7 +5865,7 @@ having to do some real janky stuff to work with ExtJS markup
   /*background: #F49548;*/
   background: #9f0000;
 }
-/* line 407, ../sass/_buttons.scss */
+/* line 412, ../sass/_buttons.scss */
 .actions button.green,
 .inline-button.green,
 .x-superboxselect-item.green,
@@ -5870,7 +5874,7 @@ having to do some real janky stuff to work with ExtJS markup
   color: white !important;
   /* override !important of .green class */
 }
-/* line 412, ../sass/_buttons.scss */
+/* line 417, ../sass/_buttons.scss */
 .actions button.green:hover,
 .inline-button.green:hover,
 .x-superboxselect-item.green:hover,
@@ -5878,7 +5882,7 @@ having to do some real janky stuff to work with ExtJS markup
   /*background: #6cb24a;*/
   background: #61a043;
 }
-/* line 417, ../sass/_buttons.scss */
+/* line 422, ../sass/_buttons.scss */
 .actions button.green:active,
 .inline-button.green:active,
 .x-superboxselect-item.green:active,
@@ -5886,7 +5890,7 @@ having to do some real janky stuff to work with ExtJS markup
   /*background: #4BA81E;*/
   background: #568e3b;
 }
-/* line 424, ../sass/_buttons.scss */
+/* line 429, ../sass/_buttons.scss */
 .actions button.blue,
 .inline-button.blue,
 .x-superboxselect-item.blue,
@@ -5895,14 +5899,14 @@ having to do some real janky stuff to work with ExtJS markup
   color: white !important;
   /* override !important of .green class */
 }
-/* line 429, ../sass/_buttons.scss */
+/* line 434, ../sass/_buttons.scss */
 .actions button.blue:hover,
 .inline-button.blue:hover,
 .x-superboxselect-item.blue:hover,
 .x-form-trigger.blue:hover {
   background: #2f89bb;
 }
-/* line 433, ../sass/_buttons.scss */
+/* line 438, ../sass/_buttons.scss */
 .actions button.blue:active,
 .inline-button.blue:active,
 .x-superboxselect-item.blue:active,
@@ -5912,7 +5916,7 @@ having to do some real janky stuff to work with ExtJS markup
 }
 
 /* basic tree toolbar styles */
-/* line 444, ../sass/_buttons.scss */
+/* line 449, ../sass/_buttons.scss */
 #modx-leftbar .x-toolbar-ct .x-btn {
   margin: 0 3px;
   padding: 5px;
@@ -5924,7 +5928,7 @@ having to do some real janky stuff to work with ExtJS markup
   display: inline-block;
   position: relative;
 }
-/* line 455, ../sass/_buttons.scss */
+/* line 460, ../sass/_buttons.scss */
 #modx-leftbar .x-toolbar-ct .x-btn > em > button {
   font-size: 20px;
   text-shadow: 0 !important;
@@ -5936,99 +5940,99 @@ having to do some real janky stuff to work with ExtJS markup
   left: 3px;
   color: #40454b;
 }
-/* line 466, ../sass/_buttons.scss */
+/* line 471, ../sass/_buttons.scss */
 #modx-leftbar .x-toolbar-ct .x-btn > em > button:hover {
   color: #3092d7;
 }
-/* line 472, ../sass/_buttons.scss */
+/* line 477, ../sass/_buttons.scss */
 #modx-leftbar .x-toolbar-ct .x-btn:hover {
   border: 1px solid #3092d7;
 }
-/* line 476, ../sass/_buttons.scss */
+/* line 481, ../sass/_buttons.scss */
 #modx-leftbar .x-toolbar-ct .x-btn span {
   vertical-align: middle;
 }
-/* line 481, ../sass/_buttons.scss */
+/* line 486, ../sass/_buttons.scss */
 #modx-leftbar .x-toolbar-ct .x-toolbar-right .x-btn > em > button {
   color: #96A9BB;
 }
 
-/* line 487, ../sass/_buttons.scss */
+/* line 492, ../sass/_buttons.scss */
 #modx-leftbar #emptifier.x-item-disabled {
   opacity: .4 !important;
 }
 
 /* resource tree toolbar icons */
-/* line 493, ../sass/_buttons.scss */
+/* line 498, ../sass/_buttons.scss */
 .tree-new-resource > em > button:before {
   content: "\f016";
 }
 
-/* line 498, ../sass/_buttons.scss */
+/* line 503, ../sass/_buttons.scss */
 .tree-new-weblink > em > button:before {
   content: "\f0c1";
 }
 
-/* line 503, ../sass/_buttons.scss */
+/* line 508, ../sass/_buttons.scss */
 .tree-new-symlink > em > button:before {
   content: "\f0c5";
 }
 
-/* line 508, ../sass/_buttons.scss */
+/* line 513, ../sass/_buttons.scss */
 .tree-new-static-resource > em > button:before {
   content: "\f0f6";
 }
 
-/* line 513, ../sass/_buttons.scss */
+/* line 518, ../sass/_buttons.scss */
 .tree-trash > em > button:before {
   content: "\f014";
 }
 
 /* alignment overrides */
-/* line 519, ../sass/_buttons.scss */
+/* line 524, ../sass/_buttons.scss */
 #modx-leftbar .x-toolbar-ct .x-btn.tree-new-symlink > em > button {
   top: 4px;
   left: 2px;
 }
 
-/* line 523, ../sass/_buttons.scss */
+/* line 528, ../sass/_buttons.scss */
 #modx-leftbar .x-toolbar-ct .x-btn.tree-new-weblink > em > button {
   left: 2px;
 }
 
 /* element tree toolbar */
-/* line 529, ../sass/_buttons.scss */
+/* line 534, ../sass/_buttons.scss */
 .tree-new-template > em > button:before {
   content: "\f0db";
 }
 
-/* line 534, ../sass/_buttons.scss */
+/* line 539, ../sass/_buttons.scss */
 .tree-new-tv > em > button:before {
   content: "\f022";
 }
 
-/* line 539, ../sass/_buttons.scss */
+/* line 544, ../sass/_buttons.scss */
 .tree-new-chunk > em > button:before {
   content: "\f009";
 }
 
-/* line 544, ../sass/_buttons.scss */
+/* line 549, ../sass/_buttons.scss */
 .tree-new-snippet > em > button:before {
   content: "\f121";
 }
 
-/* line 549, ../sass/_buttons.scss */
+/* line 554, ../sass/_buttons.scss */
 .tree-new-plugin > em > button:before {
   content: "\f085";
 }
 
-/* line 554, ../sass/_buttons.scss */
+/* line 559, ../sass/_buttons.scss */
 .tree-new-category > em > button:before {
   content: "\f07b";
 }
 
 /* accordion header row icons */
-/* line 563, ../sass/_buttons.scss */
+/* line 568, ../sass/_buttons.scss */
 #modx-leftbar .icon,
 .x-tree-node .icon {
   background: none;
@@ -6039,17 +6043,17 @@ having to do some real janky stuff to work with ExtJS markup
   padding: 3px;
   text-align: center;
 }
-/* line 571, ../sass/_buttons.scss */
+/* line 576, ../sass/_buttons.scss */
 #modx-leftbar .icon i,
 .x-tree-node .icon i {
   font-style: normal;
 }
-/* line 574, ../sass/_buttons.scss */
+/* line 579, ../sass/_buttons.scss */
 #modx-leftbar .icon button,
 .x-tree-node .icon button {
   display: none;
 }
-/* line 577, ../sass/_buttons.scss */
+/* line 582, ../sass/_buttons.scss */
 #modx-leftbar .icon:hover,
 .x-tree-node .icon:hover {
   opacity: 1 !important;
@@ -6495,7 +6499,7 @@ input::-moz-focus-inner {
   /*filter: alpha(opacity=100); /* for IE <= 8 */
 }
 /* line 390, ../sass/_forms.scss */
-.x-static-text-field.x-form-focus {
+.x-static-text-field.x-form-focus, .x-static-text-field:focus {
   border-color: #f2f2f2 !important;
 }
 

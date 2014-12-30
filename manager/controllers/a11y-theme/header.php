@@ -113,7 +113,7 @@ class TopMenu
             );
             $gravsrc = $this->modx->getOption('url_scheme', null, 'http://') . 'www.gravatar.com/avatar/'
             .$gravemail . '?s=128&d=mm';
-            $userImage = '<img src="' . $gravsrc . '" />';
+            $userImage = '<img src="' . $gravsrc . '" alt="'.$this->modx->getLoginUserName().'" />';
         }
 
         return $userImage;

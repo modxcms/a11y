@@ -38,6 +38,7 @@
   text-decoration: none;
   zoom: 1;
   border: 1px solid rgb(200, 210, 220);
+  
   button {
     font-size: 13px;
     color: $regularButtonColor;
@@ -49,6 +50,10 @@
   &.primary-button {
 	@extend %primary-button;
   }
+  &:focus {
+    background: $saveBtnBgHover !important;
+  }
+
 
   #modx-leftbar & {
     border-radius: 3px;
