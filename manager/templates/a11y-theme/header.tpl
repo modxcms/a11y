@@ -3,7 +3,7 @@
 <head>
 <title>{if $_pagetitle}{$_pagetitle} | {/if}{$_config.site_name}</title>
 <meta http-equiv="Content-Type" content="text/html; charset={$_config.modx_charset}" />
-
+	
 {if $_config.manager_favicon_url}<link rel="shortcut icon" href="{$_config.manager_favicon_url}" />{/if}
 
 <link rel="stylesheet" type="text/css" href="{$_config.manager_url}assets/ext3/resources/css/ext-all-notheme-min.css" />
@@ -59,7 +59,7 @@
                 <a href="?" title="{$_lang.dashboard}">{$_lang.dashboard}</a>
             </li>
             {if $_search}
-            <li id="modx-manager-search"></li>
+            <li id="modx-manager-search"><label for="modx-uberbar" id="modx-uberbar-label">Search</label></li>
             {/if}
             {$navb}
         </ul>

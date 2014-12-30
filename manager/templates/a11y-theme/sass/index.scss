@@ -66,6 +66,13 @@ body, body.x-border-layout-ct {
   }
 }
 
+#modx-uberbar-label{
+	height: 0;
+	width: 0;
+	font-size: 0;
+	float: left;
+}
+
 #modx-container {
   height: 100%;
   width: 100%;

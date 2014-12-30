@@ -29,4 +29,5 @@ function initA11y() {
 	document.getElementById("help-link").addEventListener("keydown", clearSubNavOpen, false);	
 	document.getElementById("modx-uberbar").addEventListener("keydown", clearSubNavOpen, false);
 
-}	
+	
+}// eof initA11y
