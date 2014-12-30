@@ -236,9 +236,8 @@ Ext.extend(MODx.panel.Resource,MODx.FormPanel,{
         }
     }
     ,onFieldChange: function(o) {
-	    //console.log("onFieldChange(): ", o);
 	    if(o){
-		    console.log("onFieldChange(): ", o.field.id);
+		    console.log("onFieldChange(): ", o.field.id); 
 		    localStorage.setItem('curFocus', o.field.id);
 	    }
         if (o && o.field && o.field.name == 'syncsite') return;

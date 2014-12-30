@@ -29,25 +29,4 @@ function initA11y() {
 	document.getElementById("help-link").addEventListener("keydown", clearSubNavOpen, false);	
 	document.getElementById("modx-uberbar").addEventListener("keydown", clearSubNavOpen, false);
 
-//Issue #10, trying to make an override for the initial focus field if we have the resource edit screen
-	//DID NOT WORK
-	//watch input changes to set focus
-	//var input = document.querySelector('input');
-	//input.oninput = whosFocused;
-	//input.attachEvent("oninput", whosFocused);
-	//input.addEventListener("input", whosFocused, false);
-	
-	//DID NOT WORK
-	//var updateDiv = document.getElementById("modx-panel-resource-div");
-	//console.log(updateDiv);
-	//if(updateDiv){document.getElementById("modx-resource-pagetitle").focus()};
-	
-	//load the last focused element, to begin where we left off 
-	//DID NOT WORK
-	//var lastActiveEle = localStorage.getItem('curFocus');
-	//console.log("Last Active: "+lastActiveEle);
-		
-	//var initFocus = document.getElementById(lastActiveEle);
-	//initFocus.focus();
-	
 }	
