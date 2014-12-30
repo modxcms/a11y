@@ -7857,7 +7857,7 @@ td.x-date-mp-year a:hover {
 }
 /* line 103, ../sass/_tabs.scss */
 .x-tab-strip li.x-tab-strip-active {
-  color: #1a7fb8;
+  color: #2276b2;
   background-color: white;
   box-shadow: 0 -3px 0 #3092d7, -1px 0 0 transparent;
   cursor: default;
@@ -8123,7 +8123,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   border-right-color: white;
   box-shadow: none;
   /* removes the active tab strip on top */
-  color: #1a7fb8;
+  color: #2276b2;
   width: 169px;
   /* make the active li 1px more wide to cover the containers right border, this makes the right border on inactive tabs necessary as the whole tab-strip wrap gets wider */
 }
