@@ -20,19 +20,22 @@
 }
 
 #modx-manager-search .x-form-trigger {
-  color: rgba(255,255,255,.25);
+  color: rgba(255,255,255,.5);
   cursor: default;
   height: 16px;
   right: 0;
+  text-indent: -25px;
   border-radius: 0;
   border: none;
   padding: 9px 5px;
-  width: 17px;
+  //width: 17px;
+  width: 47px;
   background-image: none;
   
   &:before{
 	  top: 30%; //centers icon
-	  content: "\f002"; //search icon
+	  //content: "\f002"; //search icon
+	  content: "Search";
   }
 }
 

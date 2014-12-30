@@ -8579,23 +8579,24 @@ ul.modx-subnav.open {
 
 /* line 22, ../sass/_uberbar.scss */
 #modx-manager-search .x-form-trigger {
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.5);
   cursor: default;
   height: 16px;
   right: 0;
+  text-indent: -25px;
   border-radius: 0;
   border: none;
   padding: 9px 5px;
-  width: 17px;
+  width: 47px;
   background-image: none;
 }
-/* line 33, ../sass/_uberbar.scss */
+/* line 35, ../sass/_uberbar.scss */
 #modx-manager-search .x-form-trigger:before {
   top: 30%;
-  content: "\f002";
+  content: "Search";
 }
 
-/* line 39, ../sass/_uberbar.scss */
+/* line 42, ../sass/_uberbar.scss */
 #modx-manager-search .x-form-field-wrap {
   background: rgba(0, 0, 0, 0.25);
   border: 0;
@@ -8608,25 +8609,25 @@ ul.modx-subnav.open {
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0 inset;
 }
 
-/* line 51, ../sass/_uberbar.scss */
+/* line 54, ../sass/_uberbar.scss */
 #modx-manager-search .x-form-field-trigger-wrap {
   border-width: 0;
   height: auto;
   background-image: none;
 }
-/* line 56, ../sass/_uberbar.scss */
+/* line 59, ../sass/_uberbar.scss */
 #modx-manager-search .x-form-field-trigger-wrap .x-form-text {
   text-shadow: none;
   font-weight: normal;
   color: #020608;
   letter-spacing: 0.75px;
 }
-/* line 62, ../sass/_uberbar.scss */
+/* line 65, ../sass/_uberbar.scss */
 #modx-manager-search .x-form-field-trigger-wrap .x-form-empty-field {
   color: #555;
 }
 
-/* line 68, ../sass/_uberbar.scss */
+/* line 71, ../sass/_uberbar.scss */
 #modx-manager-search .x-form-field-wrap:hover,
 #modx-manager-search .x-trigger-wrap-focus {
   /*@include transition(background-color, 360ms, ease-in);
@@ -8635,12 +8636,12 @@ ul.modx-subnav.open {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 75, ../sass/_uberbar.scss */
+/* line 78, ../sass/_uberbar.scss */
 #modx-uberbar {
   margin-right: 20px;
 }
 
-/* line 79, ../sass/_uberbar.scss */
+/* line 82, ../sass/_uberbar.scss */
 .modx-manager-search-results {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -8654,7 +8655,7 @@ ul.modx-subnav.open {
   width: 450px !important;
 }
 
-/* line 89, ../sass/_uberbar.scss */
+/* line 92, ../sass/_uberbar.scss */
 .modx-manager-search-results:before {
   content: "";
   display: block;
@@ -8665,7 +8666,7 @@ ul.modx-subnav.open {
   border-bottom: 8px solid #2b3948;
 }
 
-/* line 98, ../sass/_uberbar.scss */
+/* line 101, ../sass/_uberbar.scss */
 .modx-manager-search-results .x-combo-list-inner {
   background: #2b3948;
   width: 100% !important;
@@ -8677,7 +8678,7 @@ ul.modx-subnav.open {
   margin-top: 9px;
 }
 
-/* line 107, ../sass/_uberbar.scss */
+/* line 110, ../sass/_uberbar.scss */
 .modx-manager-search-results .section {
   border-left: 1px solid #1e2732;
   font-size: 13px;
@@ -8685,12 +8686,12 @@ ul.modx-subnav.open {
   position: relative;
 }
 
-/* line 115, ../sass/_uberbar.scss */
+/* line 118, ../sass/_uberbar.scss */
 .modx-manager-search-results .x-combo-selected h3 {
   left: 0;
 }
 
-/* line 120, ../sass/_uberbar.scss */
+/* line 123, ../sass/_uberbar.scss */
 .modx-manager-search-results h3,
 .modx-manager-search-results p {
   line-height: 17px;
@@ -8698,12 +8699,12 @@ ul.modx-subnav.open {
   padding: 4px 8px;
 }
 
-/* line 126, ../sass/_uberbar.scss */
+/* line 129, ../sass/_uberbar.scss */
 .modx-manager-search-results p {
   color: #C9D3E0;
 }
 
-/* line 130, ../sass/_uberbar.scss */
+/* line 133, ../sass/_uberbar.scss */
 .modx-manager-search-results h3 {
   color: #55bbe7;
   font-size: 13px;
@@ -8715,7 +8716,7 @@ ul.modx-subnav.open {
   width: 95px;
 }
 
-/* line 141, ../sass/_uberbar.scss */
+/* line 144, ../sass/_uberbar.scss */
 .modx-manager-search-results a {
   cursor: pointer;
   display: inline-block;
@@ -8725,7 +8726,7 @@ ul.modx-subnav.open {
   text-decoration: none;
 }
 
-/* line 150, ../sass/_uberbar.scss */
+/* line 153, ../sass/_uberbar.scss */
 .modx-manager-search-results i {
   color: #3092d7;
   left: 0;
@@ -8733,25 +8734,25 @@ ul.modx-subnav.open {
   top: 2px;
 }
 
-/* line 157, ../sass/_uberbar.scss */
+/* line 160, ../sass/_uberbar.scss */
 .modx-manager-search-results em {
   font-style: normal;
   opacity: 0.5;
 }
 
-/* line 164, ../sass/_uberbar.scss */
+/* line 167, ../sass/_uberbar.scss */
 .modx-manager-search-results .x-combo-selected h3,
 .modx-manager-search-results .x-combo-selected p,
 .modx-manager-search-results .x-combo-selected i {
   color: #fff;
 }
 
-/* line 168, ../sass/_uberbar.scss */
+/* line 171, ../sass/_uberbar.scss */
 .modx-manager-search-results .x-combo-selected p {
   border-left-color: transparent;
 }
 
-/* line 172, ../sass/_uberbar.scss */
+/* line 175, ../sass/_uberbar.scss */
 .modx-manager-search-results .x-combo-selected {
   border: none;
   color: #fff !important;
@@ -8760,7 +8761,7 @@ ul.modx-subnav.open {
   z-index: 10;
 }
 
-/* line 180, ../sass/_uberbar.scss */
+/* line 183, ../sass/_uberbar.scss */
 .modx-manager-search-results .icon-user {
   background-image: none !important;
 }

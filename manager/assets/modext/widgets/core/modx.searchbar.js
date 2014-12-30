@@ -19,7 +19,7 @@ MODx.SearchBar = function(config) {
         ,minChars: 1
         ,displayField: 'name'
         ,valueField: '_action'
-        ,width: 209 // make the uberbar border to the right of the searchfield be in line with the right tree edge
+        ,width: 150 // make the uberbar border to the right of the searchfield be in line with the right tree edge
         ,maxWidth: 300
         ,itemSelector: '.x-combo-list-item'
         ,tpl: new Ext.XTemplate(
