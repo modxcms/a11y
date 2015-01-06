@@ -236,10 +236,10 @@ Ext.extend(MODx.panel.Resource,MODx.FormPanel,{
         }
     }
     ,onFieldChange: function(o) {
+	    //a11y - Set Active Input
 	    if(o){
-		    console.log("onFieldChange(): ", o.field.id); 
-		    localStorage.setItem('curFocus', o.field.id);
-	    }
+	    	Ext.state.Manager.set("curFocus", o.field.id);
+	    }	
         if (o && o.field && o.field.name == 'syncsite') return;
 
         if (this.isReady || MODx.request.reload) {

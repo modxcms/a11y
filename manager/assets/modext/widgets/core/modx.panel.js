@@ -111,11 +111,13 @@ Ext.extend(MODx.FormPanel,Ext.FormPanel,{
                         this.fireEvent('setup',this.config);
                         
                         //Issue 10 - Keep focus of element on save
-                        var lastActiveEle = localStorage.getItem('curFocus');
+                        //a11y ExtJS version
+						var lastActiveEle = Ext.state.Manager.get("curFocus");
 						console.log("Last Active: "+lastActiveEle);
 							
 						var initFocus = document.getElementById(lastActiveEle);
 						if(initFocus) initFocus.focus();
+					
                     }
                 });
             }

@@ -28,6 +28,11 @@ function initA11y() {
 	//give help an ID by editing line 175 in /controllers/
 	document.getElementById("help-link").addEventListener("keydown", clearSubNavOpen, false);	
 	document.getElementById("modx-uberbar").addEventListener("keydown", clearSubNavOpen, false);
-
 	
 }// eof initA11y
+
+Ext.ComponentMgr.onAvailable('modx-abtn-save', function(btn) {
+    btn.on('click', function() {
+        console.log("onAvailableWorks!");
+    });
+}); 

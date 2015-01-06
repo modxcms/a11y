@@ -144,7 +144,7 @@ Ext.extend(MODx.tree.Tree,Ext.tree.TreePanel,{
     ,disableHref: false
 
     ,onLoad: function(ldr,node,resp) {
-        /*issue 10 - focus reset to tree when editing
+        /*a11y issue 10 - focus reset to tree when editing
         Ext.each(node.childNodes, function(node){
             if (node.attributes.selected) {
                 node.select();
@@ -217,7 +217,7 @@ Ext.extend(MODx.tree.Tree,Ext.tree.TreePanel,{
         if (Ext.isEmpty(treeState) && this.root) {
             this.root.expand();
             if (this.root.firstChild && this.config.expandFirst) {
-                //this.root.firstChild.select();
+                //a11y - this.root.firstChild.select();
                 this.root.firstChild.expand();
             }
         } else {
