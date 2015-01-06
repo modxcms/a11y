@@ -3,7 +3,7 @@
 $primary1: #32AB9A;
 $primary2: #00948E;
 
-$colorSplash: rgb(48, 146, 215);
+$colorSplash: rgb(35, 118, 196);
 $desaturatedSplash:lighten(desaturate($colorSplash,100%),20%);
 $lightSplash:lighten($colorSplash, 42.5%);
 $colorSplashLight: lighten($colorSplash, 42.5%); /* unused */
@@ -243,7 +243,7 @@ $tabInactiveText: darken($grey, 15%);
 $tabHoverText: $colorSplash;
 $tabActiveBg: $white;
 $tabActiveBgHover: $white;
-$tabActiveText: darken($colorSplash, 10%);
+$tabActiveText: $colorSplash;
 $tabInactiveBg: transparent;
 $tabInactiveBgHover: transparent;
 $tabTextHover: $colorSplashDark;

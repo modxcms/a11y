@@ -4259,7 +4259,7 @@ a.x-menu-item {
 /* line 1168, ../sass/_xtheme-modx.scss */
 .x-tool:hover {
   color: white;
-  background: #3092d7;
+  background: #2376c4;
 }
 /* line 1173, ../sass/_xtheme-modx.scss */
 .x-tool.x-tool-toggle {
@@ -5244,7 +5244,7 @@ having to do some real janky stuff to work with ExtJS markup
 /* line 5, ../sass/components/_primary-button.scss */
 .x-window .x-window-bwrap .x-window-bc .x-window-footer .x-toolbar-right-row td:last-of-type .x-item-disabled.x-btn, .x-item-disabled.primary-button {
   opacity: 1;
-  background: #b6b6b6;
+  background: #a7a7a7;
 }
 /* line 9, ../sass/components/_primary-button.scss */
 .x-window .x-window-bwrap .x-window-bc .x-window-footer .x-toolbar-right-row td:last-of-type .x-btn button, .actions button.primary-button button,
@@ -5364,8 +5364,8 @@ having to do some real janky stuff to work with ExtJS markup
 .inline-button:hover,
 .x-superboxselect-item:hover,
 .x-form-trigger:hover {
-  background-color: #3092d7;
-  box-shadow: 0 0 0 1px #3092d7;
+  background-color: #2376c4;
+  box-shadow: 0 0 0 1px #2376c4;
   color: white;
   /*button {
     color: inherit;
@@ -5379,9 +5379,9 @@ having to do some real janky stuff to work with ExtJS markup
 .inline-button:active,
 .x-superboxselect-item:active,
 .x-form-trigger:active {
-  background-color: #2682c3;
-  box-shadow: 0 0 0 1px #2682c3;
-  color: #3092d7;
+  background-color: #1e66aa;
+  box-shadow: 0 0 0 1px #1e66aa;
+  color: #2376c4;
   /*button {
     color: inherit;
   }*/
@@ -5534,7 +5534,7 @@ having to do some real janky stuff to work with ExtJS markup
 
 /* line 125, ../sass/_buttons.scss */
 .x-btn-over {
-  color: #3092d7 !important;
+  color: #2376c4 !important;
 }
 
 /* line 129, ../sass/_buttons.scss */
@@ -5942,11 +5942,11 @@ having to do some real janky stuff to work with ExtJS markup
 }
 /* line 471, ../sass/_buttons.scss */
 #modx-leftbar .x-toolbar-ct .x-btn > em > button:hover {
-  color: #3092d7;
+  color: #2376c4;
 }
 /* line 477, ../sass/_buttons.scss */
 #modx-leftbar .x-toolbar-ct .x-btn:hover {
-  border: 1px solid #3092d7;
+  border: 1px solid #2376c4;
 }
 /* line 481, ../sass/_buttons.scss */
 #modx-leftbar .x-toolbar-ct .x-btn span {
@@ -6107,7 +6107,7 @@ textarea.x-form-field,
   /*outline-offset: 0;*/
   /*outline: 1px solid #ddd !important; /* #shame */
   /*box-shadow: $shadowBorderFocus;*/
-  border-color: #2682c3;
+  border-color: #1e66aa;
 }
 
 /* line 44, ../sass/_forms.scss */
@@ -6206,11 +6206,11 @@ input::-moz-focus-inner {
 }
 /* line 115, ../sass/_forms.scss */
 .x-form-item label.x-form-item-label .modx-tv-reset:hover:before {
-  color: #3092d7;
+  color: #2376c4;
 }
 /* line 119, ../sass/_forms.scss */
 .x-form-item label.x-form-item-label .modx-tv-reset:active:before {
-  color: #2682c3;
+  color: #1e66aa;
 }
 /* line 124, ../sass/_forms.scss */
 .x-form-item label.x-form-item-label:hover .modx-tv-reset {
@@ -6293,21 +6293,21 @@ input::-moz-focus-inner {
 }
 /* line 192, ../sass/_forms.scss */
 .x-form-item .modx-tag-list .modx-tag-opt.modx-tag-checked, .x-form-item .modx-tag-list .modx-tag-opt:hover {
-  background-color: #3092d7;
+  background-color: #2376c4;
   color: white;
   text-decoration: none;
 }
 /* line 197, ../sass/_forms.scss */
 .x-form-item .modx-tag-list .modx-tag-opt.modx-tag-checked:before, .x-form-item .modx-tag-list .modx-tag-opt:hover:before {
-  border-color: transparent #3092d7 transparent transparent;
+  border-color: transparent #2376c4 transparent transparent;
 }
 /* line 201, ../sass/_forms.scss */
 .x-form-item .modx-tag-list .modx-tag-opt.modx-tag-checked:hover, .x-form-item .modx-tag-list .modx-tag-opt:hover:hover {
-  background-color: #2682c3;
+  background-color: #1e66aa;
 }
 /* line 204, ../sass/_forms.scss */
 .x-form-item .modx-tag-list .modx-tag-opt.modx-tag-checked:hover:before, .x-form-item .modx-tag-list .modx-tag-opt:hover:hover:before {
-  border-color: transparent #2682c3 transparent transparent;
+  border-color: transparent #1e66aa transparent transparent;
 }
 /* line 213, ../sass/_forms.scss */
 .x-form-item .modx-tv-legacy-select {
@@ -6319,7 +6319,7 @@ input::-moz-focus-inner {
 }
 /* line 219, ../sass/_forms.scss */
 .x-form-item .modx-tv-legacy-select:focus {
-  border: 1px solid #2682c3;
+  border: 1px solid #1e66aa;
 }
 /* line 224, ../sass/_forms.scss */
 .x-form-item .modx-tv-legacy-select option[selected] {
@@ -6567,7 +6567,7 @@ input::-moz-focus-inner {
 }
 /* line 443, ../sass/_forms.scss */
 .x-form-field-wrap .x-form-trigger.x-form-trigger-over, .x-form-field-wrap .x-form-trigger:hover {
-  box-shadow: 0 0 0 1px #3092d7;
+  box-shadow: 0 0 0 1px #2376c4;
 }
 /* line 446, ../sass/_forms.scss */
 .x-form-field-wrap .x-form-trigger.x-form-trigger-over:before, .x-form-field-wrap .x-form-trigger:hover:before {
@@ -6577,7 +6577,7 @@ input::-moz-focus-inner {
 }
 /* line 453, ../sass/_forms.scss */
 .x-form-field-wrap .x-form-trigger.x-form-trigger-click, .x-form-field-wrap .x-form-trigger:active {
-  box-shadow: 0 0 0 1px #2682c3;
+  box-shadow: 0 0 0 1px #1e66aa;
 }
 /* line 456, ../sass/_forms.scss */
 .x-form-field-wrap .x-form-trigger.x-form-trigger-click:before, .x-form-field-wrap .x-form-trigger:active:before {
@@ -6732,14 +6732,14 @@ input::-moz-focus-inner {
 .x-fieldset-checkbox-toggle legend .x-form-cb-label:focus:before,
 .x-fieldset-checkbox-toggle legend .x-fieldset-header-text:hover:before,
 .x-fieldset-checkbox-toggle legend .x-fieldset-header-text:focus:before {
-  color: #3092d7;
+  color: #2376c4;
 }
 /* line 591, ../sass/_forms.scss */
 .x-form-check-wrap .x-form-cb-label:active:before,
 .x-form-check-wrap .x-fieldset-header-text:active:before,
 .x-fieldset-checkbox-toggle legend .x-form-cb-label:active:before,
 .x-fieldset-checkbox-toggle legend .x-fieldset-header-text:active:before {
-  color: #2682c3;
+  color: #1e66aa;
 }
 /* line 599, ../sass/_forms.scss */
 .x-form-check-wrap .x-form-checkbox,
@@ -6794,7 +6794,7 @@ input::-moz-focus-inner {
 .x-fieldset-checkbox-toggle legend .x-form-radio:hover + .x-fieldset-header-text:before,
 .x-fieldset-checkbox-toggle legend .x-form-radio:focus + .x-form-cb-label:before,
 .x-fieldset-checkbox-toggle legend .x-form-radio:focus + .x-fieldset-header-text:before {
-  color: #3092d7;
+  color: #2376c4;
 }
 /* line 621, ../sass/_forms.scss */
 .x-form-check-wrap .x-form-checkbox:active + .x-form-cb-label:before, .x-form-check-wrap .x-form-checkbox:active + .x-fieldset-header-text:before,
@@ -6808,7 +6808,7 @@ input::-moz-focus-inner {
 .x-fieldset-checkbox-toggle legend input[type="checkbox"]:active + .x-fieldset-header-text:before,
 .x-fieldset-checkbox-toggle legend .x-form-radio:active + .x-form-cb-label:before,
 .x-fieldset-checkbox-toggle legend .x-form-radio:active + .x-fieldset-header-text:before {
-  color: #2682c3;
+  color: #1e66aa;
 }
 /* line 627, ../sass/_forms.scss */
 .x-form-check-wrap .x-form-checkbox + .x-form-cb-label:before,
@@ -7021,11 +7021,11 @@ input::-moz-focus-inner {
 }
 /* line 801, ../sass/_forms.scss */
 .x-superboxselect .x-superboxselect-btns .x-superboxselect-btn-clear:hover {
-  border-left: 1px solid #3092d7;
+  border-left: 1px solid #2376c4;
 }
 /* line 805, ../sass/_forms.scss */
 .x-superboxselect .x-superboxselect-btns .x-superboxselect-btn-clear:active {
-  border-left: 1px solid #2682c3;
+  border-left: 1px solid #1e66aa;
 }
 
 /* .x-superboxselect */
@@ -7293,7 +7293,7 @@ input::-moz-focus-inner {
 /* line 1088, ../sass/_forms.scss */
 .x-combo-list .x-combo-list-inner {
   background-color: white;
-  border: 1px solid #3092d7;
+  border: 1px solid #2376c4;
   /* apply the border here as we move this element 1px left to be in line with the combobox border */
   border-radius: 0 0 3px 3px;
   margin-left: -1px;
@@ -7318,7 +7318,7 @@ input::-moz-focus-inner {
 .x-combo-list .x-toolbar {
   border: 0;
   border-radius: 0 0 3px 3px;
-  box-shadow: 0 0 0 1px #3092d7;
+  box-shadow: 0 0 0 1px #2376c4;
   margin-top: -1px;
   position: relative;
   /* the first button << */
@@ -7360,11 +7360,11 @@ input::-moz-focus-inner {
 }
 /* line 1146, ../sass/_forms.scss */
 .x-combo-list .x-toolbar .x-toolbar-cell .x-btn.x-btn-over, .x-combo-list .x-toolbar .x-toolbar-cell .x-btn:hover, .x-combo-list .x-toolbar .x-toolbar-cell .x-btn:focus {
-  color: #3092d7;
+  color: #2376c4;
 }
 /* line 1151, ../sass/_forms.scss */
 .x-combo-list .x-toolbar .x-toolbar-cell .x-btn.x-btn-click, .x-combo-list .x-toolbar .x-toolbar-cell .x-btn:active {
-  color: #2682c3;
+  color: #1e66aa;
 }
 /* line 1155, ../sass/_forms.scss */
 .x-combo-list .x-toolbar .x-toolbar-cell .x-btn.x-item-disabled {
@@ -7543,7 +7543,7 @@ input::-moz-focus-inner {
 .x-date-mp-ybtn a.x-date-mp-prev:before,
 .x-date-mp-ybtn a.x-date-mp-next:before {
   box-sizing: border-box;
-  color: #3092d7;
+  color: #2376c4;
   content: '';
   font-size: 18px;
   position: absolute;
@@ -7640,7 +7640,7 @@ td.x-date-mp-year a:hover {
 
 /* line 1383, ../sass/_forms.scss */
 .x-date-inner .x-date-today a {
-  border-color: #3092d7;
+  border-color: #2376c4;
 }
 
 /* line 1386, ../sass/_forms.scss */
@@ -7658,7 +7658,7 @@ td.x-date-mp-year a:hover {
 /* line 1394, ../sass/_forms.scss */
 .x-date-inner .x-date-selected a,
 td.x-date-mp-sel a {
-  background-color: #3092d7;
+  background-color: #2376c4;
   /*background-image: none;*/
   border-color: white;
   color: white;
@@ -7853,13 +7853,13 @@ td.x-date-mp-year a:hover {
 /* line 98, ../sass/_tabs.scss */
 .x-tab-strip li:hover {
   background-color: transparent;
-  color: #1a5a87;
+  color: #14426d;
 }
 /* line 103, ../sass/_tabs.scss */
 .x-tab-strip li.x-tab-strip-active {
-  color: #2276b2;
+  color: #2376c4;
   background-color: white;
-  box-shadow: 0 -3px 0 #3092d7, -1px 0 0 transparent;
+  box-shadow: 0 -3px 0 #2376c4, -1px 0 0 transparent;
   cursor: default;
   margin: 0 0 0 2px;
   padding-bottom: 2px;
@@ -7985,7 +7985,7 @@ ul.x-tab-strip-bottom .x-tab-left {
 .x-tab-scroller-left:before,
 .x-tab-scroller-right:before {
   box-sizing: border-box;
-  color: #1a5a87;
+  color: #14426d;
   content: '';
   font-size: 28px;
   margin-top: -14px;
@@ -8003,7 +8003,7 @@ ul.x-tab-strip-bottom .x-tab-left {
 /* line 229, ../sass/_tabs.scss */
 .x-tab-scroller-left:before,
 .x-tab-scroller-right:before {
-  color: #3092d7;
+  color: #2376c4;
 }
 
 /* line 236, ../sass/_tabs.scss */
@@ -8123,7 +8123,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   border-right-color: white;
   box-shadow: none;
   /* removes the active tab strip on top */
-  color: #2276b2;
+  color: #2376c4;
   width: 169px;
   /* make the active li 1px more wide to cover the containers right border, this makes the right border on inactive tabs necessary as the whole tab-strip wrap gets wider */
 }
@@ -8358,7 +8358,7 @@ ul.x-tab-strip-bottom .x-tab-left {
 
 /* line 120, ../sass/_navbar.scss */
 #modx-navbar li:hover a:hover.modx-help {
-  color: #3092d7;
+  color: #2376c4;
 }
 
 /* line 126, ../sass/_navbar.scss */
@@ -8728,7 +8728,7 @@ ul.modx-subnav.open {
 
 /* line 153, ../sass/_uberbar.scss */
 .modx-manager-search-results i {
-  color: #3092d7;
+  color: #2376c4;
   left: 0;
   position: absolute;
   top: 2px;
@@ -8948,7 +8948,7 @@ ul.modx-subnav.open {
 }
 /* line 57, ../sass/_breadcrumbs.scss */
 .crumb_wrapper .crumbs li.first:hover {
-  background-color: #3092d7;
+  background-color: #2376c4;
 }
 /* line 61, ../sass/_breadcrumbs.scss */
 .crumb_wrapper .crumbs li.first .root {
@@ -8981,25 +8981,25 @@ ul.modx-subnav.open {
 .crumb_wrapper .crumbs li:hover button,
 .crumb_wrapper .crumbs li:hover span,
 .crumb_wrapper .crumbs li:hover span:after {
-  background-color: #3092d7;
+  background-color: #2376c4;
   color: white;
 }
 /* line 110, ../sass/_breadcrumbs.scss */
 .crumb_wrapper .crumbs li:hover span:after,
 .crumb_wrapper .crumbs li:hover button:after {
   border: 1px solid #fbfbfb;
-  border-left-color: #3092d7;
-  border-bottom-color: #3092d7;
+  border-left-color: #2376c4;
+  border-bottom-color: #2376c4;
 }
 /* line 117, ../sass/_breadcrumbs.scss */
 .crumb_wrapper .crumbs li:hover span:before,
 .crumb_wrapper .crumbs li:hover button:before {
-  background-color: #3092d7;
+  background-color: #2376c4;
 }
 /* line 122, ../sass/_breadcrumbs.scss */
 .crumb_wrapper .crumbs li:hover + li span:before,
 .crumb_wrapper .crumbs li:hover + li button:before {
-  border-left-color: #3092d7;
+  border-left-color: #2376c4;
 }
 /* line 127, ../sass/_breadcrumbs.scss */
 .crumb_wrapper .crumbs li:hover:after {
@@ -9410,7 +9410,7 @@ ul.modx-subnav.open {
 #modx-leftbar-tabs-xcollapsed .x-layout-mini:after {
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 5px solid #1a5a87;
+  border-right: 5px solid #14426d;
   position: absolute;
   content: ' ';
   right: 4px;
@@ -9419,7 +9419,7 @@ ul.modx-subnav.open {
 /* line 86, ../sass/_tree.scss */
 .x-layout-split .x-layout-mini:hover:after,
 #modx-leftbar-tabs-xcollapsed .x-layout-mini:hover:after {
-  border-right-color: #3092d7;
+  border-right-color: #2376c4;
 }
 /* line 92, ../sass/_tree.scss */
 .ext-gecko3 .x-layout-split .x-layout-mini, .ext-ie .x-layout-split .x-layout-mini, .ext-gecko3
@@ -9437,11 +9437,11 @@ ul.modx-subnav.open {
 /* line 104, ../sass/_tree.scss */
 #modx-leftbar-tabs-xcollapsed .x-layout-mini:after {
   border-right: 0;
-  border-left: 5px solid #1a5a87;
+  border-left: 5px solid #14426d;
 }
 /* line 109, ../sass/_tree.scss */
 #modx-leftbar-tabs-xcollapsed .x-layout-mini:hover:after {
-  border-left-color: #3092d7;
+  border-left-color: #2376c4;
 }
 
 /* line 115, ../sass/_tree.scss */
@@ -9527,7 +9527,7 @@ ul.modx-subnav.open {
 /* tree states */
 /* line 185, ../sass/_tree.scss */
 .x-tree-node-el {
-  color: #1a5a87;
+  color: #14426d;
   font: normal 13px/22px "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   padding-left: 6px;
   /* For legacy icons */
@@ -9562,7 +9562,7 @@ ul.modx-subnav.open {
 /* line 219, ../sass/_tree.scss */
 .unpublished,
 .unpublished a span {
-  color: #3092d7 !important;
+  color: #2376c4 !important;
   font-style: italic;
 }
 /* line 224, ../sass/_tree.scss */
@@ -9570,14 +9570,14 @@ ul.modx-subnav.open {
 .unpublished i.icon-large,
 .unpublished a span i.icon,
 .unpublished a span i.icon-large {
-  color: #3092d7 !important;
+  color: #2376c4 !important;
   font-style: normal;
 }
 
 /* line 230, ../sass/_tree.scss */
 .hidemenu,
 .hidemenu a span {
-  color: #3092d7 !important;
+  color: #2376c4 !important;
   font-style: normal;
 }
 /* line 235, ../sass/_tree.scss */
@@ -9591,7 +9591,7 @@ ul.modx-subnav.open {
 .hidemenu i.icon-large,
 .hidemenu a span i.icon,
 .hidemenu a span i.icon-large {
-  color: #3092d7 !important;
+  color: #2376c4 !important;
   font-style: normal;
 }
 
@@ -9614,12 +9614,12 @@ ul.modx-subnav.open {
 
 /* line 261, ../sass/_tree.scss */
 .element-node-disabled a span {
-  color: #3092d7 !important;
+  color: #2376c4 !important;
 }
 
 /* line 264, ../sass/_tree.scss */
 .x-tree-node .x-tree-node-disabled a span {
-  color: #b0d6f0;
+  color: #94c1ec;
 }
 
 /* line 268, ../sass/_tree.scss */
@@ -9659,12 +9659,12 @@ ul.modx-subnav.open {
 }
 /* line 298, ../sass/_tree.scss */
 .tree-pseudoroot-node.x-tree-node-el a span {
-  color: #1a5a87;
+  color: #14426d;
 }
 /* line 302, ../sass/_tree.scss */
 .tree-pseudoroot-node.x-tree-node-el > .icon {
   font-weight: normal;
-  color: #1a5a87;
+  color: #14426d;
   font-size: 1.33333em;
   line-height: 0.75em;
   vertical-align: -15%;
@@ -9772,7 +9772,7 @@ ul.modx-subnav.open {
 .x-dd-drag-ghost a,
 .x-tree-node a span,
 .x-dd-drag-ghost a span {
-  color: #1a5a87;
+  color: #14426d;
 }
 
 /* line 397, ../sass/_tree.scss */
@@ -9808,16 +9808,16 @@ ul.modx-subnav.open {
 
 /* line 416, ../sass/_tree.scss */
 .x-tree-node .x-tree-expanded {
-  color: #3092d7;
+  color: #2376c4;
   background-color: #e8f0f8;
 }
 /* line 419, ../sass/_tree.scss */
 .x-tree-node .x-tree-expanded a {
-  color: #3092d7;
+  color: #2376c4;
 }
 /* line 421, ../sass/_tree.scss */
 .x-tree-node .x-tree-expanded a span {
-  color: #3092d7;
+  color: #2376c4;
 }
 
 /* line 426, ../sass/_tree.scss */
@@ -10261,22 +10261,22 @@ ul.modx-subnav.open {
 
 /* line 737, ../sass/_tree.scss */
 .x-tree-node {
-  color: #1a5a87;
+  color: #14426d;
 }
 
 /* line 740, ../sass/_tree.scss */
 .x-tree-node a, .x-dd-drag-ghost a {
-  color: #1a5a87;
+  color: #14426d;
 }
 
 /* line 743, ../sass/_tree.scss */
 .x-tree-node a span, .x-dd-drag-ghost a span {
-  color: #1a5a87;
+  color: #14426d;
 }
 
 /* line 746, ../sass/_tree.scss */
 .x-tree-node .x-tree-node-disabled a span {
-  color: #b0d6f0;
+  color: #94c1ec;
 }
 
 /* line 749, ../sass/_tree.scss */
@@ -10379,7 +10379,7 @@ ul.modx-subnav.open {
 /* line 30, ../sass/_browser.scss */
 .modx-browser-thumb-wrap.x-view-selected {
   background: #dce8f4;
-  border: 1px solid #3092d7;
+  border: 1px solid #2376c4;
   padding: 4px;
 }
 
@@ -10390,7 +10390,7 @@ ul.modx-subnav.open {
 
 /* line 38, ../sass/_browser.scss */
 .modx-browser-thumb-wrap.x-view-selected span {
-  color: #3092d7;
+  color: #2376c4;
 }
 
 /* line 41, ../sass/_browser.scss */
@@ -10428,8 +10428,8 @@ ul.modx-subnav.open {
 /* line 63, ../sass/_browser.scss */
 .modx-browser-list-item.x-view-selected > span {
   background: #dce8f4;
-  border-bottom: 1px solid #3092d7;
-  color: #3092d7;
+  border-bottom: 1px solid #2376c4;
+  color: #2376c4;
 }
 
 /* line 68, ../sass/_browser.scss */
@@ -10791,16 +10791,16 @@ ul.modx-subnav.open {
 /* the progress bar (ex. saving a resource), usually in a window too */
 /* line 256, ../sass/_windows.scss */
 .x-progress-wrap {
-  border: 1px solid #3092d7;
+  border: 1px solid #2376c4;
 }
 /* line 259, ../sass/_windows.scss */
 .x-progress-wrap .x-progress-inner {
-  background-color: #e6f2fa;
+  background-color: #cae1f6;
   /*background-image: url($imgPath + 'modx-theme/qtip/bg.gif');*/
 }
 /* line 264, ../sass/_windows.scss */
 .x-progress-wrap .x-progress-bar {
-  background-color: #3092d7;
+  background-color: #2376c4;
   /*background-image: url($imgPath + 'modx-theme/progress/progress-bg.gif');*/
   border: 0;
 }
@@ -11253,7 +11253,7 @@ body.x-body-masked .x-window-plain .x-window-mc {
 
 /* line 85, ../sass/_help.scss */
 #managerbuttons ul li a:hover span.icon {
-  color: #3092d7;
+  color: #2376c4;
 }
 
 /* line 90, ../sass/_help.scss */
@@ -11384,13 +11384,13 @@ body.x-body-masked .x-window-plain .x-window-mc {
 }
 /* line 186, ../sass/_help.scss */
 #aboutMODX a {
-  color: #3092d7;
+  color: #2376c4;
   margin: -2px -4px;
   padding: 2px 4px;
 }
 /* line 190, ../sass/_help.scss */
 #aboutMODX a:hover {
-  background-color: #3092d7;
+  background-color: #2376c4;
   color: #fff;
   text-decoration: none;
 }
@@ -11427,11 +11427,11 @@ body, body.x-border-layout-ct {
 }
 /* line 60, ../sass/index.scss */
 body a, body.x-border-layout-ct a {
-  color: #3092d7;
+  color: #2376c4;
 }
 /* line 63, ../sass/index.scss */
 body a:hover, body.x-border-layout-ct a:hover {
-  color: #2276b2;
+  color: #1b5c99;
 }
 
 /* line 69, ../sass/index.scss */
@@ -11451,7 +11451,7 @@ body a:hover, body.x-border-layout-ct a:hover {
 
 /* line 82, ../sass/index.scss */
 hr {
-  background-color: #b6b6b6;
+  background-color: #a7a7a7;
   border: 0;
   color: #a1b8c5;
   height: 1px;
@@ -11466,7 +11466,7 @@ hr {
 
 /* line 95, ../sass/index.scss */
 .dashed {
-  border-bottom: 1px #b6b6b6 dashed;
+  border-bottom: 1px #a7a7a7 dashed;
 }
 
 /* line 99, ../sass/index.scss */
@@ -11791,7 +11791,7 @@ a.x-grid-link:hover, a.x-grid-link:focus {
 
 /* line 372, ../sass/index.scss */
 .news_article a:hover {
-  color: #b6b6b6;
+  color: #a7a7a7;
 }
 
 /* line 376, ../sass/index.scss */
@@ -12855,7 +12855,7 @@ iframe[classname="x-hidden"] {
 /* line 1236, ../sass/index.scss */
 .modx-pb-view-ct .x-view-selected {
   background: #d2dde6;
-  border: 1px solid #85bfe8;
+  border: 1px solid #69a8e4;
   padding: 4px;
 }
 
