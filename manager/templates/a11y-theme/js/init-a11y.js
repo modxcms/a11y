@@ -37,6 +37,13 @@ function initA11y() {
 	document.getElementById("ext-comp-1013").setAttribute("role", "tab");
 	
 	
+	var topNavChildren = document.getElementsByClassName("top");
+	var top_i;
+	for (top_i = 0; top_i < topNavChildren.length; top_i++) {
+	    topNavChildren[top_i].setAttribute("aria-haspopup", "true");
+	}
+	
+	
 }// eof initA11y
 
 /*
