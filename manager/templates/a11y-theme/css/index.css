@@ -8397,11 +8397,13 @@ ul.x-tab-strip-bottom .x-tab-left {
   background-repeat: no-repeat;
   background-size: 40px 40px;
   width: 50px;
+  height: 50px;
+  float: left;
   border-right: none;
   margin-left: 21px;
 }
 
-/* line 160, ../sass/_navbar.scss */
+/* line 162, ../sass/_navbar.scss */
 #user-avatar img {
   border-radius: 20px;
   margin: 8px 10px 0 0;
@@ -8411,7 +8413,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   float: left;
 }
 
-/* line 171, ../sass/_navbar.scss */
+/* line 173, ../sass/_navbar.scss */
 #modx-navbar #modx-home-dashboard a {
   overflow: hidden;
   padding: 0;
@@ -8419,23 +8421,23 @@ ul.x-tab-strip-bottom .x-tab-left {
   width: 100%;
 }
 
-/* line 178, ../sass/_navbar.scss */
+/* line 180, ../sass/_navbar.scss */
 #modx-navbar #modx-home-dashboard:hover a {
   background-color: transparent;
 }
 
-/* line 182, ../sass/_navbar.scss */
+/* line 184, ../sass/_navbar.scss */
 #modx-navbar #modx-home-dashboard:hover {
   /*background-color: $navbarHover;*/
 }
 
-/* line 187, ../sass/_navbar.scss */
+/* line 189, ../sass/_navbar.scss */
 #modx-navbar li:hover ul.modx-subnav,
 ul.modx-subnav.open {
   display: block !important;
 }
 
-/* line 191, ../sass/_navbar.scss */
+/* line 193, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li {
   background: #182028;
   border-bottom: 1px solid #192b3e;
@@ -8449,7 +8451,7 @@ ul.modx-subnav.open {
   @include background(linear-gradient($navbarHover, $navbarDrop) top repeat);
 }
 */
-/* line 205, ../sass/_navbar.scss */
+/* line 207, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a {
   background-color: #182028;
   color: #d2dde6;
@@ -8468,27 +8470,27 @@ ul.modx-subnav.open {
   border-bottom:1px solid $navbarDrop;
 }
 */
-/* line 225, ../sass/_navbar.scss */
+/* line 227, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a:hover {
   background: #050608;
   border-top-color: #192b3e;
   border-bottom-color: #192b3e;
   color: white;
 }
-/* line 230, ../sass/_navbar.scss */
+/* line 232, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a:hover .description {
   color: #9dd8f1;
 }
-/* line 234, ../sass/_navbar.scss */
+/* line 236, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:first-child a {
   border-top-width: 0;
 }
-/* line 237, ../sass/_navbar.scss */
+/* line 239, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:last-child a {
   border-bottom-width: 0;
 }
 
-/* line 242, ../sass/_navbar.scss */
+/* line 244, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a span {
   color: #55bbe7;
   display: block;
@@ -8500,7 +8502,7 @@ ul.modx-subnav.open {
   width: 100%;
 }
 
-/* line 253, ../sass/_navbar.scss */
+/* line 255, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav ul {
   display: none;
   left: 270px;
@@ -8511,32 +8513,32 @@ ul.modx-subnav.open {
   z-index: 24;
 }
 
-/* line 264, ../sass/_navbar.scss */
+/* line 266, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav ul li:first-child,
 #modx-navbar ul.modx-subnav ul li:first-child a {
   border-radius: 0 2px 0 0;
 }
 
-/* line 269, ../sass/_navbar.scss */
+/* line 271, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav ul li:last-child,
 #modx-navbar ul.modx-subnav ul li:last-child a {
   border-radius: 0 0 2px 0;
 }
 
-/* line 274, ../sass/_navbar.scss */
+/* line 276, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav ul ul li:last-child,
 #modx-navbar ul.modx-subnav ul ul li:last-child a {
   border-radius: 0 0 2px 2px;
 }
 
-/* line 280, ../sass/_navbar.scss */
+/* line 282, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:hover ul ul,
 #modx-navbar ul.modx-subnav ul li:hover ul ul,
 #modx-navbar ul.modx-subnav ul ul li:hover ul ul {
   display: none;
 }
 
-/* line 287, ../sass/_navbar.scss */
+/* line 289, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:hover ul,
 #modx-navbar ul.modx-subnav ul li:hover ul,
 #modx-navbar ul.modx-subnav ul ul li:hover ul,
@@ -8544,7 +8546,7 @@ ul.modx-subnav.open {
   display: block;
 }
 
-/* line 291, ../sass/_navbar.scss */
+/* line 293, ../sass/_navbar.scss */
 .ext-ie7 #modx-header {
   position: relative;
   z-index: 10;

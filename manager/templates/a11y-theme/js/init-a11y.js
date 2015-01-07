@@ -29,6 +29,14 @@ function initA11y() {
 	document.getElementById("help-link").addEventListener("keydown", clearSubNavOpen, false);	
 	document.getElementById("modx-uberbar").addEventListener("keydown", clearSubNavOpen, false);
 	
+	//Vertical Tab role assignment
+	document.getElementById("ext-gen15").setAttribute("role", "tablist");
+	document.getElementById("ext-gen15").setAttribute("aria-label", "Resources Elements and Files Tablist");
+	document.getElementById("ext-comp-1007").setAttribute("role", "tab");
+	document.getElementById("ext-comp-1010").setAttribute("role", "tab");
+	document.getElementById("ext-comp-1013").setAttribute("role", "tab");
+	
+	
 }// eof initA11y
 
 /*

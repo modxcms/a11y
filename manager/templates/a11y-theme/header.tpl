@@ -46,29 +46,28 @@
 <body id="modx-body-tag" onload="initA11y()">
 
 <div id="modx-browser"></div>
-<div id="modx-container">
+<div id="modx-container" role="main">
 
 <div id="modAB"></div>
 <div id="modx-leftbar"></div>
 <div id="modx-content">
 
-<div id="modx-header">
-    <div id="modx-navbar">
-        <ul id="modx-topnav" tabindex="2">
-            <li id="modx-home-dashboard">
-                <a href="?" title="{$_lang.dashboard}">{$_lang.dashboard}</a>
-            </li>
-            {if $_search}
-            <li id="modx-manager-search"><label for="modx-uberbar" id="modx-uberbar-label">Search</label></li>
-            {/if}
+<div id="modx-header" role="banner">
+    <div id="modx-navbar" tabindex="2">
+	    <div id="modx-home-dashboard"><a href="?" title="{$_lang.dashboard}">{$_lang.dashboard}</a></div>
+	    {if $_search}
+            <div role="search" style="float:left;">
+            <div id="modx-manager-search"><label for="modx-uberbar" id="modx-uberbar-label">Search</label></div>
+            </div>
+        {/if}
+        <ul id="modx-topnav" role="navigation" aria-label="manager menu">
             {$navb}
         </ul>
-        <ul id="modx-user-menu">
+        <ul id="modx-user-menu" role="navigation" aria-label="user and help menu">
             {* eval is used here to support nested variables *}
             {eval var=$userNav}
         </ul>
     </div>
 </div>
 
-
-    <div id="modx-panel-holder"></div>
+<div id="modx-panel-holder"></div>
