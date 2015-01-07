@@ -22,23 +22,41 @@
     <script src="assets/modext/util/utilities.js" type="text/javascript"></script>
 	<script src="assets/modext/widgets/core/modx.panel.js" type="text/javascript"></script>
     <script src="assets/modext/widgets/core/modx.window.js" type="text/javascript"></script>
-    <script src="{$_config.manager_url}templates/a11y-theme/js/login.js" type="text/javascript"></script>
+    <script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/login.js" type="text/javascript"></script>
 
     <meta name="robots" content="noindex, nofollow" />
     
     {if $error_message}
     	<script type="text/javascript">
+	    	function ariaInvalid(){
+		    	var erMsg = "{$error_message}";
+		    	if(erMsg.indexOf("incorrect") != -1){ 
+			    	document.getElementById("modx-login-username").setAttribute('aria-invalid', 'true');
+			    	document.getElementById("modx-login-password").setAttribute('aria-invalid', 'true'); 
+			    }
+		    	if(erMsg.indexOf("not found") != -1){ 
+			    	document.getElementById("modx-login-username-reset").setAttribute('aria-invalid', 'true'); 
+			    }
+			}    
+		    
         	function setFocusToTextBox(){ document.getElementById("errorMsg").focus(); }
+        	
         </script>
     {else}
         <script type="text/javascript">
         	function setFocusToTextBox(){ document.getElementById("modx-login-username").focus(); }
         </script>
     {/if}
-        
+    
+    <script type="text/javascript">
+    function initLogin() {
+    	setFocusToTextBox();
+    	ariaInvalid();
+    }    
+    </script>
 </head>
 
-<body id="login" onload="setFocusToTextBox()">
+<body id="login" onload="initLogin()">
 <div id="modx-login-language-select-div">
     <label>{$language_str}:
     <select name="cultureKey" id="modx-login-language-select">
