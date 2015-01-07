@@ -67,10 +67,8 @@ body, body.x-border-layout-ct {
 }
 
 #modx-uberbar-label{
-	height: 0;
-	width: 0;
-	font-size: 0;
-	float: left;
+	position: absolute;
+	left: -10000px;
 }
 
 #modx-container {

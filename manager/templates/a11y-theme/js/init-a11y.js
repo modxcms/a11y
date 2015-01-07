@@ -31,8 +31,10 @@ function initA11y() {
 	
 }// eof initA11y
 
+/*
 Ext.ComponentMgr.onAvailable('modx-abtn-save', function(btn) {
     btn.on('click', function() {
         console.log("onAvailableWorks!");
     });
 }); 
+*/
