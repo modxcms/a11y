@@ -22,37 +22,64 @@
     <script src="assets/modext/util/utilities.js" type="text/javascript"></script>
 	<script src="assets/modext/widgets/core/modx.panel.js" type="text/javascript"></script>
     <script src="assets/modext/widgets/core/modx.window.js" type="text/javascript"></script>
-    <script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/login.js" type="text/javascript"></script>
+    <script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/modext/sections/login.js" type="text/javascript"></script>
 
     <meta name="robots" content="noindex, nofollow" />
     
     {if $error_message}
+    
     	<script type="text/javascript">
+	    	
 	    	function ariaInvalid(){
-		    	var erMsg = "{$error_message}";
-		    	if(erMsg.indexOf("incorrect") != -1){ 
-			    	document.getElementById("modx-login-username").setAttribute('aria-invalid', 'true');
-			    	document.getElementById("modx-login-password").setAttribute('aria-invalid', 'true'); 
-			    }
-		    	if(erMsg.indexOf("not found") != -1){ 
-			    	document.getElementById("modx-login-username-reset").setAttribute('aria-invalid', 'true'); 
-			    }
+		    	var activeForm = Ext.state.Manager.get("actForm");
+		    	if(activeForm == "login"){ 
+				    document.getElementById("modx-login-username").setAttribute('aria-invalid', 'true');
+				    document.getElementById("modx-login-password").setAttribute('aria-invalid', 'true'); 
+				} else { 
+					document.getElementById("modx-login-form").style.display = 'none';
+					document.getElementById("modx-forgot-login-form").style.display = 'block';
+				    document.getElementById("modx-login-username-reset").setAttribute('aria-invalid', 'true'); 
+				}
+				
+		    	//reset
+		    	Ext.state.Manager.set("actForm", "");
 			}    
 		    
         	function setFocusToTextBox(){ document.getElementById("errorMsg").focus(); }
         	
         </script>
+        
     {else}
+    
         <script type="text/javascript">
+	        function ariaInvalid(){ Ext.state.Manager.set("actForm", ""); } //reset
+	        
         	function setFocusToTextBox(){ document.getElementById("modx-login-username").focus(); }
         </script>
+        
     {/if}
     
     <script type="text/javascript">
-    function initLogin() {
-    	setFocusToTextBox();
-    	ariaInvalid();
-    }    
+	    
+	    function initLogin() {
+	    	
+	    	//enable setProvider to use Cookies
+	    	Ext.state.Manager.setProvider(new Ext.state.CookieProvider());	
+	    	
+	    	//set focus
+	    	setFocusToTextBox();
+	    
+			//functions to set which form was clicked
+	    	function setLoginPress(){ Ext.state.Manager.set("actForm", "login"); }
+	    	function setForgotPress(){ Ext.state.Manager.set("actForm", "forgot"); }
+			ariaInvalid();
+	    	
+	    	
+	    	//Listeners
+			document.getElementById("modx-login-btn").addEventListener("click", setLoginPress, false);
+			document.getElementById("modx-fl-btn").addEventListener("click", setForgotPress, false);
+	    }
+		     
     </script>
 </head>
 
@@ -75,19 +102,19 @@
 
 <div id="modx-panel-login-div" class="x-panel modx-form x-form-label-right">
 
-    <form id="modx-login-form" action="" method="post">
-        <input type="hidden" name="login_context" value="mgr" />
-        <input type="hidden" name="modahsh" value="{$modahsh}" />
-        <input type="hidden" name="returnUrl" value="{$returnUrl}" />
-
-        <div class="x-panel x-panel-noborder"><div class="x-panel-bwrap"><div class="x-panel-body x-panel-body-noheader">
+	<div class="x-panel x-panel-noborder"><div class="x-panel-bwrap"><div class="x-panel-body x-panel-body-noheader">
         <h2>{$_config.site_name}</h2>
         <br class="clear" />
 
         {if $error_message}	
         	<p id="errorMsg" tabindex="1" class="error">{$error_message}</p>
         {/if}
-        </div></div></div>
+    </div></div></div>
+        
+    <form id="modx-login-form" action="" method="post">
+        <input type="hidden" name="login_context" value="mgr" />
+        <input type="hidden" name="modahsh" value="{$modahsh}" />
+        <input type="hidden" name="returnUrl" value="{$returnUrl}" />
 
         <div class="x-form-item login-form-item login-form-item-first">
           <label for="modx-login-username">{$_lang.login_username}</label>
