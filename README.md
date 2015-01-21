@@ -1,3 +1,3 @@
-# Demo Manager
+# MODX Accessible Manager Project
 
-http://c1560.paas2.tx.modxcloud.com/manager/
+http://a11y.modx.com/
