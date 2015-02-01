@@ -19,12 +19,13 @@ Please note, the repository at [modxcms/a11y](https://github.com/modxcms/a11y/) 
 When submitting new issues and PRs, **always** use the corresponding template.
 
 ### Translations
-For updates to text to improve the overall experience by clarifying and streamlining the language files, on English lexicon changes are handled in GitHub and directly in the parent project at [modxcms/revolution](https://github.com/modxcms/revolution/). If you want to update anything in non-English lexicon files, please do so via [Crowdin](http://translate.modx.com).
+To clarify and streamline the UI language to improve the overall end user experience for all users, all English lexicon changes are handled in the main GitHub parent project at [modxcms/revolution](https://github.com/modxcms/revolution/). To make updates to the non-English lexicon files, please do so at [Crowdin](http://translate.modx.com).
 
 ### Other
 Looking for advise or help in general about MODX Revolution, want to get involved, or have an idea? Please search the [MODX documentation](http://rtfm.modx.com/), the [MODX forums](http://forums.modx.com/) or join to #modx or #xpdo room on IRC FreeNode server (irc.freenode.net).
 
 ## Submit an issue
+We'd love to have your feedback, ideas and participation, whether you can create code or not.
 
 #### Template
 
