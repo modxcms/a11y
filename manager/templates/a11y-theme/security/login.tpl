@@ -103,7 +103,7 @@
 <div id="modx-panel-login-div" class="x-panel modx-form x-form-label-right">
 
 	<div class="x-panel x-panel-noborder"><div class="x-panel-bwrap"><div class="x-panel-body x-panel-body-noheader">
-        <h2>{$_config.site_name}</h2>
+        <h1>{$_config.site_name}</h1>
         <br class="clear" />
 
         {if $error_message}	
