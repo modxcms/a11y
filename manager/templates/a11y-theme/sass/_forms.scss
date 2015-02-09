@@ -442,6 +442,7 @@ input::-moz-focus-inner {
     &.x-form-trigger-over,
     &:hover {
       box-shadow: $shadowBorderHover;
+      color: #FFF !important;
 
       &:before {
         opacity: 1;

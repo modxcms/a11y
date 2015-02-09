@@ -20,7 +20,7 @@
 }
 
 #modx-manager-search .x-form-trigger {
-  color: rgba(255,255,255,.5);
+  color: #111;
   cursor: default;
   height: 16px;
   right: 0;
@@ -73,6 +73,7 @@
   @include transition-delay(0);
   background: $gainsboro;*/
   background-color: rgba(0,0,0,.5);
+  color: #FFF;
 }
 
 #modx-uberbar {

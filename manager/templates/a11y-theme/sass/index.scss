@@ -21,7 +21,7 @@ $fa-css-prefix:       icon;
 @import "browser";
 @import "windows";
 @import "help";
-
+ 
 /*
 
 	Diagram
@@ -58,10 +58,10 @@ body, body.x-border-layout-ct {
   -webkit-font-smoothing: antialiased;
 
   a {
-    color: $colorSplash;
+    color: #619CD3;
 
     &:hover {
-      color: darken($colorSplash, 10%);
+      color: #FFF;
     }
   }
 }

@@ -1171,6 +1171,8 @@ a.x-menu-item {
   }
 
   &.x-tool-toggle {
+	
+	color: #333;
 
     &:after {
       content: $fa-var-chevron-down;
@@ -1178,6 +1180,7 @@ a.x-menu-item {
     }
 
     &:hover {
+	  color: #FFF;  
 
 
       &:after {
