@@ -66,6 +66,15 @@ body, body.x-border-layout-ct {
   }
 }
 
+//hide new resource button & refresh button that dont work
+#extdd-1_tools{display: none;}
+
+//new - Create New Resource Link
+#aria-new-doc{
+	padding: 4px;
+	display: block;
+}
+
 #modx-uberbar-label{
 	position: absolute;
 	left: -10000px;

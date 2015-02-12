@@ -14,7 +14,9 @@
 
 .menu-section > a {
   text-decoration: none;
-  display: block; }
+  display: block; 
+  
+  }
 .menu-section + .menu-section {
   border-top: 1px solid rgba(0, 0, 0, 0.2); }
 .menu-section + .menu-section:not(.x-panel-collapsed) {
@@ -33,6 +35,7 @@
   color: #1a7fb8;
   background: #f2f2f2;
   /*border-left: 4px solid #1a7fb8; */
+  &:hover{color: $colorSplashDark;}
 }
 .menu-section .x-panel-header-text {
   line-height: 40px;

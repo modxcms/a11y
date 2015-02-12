@@ -20,6 +20,11 @@ function initA11y() {
 		var runClearOpen = Array.prototype.filter.call(findSubOpen, function(clearThisUl){
 			clearThisUl.className = "modx-subnav";
 		});
+	}
+	
+	function tellMe(){
+		//debug function to tell me stuff
+		console.log(this);
 	}	
 	
 	//who to watch
@@ -36,13 +41,36 @@ function initA11y() {
 	document.getElementById("ext-comp-1010").setAttribute("role", "tab");
 	document.getElementById("ext-comp-1013").setAttribute("role", "tab");
 	
-	
+	//make sure uberbar has aria pop rule
 	var topNavChildren = document.getElementsByClassName("top");
 	var top_i;
 	for (top_i = 0; top_i < topNavChildren.length; top_i++) {
 	    topNavChildren[top_i].setAttribute("aria-haspopup", "true");
 	}
 	
+	//create New Resource Link
+	var newResource = document.createElement("li");
+		newResource.setAttribute("class", "x-tree-node");
+		newResource.setAttribute("id", "aria-new-doc");
+		newResource.setAttribute("role", "treeitem");
+		
+	var newResourceLink = document.createElement("a");
+		newResourceLink.setAttribute("tabindex", "1");
+		newResourceLink.setAttribute("title", "Create New Resource");
+		newResourceLink.setAttribute("href", "a=resource/create");
+	var newResourceSpan = document.createElement("span");
+		newResourceSpan.className = "x-btn icon x-btn-small x-btn-icon-small-left icon-plus-circle x-btn-noicon";
+	var newResourceLabel = document.createTextNode('  Create New Resource');
+	
+	newResourceLink.appendChild(newResourceSpan);
+	newResourceLink.appendChild(newResourceLabel);
+	newResource.appendChild(newResourceLink);
+	
+	//get resource container
+	var resourceRoot = document.getElementById("ext-gen29");
+	//console.log(resourceRoot);
+	resourceRoot.insertBefore(newResource, resourceRoot.lastChild);
+
 	
 }// eof initA11y
 
