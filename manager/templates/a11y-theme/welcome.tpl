@@ -3,8 +3,8 @@
 <div id="modx-dashboard" class="dashboard">
 
 
-<div class="dashboard-block dashboard-block-[[+size]] [[+class:notempty=`[[+class]]`]]">
-	<h3 class="title">Enable Dyslexia Font</h3>
+<div class="dashboard-block dashboard-block-[[+size]] [[+class:notempty=`[[+class]]`]]" aria-labelledby="wt1">
+	<h3 class="title" id="wt1">Enable Dyslexia Font</h3>
 	<div class="body">
 	<p>The typeface Dyslexie is a revolutionary font, designed to simplify life for those who have dyslexia. With a heavy base line, alternating stick/tail lengths, larger-than-normal openings, and a semi-cursive slant, the dyslexia font ensures that each character has a unique form. Learn More at: <a href="http://www.dyslexiefont.com/" target="_blank">http://www.dyslexiefont.com/</a></p>
 	<p>
