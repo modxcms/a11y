@@ -54,7 +54,9 @@ body *:focus {@extend %a11y-outline;}
 
 body, body.x-border-layout-ct {
   color: $mainText;
-  font:  $baseText;
+  //font:  $baseText;
+  font-family: "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+  font-size: 1em;
   -webkit-font-smoothing: antialiased;
 
   a {
@@ -67,7 +69,7 @@ body, body.x-border-layout-ct {
 }
 
 //hide new resource button & refresh button that dont work
-#extdd-1_tools{display: none;}
+#extdd-1_tools, #extdd-19_tools{display: none;}
 
 //new - Create New Resource Link
 #aria-new-doc{
@@ -111,16 +113,6 @@ hr {
 	div/table headings
 */
 	
-.dashboard-block .title {
-  background: $softligthBlue;
-  border-radius: 2px 2px 0 0;
-  color: $darkNeutral;
-  font-size: 14px;
-  font-weight: bold;
-  margin: 0;
-  padding: 15px;
-  zoom: 1;
-}
 
 .x-grid3-header {
   background: $softligthBlue;
@@ -135,11 +127,13 @@ hr {
 
 h2, h3 {
   color:  $headerText;
-  font:   $fontH2;
+  //font:   $fontH2;
+  font-size: 2em;
   margin: 0 0 8px 5px;
 }
 h3 {
-  font: $fontH3;
+  //font: $fontH3;
+  font-size: 1em;
 }
 
 #modx-template-header{margin-bottom: 25px;}

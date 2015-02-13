@@ -1425,7 +1425,8 @@ a.x-menu-item {
 }
 .x-window-tl .x-window-header, .x-panel-header {
   color: #5E5E5E;
-  font: $fontNavbar;
+  //font: $fontNavbar;
+  font-size: 1.25em;
   font-weight: bold;
 }
 .x-panel-header {
@@ -1442,7 +1443,7 @@ a.x-menu-item {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
   border: 1px solid #c0c0c0;
-  font-size: 16px;
+  font-size: 1.25em;
   font-weight: bold;
   margin-top: 0;
   padding: 10px 10px 8px;

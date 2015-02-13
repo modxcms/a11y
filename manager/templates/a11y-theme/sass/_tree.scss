@@ -184,7 +184,8 @@
 /* tree states */
 .x-tree-node-el {
   color: $treeColor;
-  font: $treeNodeFont;
+  //font: $treeNodeFont;
+  font-size: 1em;
   padding-left: 6px;
 
   .x-btn {
@@ -289,9 +290,10 @@
 
 .tree-pseudoroot-node.x-tree-node-el {
   background-color: $treePseudoRootBg;
-  font: $treePseudoRootFont;
+  //font: $treePseudoRootFont;
+  font-size: 1em;
   position:relative;
-  padding: 0 0 0 4px;
+  padding: .35em;
   margin-top: 2px;
   margin-bottom: 2px;
 

@@ -36,18 +36,23 @@
 
 .dashboard-block .body {
   color: #444;
-  font-size: 12px;
+  font-size: 1em;
   height: auto;
   max-height: 300px;
   overflow: auto;
   padding: 10px;
+  
+  p{
+	  padding-bottom: 1em;
+	  line-height: 1.4em;
+  }
 }
 
 .dashboard-block .title {
-  background: $gridHeaderBgColor;
-  border-radius: $borderRadius $borderRadius 0 0;
-  color: $darkGray;
-  font-size: 12px;
+  background: $softligthBlue;
+  border-radius: 2px 2px 0 0;
+  color: $darkNeutral;
+  font-size: 1em;
   font-weight: bold;
   margin: 0;
   padding: 15px;

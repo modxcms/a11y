@@ -71,7 +71,7 @@ input::-moz-focus-inner {
   /* general styles for form labels, paddings for various form layouts are handled below */
   label.x-form-item-label {
     color: $coreFieldLabelColor;
-    font-size: 13px;
+    font-size: 1em;
     font-weight: bold;
     position: relative; /* boundary for absolutely positioned elements */
 
@@ -289,7 +289,9 @@ input::-moz-focus-inner {
 
   .x-form-element {
     padding: 0;
-    font: $baseText;
+    //font: $baseText;
+    font-family: "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
+    font-size: 1em;
   } /* .x-form-element */
 
   /* prevent columns used inside form elements to have too much spacing, some custom TV types need this */
