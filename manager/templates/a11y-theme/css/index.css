@@ -5460,7 +5460,7 @@ having to do some real janky stuff to work with ExtJS markup
 .menu-section > .x-panel-bwrap > .x-panel-body {
   border: 0 none;
   border-radius: 0;
-  padding: 10px 0;
+  padding: 0 0 10px 0;
   background: #fff;
 }
 
@@ -9838,13 +9838,13 @@ ul.modx-subnav.open {
 }
 /* line 320, ../sass/_tree.scss */
 .tree-pseudoroot-node.x-tree-node-el.x-tree-node-expanded, .tree-pseudoroot-node.x-tree-node-el.x-tree-node-expanded span, .tree-pseudoroot-node.x-tree-node-el.x-tree-node-expanded > .icon {
-  color: #447996;
-  background-color: #f0f0f0;
+  color: #14426d;
+  background-color: #f3f9fc;
 }
 /* line 324, ../sass/_tree.scss */
 .tree-pseudoroot-node.x-tree-node-el.x-tree-node-over {
-  background-color: #f0f0f0;
-  color: #447996;
+  background-color: #f3f9fc;
+  color: #14426d;
 }
 /* line 328, ../sass/_tree.scss */
 .tree-pseudoroot-node.x-tree-node-el + .x-tree-node-ct {

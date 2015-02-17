@@ -201,8 +201,8 @@ $delTextDeco: line-through;
 $delTextColor: fade-out(darken(lighten(desaturate($red,50%), 33%), 25%), 0.5) !important;
 
 $treeDivider: $darkBlue;
-$treePseudoRootOverBg: $lightBg;
-$treePseudoRootOverColor: #447996;
+$treePseudoRootOverBg: /*$lightBg*/ #F3F9FC;
+$treePseudoRootOverColor: #14426d;
 
 /* Top Nav */
 
