@@ -42,6 +42,7 @@
 {/foreach}
 
 <script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/init-a11y.js" type="text/javascript"></script>
+<script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/font-size.js" type="text/javascript"></script>
 <script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/dyslexia-font.js" type="text/javascript"></script>
 </head>
 <body id="modx-body-tag" onload="initA11y()">

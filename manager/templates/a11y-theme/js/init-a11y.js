@@ -1,3 +1,34 @@
+//pure cookies for configs
+//dyslexia font and font size
+function createCookie(name, value, days) {
+    var expires;
+
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toGMTString();
+    } else {
+        expires = "";
+    }
+    document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
+}
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+function eraseCookie(name) {
+    createCookie(name,"",-1);
+}
+//eof pure cookies for configs
+
 function initA11y() {
 	function whosFocused(){	
 		var curElement = document.activeElement;
@@ -47,7 +78,8 @@ function initA11y() {
 	for (top_i = 0; top_i < topNavChildren.length; top_i++) {
 	    topNavChildren[top_i].setAttribute("aria-haspopup", "true");
 	}
-	
+
+/* not working	
 	//create New Resource Link
 	var newResource = document.createElement("li");
 		newResource.setAttribute("class", "x-tree-node");
@@ -57,7 +89,7 @@ function initA11y() {
 	var newResourceLink = document.createElement("a");
 		newResourceLink.setAttribute("tabindex", "1");
 		newResourceLink.setAttribute("title", "Create New Resource");
-		newResourceLink.setAttribute("href", "a=resource/create");
+		newResourceLink.setAttribute("href", "?a=resource/create");
 	var newResourceSpan = document.createElement("span");
 		newResourceSpan.className = "x-btn icon x-btn-small x-btn-icon-small-left icon-plus-circle x-btn-noicon";
 	var newResourceLabel = document.createTextNode('  Create New Resource');
@@ -70,7 +102,8 @@ function initA11y() {
 	var resourceRoot = document.getElementById("ext-gen29");
 	//console.log(resourceRoot);
 	resourceRoot.insertBefore(newResource, resourceRoot.lastChild);
-
+	//eof create New Resource Link
+*/
 	
 }// eof initA11y
 
