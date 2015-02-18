@@ -57,11 +57,7 @@
 <div id="modx-header" role="banner">
     <div id="modx-navbar" tabindex="2">
 	    <div id="modx-home-dashboard"><a href="?" title="{$_lang.dashboard}">{$_lang.dashboard}</a></div>
-	    {if $_search}
-            <div role="search" style="float:left;">
-            <div id="modx-manager-search"><label for="modx-uberbar" id="modx-uberbar-label">Search</label></div>
-            </div>
-        {/if}
+	    
         <ul id="modx-topnav" role="navigation" aria-label="manager menu">
             {$navb}
         </ul>
@@ -69,6 +65,12 @@
             {* eval is used here to support nested variables *}
             {eval var=$userNav}
         </ul>
+        {if $_search}
+            <div role="search" id="mgr-search-wrapper">
+	            <i class="icon icon-search icon-2x"></i>
+            <div id="modx-manager-search"><label for="modx-uberbar" id="modx-uberbar-label">Search</label></div>
+            </div>
+        {/if}
     </div>
 </div>
 

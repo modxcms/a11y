@@ -56,14 +56,27 @@ function initA11y() {
 	function tellMe(){
 		//debug function to tell me stuff
 		console.log(this);
-	}	
+	}
+	
+	
+	function searchMovement(){
+		clearSubNavOpen();
+		document.getElementById("mgr-search-wrapper").className = "search-movement";
+	}
+	
+	function searchMovementBack(){
+		document.getElementById("mgr-search-wrapper").className = "";
+	}
+	
 	
 	//who to watch
 	document.getElementById("modx-navbar").addEventListener("keydown", whosFocused, false);
 	document.getElementById("modx-navbar").addEventListener("mouseleave", clearSubNavOpen, false);
 	//give help an ID by editing line 175 in /controllers/
 	document.getElementById("help-link").addEventListener("keydown", clearSubNavOpen, false);	
-	document.getElementById("modx-uberbar").addEventListener("keydown", clearSubNavOpen, false);
+	//search actions
+	document.getElementById("modx-uberbar").addEventListener("focus", searchMovement, false);
+	document.getElementById("modx-uberbar").addEventListener("blur", searchMovementBack, false);
 	
 	//Vertical Tab role assignment
 	document.getElementById("ext-gen15").setAttribute("role", "tablist");

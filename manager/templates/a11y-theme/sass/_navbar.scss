@@ -11,8 +11,8 @@
 }
 
 #modx-user-menu {
-  float: right;
-  margin-right: 15px;
+  float: left;
+  /*margin-right: 15px;*/
 }
 
 #modx-navbar {
@@ -151,14 +151,14 @@
 
 #modx-navbar #modx-home-dashboard {
   background-image: url($imgPath + 'modx-icon-color.svg');
-  background-position:center right;
+  background-position: 0 11px;
   background-repeat:no-repeat;
-  background-size: 40px 40px;
-  width: 50px;
-  height: 50px;
+  background-size: 30px 30px;
+  width: 40px;
+  height: 40px;
   float: left;
   border-right: none;
-  margin-left: 21px;
+  margin-left: 15px;
 }
 #user-avatar img {
   border-radius: 20px;
