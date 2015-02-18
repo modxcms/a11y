@@ -5601,7 +5601,7 @@ having to do some real janky stuff to work with ExtJS markup
   font-size: 1em;
   color: #737373;
   cursor: pointer;
-  height: 16px;
+  height: auto;
   min-width: 100%;
   vertical-align: middle;
 }
@@ -8928,39 +8928,38 @@ ul.modx-subnav.open {
   background-color: white;
   border-radius: 3px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  float: left;
-  margin: 6px 0;
+  margin: 15px 0;
 }
 
-/* line 14, ../sass/_dashboard.scss */
+/* line 13, ../sass/_dashboard.scss */
 .dashboard-block h4 {
   color: #555555;
   font-size: 13px;
   padding-bottom: 2px;
 }
 
-/* line 20, ../sass/_dashboard.scss */
+/* line 19, ../sass/_dashboard.scss */
 .dashboard-block em {
   font-style: italic;
 }
 
-/* line 24, ../sass/_dashboard.scss */
+/* line 23, ../sass/_dashboard.scss */
 .dashboard-block strong {
   font-weight: bold;
 }
 
-/* line 28, ../sass/_dashboard.scss */
+/* line 27, ../sass/_dashboard.scss */
 .dashboard-block ul {
   list-style: circle outside;
   padding: 0 0 0 15px;
 }
 
-/* line 33, ../sass/_dashboard.scss */
+/* line 32, ../sass/_dashboard.scss */
 .dashboard-block li {
   /*padding-left: 10px;*/
 }
 
-/* line 37, ../sass/_dashboard.scss */
+/* line 36, ../sass/_dashboard.scss */
 .dashboard-block .body {
   color: #444;
   font-size: 1em;
@@ -8969,13 +8968,13 @@ ul.modx-subnav.open {
   overflow: auto;
   padding: 10px;
 }
-/* line 45, ../sass/_dashboard.scss */
+/* line 44, ../sass/_dashboard.scss */
 .dashboard-block .body p {
   padding-bottom: 1em;
   line-height: 1.4em;
 }
 
-/* line 51, ../sass/_dashboard.scss */
+/* line 50, ../sass/_dashboard.scss */
 .dashboard-block .title {
   background: #d2dde6;
   border-radius: 2px 2px 0 0;
@@ -8987,7 +8986,7 @@ ul.modx-subnav.open {
   zoom: 1;
 }
 
-/* line 62, ../sass/_dashboard.scss */
+/* line 61, ../sass/_dashboard.scss */
 .dashboard-block-half {
   width: 49%;
   margin-left: 0;
@@ -8995,21 +8994,21 @@ ul.modx-subnav.open {
   clear: left;
 }
 
-/* line 68, ../sass/_dashboard.scss */
+/* line 67, ../sass/_dashboard.scss */
 .dashboard-block-half:nth-of-type(2n+0) {
   margin-left: 1%;
   float: right;
   clear: none;
 }
 
-/* line 74, ../sass/_dashboard.scss */
+/* line 73, ../sass/_dashboard.scss */
 .dashboard-block-full {
   clear: both;
   height: auto;
   width: 100%;
 }
 
-/* line 80, ../sass/_dashboard.scss */
+/* line 79, ../sass/_dashboard.scss */
 .dashboard-block-double {
   clear: both;
   height: auto;
@@ -9017,7 +9016,7 @@ ul.modx-subnav.open {
   width: 100%;
 }
 
-/* line 87, ../sass/_dashboard.scss */
+/* line 86, ../sass/_dashboard.scss */
 .dashboard-block-variable .body {
   height: auto;
 }
