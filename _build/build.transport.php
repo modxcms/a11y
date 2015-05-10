@@ -73,6 +73,12 @@ $vehicle->resolve('file', array(
 
 $builder->putVehicle($vehicle);
 
+// Add the vendor dir into the package
+$vendor = $sources['build'] . 'vendor';
+$destination = $builder->directory . $builder->package->signature .'/';
+//$result = `cp -rf $vendor $destination`;
+$cache = $modx->getCacheManager();
+$cache->copyTree($vendor, $destination);
 
 // Now pack in the license file, readme and setup options
 $modx->log(modX::LOG_LEVEL_INFO, 'Adding package attributes and setup options...');
@@ -80,9 +86,13 @@ $builder->setPackageAttributes(array(
 //    'license' => file_get_contents($sources['docs'] . 'license.txt'),
 //    'readme' => file_get_contents($sources['docs'] . 'readme.txt'),
 //    'changelog' => file_get_contents($sources['docs'] . 'changelog.txt'),
+
+    // Our dependencies
     'requires' => array(
         'VerticalNavigation' => '0.1.0-pl'
-    )
+    ),
+    // Store the expected location of the autoloader to be able to use it later
+    'loader' => 'vendor/autoload.php',
 ));
 
 // Zip up package

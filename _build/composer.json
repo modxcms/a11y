@@ -1,0 +1,13 @@
+{
+    "repositories": [{
+        "type": "vcs",
+        "url": "https://github.com/meltingmedia/MODX-Package-Installer"
+    }],
+    "require": {
+        "melting/modx/package": "0.2.*"
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "preferred-install": "dist"
+    }
+}
