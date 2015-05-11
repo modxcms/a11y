@@ -4,9 +4,9 @@ $tstart = microtime(true);
 set_time_limit(0);
 
 // Define package names
-define('PKG_NAME', 'A11y-Theme');
+define('PKG_NAME', 'A11yTheme');
 define('PKG_NAME_LOWER', strtolower(PKG_NAME));
-define('PKG_VERSION', '0.1.0');
+define('PKG_VERSION', '0.1.1');
 define('PKG_RELEASE', 'dev');
 
 // Define build paths
@@ -60,6 +60,7 @@ $attr = array(
     xPDOTransport::UPDATE_OBJECT => false,
     xPDOTransport::RESOLVE_FILES => true,
     xPDOTransport::RESOLVE_PHP => true,
+    xPDOTransport::ABORT_INSTALL_ON_VEHICLE_FAIL => true,
 );
 $vehicle = $builder->createVehicle($ns, $attr);
 $vehicle->resolve('file', array(
@@ -70,12 +71,18 @@ $vehicle->resolve('file', array(
     'source' => $sources['manager_controllers'],
     'target' => "return MODX_MANAGER_PATH . 'controllers/';",
 ));
+$vehicle->resolve('php', array(
+    'source' => $sources['resolvers'] . 'uninstall.php'
+));
+$vehicle->validate('php', array(
+    'source' => $sources['validators'] . 'dependencies.php'
+));
 
 $builder->putVehicle($vehicle);
 
 // Add the vendor dir into the package
 $vendor = $sources['build'] . 'vendor';
-$destination = $builder->directory . $builder->package->signature .'/';
+$destination = $builder->directory . $builder->package->signature .'/vendor/';
 //$result = `cp -rf $vendor $destination`;
 $cache = $modx->getCacheManager();
 $cache->copyTree($vendor, $destination);
@@ -89,7 +96,14 @@ $builder->setPackageAttributes(array(
 
     // Our dependencies
     'requires' => array(
-        'VerticalNavigation' => '0.1.0-pl'
+        'VerticalNavigation' => '<0.2.0-pl',
+    ),
+    'requires_options' => array(
+        'VerticalNavigation' => array(
+            'setup_options' => array(
+                'use_vnav' => true,
+            )
+        )
     ),
     // Store the expected location of the autoloader to be able to use it later
     'loader' => 'vendor/autoload.php',
@@ -105,4 +119,4 @@ $modx->log(modX::LOG_LEVEL_INFO, "\n\nPackage Built. \nExecution time: {$totalTi
 if (!XPDO_CLI_MODE) {
     echo '</pre>';
 }
-exit ();
+exit();

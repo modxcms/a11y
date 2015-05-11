@@ -8,17 +8,23 @@
     "packages": [
         {
             "name": "melting/modx/package",
-            "version": "v0.2.0",
+            "version": "v0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/meltingmedia/MODX-Package-Installer.git",
-                "reference": "235e38006366fe2a0348bb29b302ba85b17be677"
+                "reference": "b2f78da2e824128e03b1d418100bef6775fb30ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/meltingmedia/MODX-Package-Installer/zipball/235e38006366fe2a0348bb29b302ba85b17be677",
-                "reference": "235e38006366fe2a0348bb29b302ba85b17be677",
+                "url": "https://api.github.com/repos/meltingmedia/MODX-Package-Installer/zipball/b2f78da2e824128e03b1d418100bef6775fb30ba",
+                "reference": "b2f78da2e824128e03b1d418100bef6775fb30ba",
                 "shasum": ""
+            },
+            "archive": {
+                "exclude": [
+                    "/VERSION",
+                    "/.gitignore"
+                ]
             },
             "require": {
                 "php": ">=5.3.0"
@@ -47,10 +53,10 @@
                 "package"
             ],
             "support": {
-                "source": "https://github.com/meltingmedia/MODX-Package-Installer/tree/v0.2.0",
+                "source": "https://github.com/meltingmedia/MODX-Package-Installer/tree/v0.2.1",
                 "issues": "https://github.com/meltingmedia/MODX-Package-Installer/issues"
             },
-            "time": "2015-05-10 17:54:26"
+            "time": "2015-05-11 11:17:03"
         }
     ],
     "packages-dev": [],

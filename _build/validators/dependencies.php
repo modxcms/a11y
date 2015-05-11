@@ -43,6 +43,9 @@ if ($object->xpdo && ($options[xPDOTransport::PACKAGE_ACTION] == xPDOTransport::
     if ($requirements && !empty($requirements)) {
         // Get additional options if any
         $options = $transport->getAttribute('requires_options');
+        if (!is_array($options)) {
+            $options = array();
+        }
 
         $sourcePath = $modx->getOption('core_path').'packages/'.$transport->signature.'/';
         $loader = $sourcePath . $transport->getAttribute('loader');
@@ -61,7 +64,9 @@ if ($object->xpdo && ($options[xPDOTransport::PACKAGE_ACTION] == xPDOTransport::
 
         $installer = new \Melting\MODX\Package\Installer($modx);
         $results = $installer->installPackages($requirements, $options);
+        $modx->log(modX::LOG_LEVEL_INFO, print_r($results, true));
         $success = array_search(false, $results) === false;
+        $modx->log(modX::LOG_LEVEL_INFO, 'Success ? '. $success);
     }
 
     //return false;
