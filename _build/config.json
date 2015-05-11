@@ -1,0 +1,21 @@
+{
+  "name": "a11y",
+  "lowCaseName": "a11y",
+  "description": "MODX Accessible Manager Project",
+  "author": "MODX",
+  "version": "0.1.0",
+  "build": {
+    "resolver": {
+      "files": [
+        {
+          "source": "[[+packagePath]]/manager/controllers/a11y-theme/",
+          "target": "return MODX_MANAGER_PATH . 'controllers/';"
+        },
+        {
+          "source": "[[+packagePath]]/manager/templates/a11y-theme/",
+          "target": "return MODX_MANAGER_PATH . 'templates/';"
+        }
+      ]
+    }
+  }
+}
