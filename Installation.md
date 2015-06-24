@@ -3,5 +3,4 @@
 1. new MODX install 
 2. upload folder - manager/templates/a11y-theme
 3. upload folder - manager/controllers/a11y-theme
-4. upload folder - core/elements/plugins
-5. go to settings and change Manager Theme    
+4. go to settings and change Manager Theme    
