@@ -130,7 +130,8 @@
 }
 
 #modx-navbar ul.modx-subnav {
-  display: none;
+  //display: none;
+  visibility: hidden;
   float: left;
   left: 0;
   line-height: 1.1;
@@ -140,6 +141,7 @@
   position: absolute;
   top: 54px;
   z-index: 10000;
+  background: $subnavBg;
 }
 
 #modx-navbar ul.modx-subnav, #modx-navbar ul.modx-subsubnav {
@@ -177,7 +179,7 @@
   text-indent: -9999px;
   width: 100%;
 }
-
+ 
 #modx-navbar #modx-home-dashboard:hover a {
   background-color: transparent;
 }
@@ -188,7 +190,8 @@
 
 #modx-navbar li:hover ul.modx-subnav,
 ul.modx-subnav.open {
-  display: block !important;
+  //display: block !important;
+  visibility: visible !important;
 }
 
 #modx-navbar ul.modx-subnav li {
@@ -198,6 +201,13 @@ ul.modx-subnav.open {
   margin: 0;
   padding: 0;
 }
+
+/* Issue 30 - sub nav toobig for viewport */
+#modx-navbar ul.modx-subnav li.toobig{
+	min-height: 100px;
+	clear: right;
+}
+
 
 /*
 #modx-navbar ul.modx-subnav li:first-child a {

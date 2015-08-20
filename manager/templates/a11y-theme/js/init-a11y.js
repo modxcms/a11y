@@ -37,7 +37,7 @@ function initA11y() {
 		//console.log(curElement.nextSibling.nextSibling.className);
 		var nextDude = curElement.nextSibling.nextSibling;
 		if(nextDude.className == "modx-subnav"){
-			//console.log("bazinga");
+			//console.log("next is subnav");
 			//clear any open subnavs
 			clearSubNavOpen();
 			
@@ -91,7 +91,32 @@ function initA11y() {
 	for (top_i = 0; top_i < topNavChildren.length; top_i++) {
 	    topNavChildren[top_i].setAttribute("aria-haspopup", "true");
 	}
-
+	
+	//fix subnav being too big for viewport Issue #30
+	var navbarSubs = document.getElementsByClassName("modx-subnav");
+	var windowHeight = window.innerHeight;
+	//console.log("window height:"+windowHeight);
+	
+	for(var p=0; p<navbarSubs.length; p++) {
+		
+		//get dimensions
+		//console.log("subnav height:"+navbarSubs[p].offsetHeight);
+		//console.log("subnav width:"+navbarSubs[i].offsetWidth);
+		
+		if(navbarSubs[p].offsetHeight > windowHeight){
+			//get width and make 2 columns 
+			var doubleWidth = (navbarSubs[p].offsetWidth)*2;
+			navbarSubs[p].style.width = doubleWidth+"px";
+			//get the children
+			var bigMenuChildren = navbarSubs[p].children;
+			//console.log(bigMenuChildren);
+			//set .toobig
+			for(var i=0; i<bigMenuChildren.length; i++) {
+				bigMenuChildren[i].className = "toobig";
+			}
+		}
+	}	
+	
 /* not working	
 	//create New Resource Link
 	var newResource = document.createElement("li");

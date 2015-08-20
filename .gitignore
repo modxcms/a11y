@@ -5,3 +5,5 @@ config.core.php
 .idea
 
 *.scssc
+
+manager/templates/a11y-theme/fire_app_log.txt
