@@ -29,9 +29,12 @@
 {/if}
 
 {if $_search}
-<script type="text/javascript">
+<script type="text/javascript">   
     Ext.onReady(function() {
         new MODx.SearchBar;
+        Ext.override(MODx.SearchBar, {
+		    animate: function(blur) {}
+		});
     });
 </script>
 {/if}
