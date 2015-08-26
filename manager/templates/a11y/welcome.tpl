@@ -2,21 +2,6 @@
 
 <div id="modx-dashboard" class="dashboard">
 
-<div class="dashboard-block" aria-labelledby="wt1">
-	<h3 class="title" id="wt1">Increase Font Size</h3>
-	<div class="body">
-	<p>Click the 2 buttons below to increase or decrease the manager font size.</p>
-	<p>
-	<span class="x-btn x-btn-small x-btn-icon-small-left primary-button x-btn-noicon" style="width: auto;">
-        <em class=""><button type="button" class="x-btn-text modx-bodyfontsize-more">Increase</button></em>
-    </span>
-	<span onclick="bfsDecrease()" class="x-btn x-btn-small x-btn-icon-small-left primary-button x-btn-noicon" style="width: auto;">
-        <em class=""><button type="button" class="x-btn-text modx-bodyfontsize-less">Decrease</button></em>
-    </span>
-	</p>
-	</div>
-</div>
-
 <div class="dashboard-block" aria-labelledby="wt2">
 	<h3 class="title" id="wt2">Enable Dyslexia Font</h3>
 	<div class="body">
