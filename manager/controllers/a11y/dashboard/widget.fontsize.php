@@ -12,6 +12,7 @@
 class modDashboardWidgetFontSize extends modDashboardWidgetInterface {
 
     public function render() {
+        $this->modx->controller->addLexiconTopic('a11y:dashboards');
         $this->controller->addLastJavascript($this->modx->getOption('manager_url').'templates/a11y/js/modext/widgets/fontsize/dashboard.panel.js');
         $this->controller->addHtml('<script type="text/javascript">Ext.onReady(function() {
     MODx.load({
