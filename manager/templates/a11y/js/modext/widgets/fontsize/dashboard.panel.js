@@ -6,15 +6,15 @@ MODx.a11y.dashboardFontSizePanel = function(config) {
         cls: 'modx-panel'
         ,items:[{
             xtype:'modx-panel'
-            ,html: _('a11y.w_fontsize_desc')
+            ,html:_('a11y.w_fontsize_desc')
         },{
             xtype:'button'
-            ,text:'Increase'
+            ,text:_('a11y.increase')
             ,cls:'primary-button'
             ,handler:MODx.a11y.bfsIncrease
         },{
             xtype:'button'
-            ,text:'Decrease'
+            ,text:_('a11y.decrease')
             ,cls:'primary-button'
             ,handler:MODx.a11y.bfsDecrease
         }]
