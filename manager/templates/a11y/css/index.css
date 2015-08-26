@@ -5239,7 +5239,10 @@ body.x-body-masked .x-window-plain .x-window-mc {
 having to do some real janky stuff to work with ExtJS markup
 */
 /* line 1, ../sass/components/_primary-button.scss */
-.x-window .x-window-bwrap .x-window-bc .x-window-footer .x-toolbar-right-row td:last-of-type .x-btn, .primary-button, .x-btn.primary-button {
+.x-window .x-window-bwrap .x-window-bc .x-window-footer .x-toolbar-right-row td:last-of-type .x-btn, .actions button.primary-button,
+.primary-button.inline-button,
+.primary-button.x-superboxselect-item,
+.primary-button.x-form-trigger, .primary-button, .x-btn.primary-button {
   background-color: #6cb24a;
   color: white;
 }
@@ -5249,7 +5252,10 @@ having to do some real janky stuff to work with ExtJS markup
   background: #a7a7a7;
 }
 /* line 9, ../sass/components/_primary-button.scss */
-.x-window .x-window-bwrap .x-window-bc .x-window-footer .x-toolbar-right-row td:last-of-type .x-btn button, .primary-button button, .x-btn.primary-button button {
+.x-window .x-window-bwrap .x-window-bc .x-window-footer .x-toolbar-right-row td:last-of-type .x-btn button, .actions button.primary-button button,
+.primary-button.inline-button button,
+.primary-button.x-superboxselect-item button,
+.primary-button.x-form-trigger button, .primary-button button, .x-btn.primary-button button {
   color: white;
 }
 /* line 12, ../sass/components/_primary-button.scss */
@@ -8513,7 +8519,7 @@ ul.x-tab-strip-bottom .x-tab-left {
 
 /* line 132, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav {
-  visibility: hidden;
+  display: none;
   float: left;
   left: 0;
   line-height: 1.1;
@@ -8523,10 +8529,9 @@ ul.x-tab-strip-bottom .x-tab-left {
   position: absolute;
   top: 54px;
   z-index: 10000;
-  background: #182028;
 }
 
-/* line 147, ../sass/_navbar.scss */
+/* line 145, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav, #modx-navbar ul.modx-subsubnav {
   border-radius: 0 0 2px 2px;
   border-top: none;
@@ -8534,7 +8539,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.025), -1px 0 0 rgba(0, 0, 0, 0.025), 1px 0 0 rgba(0, 0, 0, 0.025);
 }
 
-/* line 154, ../sass/_navbar.scss */
+/* line 152, ../sass/_navbar.scss */
 #modx-navbar #modx-home-dashboard {
   background-image: url("../../default/images/modx-icon-color.svg");
   background-position: 0 11px;
@@ -8547,7 +8552,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   margin-left: 15px;
 }
 
-/* line 165, ../sass/_navbar.scss */
+/* line 163, ../sass/_navbar.scss */
 #user-avatar img {
   border-radius: 20px;
   margin: 8px 10px 0 0;
@@ -8557,7 +8562,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   float: left;
 }
 
-/* line 176, ../sass/_navbar.scss */
+/* line 174, ../sass/_navbar.scss */
 #modx-navbar #modx-home-dashboard a {
   overflow: hidden;
   padding: 0;
@@ -8565,23 +8570,23 @@ ul.x-tab-strip-bottom .x-tab-left {
   width: 100%;
 }
 
-/* line 183, ../sass/_navbar.scss */
+/* line 181, ../sass/_navbar.scss */
 #modx-navbar #modx-home-dashboard:hover a {
   background-color: transparent;
 }
 
-/* line 187, ../sass/_navbar.scss */
+/* line 185, ../sass/_navbar.scss */
 #modx-navbar #modx-home-dashboard:hover {
   /*background-color: $navbarHover;*/
 }
 
-/* line 192, ../sass/_navbar.scss */
+/* line 190, ../sass/_navbar.scss */
 #modx-navbar li:hover ul.modx-subnav,
 ul.modx-subnav.open {
-  visibility: visible !important;
+  display: block !important;
 }
 
-/* line 197, ../sass/_navbar.scss */
+/* line 194, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li {
   background: #182028;
   border-bottom: 1px solid #192b3e;
@@ -8590,19 +8595,12 @@ ul.modx-subnav.open {
   padding: 0;
 }
 
-/* Issue 30 - sub nav toobig for viewport */
-/* line 206, ../sass/_navbar.scss */
-#modx-navbar ul.modx-subnav li.toobig {
-  min-height: 100px;
-  clear: right;
-}
-
 /*
 #modx-navbar ul.modx-subnav li:first-child a {
   @include background(linear-gradient($navbarHover, $navbarDrop) top repeat);
 }
 */
-/* line 218, ../sass/_navbar.scss */
+/* line 208, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a {
   background-color: #182028;
   color: #d2dde6;
@@ -8621,27 +8619,27 @@ ul.modx-subnav.open {
   border-bottom:1px solid $navbarDrop;
 }
 */
-/* line 238, ../sass/_navbar.scss */
+/* line 228, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a:hover {
   background: #050608;
   border-top-color: #192b3e;
   border-bottom-color: #192b3e;
   color: white;
 }
-/* line 243, ../sass/_navbar.scss */
+/* line 233, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a:hover .description {
   color: #9dd8f1;
 }
-/* line 247, ../sass/_navbar.scss */
+/* line 237, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:first-child a {
   border-top-width: 0;
 }
-/* line 250, ../sass/_navbar.scss */
+/* line 240, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:last-child a {
   border-bottom-width: 0;
 }
 
-/* line 255, ../sass/_navbar.scss */
+/* line 245, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a span {
   color: #55bbe7;
   display: block;
@@ -8653,7 +8651,7 @@ ul.modx-subnav.open {
   width: 100%;
 }
 
-/* line 266, ../sass/_navbar.scss */
+/* line 256, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav ul {
   display: none;
   left: 270px;
@@ -8664,32 +8662,32 @@ ul.modx-subnav.open {
   z-index: 24;
 }
 
-/* line 277, ../sass/_navbar.scss */
+/* line 267, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav ul li:first-child,
 #modx-navbar ul.modx-subnav ul li:first-child a {
   border-radius: 0 2px 0 0;
 }
 
-/* line 282, ../sass/_navbar.scss */
+/* line 272, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav ul li:last-child,
 #modx-navbar ul.modx-subnav ul li:last-child a {
   border-radius: 0 0 2px 0;
 }
 
-/* line 287, ../sass/_navbar.scss */
+/* line 277, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav ul ul li:last-child,
 #modx-navbar ul.modx-subnav ul ul li:last-child a {
   border-radius: 0 0 2px 2px;
 }
 
-/* line 293, ../sass/_navbar.scss */
+/* line 283, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:hover ul ul,
 #modx-navbar ul.modx-subnav ul li:hover ul ul,
 #modx-navbar ul.modx-subnav ul ul li:hover ul ul {
   display: none;
 }
 
-/* line 300, ../sass/_navbar.scss */
+/* line 290, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:hover ul,
 #modx-navbar ul.modx-subnav ul li:hover ul,
 #modx-navbar ul.modx-subnav ul ul li:hover ul,
@@ -8697,7 +8695,7 @@ ul.modx-subnav.open {
   display: block;
 }
 
-/* line 304, ../sass/_navbar.scss */
+/* line 294, ../sass/_navbar.scss */
 .ext-ie7 #modx-header {
   position: relative;
   z-index: 10;
