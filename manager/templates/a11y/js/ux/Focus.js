@@ -747,14 +747,11 @@ Ext.override(Ext.FormPanel, {
     createForm: function(){
         delete this.initialConfig.listeners;
         var form = new Ext.form.BasicForm(null, this.initialConfig);
-console.log('form',form);
-console.log('this',this);
         form.afterMethod('add', this.formItemAdd, this);
         return form;
     },
 
     formItemAdd: function(item){
-console.log('item',item);
         if (typeof item === 'undefined') {
             return;
         }
