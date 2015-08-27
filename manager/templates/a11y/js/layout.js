@@ -24,9 +24,8 @@ MODx.menuEntry = function(config) {
         }
         ,headerCfg: {
             tag: 'a'
-            ,href: 'javascript:;'
+            ,href: 'javascript:void(0);'
             ,tabindex: 1
-            //,'data-qtip': 'Test'
             ,title: config.description || ''
         }
         ,headerCssClass: 'x-panel-header'
@@ -34,6 +33,7 @@ MODx.menuEntry = function(config) {
     });
     MODx.menuEntry.superclass.constructor.call(this, config);
     this.on('afterrender', this.onAfterRender, this);
+    return this;
 };
 Ext.extend(MODx.menuEntry, Ext.Panel, {
     onCollapse : function(doAnim, animArg) {
@@ -63,6 +63,8 @@ Ext.reg('modx-menu-entry', MODx.menuEntry);
 
 MODx.Layout.Default = function(config, getStore) {
     config = config || {};
+    Ext.applyIf(config,{
+    });
 
     MODx.Layout.Default.superclass.constructor.call(this, config);
     return this;
@@ -248,7 +250,7 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
     }
 
     /**
-     * Format a single menu entry to fit the stying
+     * Format a single menu entry to fit the styling
      *
      * @param {Object} config
      *
