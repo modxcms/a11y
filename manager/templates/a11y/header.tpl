@@ -8,6 +8,7 @@
 
 <link rel="stylesheet" type="text/css" href="{$_config.manager_url}assets/ext3/resources/css/ext-all-notheme-min.css" />
 <link rel="stylesheet" type="text/css" href="{$_config.manager_url}templates/{$_config.manager_theme}/css/index.css" />
+<link rel="stylesheet" type="text/css" href="{$_config.manager_url}templates/{$_config.manager_theme}/css/focus.css" />
 
 {if $_config.ext_debug}
 <script src="{$_config.manager_url}assets/ext3/adapter/ext/ext-base-debug.js" type="text/javascript"></script>
@@ -38,7 +39,6 @@
 		    animate: function(blur) {}
 		});
         new MODx.SearchBar;
-        MODx.a11y.init();
     });
 </script>
 {/if}
@@ -72,7 +72,8 @@
         {if $_search}
             <div role="search" id="mgr-search-wrapper">
 	            <i class="icon icon-search icon-2x"></i>
-            <div id="modx-manager-search"><label for="modx-uberbar" id="modx-uberbar-label">Search</label></div>
+                <label for="modx-uberbar" id="modx-uberbar-label">{$_lang.search}</label>
+                <div id="modx-manager-search"></div>
             </div>
         {/if}
     </div>
