@@ -75,6 +75,15 @@ console.log("currently selected:"+curElement);
                 Ext.get('modx-body-tag').setStyle('font-size', "1."+bfsCheck+"em");
             }, 1000);
         }
+        var dstCheck = cookie.get('dysfont');
+        if(dstCheck){
+            Ext.DomHelper.append(Ext.getHead(), {
+                tag: 'link'
+                ,type:'text/css'
+                ,rel:'stylesheet'
+                ,href:MODx.config.manager_url+'templates/a11y/css/dyslexia.css'
+            });
+        }
     }
     ,bfsIncrease: function(){
         var cookie = new MODx.cookie();
@@ -87,8 +96,20 @@ console.log("currently selected:"+curElement);
         var cookie = new MODx.cookie();
         var bfsCheck = cookie.get('bodyfontsize');
         var newBfs = Number(bfsCheck)-1;
+        if (newBfs<0)return;
         cookie.create("bodyfontsize", newBfs, 30);
         Ext.get('modx-body-tag').setStyle('font-size', "1."+newBfs+"em");
+    }
+    ,dyslexiaToggler:function(){
+        var cookie = new MODx.cookie();
+        var dstCheck = cookie.get('dysfont');
+        if(dstCheck){
+            cookie.remove("dysfont");
+            location.reload();
+        } else {
+            cookie.create("dysfont", "true", 30);
+            location.reload();
+        }
     }
 });
 

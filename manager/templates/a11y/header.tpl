@@ -21,7 +21,6 @@
 <script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/ux/Focus.js" type="text/javascript"></script>
 <script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/tree/ARIA.js" type="text/javascript"></script>
 <script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/modext/core/modx.a11y.js" type="text/javascript"></script>
-<script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/dyslexia-font.js" type="text/javascript"></script>
 
 <script src="{$_config.connectors_url}lang.js.php?ctx=mgr&topic=topmenu,file,resource,{$_lang_topics}&action={$smarty.get.a|strip_tags}" type="text/javascript"></script>
 <script src="{$_config.connectors_url}modx.config.js.php?action={$smarty.get.a|strip_tags}{if $_ctx}&wctx={$_ctx}{/if}" type="text/javascript"></script>
