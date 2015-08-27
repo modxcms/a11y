@@ -1,19 +1,7 @@
 Ext.namespace('MODx.a11y');
 
-MODx.a11y.ARIA = function(config) {
-    config = config || {};
-
-    Ext.applyIf(config,{
-
-    });
-
-    MODx.a11y.ARIA.superclass.constructor.call(this,config);
-};
-
-Ext.extend(MODx.a11y.ARIA,Ext.a11y.ARIA, {
-    initA11y: function() {
-console.log('initA11y');
-
+MODx.a11y = Ext.apply(Ext.a11y, {
+    init: function() {
         //who to watch
         Ext.get('modx-navbar').on({
             'keydown':this.whosFocused
@@ -46,6 +34,8 @@ console.log('initA11y');
         if (typeof(Ext.getCmp('modx-file-tree'))!=='undefined') {
             this.setProperty('modx-file-tree', 'role', 'tab');
         }
+
+        this.initFont();
     }
     ,whosFocused: function() {
 		var curElement = document.activeElement;
@@ -72,30 +62,83 @@ console.log("currently selected:"+curElement);
             item.removeClass('open');
         });
     }
-    ,createCookie: function(name, value, days) {
-        var expires;
-
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toGMTString();
+    ,initFont:function(){
+        var cookie = new MODx.cookie();
+        var bfsCheck = cookie.get('bodyfontsize');
+        if (!bfsCheck) {
+            cookie.create("bodyfontsize", 0, 30);
+            setTimeout(function () {
+                Ext.get('modx-body-tag').setStyle('font-size', "1.0em");
+            }, 1000);
         } else {
-            expires = "";
+            setTimeout(function () {
+                Ext.get('modx-body-tag').setStyle('font-size', "1."+bfsCheck+"em");
+            }, 1000);
         }
-        document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
-    }
-    ,readCookie:function(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for(var i=0;i < ca.length;i++) {
-            var c = ca[i];
-            while (c.charAt(0)==' ') c = c.substring(1,c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        var dstCheck = cookie.get('dysfont');
+        if(dstCheck){
+            Ext.DomHelper.append(Ext.getHead(), {
+                tag: 'link'
+                ,type:'text/css'
+                ,rel:'stylesheet'
+                ,href:MODx.config.manager_url+'templates/a11y/css/dyslexia.css'
+            });
         }
-        return null;
     }
-    ,eraseCookie:function(name) {
-        createCookie(name,"",-1);
+    ,bfsIncrease: function(){
+        var cookie = new MODx.cookie();
+        var bfsCheck = cookie.get('bodyfontsize');
+        var newBfs = Number(bfsCheck)+1;
+        cookie.create("bodyfontsize", newBfs, 30);
+        Ext.get('modx-body-tag').setStyle('font-size', "1."+newBfs+"em");
+    }
+    ,bfsDecrease:function(){
+        var cookie = new MODx.cookie();
+        var bfsCheck = cookie.get('bodyfontsize');
+        var newBfs = Number(bfsCheck)-1;
+        if (newBfs<0)return;
+        cookie.create("bodyfontsize", newBfs, 30);
+        Ext.get('modx-body-tag').setStyle('font-size', "1."+newBfs+"em");
+    }
+    ,dyslexiaToggler:function(){
+        var cookie = new MODx.cookie();
+        var dstCheck = cookie.get('dysfont');
+        if(dstCheck){
+            cookie.remove("dysfont");
+            location.reload();
+        } else {
+            cookie.create("dysfont", "true", 30);
+            location.reload();
+        }
     }
 });
-Ext.reg('modx-a11y-aria',MODx.a11y.ARIA);
+
+MODx.cookie = function(){
+    return {
+        create: function(name, value, days) {
+            var expires;
+
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toGMTString();
+            } else {
+                expires = "";
+            }
+            document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
+        }
+        ,get: function(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+        ,remove: function(name){
+            this.create(name,"",-1);
+        }
+    };
+};

@@ -6,8 +6,8 @@
     {if $_config.manager_favicon_url}<link rel="shortcut icon" type="image/x-icon" href="{$_config.manager_favicon_url}" />{/if}
 
     <!--<link rel="stylesheet" type="text/css" href="{$_config.manager_url}assets/ext3/resources/css/ext-all-notheme-min.css" />-->
-  	<link rel="stylesheet" type="text/css" href="{$_config.manager_url}templates/a11y-theme/css/index.css" />
-    <link rel="stylesheet" type="text/css" href="{$_config.manager_url}templates/a11y-theme/css/login.css" />
+  	<link rel="stylesheet" type="text/css" href="{$_config.manager_url}templates/a11y/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="{$_config.manager_url}templates/a11y/css/login.css" />
 
     {if $_config.ext_debug}
     <script src="{$_config.manager_url}assets/ext3/adapter/ext/ext-base-debug.js" type="text/javascript"></script>
@@ -22,64 +22,70 @@
     <script src="assets/modext/util/utilities.js" type="text/javascript"></script>
 	<script src="assets/modext/widgets/core/modx.panel.js" type="text/javascript"></script>
     <script src="assets/modext/widgets/core/modx.window.js" type="text/javascript"></script>
+
+    <!--Sencha Aria Module -->
+    <script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/ux/Focus.js" type="text/javascript"></script>
+    <script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/tree/ARIA.js" type="text/javascript"></script>
+    <script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/modext/core/modx.a11y.js" type="text/javascript"></script>
+
     <script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/modext/sections/login.js" type="text/javascript"></script>
 
     <meta name="robots" content="noindex, nofollow" />
-    
+
     {if $error_message}
-    
+
     	<script type="text/javascript">
-	    	
+
 	    	function ariaInvalid(){
 		    	var activeForm = Ext.state.Manager.get("actForm");
-		    	if(activeForm == "login"){ 
-				    document.getElementById("modx-login-username").setAttribute('aria-invalid', 'true');
-				    document.getElementById("modx-login-password").setAttribute('aria-invalid', 'true'); 
-				} else { 
-					document.getElementById("modx-login-form").style.display = 'none';
-					document.getElementById("modx-forgot-login-form").style.display = 'block';
-				    document.getElementById("modx-login-username-reset").setAttribute('aria-invalid', 'true'); 
+		    	if(activeForm == "login"){
+                    MODx.a11y.ARIA.setProperty('modx-login-username','aria-invalid','true');
+                    MODx.a11y.ARIA.setProperty('modx-login-password','aria-invalid','true');
+				} else {
+					Ext.get("modx-login-form").setStyle('display', 'none');
+					Ext.get("modx-forgot-login-form").setStyle('display', 'block');
+                    MODx.a11y.ARIA.setProperty('modx-login-username-reset','aria-invalid','true');
 				}
-				
+
 		    	//reset
 		    	Ext.state.Manager.set("actForm", "");
-			}    
-		    
-        	function setFocusToTextBox(){ document.getElementById("errorMsg").focus(); }
-        	
+			}
+
+        	function setFocusToTextBox(){ Ext.get("errorMsg").focus(); }
+
         </script>
-        
+
     {else}
-    
+
         <script type="text/javascript">
 	        function ariaInvalid(){ Ext.state.Manager.set("actForm", ""); } //reset
-	        
-        	function setFocusToTextBox(){ document.getElementById("modx-login-username").focus(); }
+
+        	function setFocusToTextBox(){ Ext.get("modx-login-username").focus(); }
         </script>
-        
+
     {/if}
-    
+
     <script type="text/javascript">
-	    
+
 	    function initLogin() {
-	    	
+
 	    	//enable setProvider to use Cookies
-	    	Ext.state.Manager.setProvider(new Ext.state.CookieProvider());	
-	    	
+	    	Ext.state.Manager.setProvider(new Ext.state.CookieProvider());
+
 	    	//set focus
 	    	setFocusToTextBox();
-	    
+
 			//functions to set which form was clicked
 	    	function setLoginPress(){ Ext.state.Manager.set("actForm", "login"); }
 	    	function setForgotPress(){ Ext.state.Manager.set("actForm", "forgot"); }
 			ariaInvalid();
-	    	
-	    	
+
+
 	    	//Listeners
-			document.getElementById("modx-login-btn").addEventListener("click", setLoginPress, false);
-			document.getElementById("modx-fl-btn").addEventListener("click", setForgotPress, false);
+			Ext.get("modx-login-btn").on("click", setLoginPress, false);
+			Ext.get("modx-fl-btn").on("click", setForgotPress, false);
 	    }
-		     
+
     </script>
 </head>
 
@@ -106,11 +112,11 @@
         <h1>{$_config.site_name}</h1>
         <br class="clear" />
 
-        {if $error_message}	
+        {if $error_message}
         	<p id="errorMsg" tabindex="1" class="error">{$error_message}</p>
         {/if}
     </div></div></div>
-        
+
     <form id="modx-login-form" action="" method="post">
         <input type="hidden" name="login_context" value="mgr" />
         <input type="hidden" name="modahsh" value="{$modahsh}" />
@@ -121,26 +127,27 @@
           <div class="x-form-element login-form-element">
             <!--eliminate placeholder Issue #23
 	            <input type="text" id="modx-login-username" name="username" tabindex="1" autocomplete="on" value="{$_post.username}" class="x-form-text x-form-field" placeholder="{$_lang.login_username}" />
-	        -->    
-            <input aria-required="true" type="text" id="modx-login-username" name="username" tabindex="1" autocomplete="on" value="{$_post.username}" class="x-form-text x-form-field" />
+	        -->
+            <input aria-required="true" required="required" type="text" id="modx-login-username" name="username" tabindex="1" autocomplete="on" value="{$_post.username}" class="x-form-text x-form-field" />
           </div>
         </div>
 
         <div class="x-form-item login-form-item">
           <label for="modx-login-password">{$_lang.login_password}</label>
           <div class="x-form-element login-form-element">
-	        <!--eliminate placeholder Issue #23 
+	        <!--eliminate placeholder Issue #23
             <input type="password" id="modx-login-password" name="password" tabindex="2" autocomplete="on" class="x-form-text x-form-field" placeholder="{$_lang.login_password}" />
             -->
-            <input aria-required="true" type="password" id="modx-login-password" name="password" tabindex="2" autocomplete="on" class="x-form-text x-form-field" />
+            <input aria-required="true" required="required" type="password" id="modx-login-password" name="password" tabindex="2" autocomplete="on" class="x-form-text x-form-field" />
           </div>
         </div>
-
 
         <div class="login-cb-row">
             <div class="login-cb-col one">
                 <div class="modx-login-fl-link">
-                   <a href="javascript:void(0);" id="modx-fl-link" style="{if $_post.username_reset}display:none;{/if}">{$_lang.login_forget_your_login}</a>
+{if $allow_forgot_password|default}
+                        <a href="javascript:void(0);" id="modx-fl-link" style="{if $_post.username_reset|default}display:none;{/if}">{$_lang.login_forget_your_login}</a>
+{/if}
                 </div>
             </div>
             <div class="login-cb-col two">
@@ -155,33 +162,27 @@
         {$onManagerLoginFormRender}
     </form>
 
-    {if $allow_forgot_password}
-      <div class="modx-forgot-login">
-        <form id="modx-fl-form" action="" method="post">
-           <div id="modx-forgot-login-form" style="{if NOT $_post.username_reset}display: none;{/if}">
+{if $allow_forgot_password|default}
+        <div class="modx-forgot-login">
+            <form id="modx-fl-form" action="" method="post">
+                <div id="modx-forgot-login-form" style="{if NOT $_post.username_reset|default}display: none;{/if}">
+                    <div class="x-form-item login-form-item">
+                        <div class="x-form-element login-form-element">
+                            <label for="modx-login-username-reset">{$_lang.login_username_or_email}</label>
+                            <input aria-required="true" required="required" type="text" id="modx-login-username-reset" name="username_reset" class="x-form-text x-form-field" value="{$_post.username_reset|default}" placeholder="{$_lang.login_username_or_email}" />
+                        </div>
+                        <div class="x-form-clear-left"></div>
+                    </div>
 
-               <div class="x-form-item login-form-item">
-                  <div class="x-form-element login-form-element">
-                    <label for="modx-login-username-reset">Username or Email</label>
-                    <input type="text" id="modx-login-username-reset" name="username_reset" class="x-form-text x-form-field" value="{$_post.username_reset}" />
-                  </div>
-                  <div class="x-form-clear-left"></div>
+                   <button class="x-btn x-btn-small x-btn-icon-small-left primary-button x-btn-noicon login-form-btn" name="forgotlogin" type="submit" value="1" id="modx-fl-btn">{$_lang.login_send_activation_email}</button>
                </div>
-
-
-               <button class="x-btn x-btn-small x-btn-icon-small-left primary-button x-btn-noicon login-form-btn" name="forgotlogin" type="submit" value="1" id="modx-fl-btn">{$_lang.login_send_activation_email}</button>
-
-           </div>
-        </form>
+            </form>
         </div>
-    {/if}
-
+{/if}
     <br class="clear" />
 </div>
 
-<p class="loginLicense">
-{$_lang.login_copyright}
-</p>
+    <p class="loginLicense">{$_lang.login_copyright}</p>
 </div>
 
 </body>

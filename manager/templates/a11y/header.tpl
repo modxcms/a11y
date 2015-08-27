@@ -3,7 +3,7 @@
 <head>
 <title>{if $_pagetitle}{$_pagetitle} | {/if}{$_config.site_name}</title>
 <meta http-equiv="Content-Type" content="text/html; charset={$_config.modx_charset}" />
-	
+
 {if $_config.manager_favicon_url}<link rel="shortcut icon" href="{$_config.manager_favicon_url}" />{/if}
 
 <link rel="stylesheet" type="text/css" href="{$_config.manager_url}assets/ext3/resources/css/ext-all-notheme-min.css" />
@@ -18,7 +18,10 @@
 {/if}
 <script src="{$_config.manager_url}assets/modext/core/modx.js" type="text/javascript"></script>
 <!--Sencha Aria Module -->
-<script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/aria-tree.js" type="text/javascript"></script>
+<script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/ux/Focus.js" type="text/javascript"></script>
+<script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/tree/ARIA.js" type="text/javascript"></script>
+<script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/modext/core/modx.a11y.js" type="text/javascript"></script>
+
 <script src="{$_config.connectors_url}lang.js.php?ctx=mgr&topic=topmenu,file,resource,{$_lang_topics}&action={$smarty.get.a|strip_tags}" type="text/javascript"></script>
 <script src="{$_config.connectors_url}modx.config.js.php?action={$smarty.get.a|strip_tags}{if $_ctx}&wctx={$_ctx}{/if}" type="text/javascript"></script>
 
@@ -29,12 +32,13 @@
 {/if}
 
 {if $_search}
-<script type="text/javascript">   
+<script type="text/javascript">
     Ext.onReady(function() {
-        new MODx.SearchBar;
         Ext.override(MODx.SearchBar, {
 		    animate: function(blur) {}
 		});
+        new MODx.SearchBar;
+        MODx.a11y.init();
     });
 </script>
 {/if}
@@ -44,11 +48,8 @@
 {$scr}
 {/foreach}
 
-<script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/init-a11y.js" type="text/javascript"></script>
-<script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/font-size.js" type="text/javascript"></script>
-<script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/dyslexia-font.js" type="text/javascript"></script>
 </head>
-<body id="modx-body-tag" onload="initA11y()">
+<body id="modx-body-tag">
 
 <div id="modx-browser"></div>
 <div id="modx-container" role="main">
@@ -60,7 +61,7 @@
 <div id="modx-header" role="banner">
     <div id="modx-navbar" tabindex="2">
 	    <div id="modx-home-dashboard"><a href="?" title="{$_lang.dashboard}">{$_lang.dashboard}</a></div>
-	    
+
         <ul id="modx-topnav" role="navigation" aria-label="manager menu">
             {$navb}
         </ul>
