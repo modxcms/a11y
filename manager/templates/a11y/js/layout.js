@@ -25,7 +25,7 @@ MODx.menuEntry = function(config) {
         ,headerCfg: {
             tag: 'a'
             ,href: 'javascript:void(0);'
-            ,tabindex: 1
+            ,tabindex: -1
             ,title: config.description || ''
         }
         ,headerCssClass: 'x-panel-header'
@@ -40,11 +40,15 @@ Ext.extend(MODx.menuEntry, Ext.Panel, {
         MODx.menuEntry.superclass.onCollapse.call(this, doAnim, animArg);
         // Force layout to have no active item
         this.getLayout().setActiveItem(null);
+        // set tabindex to -1
+        MODx.a11y.ARIA.setProperty(this.getEl().id, 'tabindex', -1);
     }
     ,onExpand: function(doAnim, animArg) {
         MODx.menuEntry.superclass.onExpand.call(this, doAnim, animArg);
         // Force layout to display its item
         this.getLayout().setActiveItem(0);
+        // set tabindex to 0
+        MODx.a11y.ARIA.setProperty(this.getEl().id, 'tabindex', 0);
     }
     ,getState: function() {
         // Menu attributes to save/restore for the state manager
@@ -56,6 +60,11 @@ Ext.extend(MODx.menuEntry, Ext.Panel, {
     ,onAfterRender: function(me) {
         if (!me.collapsed) {
             me.getLayout().setActiveItem(0);
+            // set tabindex to -1
+            MODx.a11y.ARIA.setProperty(me.getEl().id, 'tabindex', -1);
+        } else {
+            // set tabindex to 0
+            MODx.a11y.ARIA.setProperty(me.getEl().id, 'tabindex', 0);
         }
     }
 });
