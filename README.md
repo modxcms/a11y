@@ -1,6 +1,6 @@
 # MODX Accessible Manager Project
 
-MODX Revolution has always been a stellar platform for powering accessible websites, but the back-end Manager falls short. Users that rely upon assistive devices such as screen readers, enlarged fonts and alternate input devices were left with a sub-optimal experiences when it comes to creating and managing content in the MODX Manager. 
+MODX Revolution has always been a stellar platform for powering accessible websites, but the back-end Manager falls short. Users that rely upon assistive devices such as screen readers, enlarged fonts and alternate input devices were left with a sub-optimal experiences when it comes to creating and managing content in the MODX Manager.
 
 The purpose of this project is to make MODX a first class citizen in the accessible software world, and the _premiere accessible CMS_. This will be accomplished in a way that doesn't require rebuilding your existing MODX Revolution websites, and achieves some critical goals:
 
@@ -69,3 +69,13 @@ We try to follow [Semantic Versioning](http://semver.org/), so if you are submit
 
     ### Related issue(s)/PR(s)
     Let us know if this is related to any issue/pull request (see https://github.com/blog/1506-closing-issues-via-pull-requests)
+
+## Road Map
+###1.0
+* Keyboard Navigation
+* ARIA roles, states, and properties for all the major areas of the Manager UI
+* Visual Contrast to meet WCAG guidelines
+* Clean up text presentation for screen readers
+* Focus indication
+
+This theme will be available as an extra and the testing releases will be available on [GitHub's repo](https://github.com/modxcms/a11y/releases)
