@@ -114,7 +114,7 @@ Ext.a11y.Focusable = Ext.extend(Ext.util.Observable, {
             this.setComponent(null);
         }
 
-        this.setRelayTo(relayTo)
+        this.setRelayTo(relayTo);
         this.setNoFrame(noFrame);
         this.setFrameEl(frameEl);
 
@@ -124,7 +124,7 @@ Ext.a11y.Focusable = Ext.extend(Ext.util.Observable, {
     },
 
     init: function(){
-        this.el.dom.tabIndex = '1';
+        this.el.dom.tabIndex = '-1';
         this.el.addClass('x-a11y-focusable');
         this.el.on({
             focus: this.onFocus,
