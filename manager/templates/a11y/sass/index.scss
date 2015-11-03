@@ -1,4 +1,6 @@
-@import "bourbon/bourbon";
+//@import "bourbon/bourbon";
+@import "_bourbon-fix.scss";
+
 $border-box-sizing:false;
 @import "neat/neat";
 $fa-css-prefix:       icon;
@@ -1532,4 +1534,14 @@ iframe[classname="x-hidden"] {
 .x-toolbar .x-toolbar-cell input.x-form-text{
 	padding: 4px; //weird padding issue 
 	background-color: transparent !important; //getting tan bg from global .x-form-text
+}
+
+
+.sr-only {
+    position: absolute !important;
+    height: 1px; width: 1px; 
+    border: 0; padding: 0;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
 }
