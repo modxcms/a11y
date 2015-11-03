@@ -5478,9 +5478,11 @@ having to do some real janky stuff to work with ExtJS markup
 .menu-section .x-panel-header-text {
   line-height: 40px;
   margin: 0 5px;
+  font-size: 16px;
+  color: inherit;
 }
 
-/* line 43, ../sass/components/_vertical-navigation.scss */
+/* line 46, ../sass/components/_vertical-navigation.scss */
 .menu-section .x-panel-header-text > i.icon {
   display: inline-block !important;
   opacity: 1 !important;
@@ -5489,7 +5491,7 @@ having to do some real janky stuff to work with ExtJS markup
   line-height: 2;
 }
 
-/* line 49, ../sass/components/_vertical-navigation.scss */
+/* line 52, ../sass/components/_vertical-navigation.scss */
 .menu-section.x-panel-collapsed .x-panel-header {
   color: #fff;
   background: transparent;
@@ -5497,59 +5499,59 @@ having to do some real janky stuff to work with ExtJS markup
   text-align: left;
 }
 
-/* line 54, ../sass/components/_vertical-navigation.scss */
+/* line 57, ../sass/components/_vertical-navigation.scss */
 .menu-section.x-panel-collapsed .x-panel-header:hover, .menu-section.x-panel-collapsed .x-panel-header:focus {
   background: rgba(0, 0, 0, 0.2);
   /*border-left: 15px solid transparent; */
 }
 
-/* line 58, ../sass/components/_vertical-navigation.scss */
+/* line 61, ../sass/components/_vertical-navigation.scss */
 .menu-section.x-panel-collapsed .x-panel-header-text > i.icon {
   float: left;
 }
 
-/* line 61, ../sass/components/_vertical-navigation.scss */
+/* line 64, ../sass/components/_vertical-navigation.scss */
 .border-nav.x-border-layout-ct {
   background: transparent;
 }
 
-/* line 63, ../sass/components/_vertical-navigation.scss */
+/* line 66, ../sass/components/_vertical-navigation.scss */
 .border-nav .sub-nav {
   background: #fff;
   border-radius: 0;
   height: 100%;
 }
 
-/* line 67, ../sass/components/_vertical-navigation.scss */
+/* line 70, ../sass/components/_vertical-navigation.scss */
 .border-nav .menu-section > .x-panel-bwrap > .x-panel-body {
   display: none;
 }
 
-/* line 69, ../sass/components/_vertical-navigation.scss */
+/* line 72, ../sass/components/_vertical-navigation.scss */
 .border-nav .menu-section .x-panel-header {
   background: #fff;
   border-left: 4px solid transparent;
 }
 
-/* line 72, ../sass/components/_vertical-navigation.scss */
+/* line 75, ../sass/components/_vertical-navigation.scss */
 .border-nav .menu-section .x-panel-header-text {
   margin: 0;
 }
 
-/* line 74, ../sass/components/_vertical-navigation.scss */
+/* line 77, ../sass/components/_vertical-navigation.scss */
 .border-nav .menu-section .x-panel-header-text > i.icon {
   width: 50px;
   padding: 0 !important;
   font-size: 1.2em;
 }
 
-/* line 78, ../sass/components/_vertical-navigation.scss */
+/* line 81, ../sass/components/_vertical-navigation.scss */
 .border-nav .menu-section.x-panel-collapsed .x-panel-header {
   background: transparent;
   border: 0 none;
 }
 
-/* line 81, ../sass/components/_vertical-navigation.scss */
+/* line 84, ../sass/components/_vertical-navigation.scss */
 .border-nav .menu-section.x-panel-collapsed .x-panel-header:hover, .border-nav .menu-section.x-panel-collapsed .x-panel-header:focus {
   border-left: 4px solid transparent;
 }

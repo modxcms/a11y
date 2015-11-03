@@ -39,7 +39,10 @@
 }
 .menu-section .x-panel-header-text {
   line-height: 40px;
-  margin: 0 5px; }
+  margin: 0 5px; 
+  font-size: 16px;
+  color: inherit;
+}
   .menu-section .x-panel-header-text > i.icon {
     display: inline-block !important;
     opacity: 1 !important;
