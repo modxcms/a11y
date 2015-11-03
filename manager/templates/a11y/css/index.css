@@ -13440,13 +13440,11 @@ iframe[classname="x-hidden"] {
 
 /* line 1540, ../sass/index.scss */
 .sr-only {
-      position: absolute !important;
-      height: 1px;
+  position: absolute !important;
+  height: 1px;
   width: 1px;
-      border: 0;
+  border: 0;
   padding: 0;
-      overflow: hidden;
-      clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-      clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }

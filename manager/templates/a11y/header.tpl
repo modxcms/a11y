@@ -61,14 +61,16 @@
 <div id="modx-header" role="banner">
     <div id="modx-navbar" tabindex="2">
 	    <div id="modx-home-dashboard"><a href="?" title="{$_lang.dashboard}">{$_lang.dashboard}</a></div>
-
-        <ul id="modx-topnav" role="navigation" aria-label="manager menu">
-            {$navb}
-        </ul>
-        <ul id="modx-user-menu" role="navigation" aria-label="user and help menu">
-            {* eval is used here to support nested variables *}
-            {eval var=$userNav}
-        </ul>
+		
+		<nav><h2 class="sr-only">Global Navigation</h2>
+	        <ul id="modx-topnav" role="navigation" aria-label="manager menu">
+	            {$navb}
+	        </ul>
+	        <ul id="modx-user-menu" role="navigation" aria-label="user and help menu">
+	            {* eval is used here to support nested variables *}
+	            {eval var=$userNav}
+	        </ul>
+		</nav>    
         {if $_search}
             <div role="search" id="mgr-search-wrapper">
 	            <i class="icon icon-search icon-2x"></i>
