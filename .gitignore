@@ -7,3 +7,5 @@ config.core.php
 *.scssc
 
 manager/templates/a11y-theme/fire_app_log.txt
+
+manager/templates/a11y/fire_app_log.txt
