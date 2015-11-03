@@ -52,7 +52,7 @@
 <body id="modx-body-tag">
 
 <div id="modx-browser"></div>
-<div id="modx-container" role="main">
+<div id="modx-container">
 
 <div id="modAB"></div>
 <div id="modx-leftbar"></div>
@@ -77,5 +77,5 @@
         {/if}
     </div>
 </div>
-
+<main role="main">
 <div id="modx-panel-holder"></div>
