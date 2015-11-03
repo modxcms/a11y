@@ -2528,6 +2528,7 @@ body *:focus, #modx-header *:focus, #modx-leftbar *:focus, #modx-leftbar a:focus
 /* Diagram */
 /* A */
 /* B - Text & More Below */
+/*$offWhite*/
 /* C - Text & More Below */
 /* D */
 /* E - Borders & More Below */
@@ -8351,31 +8352,39 @@ ul.x-tab-strip-bottom .x-tab-left {
 /* Main MODX Manager navbar */
 /* line 2, ../sass/_navbar.scss */
 #modx-header {
-  background: #f2f2f2;
+  background: #dce0e2;
   height: 55px;
   width: auto !important;
 }
 
-/* line 7, ../sass/_navbar.scss */
+/* line 8, ../sass/_navbar.scss */
 #modx-navbar {
   height: 100%;
   position: relative;
   z-index: 10;
 }
 
-/* line 13, ../sass/_navbar.scss */
+/* line 14, ../sass/_navbar.scss */
+#new-menu-wrapper {
+  background-color: #D2D7DA;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  clear: both;
+}
+
+/* line 21, ../sass/_navbar.scss */
 #modx-user-menu {
   float: left;
   /*margin-right: 15px;*/
 }
 
-/* line 18, ../sass/_navbar.scss */
+/* line 26, ../sass/_navbar.scss */
 #modx-navbar {
   font-weight: bold;
   font-size: 1em;
 }
 
-/* line 24, ../sass/_navbar.scss */
+/* line 32, ../sass/_navbar.scss */
 #modx-topnav {
   float: left;
   list-style: none;
@@ -8384,7 +8393,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   height: 56px;
 }
 
-/* line 36, ../sass/_navbar.scss */
+/* line 44, ../sass/_navbar.scss */
 #modx-navbar li,
 #modx-navbar a {
   background: transparent;
@@ -8394,12 +8403,12 @@ ul.x-tab-strip-bottom .x-tab-left {
   position: relative;
 }
 
-/* line 44, ../sass/_navbar.scss */
+/* line 52, ../sass/_navbar.scss */
 #modx-navbar li:hover {
   z-index: 10000;
 }
 
-/* line 48, ../sass/_navbar.scss */
+/* line 56, ../sass/_navbar.scss */
 #modx-navbar a {
   color: #333333;
   cursor: pointer;
@@ -8410,7 +8419,7 @@ ul.x-tab-strip-bottom .x-tab-left {
 }
 
 @media screen and (max-width: 960px) {
-  /* line 59, ../sass/_navbar.scss */
+  /* line 67, ../sass/_navbar.scss */
   #modx-topnav > li:not(#modx-home-dashboard) > a {
     text-indent: -99999em;
     display: block;
@@ -8418,7 +8427,7 @@ ul.x-tab-strip-bottom .x-tab-left {
     position: relative;
     width: 1em;
   }
-  /* line 66, ../sass/_navbar.scss */
+  /* line 74, ../sass/_navbar.scss */
   #modx-topnav > li:not(#modx-home-dashboard) > a:after {
     position: absolute;
     top: 0;
@@ -8440,22 +8449,22 @@ ul.x-tab-strip-bottom .x-tab-left {
   }
 }
 @media screen and (max-width: 960px) {
-  /* line 79, ../sass/_navbar.scss */
+  /* line 87, ../sass/_navbar.scss */
   #modx-topnav #limenu-site > a:after {
     content: "\f0f6";
     /* "\f0f6" */
   }
-  /* line 80, ../sass/_navbar.scss */
+  /* line 88, ../sass/_navbar.scss */
   #modx-topnav #limenu-media > a:after {
     content: "\f03e";
     /* "\f03e" */
   }
-  /* line 81, ../sass/_navbar.scss */
+  /* line 89, ../sass/_navbar.scss */
   #modx-topnav #limenu-components > a:after {
     content: "\f1b2";
     /* "\f1b2" */
   }
-  /* line 82, ../sass/_navbar.scss */
+  /* line 90, ../sass/_navbar.scss */
   #modx-topnav #limenu-manage > a:after {
     content: "\f1de";
     /* "\f1de" */
@@ -8463,17 +8472,17 @@ ul.x-tab-strip-bottom .x-tab-left {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 86, ../sass/_navbar.scss */
+  /* line 94, ../sass/_navbar.scss */
   #user-username {
     display: none;
   }
 }
 
-/* line 92, ../sass/_navbar.scss */
+/* line 100, ../sass/_navbar.scss */
 #modx-navbar .top {
   padding-right: 15px;
 }
-/* line 95, ../sass/_navbar.scss */
+/* line 103, ../sass/_navbar.scss */
 #modx-navbar .top:after {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -8484,36 +8493,36 @@ ul.x-tab-strip-bottom .x-tab-left {
   top: 26px;
 }
 
-/* line 106, ../sass/_navbar.scss */
+/* line 114, ../sass/_navbar.scss */
 #modx-topnav li.top > a {
   cursor: default;
 }
 
-/* line 110, ../sass/_navbar.scss */
+/* line 118, ../sass/_navbar.scss */
 #modx-topnav > li.top > a, #modx-user-menu > li.top > a {
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
 }
 
-/* line 115, ../sass/_navbar.scss */
+/* line 123, ../sass/_navbar.scss */
 #modx-topnav > li.top:hover > a, #modx-user-menu > li.top:hover > a {
   padding-bottom: 1px;
   z-index: 10001;
 }
 
-/* line 121, ../sass/_navbar.scss */
+/* line 129, ../sass/_navbar.scss */
 #modx-navbar li:hover a:hover.modx-help {
   color: #2376c4;
 }
 
-/* line 127, ../sass/_navbar.scss */
+/* line 135, ../sass/_navbar.scss */
 #modx-navbar #limenu-admin ul.modx-subnav,
 #modx-navbar #limenu-user ul.modx-subnav {
   left: auto;
   right: 0;
 }
 
-/* line 132, ../sass/_navbar.scss */
+/* line 140, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav {
   visibility: hidden;
   float: left;
@@ -8528,15 +8537,15 @@ ul.x-tab-strip-bottom .x-tab-left {
   background: #182028;
 }
 
-/* line 147, ../sass/_navbar.scss */
-#modx-navbar ul.modx-subnav, #modx-navbar ul.modx-subsubnav {
+/* line 155, ../sass/_navbar.scss */
+#modx-navbar ul.modx-subnav {
   border-radius: 0 0 2px 2px;
   border-top: none;
   border: 1px solid #2b3948;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.025), -1px 0 0 rgba(0, 0, 0, 0.025), 1px 0 0 rgba(0, 0, 0, 0.025);
 }
 
-/* line 154, ../sass/_navbar.scss */
+/* line 162, ../sass/_navbar.scss */
 #modx-navbar #modx-home-dashboard {
   background-image: url("../../default/images/modx-icon-color.svg");
   background-position: 0 11px;
@@ -8549,7 +8558,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   margin-left: 15px;
 }
 
-/* line 165, ../sass/_navbar.scss */
+/* line 173, ../sass/_navbar.scss */
 #user-avatar img {
   border-radius: 20px;
   margin: 8px 10px 0 0;
@@ -8559,7 +8568,7 @@ ul.x-tab-strip-bottom .x-tab-left {
   float: left;
 }
 
-/* line 176, ../sass/_navbar.scss */
+/* line 184, ../sass/_navbar.scss */
 #modx-navbar #modx-home-dashboard a {
   overflow: hidden;
   padding: 0;
@@ -8567,44 +8576,59 @@ ul.x-tab-strip-bottom .x-tab-left {
   width: 100%;
 }
 
-/* line 183, ../sass/_navbar.scss */
+/* line 191, ../sass/_navbar.scss */
 #modx-navbar #modx-home-dashboard:hover a {
   background-color: transparent;
 }
 
-/* line 187, ../sass/_navbar.scss */
+/* line 195, ../sass/_navbar.scss */
 #modx-navbar #modx-home-dashboard:hover {
   /*background-color: $navbarHover;*/
 }
 
-/* line 192, ../sass/_navbar.scss */
+/* line 200, ../sass/_navbar.scss */
 #modx-navbar li:hover ul.modx-subnav,
 ul.modx-subnav.open {
   visibility: visible !important;
+  width: 25em;
 }
 
-/* line 197, ../sass/_navbar.scss */
+/* line 206, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li {
   background: #182028;
   border-bottom: 1px solid #192b3e;
-  clear: both;
+  float: left;
+  width: 50%;
+  min-height: 110px;
   margin: 0;
   padding: 0;
 }
 
-/* Issue 30 - sub nav toobig for viewport */
-/* line 206, ../sass/_navbar.scss */
-#modx-navbar ul.modx-subnav li.toobig {
-  min-height: 100px;
-  clear: right;
+/* line 216, ../sass/_navbar.scss */
+#modx-navbar ul.modx-subnav li:nth-child(odd) {
+  clear: left;
 }
 
+/* line 218, ../sass/_navbar.scss */
+#modx-navbar ul.modx-subsubnav {
+  width: 25em;
+  border: 0 !important;
+  position: absolute;
+  left: 100%;
+  top: -1px;
+}
+
+/* Issue 30 - sub nav toobig for viewport 
+#modx-navbar ul.modx-subnav li.toobig{
+	min-height: 100px;
+	clear: right;
+}*/
 /*
 #modx-navbar ul.modx-subnav li:first-child a {
   @include background(linear-gradient($navbarHover, $navbarDrop) top repeat);
 }
 */
-/* line 218, ../sass/_navbar.scss */
+/* line 239, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a {
   background-color: #182028;
   color: #d2dde6;
@@ -8614,7 +8638,8 @@ ul.modx-subnav.open {
   margin: 0;
   padding: 8px 15px;
   text-shadow: none;
-  width: 240px;
+  min-height: 110px;
+  /*width: 240px;*/
 }
 
 /*
@@ -8623,39 +8648,39 @@ ul.modx-subnav.open {
   border-bottom:1px solid $navbarDrop;
 }
 */
-/* line 238, ../sass/_navbar.scss */
+/* line 260, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a:hover {
   background: #050608;
   border-top-color: #192b3e;
   border-bottom-color: #192b3e;
   color: white;
 }
-/* line 243, ../sass/_navbar.scss */
+/* line 265, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a:hover .description {
   color: #9dd8f1;
 }
-/* line 247, ../sass/_navbar.scss */
+/* line 269, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:first-child a {
   border-top-width: 0;
 }
-/* line 250, ../sass/_navbar.scss */
+/* line 272, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:last-child a {
   border-bottom-width: 0;
 }
 
-/* line 255, ../sass/_navbar.scss */
+/* line 277, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li a span {
   color: #55bbe7;
   display: block;
   float: none;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: normal;
   line-height: 1.3;
   margin-top: 6px;
   width: 100%;
 }
 
-/* line 266, ../sass/_navbar.scss */
+/*
 #modx-navbar ul.modx-subnav ul {
   display: none;
   left: 270px;
@@ -8666,40 +8691,35 @@ ul.modx-subnav.open {
   z-index: 24;
 }
 
-/* line 277, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav ul li:first-child,
 #modx-navbar ul.modx-subnav ul li:first-child a {
   border-radius: 0 2px 0 0;
 }
 
-/* line 282, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav ul li:last-child,
 #modx-navbar ul.modx-subnav ul li:last-child a {
   border-radius: 0 0 2px 0;
 }
 
-/* line 287, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav ul ul li:last-child,
 #modx-navbar ul.modx-subnav ul ul li:last-child a {
   border-radius: 0 0 2px 2px;
 }
 
-/* line 293, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:hover ul ul,
 #modx-navbar ul.modx-subnav ul li:hover ul ul,
 #modx-navbar ul.modx-subnav ul ul li:hover ul ul {
   display: none;
 }
 
-/* line 300, ../sass/_navbar.scss */
 #modx-navbar ul.modx-subnav li:hover ul,
 #modx-navbar ul.modx-subnav ul li:hover ul,
 #modx-navbar ul.modx-subnav ul ul li:hover ul,
 #modx-navbar ul.modx-subnav ul ul ul li:hover ul {
   display: block;
 }
-
-/* line 304, ../sass/_navbar.scss */
+*/
+/* line 328, ../sass/_navbar.scss */
 .ext-ie7 #modx-header {
   position: relative;
   z-index: 10;
@@ -8708,16 +8728,16 @@ ul.modx-subnav.open {
 /* MODX MANAGER SEARCH */
 /* line 2, ../sass/_uberbar.scss */
 #mgr-search-wrapper {
-  float: right;
-  position: absolute;
-  margin-right: -310px;
+  float: left;
+  /*position: absolute;*/
+  /*margin-right:-310px;*/
   right: 0;
   z-index: 9999;
-  height: 50px;
+  height: 55px;
   margin-top: 2px;
   width: 350px;
-  background: #B1BBC3;
-  padding-left: 10px;
+  /*background: #B1BBC3;
+  padding-left: 10px;*/
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -8742,7 +8762,7 @@ ul.modx-subnav.open {
 /* line 25, ../sass/_uberbar.scss */
 #modx-navbar #modx-manager-search {
   float: left;
-  padding: 11px 8px 5px 20px;
+  padding: 11px 8px 5px 10px;
   height: 38px;
   min-width: 120px;
 }
@@ -8776,18 +8796,19 @@ ul.modx-subnav.open {
   border: none;
   padding: 9px 5px;
   width: 47px;
+  background-color: #444;
   background-image: none;
 }
-/* line 59, ../sass/_uberbar.scss */
+/* line 60, ../sass/_uberbar.scss */
 #modx-manager-search .x-form-trigger:before {
   top: 30%;
   content: "Search";
 }
 
-/* line 66, ../sass/_uberbar.scss */
+/* line 67, ../sass/_uberbar.scss */
 #modx-manager-search .x-form-field-wrap {
   background: rgba(0, 0, 0, 0.25);
-  border: 0;
+  border: 1px solid #444;
   border-radius: 4px;
   overflow: hidden;
   color: #565353;
@@ -8797,25 +8818,24 @@ ul.modx-subnav.open {
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 3px 0 inset;
 }
 
-/* line 78, ../sass/_uberbar.scss */
+/* line 79, ../sass/_uberbar.scss */
 #modx-manager-search .x-form-field-trigger-wrap {
-  border-width: 0;
   height: auto;
   background-image: none;
 }
-/* line 83, ../sass/_uberbar.scss */
+/* line 84, ../sass/_uberbar.scss */
 #modx-manager-search .x-form-field-trigger-wrap .x-form-text {
   text-shadow: none;
   font-weight: normal;
   color: #020608;
   letter-spacing: 0.75px;
 }
-/* line 89, ../sass/_uberbar.scss */
+/* line 90, ../sass/_uberbar.scss */
 #modx-manager-search .x-form-field-trigger-wrap .x-form-empty-field {
   color: #555;
 }
 
-/* line 95, ../sass/_uberbar.scss */
+/* line 96, ../sass/_uberbar.scss */
 #modx-manager-search .x-form-field-wrap:hover,
 #modx-manager-search .x-trigger-wrap-focus {
   /*@include transition(background-color, 360ms, ease-in);
@@ -8824,12 +8844,12 @@ ul.modx-subnav.open {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 102, ../sass/_uberbar.scss */
+/* line 103, ../sass/_uberbar.scss */
 #modx-uberbar {
   margin-right: 20px;
 }
 
-/* line 106, ../sass/_uberbar.scss */
+/* line 107, ../sass/_uberbar.scss */
 .modx-manager-search-results {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -8843,7 +8863,7 @@ ul.modx-subnav.open {
   width: 450px !important;
 }
 
-/* line 116, ../sass/_uberbar.scss */
+/* line 117, ../sass/_uberbar.scss */
 .modx-manager-search-results:before {
   content: "";
   display: block;
@@ -8854,7 +8874,7 @@ ul.modx-subnav.open {
   border-bottom: 8px solid #2b3948;
 }
 
-/* line 125, ../sass/_uberbar.scss */
+/* line 126, ../sass/_uberbar.scss */
 .modx-manager-search-results .x-combo-list-inner {
   background: #2b3948;
   border: 1px solid #2b3948;
@@ -8867,7 +8887,7 @@ ul.modx-subnav.open {
   margin-top: 9px;
 }
 
-/* line 135, ../sass/_uberbar.scss */
+/* line 136, ../sass/_uberbar.scss */
 .modx-manager-search-results .section {
   border-left: 1px solid #1e2732;
   font-size: 13px;
@@ -8875,12 +8895,12 @@ ul.modx-subnav.open {
   position: relative;
 }
 
-/* line 143, ../sass/_uberbar.scss */
+/* line 144, ../sass/_uberbar.scss */
 .modx-manager-search-results .x-combo-selected h3 {
   left: 0;
 }
 
-/* line 148, ../sass/_uberbar.scss */
+/* line 149, ../sass/_uberbar.scss */
 .modx-manager-search-results h3,
 .modx-manager-search-results p {
   line-height: 17px;
@@ -8888,12 +8908,12 @@ ul.modx-subnav.open {
   padding: 4px 8px;
 }
 
-/* line 154, ../sass/_uberbar.scss */
+/* line 155, ../sass/_uberbar.scss */
 .modx-manager-search-results p {
   color: #C9D3E0;
 }
 
-/* line 158, ../sass/_uberbar.scss */
+/* line 159, ../sass/_uberbar.scss */
 .modx-manager-search-results h3 {
   color: #55bbe7;
   font-size: 13px;
@@ -8905,7 +8925,7 @@ ul.modx-subnav.open {
   width: 95px;
 }
 
-/* line 169, ../sass/_uberbar.scss */
+/* line 170, ../sass/_uberbar.scss */
 .modx-manager-search-results a {
   cursor: pointer;
   display: inline-block;
@@ -8915,7 +8935,7 @@ ul.modx-subnav.open {
   text-decoration: none;
 }
 
-/* line 178, ../sass/_uberbar.scss */
+/* line 179, ../sass/_uberbar.scss */
 .modx-manager-search-results i {
   color: #2376c4;
   left: 0;
@@ -8923,25 +8943,25 @@ ul.modx-subnav.open {
   top: 2px;
 }
 
-/* line 185, ../sass/_uberbar.scss */
+/* line 186, ../sass/_uberbar.scss */
 .modx-manager-search-results em {
   font-style: normal;
   opacity: 0.5;
 }
 
-/* line 192, ../sass/_uberbar.scss */
+/* line 193, ../sass/_uberbar.scss */
 .modx-manager-search-results .x-combo-selected h3,
 .modx-manager-search-results .x-combo-selected p,
 .modx-manager-search-results .x-combo-selected i {
   color: #fff;
 }
 
-/* line 196, ../sass/_uberbar.scss */
+/* line 197, ../sass/_uberbar.scss */
 .modx-manager-search-results .x-combo-selected p {
   border-left-color: transparent;
 }
 
-/* line 200, ../sass/_uberbar.scss */
+/* line 201, ../sass/_uberbar.scss */
 .modx-manager-search-results .x-combo-selected {
   border: none;
   color: #fff !important;
@@ -8950,7 +8970,7 @@ ul.modx-subnav.open {
   z-index: 10;
 }
 
-/* line 208, ../sass/_uberbar.scss */
+/* line 209, ../sass/_uberbar.scss */
 .modx-manager-search-results .icon-user {
   background-image: none !important;
 }

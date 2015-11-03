@@ -4,10 +4,18 @@
     height:55px; 
     width: auto !important;
 }
+
 #modx-navbar {
   height: 100%;
   position: relative;
   z-index: 10;
+}
+
+#new-menu-wrapper{
+  background-color: #D2D7DA;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  clear: both;
 }
 
 #modx-user-menu {
@@ -27,7 +35,7 @@
   margin: 0;
   padding: 0;
   height: 56px;
-
+  
   li {
   }
 }
@@ -144,7 +152,7 @@
   background: $subnavBg;
 }
 
-#modx-navbar ul.modx-subnav, #modx-navbar ul.modx-subsubnav {
+#modx-navbar ul.modx-subnav{
   border-radius: 0 0 $navbarRadius $navbarRadius;
   border-top: none;
   border: 1px solid $navbarBorder;
@@ -192,21 +200,34 @@
 ul.modx-subnav.open {
   //display: block !important;
   visibility: visible !important;
+  width: 25em;
 }
 
 #modx-navbar ul.modx-subnav li {
   background: $subnavBg;
   border-bottom: 1px solid $subnavSepBorder;
-  clear: both;
+  float:left;
+  width: 50%;
+  min-height: 110px;
   margin: 0;
   padding: 0;
 }
 
-/* Issue 30 - sub nav toobig for viewport */
+#modx-navbar ul.modx-subnav li:nth-child(odd){clear:left;}
+
+ #modx-navbar ul.modx-subsubnav{
+	 width: 25em;
+	 border: 0 !important;
+	 position: absolute;
+	 left: 100%;
+	 top:-1px;
+ }
+ 
+/* Issue 30 - sub nav toobig for viewport 
 #modx-navbar ul.modx-subnav li.toobig{
 	min-height: 100px;
 	clear: right;
-}
+}*/
 
 
 /*
@@ -224,7 +245,8 @@ ul.modx-subnav.open {
   margin: 0;
   padding: 8px 15px;
   text-shadow: none;
-  width: 240px;
+  min-height: 110px;
+  /*width: 240px;*/
 }
 
 /*
@@ -256,13 +278,14 @@ ul.modx-subnav.open {
   color: $subnavDescriptionColor;
   display: block;
   float: none;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: normal;
   line-height: 1.3;
   margin-top: 6px;
   width: 100%;
 }
 
+/*
 #modx-navbar ul.modx-subnav ul {
   display: none;
   left: 270px;
@@ -300,6 +323,7 @@ ul.modx-subnav.open {
 #modx-navbar ul.modx-subnav ul ul ul li:hover ul {
   display: block;
 }
+*/
 
 .ext-ie7 #modx-header {
   position: relative;
