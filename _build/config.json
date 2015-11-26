@@ -8,11 +8,11 @@
     "resolver": {
       "files": [
         {
-          "source": "[[+packagePath]]/manager/controllers/a11y-theme/",
+          "source": "[[+packagePath]]/manager/controllers/a11y/",
           "target": "return MODX_MANAGER_PATH . 'controllers/';"
         },
         {
-          "source": "[[+packagePath]]/manager/templates/a11y-theme/",
+          "source": "[[+packagePath]]/manager/templates/a11y/",
           "target": "return MODX_MANAGER_PATH . 'templates/';"
         }
       ]
