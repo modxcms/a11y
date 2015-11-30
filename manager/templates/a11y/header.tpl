@@ -37,7 +37,7 @@
 		    animate: function(blur) {}
 		});
         new MODx.SearchBar;
-        MODx.a11y.init();
+        
     });
 </script>
 {/if}
