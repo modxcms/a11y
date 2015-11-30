@@ -19,6 +19,11 @@ at http://www.sencha.com/contact.
 Build date: 2013-04-03 15:07:25
 
 Edited by: novriko@modx.com
+
+Intended Usage: Focus.js tries to overwrite all the widgets' contructors to make them focusable and it also tries to define the keyboard's behaviors
+
+Focus.js Experiments: http://c1560.paas2.tx.modxcloud.com/test/experiments/
+
 */
 (function(){
 Ext.ns('Ext.a11y');

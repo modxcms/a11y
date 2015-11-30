@@ -1,0 +1,20 @@
+/* if Focus.js is installed */
+.x-a11y-focusframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000000;
+    width: 0;
+    height: 0;
+    font-size: 0;
+}
+.x-a11y-focusframe-side {
+    position: absolute;
+    font-size: 0;
+    overflow: hidden;
+}
+.x-a11y-focusable:focus {outline: none;}
+button.x-a11y-focusable::-moz-focus-inner{border:none}
+.x-a11y-focused{background-color: red !important;}
+.x-a11y-focused-relay{}
+.x-btn-focus{}

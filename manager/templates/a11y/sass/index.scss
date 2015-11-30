@@ -53,7 +53,6 @@ body *:focus {@extend %a11y-outline;}
 #modx-header *:focus, #modx-leftbar *:focus, #modx-leftbar a:focus, .x-panel-body *:focus, -webkit-tap-highlight-color, .x-btn-focus, .x-btn button:focus 
 {@extend %a11y-outline;}
 
-
 body, body.x-border-layout-ct {
   color: $mainText;
   //font:  $baseText;
@@ -342,7 +341,6 @@ a.x-grid-link:hover, a.x-grid-link:focus{ text-decoration: underline; }
 
 #modx-content form.x-panel-body {
   background-color: transparent !important;
-  padding-top: 20px;
 }
 
 #modx-mainpanel {
@@ -797,7 +795,7 @@ iframe[classname="x-hidden"] {
 /* MODExt common classes */
 
 .container {
-  margin: 20px 15px 20px;
+  margin: 20px 15px 85px 20px;
 }
 
 /* prevent cut off box shadows */
