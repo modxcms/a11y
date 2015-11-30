@@ -13,7 +13,7 @@ MODx.a11y.dashboardDyslexiaPanel = function(config) {
         },{
             xtype:'button'
             ,id:'modx-a11y-dashboarddyslexia-btn'
-            ,text: dstCheck ? _('a11y.disabled') : _('a11y.enabled')
+            ,text: dstCheck ? _('a11y.disable') : _('a11y.enable')
             ,cls:'primary-button'
             ,handler:MODx.a11y.dyslexiaToggler
         }]

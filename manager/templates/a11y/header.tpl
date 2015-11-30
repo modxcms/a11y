@@ -17,8 +17,6 @@
 <script src="{$_config.manager_url}assets/ext3/ext-all.js" type="text/javascript"></script>
 {/if}
 <script src="{$_config.manager_url}assets/modext/core/modx.js" type="text/javascript"></script>
-<!--Sencha Aria Module -->
-<script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/ux/Focus.js" type="text/javascript"></script>
 <script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/tree/ARIA.js" type="text/javascript"></script>
 <script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/modext/core/modx.a11y.js" type="text/javascript"></script>
 <script src="{$_config.manager_url}templates/{$_config.manager_theme}/js/modext/core/a11y.overrides.js" type="text/javascript"></script>
@@ -67,7 +65,7 @@
 			{if $_search}
 	            <div role="search" id="mgr-search-wrapper">
 		            <!--<i class="icon icon-search icon-2x"></i>-->
-	            <div id="modx-manager-search"><label for="modx-uberbar" id="modx-uberbar-label">Search</label></div>
+	            <div id="modx-manager-search"><label for="modx-uberbar" id="modx-uberbar-label">{$_lang.search}</label></div>
 	            </div>
 	        {/if}
 		</div>

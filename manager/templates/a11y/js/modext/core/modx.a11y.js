@@ -20,21 +20,6 @@ MODx.a11y = Ext.apply(Ext.a11y, {
                 Ext.get('mgr-search-wrapper').removeClass('search-movement');
             }
         });
-        //Vertical Tab role assignment
-        if (typeof(Ext.getCmp('modx-leftbar'))!=='undefined') {
-            this.setRole('modx-leftbar', 'tablist');
-            this.setProperty('modx-leftbar', 'aria-label', 'Resources Elements and Files Tablist');
-        }
-        if (typeof(Ext.getCmp('modx-resource-tree'))!=='undefined') {
-            this.setProperty('modx-resource-tree', 'role', 'tab');
-        }
-        if (typeof(Ext.getCmp('modx-tree-element'))!=='undefined') {
-            this.setProperty('modx-tree-element', 'role', 'tab');
-        }
-        if (typeof(Ext.getCmp('modx-file-tree'))!=='undefined') {
-            this.setProperty('modx-file-tree', 'role', 'tab');
-        }
-
         this.initFont();
     }
     ,whosFocused: function() {
@@ -109,6 +94,38 @@ console.log("currently selected:"+curElement);
         } else {
             cookie.create("dysfont", "true", 30);
             location.reload();
+        }
+    }
+    ,initTree:function(){
+        //Vertical Tab role assignment
+        var modxLayout = Ext.getCmp('modx-layout');
+console.log('modxLayout',modxLayout);
+        var tabPanel = Ext.getCmp('modx-leftbar-tabs');
+        if (typeof(tabPanel)!=='undefined') {
+console.log('this',this);
+            this.ARIA.setRole('modx-leftbar-tabs', 'tablist');
+            this.ARIA.setProperty('modx-leftbar', 'aria-label', 'Resources Elements and Files Tablist');
+//            Ext.getCmp('modx-leftbar-tabs').initFocus();
+        }
+        var resTree = Ext.getCmp('modx-resource-tree');
+console.log('resTree',resTree);
+        if (typeof(resTree)!=='undefined') {
+            this.ARIA.setProperty('modx-resource-tree', 'role', 'tab');
+//            Ext.getCmp('modx-resource-tree').getEl().addClass('x-a11y-focusable');
+            resTree.on('expand',function(panel){
+console.log('panel',panel);
+            });
+        }
+        var elTree = Ext.getCmp('modx-tree-element');
+        if (typeof(elTree)!=='undefined') {
+            this.ARIA.setProperty('modx-tree-element', 'role', 'tab');
+//            Ext.getCmp('modx-tree-element').getEl().addClass('x-a11y-focusable');
+        }
+        var fileTree = Ext.getCmp('modx-file-tree');
+        if (typeof(fileTree)!=='undefined') {
+            this.ARIA.setProperty('modx-file-tree', 'role', 'tab');
+//            Ext.getCmp('modx-file-tree').getEl().addClass('x-a11y-focusable');
+            fileTree.initFocus();
         }
     }
 });
