@@ -24,9 +24,8 @@ MODx.menuEntry = function(config) {
         }
         ,headerCfg: {
             tag: 'a'
-            ,href: 'javascript:;'
-            ,tabindex: 1
-            //,'data-qtip': 'Test'
+            ,href: 'javascript:void(0);'
+            ,tabindex: -1
             ,title: config.description || ''
         }
         ,headerCssClass: 'x-panel-header'
@@ -34,17 +33,22 @@ MODx.menuEntry = function(config) {
     });
     MODx.menuEntry.superclass.constructor.call(this, config);
     this.on('afterrender', this.onAfterRender, this);
+    return this;
 };
 Ext.extend(MODx.menuEntry, Ext.Panel, {
     onCollapse : function(doAnim, animArg) {
         MODx.menuEntry.superclass.onCollapse.call(this, doAnim, animArg);
         // Force layout to have no active item
         this.getLayout().setActiveItem(null);
+        // set tabindex to -1
+        MODx.a11y.ARIA.setProperty(this.getEl().id, 'tabindex', -1);
     }
     ,onExpand: function(doAnim, animArg) {
         MODx.menuEntry.superclass.onExpand.call(this, doAnim, animArg);
         // Force layout to display its item
         this.getLayout().setActiveItem(0);
+        // set tabindex to 0
+        MODx.a11y.ARIA.setProperty(this.getEl().id, 'tabindex', 0);
     }
     ,getState: function() {
         // Menu attributes to save/restore for the state manager
@@ -56,6 +60,11 @@ Ext.extend(MODx.menuEntry, Ext.Panel, {
     ,onAfterRender: function(me) {
         if (!me.collapsed) {
             me.getLayout().setActiveItem(0);
+            // set tabindex to -1
+            MODx.a11y.ARIA.setProperty(me.getEl().id, 'tabindex', -1);
+        } else {
+            // set tabindex to 0
+            MODx.a11y.ARIA.setProperty(me.getEl().id, 'tabindex', 0);
         }
     }
 });
@@ -63,6 +72,8 @@ Ext.reg('modx-menu-entry', MODx.menuEntry);
 
 MODx.Layout.Default = function(config, getStore) {
     config = config || {};
+    Ext.applyIf(config,{
+    });
 
     MODx.Layout.Default.superclass.constructor.call(this, config);
     return this;
@@ -248,7 +259,7 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
     }
 
     /**
-     * Format a single menu entry to fit the stying
+     * Format a single menu entry to fit the styling
      *
      * @param {Object} config
      *
