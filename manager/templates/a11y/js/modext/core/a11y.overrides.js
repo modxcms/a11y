@@ -73,6 +73,21 @@ Ext.onReady(function() {
             
             var form = this.getForm();
             form.findField('pagetitle').el.dom.setAttribute('aria-required', true);
+            
+            var content = Ext.getCmp('modx-resource-content');
+            if (content) {
+                content.on('collapse', function(){
+                    this.tools.toggle.dom.setAttribute('aria-expanded', false);               
+                });
+                
+                content.on('expand', function(){
+                    this.tools.toggle.dom.setAttribute('aria-expanded', true);               
+                });
+
+                content.tools.toggle.dom.setAttribute('aria-expanded', !content.collapsed);
+                content.tools.toggle.dom.setAttribute('aria-controls', content.bwrap.dom.id);
+                content.bwrap.dom.setAttribute('aria-label', _('resource_content'));
+            }
         }
     });
 });
