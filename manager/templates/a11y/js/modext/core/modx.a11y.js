@@ -25,7 +25,7 @@ MODx.a11y = Ext.apply(Ext.a11y, {
     ,whosFocused: function() {
 		var curElement = document.activeElement;
 		//localStorage.setItem('curFocus',curElement);
-console.log("currently selected:"+curElement);
+		console.log("currently selected:"+curElement);
 		//console.log(curElement.nextSibling.nextSibling.className);
 		var nextDude = curElement.nextSibling.nextSibling;
 		if(nextDude.className == "modx-subnav"){
