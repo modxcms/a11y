@@ -76,6 +76,8 @@ Ext.onReady(function() {
             
             var content = Ext.getCmp('modx-resource-content');
             if (content) {
+                var contentTitle = content.header.dom.getElementsByClassName('x-panel-header-text')[0];
+                contentTitle.innerHTML = '<h2>' + contentTitle.innerHTML + '</h2>';
                 content.on('collapse', function(){
                     this.tools.toggle.dom.setAttribute('aria-expanded', false);               
                 });
