@@ -132,6 +132,13 @@
 }
 
 .x-btn-icon {
+	font-family: FontAwesome !important;
+	font-size: 1.5em !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	
+	button{height: 0 !important; width: 0 !important; font-size: 0 !important;}
+	
     &.arrow_up {
       button {
         background:none !important; /* #shame */
@@ -169,6 +176,9 @@
       }
     }
 }
+
+.icon-page_white:before{content: "\f0f6";}
+.icon-file_upload:before{content: "\f01b";}
 
 .x-btn-text-icon button {
   padding-left: 20px !important;

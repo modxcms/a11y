@@ -12,7 +12,7 @@ This project is being crowdfunded, with intial seed funding sponsored by The Ohi
 
 ## Get Involved
 
-We would love the world to contribute to this project. Before submitting a new issue or opening a new Pull Request, please search to see if the same issue/PR already exists. You can also look in the [changelog](https://github.com/modxcms/a11y/blob/develop/core/docs/changelog.txt) (TBD).
+We would love the world to contribute to this project. Before submitting a new issue or opening a new Pull Request, please search to see if the same issue/PR already exists.
 
 Please note, the repository at [modxcms/a11y](https://github.com/modxcms/a11y/) is only for issues & PRs directly related to the **MODX Accessible CMS** project. For general issues about MODX Revolution itself, please see [modxcms/revolution](https://github.com/modxcms/revolution/).
 
@@ -77,5 +77,14 @@ We try to follow [Semantic Versioning](http://semver.org/), so if you are submit
 * Visual Contrast to meet WCAG guidelines
 * Clean up text presentation for screen readers
 * Focus indication
+* Packaged Installation
+
+###2.0
+* Modal Support
+* Dyslexia Font Dashboard Widget
+* Font Increase / Decrease Dashboard Widget
+* Resource X-Tab Strip Navigation
+* X-Grid Data Table Keyboard Navigation
+* Better Text Error Handling on form inputs
 
 This theme will be available as an extra and the testing releases will be available on [GitHub's repo](https://github.com/modxcms/a11y/releases)
