@@ -42,12 +42,14 @@ Ext.extend(MODx.menuEntry, Ext.Panel, {
         // Force layout to have no active item
         this.getLayout().setActiveItem(null);
         MODx.a11y.ARIA.setProperty(this.getEl().id, 'tabindex', -1);
+        MODx.a11y.ARIA.setProperty(this.getEl().id, 'aria-expanded', false);
     }
     ,onExpand: function(doAnim, animArg) {
         MODx.menuEntry.superclass.onExpand.call(this, doAnim, animArg);
         // Force layout to display its item
         this.getLayout().setActiveItem(0);
         MODx.a11y.ARIA.setProperty(this.getEl().id, 'tabindex', 0);
+        MODx.a11y.ARIA.setProperty(this.getEl().id, 'aria-expanded', true);
     }
     ,getState: function() {
         // Menu attributes to save/restore for the state manager
@@ -60,8 +62,10 @@ Ext.extend(MODx.menuEntry, Ext.Panel, {
         if (!me.collapsed) {
             me.getLayout().setActiveItem(0);
             MODx.a11y.ARIA.setProperty(me.getEl().id, 'tabindex', -1);
+            MODx.a11y.ARIA.setProperty(this.getEl().id, 'aria-expanded', true);
         } else {
             MODx.a11y.ARIA.setProperty(me.getEl().id, 'tabindex', 0);
+            MODx.a11y.ARIA.setProperty(this.getEl().id, 'aria-expanded', false);
         }
     }
 });
@@ -82,7 +86,7 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
         if (MODx.perm.resource_tree) {
             items.push(this.handleRecord({
                 title: _('resources')
-                ,titleTpl: '<i class="icon icon-sitemap"></i><span class="title">{title}</span>'
+                ,titleTpl: '<h2><i class="icon icon-sitemap"></i><span class="title">{title}</span></h2>'
                 ,stateId: 'nav-resource-tree'
                 ,defaults: {
                     remoteToolbar: false
@@ -101,7 +105,7 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
         if (MODx.perm.element_tree) {
             items.push(this.handleRecord({
                 title: _('elements')
-                ,titleTpl: '<i class="icon icon-bars"></i><span class="title">{title}</span>'
+                ,titleTpl: '<h2><i class="icon icon-bars"></i><span class="title">{title}</span></h2>'
                 ,stateId: 'nav-element-tree'
                 ,defaults: {
                     remoteToolbar: false
@@ -120,7 +124,7 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
         if (MODx.perm.file_tree) {
             items.push(this.handleRecord({
                 title: _('files')
-                ,titleTpl: '<i class="icon icon-folder-open"></i><span class="title">{title}</span>'
+                ,titleTpl: '<h2><i class="icon icon-folder-open"></i><span class="title">{title}</span></h2>'
                 ,stateId: 'nav-file-tree'
                 ,defaults: {
                     remoteToolbar: false
