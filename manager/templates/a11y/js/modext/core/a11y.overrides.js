@@ -79,6 +79,7 @@ Ext.onReady(function() {
                 var contentTitle = content.header.dom.getElementsByClassName('x-panel-header-text')[0];
                 contentTitle.innerHTML = '<h2>' + contentTitle.innerHTML + '</h2>';
                 content.tools.toggle.dom.setAttribute('aria-label', "Hide Content Field"); 
+                content.tools.toggle.dom.innerHTML = '<span class="sr-only">Hide Content Field</span>';
                 content.on('collapse', function(){
                     this.tools.toggle.dom.setAttribute('aria-expanded', false);               
                 });
