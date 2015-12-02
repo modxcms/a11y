@@ -78,8 +78,31 @@ Ext.onReady(function() {
             if (content) {
                 var contentTitle = content.header.dom.getElementsByClassName('x-panel-header-text')[0];
                 contentTitle.innerHTML = '<h2>' + contentTitle.innerHTML + '</h2>';
+                
+                //set global variable to attach "ENTER" button trigger
+                //contentToggleEl = content.tools.toggle.dom.setAttribute('aria-controls', content.bwrap.dom.id);
+                
+                //Toggle Div attributes
                 content.tools.toggle.dom.setAttribute('aria-label', "Hide Content Field"); 
+                content.tools.toggle.dom.setAttribute('tabindex', "0"); 
                 content.tools.toggle.dom.innerHTML = '<span class="sr-only">Hide Content Field</span>';
+                
+                //Toggle Actions
+                content.tools.toggle.on('focus', function(){
+	                //console.log("bazinga");
+	                thisToggId = this.id;
+	                var thisToggEl = document.getElementById(thisToggId);
+			        thisToggEl.onkeydown = function(evt) {
+		                evt = evt || window.event;
+		                //alert("keydown: " + evt.keyCode);
+		                if(evt.keyCode = 13){
+			                content.toggleCollapse();
+		                }
+		            };
+	                
+	            });
+	            
+                //Content Actions
                 content.on('collapse', function(){
                     this.tools.toggle.dom.setAttribute('aria-expanded', false);               
                 });
@@ -87,7 +110,7 @@ Ext.onReady(function() {
                 content.on('expand', function(){
                     this.tools.toggle.dom.setAttribute('aria-expanded', true);               
                 });
-
+                
                 content.tools.toggle.dom.setAttribute('aria-expanded', !content.collapsed);
                 content.tools.toggle.dom.setAttribute('aria-controls', content.bwrap.dom.id);
                 content.bwrap.dom.setAttribute('aria-label', _('resource_content'));
