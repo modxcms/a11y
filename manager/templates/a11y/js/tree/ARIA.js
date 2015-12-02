@@ -61,11 +61,20 @@ Ext.override(Ext.tree.TreeNode, {
 
 Ext.override(Ext.tree.TreePanel, {
     initARIA : function() {
-        Ext.tree.TreePanel.superclass.initARIA.call(this);
+        //Ext.tree.TreePanel.superclass.initARIA.call(this);
         this.getSelectionModel().on('selectionchange', this.onNodeSelect, this);
         this.ariaTreeEl = this.body.down('.x-tree-root-ct');
         this.on('collapsenode', this.onNodeCollapse, this);
         this.on('expandnode', this.onNodeExpand, this);
+    },
+
+    originalMethods: {
+        onRender: Ext.tree.TreePanel.prototype.onRender
+    },
+    
+    onRender: function(ct, position){
+        this.originalMethods.onRender.call(this, ct, position);
+        this.initARIA();                     
     },
 
     // private
@@ -89,7 +98,7 @@ Ext.override(Ext.tree.TreePanel, {
 
         if(node.isRoot) {
             ARIA.setRole(this.ariaTreeEl, 'tree');
-            ARIA.setProperty(this.ariaTreeEl, 'aria-labelledby', Ext.id(node.ui.textNode));
+            ARIA.setProperty(this.ariaTreeEl, 'aria-labelledby', this.ariaTreeEl.up('li.x-panel').dom.getElementsByClassName('x-panel-header-text')[0].id);
             ARIA.setProperty(this.ariaTreeEl, 'aria-activedescendant', 'false');
             if(!this.rootVisible) {
                 return;
