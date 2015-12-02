@@ -79,9 +79,6 @@ Ext.onReady(function() {
                 var contentTitle = content.header.dom.getElementsByClassName('x-panel-header-text')[0];
                 contentTitle.innerHTML = '<h2>' + contentTitle.innerHTML + '</h2>';
                 
-                //set global variable to attach "ENTER" button trigger
-                //contentToggleEl = content.tools.toggle.dom.setAttribute('aria-controls', content.bwrap.dom.id);
-                
                 //Toggle Div attributes
                 content.tools.toggle.dom.setAttribute('aria-label', "Hide Content Field"); 
                 content.tools.toggle.dom.setAttribute('tabindex', "0"); 
