@@ -89,12 +89,10 @@ Ext.onReady(function() {
                 
                 //Toggle Actions
                 content.tools.toggle.on('focus', function(){
-	                //console.log("bazinga");
 	                thisToggId = this.id;
 	                var thisToggEl = document.getElementById(thisToggId);
 			        thisToggEl.onkeydown = function(evt) {
 		                evt = evt || window.event;
-		                //alert("keydown: " + evt.keyCode);
 		                if(evt.keyCode = 13){
 			                content.toggleCollapse();
 		                }
