@@ -73,12 +73,12 @@
         <div id="new-menu-wrapper">
 			<nav role="navigation" aria-label="manager menu">
 				<h2 class="sr-only">Global Navigation</h2>
-		        <ul id="modx-topnav" role="menu">
+		        <ul id="modx-topnav" role="menubar">
 		            {$navb}
 		        </ul>
 			</nav>
 			<nav role="navigation" aria-label="user and system menu">    
-		        <ul id="modx-user-menu" role="menu">
+		        <ul id="modx-user-menu" role="menubar">
 		            {* eval is used here to support nested variables *}
 		            {eval var=$userNav}
 		        </ul>

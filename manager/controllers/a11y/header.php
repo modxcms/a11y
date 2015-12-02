@@ -160,7 +160,10 @@ class TopMenu
             }
 
             $top = (!empty($menu['children'])) ? ' class="top"' : '';
-            $menuTpl = '<li id="limenu-'.$menu['id'].'"'.$top.'>'."\n";
+            
+            $ariaHasPopUp = !empty($menu['children']) ? ' aria-haspopup="true"' : '';
+            
+            $menuTpl = '<li id="limenu-'.$menu['id'].'"'.$top.' role="menuitem"' . $ariaHasPopUp . '>'."\n";
             if (!empty($menu['handler'])) {
                 $menuTpl .= '<a href="javascript:;" onclick="'.str_replace('"','\'',$menu['handler']).'">'.$label.'</a>'."\n";
             } elseif (!empty($menu['action'])) {
@@ -178,7 +181,7 @@ class TopMenu
             }
 
             if (!empty($menu['children'])) {
-                $menuTpl .= '<ul class="modx-subnav">'."\n";
+                $menuTpl .= '<ul class="modx-subnav" role="menu">'."\n";
                 $this->processSubMenus($menuTpl, $menu['children']);
                 $menuTpl .= '</ul>'."\n";
             }
@@ -296,7 +299,10 @@ class TopMenu
             if (!$this->hasPermission($menu['permissions'])) {
                 continue;
             }
-            $smTpl = '<li id="'.$menu['id'].'">'."\n";
+            
+            $ariaHasPopUp = !empty($menu['children']) ? ' aria-haspopup="true"' : '';
+            
+            $smTpl = '<li id="'.$menu['id'].'" role="menuitem"' . $ariaHasPopUp . '>'."\n";
 
             $description = '';
             if ($this->showDescriptions && !empty($menu['description'])) {
@@ -318,7 +324,7 @@ class TopMenu
             }
 
             if (!empty($menu['children'])) {
-                $smTpl .= '<ul class="modx-subsubnav">'."\n";
+                $smTpl .= '<ul class="modx-subsubnav" role="menu">'."\n";
                 $this->processSubMenus($smTpl, $menu['children']);
                 $smTpl .= '</ul>'."\n";
             }
