@@ -75,6 +75,7 @@ Ext.onReady(function() {
             form.findField('pagetitle').el.dom.setAttribute('aria-required', true);
             
             var content = Ext.getCmp('modx-resource-content');
+            
             if (content) {
                 var contentTitle = content.header.dom.getElementsByClassName('x-panel-header-text')[0];
                 contentTitle.innerHTML = '<h2>' + contentTitle.innerHTML + '</h2>';
@@ -90,7 +91,7 @@ Ext.onReady(function() {
 	                var thisToggEl = document.getElementById(thisToggId);
 			        thisToggEl.onkeydown = function(evt) {
 		                evt = evt || window.event;
-		                if(evt.keyCode = 13){
+		                if(evt.keyCode == 13){
 			                content.toggleCollapse();
 		                }
 		            };
@@ -110,8 +111,32 @@ Ext.onReady(function() {
                 content.tools.toggle.dom.setAttribute('aria-controls', content.bwrap.dom.id);
                 content.bwrap.dom.setAttribute('aria-label', _('resource_content'));
             }
+            
+            /* ONE ELEMENT AT A TIME - @dubrod
+            var hidemenuBox = Ext.getCmp('modx-resource-hidemenu');
+            if (hidemenuBox) {
+	            
+	            hidemenuBox.on('focus', function(){
+		            thisToggId = this.id;
+	                var thisToggEl = document.getElementById(thisToggId);
+			        thisToggEl.onkeydown = function(evt) {
+		                evt = evt || window.event;
+		                if(evt.keyCode == 13){
+			                if ( hidemenuBox.el.dom.checked ){
+								hidemenuBox.setValue(0);
+			                } else {
+				                hidemenuBox.setValue(1);
+			                }			                
+		                }
+		            };
+	            });
+            }
+            */
+            
         }
     });
+       
+ 
 });
 
 Ext.form.MessageTargets = {
@@ -206,4 +231,35 @@ Ext.form.MessageTargets = {
             }
         }
     }
+       
 };
+
+/*@dubrod*/
+this.addEventListener("load", everythingIsloaded, true);
+
+function everythingIsloaded(){	
+	
+	setTimeout(function(){
+		
+		//allow all checkboxes to be triggered by ENTER
+		var allXBoxes = document.getElementsByClassName("x-form-checkbox");
+		
+		var triggerXbox = function(evt) {
+		    evt = evt || window.event;
+			if(evt.keyCode == 13){
+				
+				var xBoxEl = Ext.getCmp(this.id);
+				if ( xBoxEl.el.dom.checked ){ xBoxEl.setValue(0); } else { xBoxEl.setValue(1); }
+
+			}
+		};
+		
+		for(var i=0;i<allXBoxes.length;i++){
+		    allXBoxes[i].addEventListener('keydown', triggerXbox, false);
+		}
+		//EOF allow all checkboxes to be triggered by ENTER
+		
+	
+	}, 2000);
+
+}
