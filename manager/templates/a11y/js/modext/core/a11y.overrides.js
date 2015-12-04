@@ -234,32 +234,18 @@ Ext.form.MessageTargets = {
        
 };
 
-/*@dubrod*/
-this.addEventListener("load", everythingIsloaded, true);
-
-function everythingIsloaded(){	
-	
-	setTimeout(function(){
-		
-		//allow all checkboxes to be triggered by ENTER
-		var allXBoxes = document.getElementsByClassName("x-form-checkbox");
-		
-		var triggerXbox = function(evt) {
-		    evt = evt || window.event;
-			if(evt.keyCode == 13){
-				
-				var xBoxEl = Ext.getCmp(this.id);
-				if ( xBoxEl.el.dom.checked ){ xBoxEl.setValue(0); } else { xBoxEl.setValue(1); }
-
-			}
-		};
-		
-		for(var i=0;i<allXBoxes.length;i++){
-		    allXBoxes[i].addEventListener('keydown', triggerXbox, false);
-		}
-		//EOF allow all checkboxes to be triggered by ENTER
-		
-	
-	}, 2000);
-
-}
+Ext.override(Ext.form.Checkbox,{
+    checkboxOriginals: {
+        initComponent: Ext.form.Checkbox.prototype.initComponent
+    },
+    
+    initComponent : function(){
+        this.checkboxOriginals.initComponent.call(this);
+        
+        this.on('specialkey', function(checkbox, e){
+            if (e.getKey() == Ext.EventObject.ENTER) {
+                this.setValue(!this.getValue())
+            }          
+        });
+    }
+});

@@ -120,8 +120,10 @@ Ext.override(Ext.tree.TreePanel, {
     },
 
     onNodeSelect : function(sm, node) {
-        ARIA.setProperty(this.ariaTreeEl, 'aria-activedescendant', Ext.id(node.ui.wrap));
-        ARIA.setProperty(node.ui.wrap, 'aria-selected', 'true');
+        if (node) {
+            ARIA.setProperty(this.ariaTreeEl, 'aria-activedescendant', Ext.id(node.ui.wrap));
+            ARIA.setProperty(node.ui.wrap, 'aria-selected', 'true');
+        }
     },
 
     onNodeCollapse : function(node) {
