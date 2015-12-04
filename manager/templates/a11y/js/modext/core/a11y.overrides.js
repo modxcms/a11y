@@ -79,37 +79,6 @@ Ext.onReady(function() {
             if (content) {
                 var contentTitle = content.header.dom.getElementsByClassName('x-panel-header-text')[0];
                 contentTitle.innerHTML = '<h2>' + contentTitle.innerHTML + '</h2>';
-                
-                //Toggle Div attributes
-                content.tools.toggle.dom.setAttribute('aria-label', "Hide Content Field"); 
-                content.tools.toggle.dom.setAttribute('tabindex', "0"); 
-                content.tools.toggle.dom.innerHTML = '<span class="sr-only">Hide Content Field</span>';
-                
-                //Toggle Actions
-                content.tools.toggle.on('focus', function(){
-	                thisToggId = this.id;
-	                var thisToggEl = document.getElementById(thisToggId);
-			        thisToggEl.onkeydown = function(evt) {
-		                evt = evt || window.event;
-		                if(evt.keyCode == 13){
-			                content.toggleCollapse();
-		                }
-		            };
-	                
-	            });
-	            
-                //Content Actions
-                content.on('collapse', function(){
-                    this.tools.toggle.dom.setAttribute('aria-expanded', false);               
-                });
-                
-                content.on('expand', function(){
-                    this.tools.toggle.dom.setAttribute('aria-expanded', true);               
-                });
-                
-                content.tools.toggle.dom.setAttribute('aria-expanded', !content.collapsed);
-                content.tools.toggle.dom.setAttribute('aria-controls', content.bwrap.dom.id);
-                content.bwrap.dom.setAttribute('aria-label', _('resource_content'));
             }
             
             /* ONE ELEMENT AT A TIME - @dubrod
@@ -247,5 +216,41 @@ Ext.override(Ext.form.Checkbox,{
                 this.setValue(!this.getValue())
             }          
         });
+    }
+});
+
+Ext.override(Ext.Panel, {
+    panelOriginals: {
+        onRender: Ext.Panel.prototype.onRender
+    },
+    
+    onRender: function(ct, position){
+        this.panelOriginals.onRender.call(this, ct, position);
+
+        if(this.collapsible && this.tools && this.tools.toggle) {
+            this.tools.toggle.on('keydown', function(e) {
+               if (e.getKey() == Ext.EventObject.ENTER) {
+                    this.toggleCollapse();    
+               }              
+            }, this);
+
+            this.on('collapse', function(){
+                this.tools.toggle.dom.setAttribute('aria-expanded', false);
+            });
+
+            this.on('expand', function(){
+                this.tools.toggle.dom.setAttribute('aria-expanded', true);
+            });
+
+            this.tools.toggle.dom.setAttribute('aria-label', "Hide " + (this.title || "")  + " Field");
+            this.tools.toggle.dom.setAttribute('tabindex', "0");
+            this.tools.toggle.dom.innerHTML = '<span class="sr-only">Hide ' + (this.title || '')  + ' Field</span>';
+
+            this.tools.toggle.dom.setAttribute('aria-expanded', !this.collapsed);
+            this.tools.toggle.dom.setAttribute('aria-controls', this.bwrap.dom.id);
+            if (this.title) {
+                this.bwrap.dom.setAttribute('aria-label', this.title);
+            }
+        }
     }
 });
