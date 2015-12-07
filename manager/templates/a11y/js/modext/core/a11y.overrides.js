@@ -254,3 +254,58 @@ Ext.override(Ext.Panel, {
         }
     }
 });
+
+Ext.override(Ext.TabPanel, {
+    tabOriginals: {
+        onRender: Ext.TabPanel.prototype.onRender,
+        initTab: Ext.TabPanel.prototype.initTab,
+        initComponent: Ext.TabPanel.prototype.initComponent
+    },
+
+    initComponent: function(){
+        this.tabOriginals.initComponent.call(this);
+        
+        this.on('beforetabchange', function(tabs, newTab, currentTab){
+            newTab.tabEl.setAttribute('tabindex', '0');
+            newTab.tabEl.setAttribute('aria-selected', 'true');
+            
+            if (newTab.el && newTab.el.dom) {
+                newTab.el.dom.setAttribute('aria-hidden', 'false');    
+            }
+            
+            if (currentTab) {
+                currentTab.tabEl.setAttribute('tabindex', '-1');
+                currentTab.tabEl.setAttribute('aria-selected', 'false');
+                
+                if (currentTab.el && currentTab.el.dom) {
+                    currentTab.el.dom.setAttribute('aria-hidden', 'true');
+                }
+            }
+        });
+    },
+    
+    onRender: function(ct, position){
+        this.tabOriginals.onRender.call(this, ct, position);
+        
+        this.strip.dom.setAttribute('role', 'tablist');
+    },
+
+    initTab: function(item, index) {
+        this.tabOriginals.initTab.call(this, item, index);
+        
+        item.tabEl.setAttribute('tabindex', '-1');
+        item.tabEl.setAttribute('aria-selected', 'false');
+        
+        item.on('render', function(tab) {
+            tab.el.dom.setAttribute('aria-labelledby', tab.tabEl.id);                
+            tab.el.dom.setAttribute('role', 'tabpanel');                
+            tab.el.dom.setAttribute('aria-hidden', 'true');
+            
+            tab.el.insertFirst({
+                tag: 'h2',
+                cls: 'sr-only',
+                html: tab.title
+            });
+        }, this, {single: true});
+    }
+});
