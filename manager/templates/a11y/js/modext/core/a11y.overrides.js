@@ -223,15 +223,15 @@ Ext.override(Ext.Panel, {
     panelOriginals: {
         onRender: Ext.Panel.prototype.onRender
     },
-    
+
     onRender: function(ct, position){
         this.panelOriginals.onRender.call(this, ct, position);
 
         if(this.collapsible && this.tools && this.tools.toggle) {
             this.tools.toggle.on('keydown', function(e) {
-               if (e.getKey() == Ext.EventObject.ENTER) {
-                    this.toggleCollapse();    
-               }              
+                if (e.getKey() == Ext.EventObject.ENTER) {
+                    this.toggleCollapse();
+                }
             }, this);
 
             this.on('collapse', function(){
@@ -242,15 +242,20 @@ Ext.override(Ext.Panel, {
                 this.tools.toggle.dom.setAttribute('aria-expanded', true);
             });
 
-            this.tools.toggle.dom.setAttribute('aria-label', "Hide " + (this.title || "")  + " Field");
+            this.tools.toggle.dom.setAttribute('aria-label', "Hide Field");
             this.tools.toggle.dom.setAttribute('tabindex', "0");
-            this.tools.toggle.dom.innerHTML = '<span class="sr-only">Hide ' + (this.title || '')  + ' Field</span>';
-
+            
             this.tools.toggle.dom.setAttribute('aria-expanded', !this.collapsed);
             this.tools.toggle.dom.setAttribute('aria-controls', this.bwrap.dom.id);
             if (this.title) {
                 this.bwrap.dom.setAttribute('aria-label', this.title);
             }
+            
+            this.tools.toggle.insertFirst({
+                tag: 'div',
+                cls: 'sr-only',
+                html: 'Hide ' + (this.title || '') + ' Field'
+            });   
         }
     }
 });
@@ -264,43 +269,44 @@ Ext.override(Ext.TabPanel, {
 
     initComponent: function(){
         this.tabOriginals.initComponent.call(this);
-        
+
         this.on('beforetabchange', function(tabs, newTab, currentTab){
             newTab.tabEl.setAttribute('tabindex', '0');
             newTab.tabEl.setAttribute('aria-selected', 'true');
-            
+
             if (newTab.el && newTab.el.dom) {
-                newTab.el.dom.setAttribute('aria-hidden', 'false');    
+                newTab.el.dom.setAttribute('aria-hidden', 'false');
             }
-            
+
             if (currentTab) {
                 currentTab.tabEl.setAttribute('tabindex', '-1');
                 currentTab.tabEl.setAttribute('aria-selected', 'false');
-                
+
                 if (currentTab.el && currentTab.el.dom) {
                     currentTab.el.dom.setAttribute('aria-hidden', 'true');
                 }
             }
         });
     },
-    
+
     onRender: function(ct, position){
         this.tabOriginals.onRender.call(this, ct, position);
-        
+
         this.strip.dom.setAttribute('role', 'tablist');
+        this.stripWrap.dom.setAttribute('tabindex', 0);
     },
 
     initTab: function(item, index) {
         this.tabOriginals.initTab.call(this, item, index);
-        
+
         item.tabEl.setAttribute('tabindex', '-1');
         item.tabEl.setAttribute('aria-selected', 'false');
-        
+
         item.on('render', function(tab) {
-            tab.el.dom.setAttribute('aria-labelledby', tab.tabEl.id);                
-            tab.el.dom.setAttribute('role', 'tabpanel');                
+            tab.el.dom.setAttribute('aria-labelledby', tab.tabEl.id);
+            tab.el.dom.setAttribute('role', 'tabpanel');
             tab.el.dom.setAttribute('aria-hidden', 'true');
-            
+
             tab.el.insertFirst({
                 tag: 'h2',
                 cls: 'sr-only',
