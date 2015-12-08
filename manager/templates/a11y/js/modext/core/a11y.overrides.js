@@ -287,6 +287,24 @@ Ext.override(Ext.TabPanel, {
                 }
             }
         });
+        
+        this.on('render', function() {
+            this.strip.on('keydown', function(e) {
+                if (e.getKey() == Ext.EventObject.RIGHT) {
+                    try {
+                        this.setActiveTab(this.items.indexOf(this.activeTab) + 1);
+                        this.activeTab.tabEl.focus();
+                    } catch (err) {}
+                }
+                
+                if (e.getKey() == Ext.EventObject.LEFT) {
+                    try {
+                        this.setActiveTab(this.items.indexOf(this.activeTab) - 1);
+                        this.activeTab.tabEl.focus();
+                    } catch (err) {}
+                }
+            }, this);                 
+        }, this, {single: true})
     },
 
     onRender: function(ct, position){
