@@ -82,6 +82,7 @@ MODx.a11y = Ext.apply(Ext.a11y, {
                 uberBarMovement(activeKey,liTarget,liTargetParent);
             }
 		});
+		
 		 
         /*give help an ID by editing line 175 in /controllers/
         Ext.get('help-link').on({
@@ -103,16 +104,6 @@ MODx.a11y = Ext.apply(Ext.a11y, {
         this.initFont();
     }
 
-    ,clearSubNavOpen: function() {
-        var topNav = Ext.get('modx-topnav');
-        var findSubOpen = topNav.query('.modx-subnav.open');
-        if (findSubOpen.length === 0) {
-            return;
-        }
-        Ext.each(findSubOpen, function(item,idx){
-            item.removeClass('open');
-        });
-    }
     ,initFont:function(){
         var cookie = new MODx.cookie();
         var bfsCheck = cookie.get('bodyfontsize');

@@ -180,8 +180,73 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
             ,ctrl: true
             ,shift: true
             ,fn: function() {
-                var t = Ext.getCmp('modx-resource-tree');
-                if (t) { t.quickCreate(document,{},'modDocument','web',0); }
+                window.open("/manager/?a=resource/create",'_self');
+                //var t = Ext.getCmp('modx-resource-tree');
+                //if (t) { t.quickCreate(document,{},'modDocument','web',0); }
+            }
+            ,stopEvent: true
+        });
+        //expand all resources
+        k.addBinding({
+            key: Ext.EventObject.ONE
+            ,ctrl: true
+            ,shift: true
+            ,fn: function() {
+	        	var t = Ext.getCmp('modx-resource-tree');
+	        	t.expandAll();
+	        }
+            ,stopEvent: true
+        });
+        //collapse all resources
+        k.addBinding({
+            key: Ext.EventObject.ONE
+            ,ctrl: true
+            ,option: true
+            ,fn: function() {
+	        	var t = Ext.getCmp('modx-resource-tree');
+	        	t.collapseAll();
+	        }
+            ,stopEvent: true
+        });
+        //expand all elements
+        k.addBinding({
+            key: Ext.EventObject.TWO
+            ,ctrl: true
+            ,shift: true
+            ,fn: function() {
+	        	var t = Ext.getCmp('modx-tree-element');
+	        	t.expandAll();
+	        }
+            ,stopEvent: true
+        });
+        //collapse all elements
+        k.addBinding({
+            key: Ext.EventObject.TWO
+            ,ctrl: true
+            ,option: true
+            ,fn: function() {
+	        	var t = Ext.getCmp('modx-tree-element');
+	        	t.collapseAll();
+	        }
+            ,stopEvent: true
+        });
+            
+        k.addBinding({
+            key: Ext.EventObject.T
+            ,ctrl: true
+            ,shift: true
+            ,fn: function() {
+            	//alert("pressed R.");
+            	var t = Ext.getCmp('modx-resource-tree');
+            	//console.log(t); // M…x.t…e.Resource {0: "/root", 1: "/root/web_0", config: Object, initialConfig: Object, xtype: "modx-tree-resource", id: "modx-resource-tree", remoteToolbar: false…}
+            	//t.collapseAll(); //works
+            	console.log(t.root); //Ext.t…e.AsyncTreeNode {loaded: true, loading: false, childrenRendered: true, rendered: true, attributes: Object…}
+            						// UI > ctNode = div.x-tree-root-node
+            	t.root.reload();
+            	//t.root.expand(); //nothing
+            	//console.log(t.root.childNodes); //web_0
+            	//t.root.childNodes.expand(); //not a function
+            	//t.expandAll(); //works but is all children
             }
             ,stopEvent: true
         });
