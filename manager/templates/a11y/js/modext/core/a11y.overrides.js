@@ -104,8 +104,78 @@ Ext.onReady(function() {
             
         }
     });
-       
- 
+
+    Ext.override(MODx.toolbar.ActionButtons, {
+        handleClick: function(itm,e) {
+            var o = this.config;
+            if (o.formpanel === false || o.formpanel === undefined || o.formpanel === null) return false;
+
+            if (itm.method === 'remote') { /* if using connectors */
+                MODx.util.Progress.reset();
+                o.form = Ext.getCmp(o.formpanel);
+                if (!o.form) return false;
+
+                var f = o.form.getForm ? o.form.getForm() : o.form;
+                var isv = true;
+                var invalidField;
+                if (f.items && f.items.items) {
+                    for (var fld in f.items.items) {
+                        if (f.items.items[fld] && f.items.items[fld].validate) {
+                            var fisv = f.items.items[fld].validate();
+                            if (!fisv) {
+                                f.items.items[fld].markInvalid();
+                                invalidField = f.items.items[fld]; 
+                                isv = false;
+                            }
+                        }
+                    }
+                }
+
+                if (isv) {
+                    Ext.applyIf(o.params,{
+                        action: itm.process
+                    });
+
+                    Ext.apply(f.baseParams,o.params);
+
+                    o.form.on('success',function(r) {
+                        if (o.form.clearDirty) o.form.clearDirty();
+                        /* allow for success messages */
+                        MODx.msg.status({
+                            title: _('success')
+                            ,message: r.result.message || _('save_successful')
+                            ,dontHide: r.result.message != '' ? true : false
+                        });
+
+                        if (itm.redirect != false) {
+                            Ext.callback(this.redirect,this,[o,itm,r.result],1000);
+                        }
+
+                        this.resetDirtyButtons(r.result);
+                    },this);
+                    o.form.submit({
+                        headers: {
+                            'Powered-By': 'MODx'
+                            ,'modAuth': MODx.siteId
+                        }
+                    });
+                } else {
+                    Ext.Msg.alert(_('error'),_('correct_errors'), function(){
+                        try {
+                            invalidField.focus();
+                        } catch (err) {}
+                    });
+                }
+            } else {
+                // if just doing a URL redirect
+                var params = itm.params || {};
+                Ext.applyIf(params, o.baseParams || {});
+                MODx.loadPage('?' + Ext.urlEncode(params));
+            }
+            
+            return false;
+        }
+    });
 });
 
 Ext.form.MessageTargets = {
@@ -154,7 +224,7 @@ Ext.form.MessageTargets = {
             field.alignErrorEl();
             field.errorEl.update(msg);
             Ext.form.Field.msgFx[field.msgFx].show(field.errorEl, field);
-            field.focus();
+            //field.focus();
         },
         clear: function(field){
             field.el.removeClass(field.invalidClass);
