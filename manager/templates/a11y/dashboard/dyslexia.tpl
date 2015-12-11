@@ -1,0 +1,1 @@
+<div id="modx-a11y-dashboard-dyslexia"></div>

@@ -4,6 +4,26 @@
   "description": "MODX Accessible Manager Project",
   "author": "MODX",
   "version": "0.1.0",
+  "package":{
+    "elements": {
+      "widgets": [
+        {
+          "name": "Dyslexia",
+          "type": "file",
+          "lexicon": "a11y:dashboards",
+          "size": "half",
+          "content": "widget.dyslexia.php"
+        },
+        {
+          "name": "FontSize",
+          "type": "file",
+          "lexicon": "a11y:dashboards",
+          "size": "half",
+          "content": "widget.fontsize.php"
+        }
+      ]
+    }
+  },
   "build": {
     "resolver": {
       "files": [
