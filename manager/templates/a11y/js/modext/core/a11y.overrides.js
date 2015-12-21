@@ -306,10 +306,12 @@ Ext.override(Ext.Panel, {
 
             this.on('collapse', function(){
                 this.tools.toggle.dom.setAttribute('aria-expanded', false);
+                this.bwrap.addClass("hide");
             });
 
             this.on('expand', function(){
                 this.tools.toggle.dom.setAttribute('aria-expanded', true);
+                this.bwrap.removeClass("hide");
             });
 
             this.tools.toggle.dom.setAttribute('aria-label', "Hide Field");

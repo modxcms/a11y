@@ -53,6 +53,8 @@ body *:focus {@extend %a11y-outline;}
 #modx-header *:focus, #modx-leftbar *:focus, #modx-leftbar a:focus, .x-panel-body *:focus, -webkit-tap-highlight-color, .x-btn-focus:focus 
 {@extend %a11y-outline;}
 
+.hide{display:none;}
+
 body, body.x-border-layout-ct {
   color: $mainText;
   //font:  $baseText;
