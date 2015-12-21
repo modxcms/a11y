@@ -54,6 +54,7 @@ body *:focus {@extend %a11y-outline;}
 {@extend %a11y-outline;}
 
 .hide{display:none;}
+.a11y-gear{float: right; margin: 3px 3px 0 0 !important;}
 
 body, body.x-border-layout-ct {
   color: $mainText;
