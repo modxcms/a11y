@@ -21,7 +21,10 @@
   .x-toolbar-left {
     width: auto !important;
     zoom: 1;
+  
+	.x-btn{padding: 10px 15px !important;}
   }
+  
 }
 
 /* btn style */
@@ -33,7 +36,7 @@
   cursor: pointer;
   display: inline-block;
   margin: 0 1px;
-  padding: 10px 15px;
+  padding: 6px;
   position: relative;
   text-decoration: none;
   zoom: 1;
@@ -100,7 +103,7 @@
     zoom: 1;
     border: 1px solid rgb(200, 210, 220);
     transition: background-color .2s;
-    padding: 3px 23px 3px 0;
+    padding: 1px 23px 1px 0;
 
     input.x-form-text {
       font-weight: normal !important;

@@ -61,6 +61,13 @@ input::-moz-focus-inner {
   padding: 15px 0 0 0;
 }
 
+.x-panel-bbar .x-btn-text:before{line-height: 10%;right: 3px;}
+.x-panel-bbar .x-tbar-page-first:before{left:-8px; top:0;}
+.x-panel-bbar .x-tbar-page-last:before{left:-5px; top:0;}
+.x-panel-bbar .x-tbar-loading:before{left:-6px;top:0;}
+.x-panel-bbar .x-btn{padding: 4px 13px !important;}
+
+
 /* the wrapper structure for form inputs */
 .x-form-item {
   display: block;
@@ -1159,7 +1166,7 @@ input::-moz-focus-inner {
           color: $buttonColor;
           opacity: 0.4;
         }
-
+        
         button:before {
           line-height: 20px;
           top: 0; left: 0; right: 0;
