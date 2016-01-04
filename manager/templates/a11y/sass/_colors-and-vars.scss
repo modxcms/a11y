@@ -3,7 +3,7 @@
 $primary1: #32AB9A;
 $primary2: #00948E;
 
-$colorSplash: rgb(35, 118, 196);
+$colorSplash: rgb(27, 99, 167);
 $desaturatedSplash:lighten(desaturate($colorSplash,100%),20%);
 $lightSplash:lighten($colorSplash, 42.5%);
 $colorSplashLight: lighten($colorSplash, 42.5%); /* unused */
@@ -41,7 +41,7 @@ $skyBlue: #55bbe7;
 $mutedblue: #535d6c;
 $darkBlue: #2b3948;
 
-$green: #93c14e;
+$green: #5F9E40;
 $desturatedSuccess:lighten(desaturate($green,100%),10%);
 $mutedgreen: #9caf78;
 $darkGreen: #636f4c;
@@ -50,7 +50,6 @@ $pastelGreen: rgb(88, 165, 152);
 $red:red;
 $orange: #F49548;
 $red: #BE0000;
-$green: #6CB24A;
 $blue: #3697cd; /* default theme $colorSplash */
 $purple: #B42260;
 $yellow: #FFEA80;

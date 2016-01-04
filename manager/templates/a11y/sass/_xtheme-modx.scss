@@ -392,7 +392,7 @@
   padding-left: 0;
 }
 .x-grid3-header .x-grid3-hd-row td {
-  color: darken($grey, 20%);
+  color: darken($grey, 25%);
   font-weight: bold;
 }
 .x-grid3-header-pop {
@@ -1490,7 +1490,7 @@ body.x-body-masked .x-window-plain .x-window-mc {
   border-color: #bcbcbc;
 }
 .x-toolbar td, .x-toolbar span, .x-toolbar input, .x-toolbar div, .x-toolbar select, .x-toolbar label {
-  border-radius: 3px;
+  border-radius: 3px; border-color: $grey;
 }
 .x-html-editor-tb .x-btn-text {
   background-image: url($imgPath + 'modx-theme/editor/tb-sprite.gif');
