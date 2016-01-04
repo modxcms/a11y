@@ -5,7 +5,7 @@ function uberBarMovement(key,el,elp) {
 	   	//console.log("keycode: "+key);
 	    //console.log("elp: "+elp);
 
-		if(elp == "limenu-site" || elp == "limenu-media" || elp == "limenu-components" || elp == "limenu-manage"){ 
+		if(elp == "limenu-site" || elp == "limenu-media" || elp == "limenu-components" || elp == "limenu-manage" || elp == "limenu-user" || elp == "limenu-admin" || elp == "limenu-about"){ 
 			
 			//its a main dropdown
 			
@@ -73,6 +73,17 @@ MODx.a11y = Ext.apply(Ext.a11y, {
     init: function() {
 	    
 		Ext.get('modx-topnav').on('keydown', function(e){
+			if(e.within(this)){
+				var liTarget = e.target.id; // new_resource - after the rootItem focus otherwise empty
+				//console.log("e: "+e.target.id);
+				var liTargetParent = e.target.parentElement.id; // limenu-site - on tab focus otherwise empty
+                //console.log("parent: "+liTargetParent);
+                var activeKey = e.getKey();
+                uberBarMovement(activeKey,liTarget,liTargetParent);
+            }
+		});
+		
+		Ext.get('modx-user-menu').on('keydown', function(e){
 			if(e.within(this)){
 				var liTarget = e.target.id; // new_resource - after the rootItem focus otherwise empty
 				//console.log("e: "+e.target.id);
