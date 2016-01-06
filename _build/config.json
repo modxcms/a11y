@@ -20,6 +20,13 @@
           "lexicon": "a11y:dashboards",
           "size": "half",
           "content": "widget.fontsize.php"
+        },
+        {
+          "name": "SwitchTheme",
+          "type": "file",
+          "lexicon": "a11y:dashboards",
+          "size": "half",
+          "content": "widget.switchtheme.php"
         }
       ]
     }
