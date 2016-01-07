@@ -4,7 +4,7 @@
   "description": "MODX Accessible Manager Project",
   "author": "MODX",
   "version": "0.1.0",
-  "package":{
+  "package": {
     "elements": {
       "widgets": [
         {
@@ -42,6 +42,9 @@
           "source": "[[+packagePath]]/manager/templates/a11y/",
           "target": "return MODX_MANAGER_PATH . 'templates/';"
         }
+      ],
+      "after": [
+        "resolve.theme.php"
       ]
     }
   }
