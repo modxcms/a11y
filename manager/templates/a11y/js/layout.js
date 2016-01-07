@@ -260,11 +260,58 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
             ,scope: this
             ,stopEvent: true
         });
+        
+        // ctrl + f6 to switch regions
+        k.addBinding({
+            key: Ext.EventObject.F6
+            ,ctrl: true
+            ,scope: this
+            ,fn: this.focusNextRegion
+        });
 
         this.fireEvent('loadKeyMap',{
             keymap: k
         });
     }
+    
+    ,currentRegion: null
+    
+    ,focusNextRegion: function(){
+        switch (this.currentRegion) {
+            case 'resource-tree':
+                Ext.getCmp('modx-tree-element').bwrap.dom.parentElement.parentElement.parentElement.parentElement.focus();
+                this.currentRegion = 'element-tree';
+                break;
+            case 'element-tree':
+                Ext.getCmp('modx-file-tree').el.dom.parentElement.parentElement.parentElement.focus();
+                this.currentRegion = 'file-tree';
+                break;
+            case 'file-tree':
+                Ext.Element.fly('modx-navbar').dom.focus();
+                this.currentRegion = 'navbar';
+                break;
+            case 'navbar':
+                try {
+                    Ext.Element.fly('modx-resource-pagetitle').dom.focus();
+                    this.currentRegion = 'resource-pagetitle';
+                    break;
+                } catch (err) {}
+            case 'resource-pagetitle':
+                try {
+                    Ext.Element.fly('ta').dom.focus();
+                    this.currentRegion = 'resource-ta';
+                    break;
+                } catch (err) {}
+            case 'resource-ta':
+                Ext.getCmp('modx-resource-tree').bwrap.dom.parentElement.parentElement.parentElement.parentElement.focus();
+                this.currentRegion = 'resource-tree';
+                break;
+            default:
+                Ext.getCmp('modx-resource-tree').bwrap.dom.parentElement.parentElement.parentElement.parentElement.focus();
+                this.currentRegion = 'resource-tree';
+        }             
+    }
+    
     /**
      * Wrapper method to get the navigation container
      *
