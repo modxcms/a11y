@@ -279,11 +279,11 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
     ,focusNextRegion: function(){
         switch (this.currentRegion) {
             case 'resource-tree':
-                Ext.getCmp('modx-tree-element').bwrap.dom.parentElement.parentElement.parentElement.parentElement.focus();
+                Ext.Element.fly('modx-leftbar').child('ul').first('li').next().first('a').dom.focus();
                 this.currentRegion = 'element-tree';
                 break;
             case 'element-tree':
-                Ext.getCmp('modx-file-tree').el.dom.parentElement.parentElement.parentElement.focus();
+                Ext.Element.fly('modx-leftbar').child('ul').first('li').next().next().first('a').dom.focus();
                 this.currentRegion = 'file-tree';
                 break;
             case 'file-tree':
@@ -291,6 +291,10 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
                 this.currentRegion = 'navbar';
                 break;
             case 'navbar':
+                Ext.Element.fly('modx-uberbar').dom.focus();
+                this.currentRegion = 'uberbar';
+                break;
+            case 'uberbar':
                 try {
                     Ext.Element.fly('modx-resource-pagetitle').dom.focus();
                     this.currentRegion = 'resource-pagetitle';
@@ -303,11 +307,11 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
                     break;
                 } catch (err) {}
             case 'resource-ta':
-                Ext.getCmp('modx-resource-tree').bwrap.dom.parentElement.parentElement.parentElement.parentElement.focus();
+                Ext.Element.fly('modx-leftbar').child('ul').first('li').first('a').dom.focus();
                 this.currentRegion = 'resource-tree';
                 break;
             default:
-                Ext.getCmp('modx-resource-tree').bwrap.dom.parentElement.parentElement.parentElement.parentElement.focus();
+                Ext.Element.fly('modx-leftbar').child('ul').first('li').first('a').dom.focus();
                 this.currentRegion = 'resource-tree';
         }             
     }
