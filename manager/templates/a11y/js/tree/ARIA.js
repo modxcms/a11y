@@ -138,6 +138,8 @@ Ext.override(Ext.tree.TreePanel, {
         }, this);
         
         Ext.get(node.ui.textNode.parentElement).on('focus', function(e){
+            node.select();
+            
             if (node.gear) {
                 node.gear.show();
             }
