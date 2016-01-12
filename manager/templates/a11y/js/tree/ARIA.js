@@ -118,55 +118,61 @@ Ext.override(Ext.tree.TreePanel, {
             ARIA.setProperty(node.ui.wrap, 'aria-expanded', node.isExpanded());
         }
 
-        node.gear = Ext.Element.fly(node.ui.textNode.parentNode).insertSibling({
-            tag:'div',
-            html:'',
-            cls: 'icon icon-gear a11y-gear',
-            tabindex: 1
-        }, 'after');
-        
-        node.gear.hide();
+        //node.gear = Ext.Element.fly(node.ui.textNode.parentNode).insertSibling({
+        //    tag:'div',
+        //    html:'',
+        //    cls: 'icon icon-gear a11y-gear',
+        //    tabindex: 1
+        //}, 'after');
+        //
+        //node.gear.hide();
+        //
+        //node.gear.on('keydown', function(e){
+        //    if (e.getKey() == Ext.EventObject.ENTER) {
+        //        this._showContextMenu(node, e);                 
+        //    } else {
+        //        if ((e.getKey() != Ext.EventObject.SHIFT) && (e.getKey() != Ext.EventObject.TAB)) {
+        //            node.gear.hide();
+        //        }
+        //    }
+        //}, this);
 
-        node.gear.on('keydown', function(e){
-            if (e.getKey() == Ext.EventObject.ENTER) {
+        Ext.get(node.ui.textNode.parentElement).on('keydown', function(e){
+            if ((e.getKey() == Ext.EventObject.F10) && (e.ctrlKey == true)) {
                 this._showContextMenu(node, e);                 
-            } else {
-                if ((e.getKey() != Ext.EventObject.SHIFT) && (e.getKey() != Ext.EventObject.TAB)) {
-                    node.gear.hide();
-                }
             }
         }, this);
         
         Ext.get(node.ui.textNode.parentElement).on('focus', function(e){
             node.select();
             
-            if (node.gear) {
-                node.gear.show();
-            }
+            //if (node.gear) {
+            //    node.gear.show();
+            //}
         }, this);
 
         Ext.get(node.ui.textNode.parentElement).on('blur', function(e){
-            if (node.gear) {
-                var target = e.getRelatedTarget();
-                if (target) {
-                    if (!target.classList.contains('a11y-gear')) {
-                        node.gear.hide();
-                    }
-                } else {
-                    node.gear.hide();
-                }
-            }
+            //if (node.gear) {
+            //    var target = e.getRelatedTarget();
+            //    if (target) {
+            //        if (!target.classList.contains('a11y-gear')) {
+            //            node.gear.hide();
+            //        }
+            //    } else {
+            //        node.gear.hide();
+            //    }
+            //}
         }, this);
         
-        Ext.get(node.ui.textNode.parentElement).on('keydown', function(e){
-            if ([Ext.EventObject.UP, Ext.EventObject.DOWN].indexOf(e.getKey()) != -1) {
-                node.gear.hide();
-            }
-        }, this);
+        //Ext.get(node.ui.textNode.parentElement).on('keydown', function(e){
+        //    if ([Ext.EventObject.UP, Ext.EventObject.DOWN].indexOf(e.getKey()) != -1) {
+        //        node.gear.hide();
+        //    }
+        //}, this);
         
-        Ext.get(node.gear).on('blur', function(e){
-            node.gear.hide();
-        }, this);
+        //Ext.get(node.gear).on('blur', function(e){
+        //    node.gear.hide();
+        //}, this);
         
     },
 
