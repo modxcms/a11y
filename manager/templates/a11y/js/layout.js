@@ -278,42 +278,14 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
     
     ,focusNextRegion: function(){
         switch (this.currentRegion) {
-            case 'resource-tree':
-                Ext.Element.fly('modx-leftbar').child('ul').first('li').next().first('a').dom.focus();
-                this.currentRegion = 'element-tree';
-                break;
-            case 'element-tree':
-                Ext.Element.fly('modx-leftbar').child('ul').first('li').next().next().first('a').dom.focus();
-                this.currentRegion = 'file-tree';
-                break;
-            case 'file-tree':
+            case 'leftbar':
                 Ext.Element.fly('modx-navbar').dom.focus();
                 this.currentRegion = 'navbar';
                 break;
-            case 'navbar':
-                Ext.Element.fly('modx-uberbar').dom.focus();
-                this.currentRegion = 'uberbar';
-                break;
-            case 'uberbar':
-                try {
-                    Ext.Element.fly('modx-resource-pagetitle').dom.focus();
-                    this.currentRegion = 'resource-pagetitle';
-                    break;
-                } catch (err) {}
-            case 'resource-pagetitle':
-                try {
-                    Ext.Element.fly('ta').dom.focus();
-                    this.currentRegion = 'resource-ta';
-                    break;
-                } catch (err) {}
-            case 'resource-ta':
-                Ext.Element.fly('modx-leftbar').child('ul').first('li').first('a').dom.focus();
-                this.currentRegion = 'resource-tree';
-                break;
             default:
-                Ext.Element.fly('modx-leftbar').child('ul').first('li').first('a').dom.focus();
-                this.currentRegion = 'resource-tree';
-        }             
+                Ext.Element.fly('modx-leftbar').dom.focus();
+                this.currentRegion = 'leftbar';
+        }  
     }
     
     /**

@@ -55,7 +55,7 @@
 <div id="modx-container">
 
 <div id="modAB"></div>
-<div id="modx-leftbar"></div>
+<div id="modx-leftbar" tabindex="-1"></div>
 <div id="modx-content">
 
 <div id="modx-header" role="banner">
