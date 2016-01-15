@@ -52,6 +52,8 @@ $fa-css-prefix:       icon;
 body *:focus {@extend %a11y-outline;}
 #modx-header *:focus, #modx-leftbar *:focus, #modx-leftbar a:focus, .x-panel-body *:focus, -webkit-tap-highlight-color, .x-btn-focus:focus 
 {@extend %a11y-outline;}
+#modx-leftbar .x-plain-bwrap > ul > li:focus{border-top:1px solid $green;border-bottom:1px solid $green;background-color: #000;}
+
 
 .hide{display:none;}
 .a11y-gear{float: right; margin: 3px 3px 0 0 !important;}
