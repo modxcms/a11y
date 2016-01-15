@@ -55,11 +55,11 @@
 <div id="modx-container">
 
 <div id="modAB"></div>
-<div id="modx-leftbar" tabindex="-1"></div>
-<div id="modx-content">
+
+<div id="modx-leftbar" tabindex="0"></div>
 
 <div id="modx-header" role="banner">
-    <div id="modx-navbar" tabindex="2">
+    <div id="modx-navbar" tabindex="0">
 	    
 		<div style="clear:both;">
 			<div id="modx-home-dashboard"><a href="?" title="{$_lang.dashboard}">{$_lang.dashboard}</a></div>
@@ -88,5 +88,7 @@
         
     </div>
 </div>
-<main role="main">
-<div id="modx-panel-holder"></div>
+
+<div id="modx-content" tabindex="0">
+	<main role="main">
+	<div id="modx-panel-holder"></div>

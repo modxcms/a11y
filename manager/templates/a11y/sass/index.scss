@@ -212,16 +212,28 @@ em {
 */
 
 #modx-leftbar,
+#modx-header,
 #modx-content,
 #modx-footer {
   position: absolute;
 }
 
-#modx-content{top: 0 !important; left: 310px !important;}
+#modx-content{
+	top: 112px !important; 
+	left: 310px !important;
+}
+
 #modx-leftbar{
 	background: $tabBg;
 	top: 0 !important;
 	height: 100%;
+}
+
+#modx-header {
+    background: $navbarBg;
+    height:55px; 
+    left: 310px !important;
+    width: 100% !important;
 }
 
 .modx-form p {
