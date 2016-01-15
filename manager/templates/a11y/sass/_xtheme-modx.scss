@@ -849,19 +849,23 @@ td.x-date-mp-sep {
 }
 a.x-menu-item {
   color: $menuTextColor;
-  font-size: 14px;
-  padding: 4px 25px 4px 30px;
+  font-size: 16px;
+  padding: 7px 25px 7px 30px;
 }
 .x-menu-item-active {
-  background-color: $menuSelectedBg;
+  //background-color: $menuSelectedBg;
   background-image: none;
   border: 0 none;
   margin: 0;
   padding: 1px;
+  
+  //needs more contrast
+  background-color: #3D474C;
 }
 .x-menu-item-active a.x-menu-item {
   border: 0 none;
   margin: 0;
+  color: #FFF !important;
 }
 .x-menu-check-item .x-menu-item-icon {
   background-image: url($imgPath + 'modx-theme/menu/unchecked.gif');
@@ -963,7 +967,10 @@ a.x-menu-item {
   border-radius: 0 0 5px 5px;
 }
 .x-menu-list {
-  background-color: $menuBg;
+  //background-color: $menuBg;
+  //needs more contrast
+  background-color: #14191e;
+  width:19rem;
 }
 
 .x-combo-list {

@@ -139,7 +139,18 @@ Ext.override(Ext.tree.TreePanel, {
 
         Ext.get(node.ui.textNode.parentElement).on('keydown', function(e){
             if ((e.getKey() == Ext.EventObject.F10) && (e.ctrlKey == true)) {
-                this._showContextMenu(node, e);                 
+                this._showContextMenu(node, e);
+                
+                //move the context menu to just below the item focused
+                var bodyRect = document.body.getBoundingClientRect();
+				var elemRect = node.ui.textNode.parentElement.getBoundingClientRect();
+    			var offset   = elemRect.top - bodyRect.top;
+				var floatingLayer = document.getElementsByClassName("x-menu-floating");
+				for(var i=0;i<floatingLayer.length;i++){
+					floatingLayer[i].style.top = (offset+22)+"px";
+					floatingLayer[i].style.left = "2px";
+				}	
+				
             }
         }, this);
         
