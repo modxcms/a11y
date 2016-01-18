@@ -282,6 +282,10 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
                 Ext.Element.fly('modx-navbar').dom.focus();
                 this.currentRegion = 'navbar';
                 break;
+            case 'navbar':
+                Ext.Element.fly('modx-content').dom.focus();
+                this.currentRegion = 'content';
+                break;
             default:
                 Ext.Element.fly('modx-leftbar').dom.focus();
                 this.currentRegion = 'leftbar';
