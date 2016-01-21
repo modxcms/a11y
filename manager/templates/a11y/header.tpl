@@ -6,7 +6,7 @@
 
 {if $_config.manager_favicon_url}<link rel="shortcut icon" href="{$_config.manager_favicon_url}" />{/if}
 
-<link rel="stylesheet" type="text/css" href="{$_config.manager_url}assets/ext3/resources/css/ext-all-notheme-min.css" />
+<link rel="stylesheet" type="text/css" href="{$_config.manager_url}templates/{$_config.manager_theme}/css/ext-all-notheme-min.css" />
 <link rel="stylesheet" type="text/css" href="{$_config.manager_url}templates/{$_config.manager_theme}/css/index.css" />
 
 {if $_config.ext_debug}
@@ -56,7 +56,7 @@
 
 <div id="modAB"></div>
 
-<div id="modx-leftbar" tabindex="0"></div>
+<div id="modx-leftbar" role="tabpanel" tabindex="0"></div>
 
 <div id="modx-header" role="banner">
     <div id="modx-navbar" tabindex="0">
@@ -89,6 +89,7 @@
     </div>
 </div>
 
+<main role="main">
 <div id="modx-content" tabindex="0">
-	<main role="main">
+	
 	<div id="modx-panel-holder"></div>
