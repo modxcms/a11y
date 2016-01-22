@@ -41,7 +41,7 @@ Ext.extend(MODx.menuEntry, Ext.Panel, {
         MODx.menuEntry.superclass.onCollapse.call(this, doAnim, animArg);
         // Force layout to have no active item
         this.getLayout().setActiveItem(null);
-        MODx.a11y.ARIA.setProperty(this.getEl().id, 'tabindex', -1);
+        MODx.a11y.ARIA.setProperty(this.getEl().id, 'tabindex', 0);
         MODx.a11y.ARIA.setProperty(this.getEl().id, 'aria-expanded', false);
     }
     ,onExpand: function(doAnim, animArg) {
@@ -61,12 +61,22 @@ Ext.extend(MODx.menuEntry, Ext.Panel, {
     ,onAfterRender: function(me) {
         if (!me.collapsed) {
             me.getLayout().setActiveItem(0);
-            MODx.a11y.ARIA.setProperty(me.getEl().id, 'tabindex', -1);
+            MODx.a11y.ARIA.setProperty(me.getEl().id, 'tabindex', 0);
             MODx.a11y.ARIA.setProperty(this.getEl().id, 'aria-expanded', true);
         } else {
             MODx.a11y.ARIA.setProperty(me.getEl().id, 'tabindex', 0);
             MODx.a11y.ARIA.setProperty(this.getEl().id, 'aria-expanded', false);
         }
+        
+        me.el.on('keypress', function(e) {
+            if (e.getKey() == Ext.EventObject.ENTER) {
+                if (me.collapsed) {
+                    me.expand();
+                } else {
+                    me.collapse();
+                }
+            }
+        }, this);
     }
 });
 Ext.reg('modx-menu-entry', MODx.menuEntry);
