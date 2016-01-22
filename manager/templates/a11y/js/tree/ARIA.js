@@ -154,6 +154,7 @@ Ext.override(Ext.tree.TreePanel, {
             }
         }, this);
         
+        node.ui.textNode.parentNode.setAttribute('tabindex', -1);
         Ext.get(node.ui.textNode.parentElement).on('focus', function(e){
             node.select();
             

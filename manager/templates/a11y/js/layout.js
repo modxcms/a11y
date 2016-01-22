@@ -76,6 +76,17 @@ Ext.extend(MODx.menuEntry, Ext.Panel, {
                     me.collapse();
                 }
             }
+            if (!me.collapsed && (e.getKey() == Ext.EventObject.SPACE)) {
+                e.stopPropagation();
+                e.preventDefault();
+                
+                try {
+                    me.items.items[0].root.firstChild.select();
+                } catch (err) {
+                    me.items.items[0].items.items[0].root.select();
+                }
+            }
+            
         }, this);
     }
 });
