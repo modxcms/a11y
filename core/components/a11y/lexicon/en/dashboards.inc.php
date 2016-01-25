@@ -10,3 +10,10 @@ $_lang['a11y.enabled'] = 'Enabled';
 $_lang['a11y.disabled'] = 'Disabled';
 $_lang['a11y.enable'] = 'Enable';
 $_lang['a11y.disable'] = 'Disable';
+
+$_lang['a11y.widget.dyslexia'] = 'Dyslexia';
+$_lang['a11y.widget.dyslexia_description'] = '';
+$_lang['a11y.widget.font_size'] = 'Font Size';
+$_lang['a11y.widget.font_size_description'] = '';
+$_lang['a11y.widget.switch_theme'] = 'Switch Theme';
+$_lang['a11y.widget.switch_theme_description'] = '';

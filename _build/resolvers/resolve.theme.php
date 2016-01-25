@@ -4,9 +4,9 @@ if ($object->xpdo) {
     $modx =& $object->xpdo;
     switch ($options[xPDOTransport::PACKAGE_ACTION]) {
         case xPDOTransport::ACTION_INSTALL:
-            $dyslexia = $modx->getObject('modDashboardWidget', array('name' => 'Dyslexia', 'namespace' => 'a11y'));
-            $fontSize = $modx->getObject('modDashboardWidget', array('name' => 'FontSize', 'namespace' => 'a11y'));
-            $switchTheme = $modx->getObject('modDashboardWidget', array('name' => 'SwitchTheme', 'namespace' => 'a11y'));
+            $dyslexia = $modx->getObject('modDashboardWidget', array('name' => 'a11y.widget.dyslexia', 'namespace' => 'a11y'));
+            $fontSize = $modx->getObject('modDashboardWidget', array('name' => 'a11y.widget.font_size', 'namespace' => 'a11y'));
+            $switchTheme = $modx->getObject('modDashboardWidget', array('name' => 'a11y.widget.switch_theme', 'namespace' => 'a11y'));
             
             $c = $modx->newQuery('modDashboard');
             $c->sortby('id', 'ASC');
