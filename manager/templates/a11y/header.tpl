@@ -52,44 +52,47 @@
 <body id="modx-body-tag">
 
 <div id="modx-browser"></div>
+
 <div id="modx-container">
 
-<div id="modAB"></div>
+  <div id="modAB"></div>
 
-<div id="modx-leftbar" role="tabpanel" tabindex="0"></div>
+  <div id="modx-leftbar" role="tabpanel" tabindex="0">
+    <p class="sr-only">{$_lang.a11y.tree_instructions}</p>
+  </div>
 
-<div id="modx-header" role="banner">
-    <div id="modx-navbar" tabindex="0">
-	    
-		<div style="clear:both;">
-			<div id="modx-home-dashboard"><a href="?" title="{$_lang.dashboard}">{$_lang.dashboard}</a></div>
-			{if $_search}
+  <div id="modx-header" role="banner">
+      <div id="modx-navbar" tabindex="0">
+
+    		<div style="clear:both;">
+    			<div id="modx-home-dashboard"><a href="?" title="{$_lang.dashboard}">{$_lang.dashboard}</a></div>
+      			{if $_search}
 	            <div role="search" id="mgr-search-wrapper">
-		            <!--<i class="icon icon-search icon-2x"></i>-->
-	            <div id="modx-manager-search"><label for="modx-uberbar" id="modx-uberbar-label">{$_lang.search}</label></div>
+  		            <!--<i class="icon icon-search icon-2x"></i>-->
+  	            <div id="modx-manager-search"><label for="modx-uberbar" id="modx-uberbar-label">{$_lang.search}</label></div>
 	            </div>
-	        {/if}
-		</div>
+            {/if}
+    		</div>
         <div id="new-menu-wrapper">
-			<nav role="navigation" aria-label="manager menu">
-				<h2 class="sr-only">Global Navigation</h2>
-		        <ul id="modx-topnav" role="menubar">
-		            {$navb}
-		        </ul>
-			</nav>
-			<nav role="navigation" aria-label="user and system menu">    
-		        <ul id="modx-user-menu" role="menubar">
-		            {* eval is used here to support nested variables *}
-		            {eval var=$userNav}
-		        </ul>
-			</nav>
-			<div style="clear:both;"></div>
-        </div>	    
-        
-    </div>
-</div>
+    			<nav role="navigation" aria-label="manager menu">
+    				<h2 class="sr-only">Global Navigation</h2>
+    		        <ul id="modx-topnav" role="menubar">
+    		            {$navb}
+    		        </ul>
+    			</nav>
+    			<nav role="navigation" aria-label="user and system menu">
+    		        <ul id="modx-user-menu" role="menubar">
+    		            {* eval is used here to support nested variables *}
+    		            {eval var=$userNav}
+    		        </ul>
+    			</nav>
+    			<div style="clear:both;"></div>
+        </div>
 
-<main role="main">
-<div id="modx-content" tabindex="0">
-	
-	<div id="modx-panel-holder"></div>
+      </div>
+  </div>
+
+  <main role="main">
+    <div id="modx-content" tabindex="0">
+
+    	<div id="modx-panel-holder"></div>
