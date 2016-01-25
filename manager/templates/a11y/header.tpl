@@ -58,7 +58,7 @@
   <div id="modAB"></div>
 
   <div id="modx-leftbar" role="tabpanel" tabindex="0">
-    <p class="sr-only">{$_lang.a11y.tree_instructions}</p>
+    <p class="sr-only">{$_lang.a11y.tree_instructions} </p>
   </div>
 
   <div id="modx-header" role="banner">
