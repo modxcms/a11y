@@ -8,24 +8,24 @@
     "elements": {
       "widgets": [
         {
-          "name": "a11y.widget.dyslexia",
-          "description": "a11y.widget.dyslexia_description",
+          "name": "a11y.w_dislexia",
+          "description": "a11y.w_dislexia_desc",
           "type": "file",
           "lexicon": "a11y:dashboards",
           "size": "half",
           "content": "widget.dyslexia.php"
         },
         {
-          "name": "a11y.widget.font_size",
-          "description": "a11y.widget.font_size_description",
+          "name": "a11y.w_fontsize",
+          "description": "a11y.w_fontsize_desc",
           "type": "file",
           "lexicon": "a11y:dashboards",
           "size": "half",
           "content": "widget.fontsize.php"
         },
         {
-          "name": "a11y.widget.switch_theme",
-          "description": "a11y.widget.switch_theme_description",
+          "name": "a11y.w_switch_theme",
+          "description": "a11y.w_switch_theme_desc",
           "type": "file",
           "lexicon": "a11y:dashboards",
           "size": "half",
