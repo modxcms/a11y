@@ -68,6 +68,19 @@ Ext.extend(MODx.menuEntry, Ext.Panel, {
             MODx.a11y.ARIA.setProperty(this.getEl().id, 'aria-expanded', false);
         }
         
+        me.el.on('keydown', function(e){
+            if (!me.collapsed && (e.getKey() == Ext.EventObject.DOWN)) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                try {
+                    me.items.items[0].root.firstChild.select();
+                } catch (err) {
+                    me.items.items[0].items.items[0].root.select();
+                }
+            }                 
+        });
+        
         me.el.on('keypress', function(e) {
             if (e.getKey() == Ext.EventObject.ENTER) {
                 if (me.collapsed) {
@@ -76,17 +89,6 @@ Ext.extend(MODx.menuEntry, Ext.Panel, {
                     me.collapse();
                 }
             }
-            if (!me.collapsed && (e.getKey() == Ext.EventObject.SPACE)) {
-                e.stopPropagation();
-                e.preventDefault();
-                
-                try {
-                    me.items.items[0].root.firstChild.select();
-                } catch (err) {
-                    me.items.items[0].items.items[0].root.select();
-                }
-            }
-            
         }, this);
     }
 });
