@@ -1,19 +1,13 @@
 <?php
 
-$_lang['a11y.w_fontsize'] = 'Adjust Font Size';
-$_lang['a11y.w_fontsize_desc'] = 'Click the buttons below to increase or decrease the manager font size.';
-$_lang['a11y.increase'] = 'Increase';
-$_lang['a11y.decrease'] = 'Decrease';
-$_lang['a11y.w_dislexia'] = 'Enable Dyslexia Font';
-$_lang['a11y.w_dislexia_desc'] = 'The typeface Dyslexie is a revolutionary font, designed to simplify life for those who have dyslexia. With a heavy base line, alternating stick/tail lengths, larger-than-normal openings, and a semi-cursive slant, the dyslexia font ensures that each character has a unique form. Learn More at: <a href="http://www.dyslexiefont.com/" target="_blank">http://www.dyslexiefont.com/</a>';
-$_lang['a11y.enabled'] = 'Enabled';
-$_lang['a11y.disabled'] = 'Disabled';
-$_lang['a11y.enable'] = 'Enable';
-$_lang['a11y.disable'] = 'Disable';
-
-$_lang['a11y.widget.dyslexia'] = 'Dyslexia';
-$_lang['a11y.widget.dyslexia_description'] = '';
-$_lang['a11y.widget.font_size'] = 'Font Size';
-$_lang['a11y.widget.font_size_description'] = '';
-$_lang['a11y.widget.switch_theme'] = 'Switch Theme';
-$_lang['a11y.widget.switch_theme_description'] = '';
+$_lang['a11y.w_fontsize'] = 'Font Sizes';
+$_lang['a11y.w_fontsize_desc'] = '<p>Use these buttons to increase or decrease the Manager font size.</p>';
+$_lang['a11y.increase'] = '+ Font Size';
+$_lang['a11y.decrease'] = '- Font Size';
+$_lang['a11y.w_dyslexia'] = 'OpenDyslexic Font';
+$_lang['a11y.w_dyslexia_desc'] = '<p><a href="http://opendyslexic.org/" target="_blank">OpenDyslexic</a> is a font for anyone with reading problems, like Dyslexia.</p>';
+$_lang['a11y.enable'] = 'Use OpenDyslexic Font';
+$_lang['a11y.disable'] = 'Using OpenDyslexic—Revert to Default';
+$_lang['a11y.w_switch_theme'] = 'Switch Theme';
+$_lang['a11y.w_switch_theme_desc'] = '<p>The <em>a11y</em> theme enhances visual contrast, keyboard navigation and compatibility with screen readers. Use the select list to change your theme.</p>';
+$_lang['a11y.tree_instructions'] = 'Tree menus. Use the tab-key to skip between Resources, Elements and Files. Press Enter to open or collapse a tree, and use the arrow keys to navigate the tree nodes. Press control-F10 on Windows and Linux, or command-F10 on Mac OS, to access the context menu for each tree node.';

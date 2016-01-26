@@ -6,12 +6,15 @@ MODx.a11y.dashboardSwitchTheme = function(config) {
     Ext.applyIf(config,{
         cls: 'modx-panel'
         ,items:[{
-            xtype: 'modx-combo-manager-theme'    
+            xtype:'modx-panel'
+            ,html:_('a11y.w_switch_theme_desc')
+        },{
+            xtype: 'modx-combo-manager-theme'
             ,value: MODx.config.manager_theme
             ,id: 'a11y-switch-theme'
         },{
             xtype:'button'
-            ,text: _('a11y.enable')
+            ,text: _('a11y.w_switch_theme')
             ,cls:'primary-button'
             ,handler: this.switchTheme
             ,scope: this
