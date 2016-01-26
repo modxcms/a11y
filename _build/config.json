@@ -8,8 +8,8 @@
     "elements": {
       "widgets": [
         {
-          "name": "a11y.w_dislexia",
-          "description": "a11y.w_dislexia_desc",
+          "name": "a11y.w_dyslexia",
+          "description": "a11y.w_dyslexia_desc",
           "type": "file",
           "lexicon": "a11y:dashboards",
           "size": "half",
