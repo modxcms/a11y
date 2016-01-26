@@ -10,10 +10,6 @@ MODx.a11y.dashboardSwitchTheme = function(config) {
             ,value: MODx.config.manager_theme
             ,id: 'a11y-switch-theme'
         },{
-            xtype:'modx-panel'
-            ,html:_('a11y.w_switch_theme_desc')
-        },{
-
             xtype:'button'
             ,text: _('a11y.w_switch_theme')
             ,cls:'primary-button'
