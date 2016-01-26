@@ -39,6 +39,7 @@ class A11y {
 
         $this->modx->addPackage('a11y',$this->config['modelPath']);
         $this->modx->lexicon->load('a11y:default');
+        $this->modx->lexicon->load('a11y:dashboard');
     }
 
     /**
