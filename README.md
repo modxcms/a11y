@@ -77,14 +77,17 @@ We try to follow [Semantic Versioning](http://semver.org/), so if you are submit
 * Visual Contrast to meet WCAG guidelines
 * Clean up text presentation for screen readers
 * Focus indication
+* Dashboard Widgets:
+  * Enable Dyslexia Font 
+  * Font Size Increase / Decrease 
+  * Theme Switcher 
 * Packaged Installation
 
 ###2.0
 * Modal Support
-* Dyslexia Font Dashboard Widget
-* Font Increase / Decrease Dashboard Widget
 * Resource X-Tab Strip Navigation
 * X-Grid Data Table Keyboard Navigation
 * Better Text Error Handling on form inputs
+* Additional Translations
 
 This theme will be available as an extra and the testing releases will be available on [GitHub's repo](https://github.com/modxcms/a11y/releases)
