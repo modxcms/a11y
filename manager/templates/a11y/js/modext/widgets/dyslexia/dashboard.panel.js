@@ -9,7 +9,7 @@ MODx.a11y.dashboardDyslexiaPanel = function(config) {
         cls: 'modx-panel'
         ,items:[{
             xtype:'modx-panel'
-            ,html:_('a11y.w_dislexia_desc')
+            ,html:_('a11y.w_dyslexia_desc')
         },{
             xtype:'button'
             ,id:'modx-a11y-dashboarddyslexia-btn'
