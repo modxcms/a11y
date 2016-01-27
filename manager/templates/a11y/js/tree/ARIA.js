@@ -71,10 +71,10 @@ Ext.override(Ext.tree.TreePanel, {
     originalMethods: {
         onRender: Ext.tree.TreePanel.prototype.onRender
     },
-    
+
     onRender: function(ct, position){
         this.originalMethods.onRender.call(this, ct, position);
-        this.initARIA();                     
+        this.initARIA();
     },
 
     // private
@@ -129,7 +129,7 @@ Ext.override(Ext.tree.TreePanel, {
         //
         //node.gear.on('keydown', function(e){
         //    if (e.getKey() == Ext.EventObject.ENTER) {
-        //        this._showContextMenu(node, e);                 
+        //        this._showContextMenu(node, e);
         //    } else {
         //        if ((e.getKey() != Ext.EventObject.SHIFT) && (e.getKey() != Ext.EventObject.TAB)) {
         //            node.gear.hide();
@@ -138,9 +138,9 @@ Ext.override(Ext.tree.TreePanel, {
         //}, this);
 
         Ext.get(node.ui.textNode.parentElement).on('keydown', function(e){
-            if ((e.getKey() == Ext.EventObject.F10) && (e.ctrlKey == true)) {
+            if ((e.getKey() == Ext.EventObject.F10) && (e.shiftKey == true)) {
                 this._showContextMenu(node, e);
-                
+
                 //move the context menu to just below the item focused
                 var bodyRect = document.body.getBoundingClientRect();
 				var elemRect = node.ui.textNode.parentElement.getBoundingClientRect();
@@ -149,15 +149,15 @@ Ext.override(Ext.tree.TreePanel, {
 				for(var i=0;i<floatingLayer.length;i++){
 					floatingLayer[i].style.top = (offset+22)+"px";
 					floatingLayer[i].style.left = "2px";
-				}	
-				
+				}
+
             }
         }, this);
-        
+
         node.ui.textNode.parentNode.setAttribute('tabindex', -1);
         Ext.get(node.ui.textNode.parentElement).on('focus', function(e){
             node.select();
-            
+
             //if (node.gear) {
             //    node.gear.show();
             //}
@@ -175,17 +175,17 @@ Ext.override(Ext.tree.TreePanel, {
             //    }
             //}
         }, this);
-        
+
         //Ext.get(node.ui.textNode.parentElement).on('keydown', function(e){
         //    if ([Ext.EventObject.UP, Ext.EventObject.DOWN].indexOf(e.getKey()) != -1) {
         //        node.gear.hide();
         //    }
         //}, this);
-        
+
         //Ext.get(node.gear).on('blur', function(e){
         //    node.gear.hide();
         //}, this);
-        
+
     },
 
     onNodeSelect : function(sm, node) {
