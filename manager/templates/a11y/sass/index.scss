@@ -75,6 +75,8 @@ body, body.x-border-layout-ct {
   }
 }
 
+.dashboard-block x-panel-body a{color: $green !important;}
+
 //hide new resource button & refresh button that dont work
 #extdd-1_tools, #extdd-19_tools{display: none;}
 

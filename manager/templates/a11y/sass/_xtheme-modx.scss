@@ -848,7 +848,7 @@ td.x-date-mp-sep {
   border-bottom: none;
 }
 a.x-menu-item {
-  color: $menuTextColor;
+  color: #59aefc !important; /*$menuTextColor*/
   font-size: 16px;
   padding: 7px 25px 7px 30px;
 }
@@ -858,9 +858,6 @@ a.x-menu-item {
   border: 0 none;
   margin: 0;
   padding: 1px;
-  
-  //needs more contrast
-  background-color: #3D474C;
 }
 .x-menu-item-active a.x-menu-item {
   border: 0 none;
