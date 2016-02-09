@@ -184,7 +184,10 @@
   padding: 5px 0;
 }
 
-
+.x-toolbar td{
+	width: 20px;height:20px;line-height: 0;
+	.x-btn-icon button{height:20px; width:20px;}
+}
 
 .x-toolbar td, .x-toolbar span, .x-toolbar input, .x-toolbar div, .x-toolbar select, .x-toolbar label {
   border-radius: $borderRadius;
