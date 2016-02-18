@@ -12,6 +12,12 @@ MODx.a11y.dashboardSwitchTheme = function(config) {
             xtype: 'modx-combo-manager-theme'
             ,value: MODx.config.manager_theme
             ,id: 'a11y-switch-theme'
+            ,listeners: {
+                render: function() {
+                    this.wrap.dom.style.display = 'inline-block';
+                    this.wrap.dom.style['margin-right'] = '3px';
+                }
+            }
         },{
             xtype:'button'
             ,text: _('a11y.w_switch_theme')
