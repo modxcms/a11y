@@ -349,6 +349,9 @@ class TopMenu
     }
 }
 
+$modx->lexicon->load('a11y:default');
+$modx->lexicon->load('a11y:dashboards');
+
 // Set Smarty placeholder to display search bar, if appropriate
 $this->setPlaceholder('_search', $modx->hasPermission('search'));
 $this->setPlaceholder('a11y',$modx->lexicon->fetch('a11y.', true));
