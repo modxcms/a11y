@@ -9,6 +9,8 @@ MODx.a11y.dashboardSwitchTheme = function(config) {
             xtype:'modx-panel'
             ,html:_('a11y.w_switch_theme_desc')
         },{
+            html: '<label for="a11y-switch-theme" class="sr-only">' + _('a11y.theme_select_label') + '</label>'
+        },{
             xtype: 'modx-combo-manager-theme'
             ,value: MODx.config.manager_theme
             ,id: 'a11y-switch-theme'
