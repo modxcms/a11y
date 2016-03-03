@@ -1,10 +1,14 @@
 @font-face {
-    font-family: "opendyslexic3regular";
-    src: url("/manager/templates/a11y/css/fonts/OpenDyslexic3-Regular-webfont.eot");
-    src: url("/manager/templates/a11y/css/fonts/OpenDyslexic3-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("/manager/templates/a11y/css/fonts/OpenDyslexic3-Regular-webfont.woff2") format("woff2"), url("/manager/templates/a11y/css/fonts/OpenDyslexic3-Regular-webfont.woff") format("woff"), url("/manager/templates/a11y/css/fonts/OpenDyslexic3-Regular-webfont.ttf") format("truetype"), url("/manager/templates/a11y/css/fonts/OpenDyslexic3-Regular-webfont.svg#opendyslexic3regular") format("svg");
+    font-family: "dyslexic-regular";
+    src: url("/manager/templates/a11y/css/fonts/dyslexie_regular_lp151710-webfont.eot");
+    src: url("/manager/templates/a11y/css/fonts/dyslexie_regular_lp151710-webfont.eot?#iefix") format("embedded-opentype"),
+    url("/manager/templates/a11y/css/fonts/dyslexie_regular_lp151710-webfont.woff2") format("woff2"),
+    url("/manager/templates/a11y/css/fonts/dyslexie_regular_lp151710-webfont.woff") format("woff"),
+    url("/manager/templates/a11y/css/fonts/dyslexie_regular_lp151710-webfont.ttf") format("truetype"),
+    url("/manager/templates/a11y/css/fonts/dyslexie_regular_lp151710-webfont.svg#dyslexieregular") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 body{
-    font-family: "opendyslexic3regular" !important;
+    font-family: "dyslexic-regular" !important;
 }
