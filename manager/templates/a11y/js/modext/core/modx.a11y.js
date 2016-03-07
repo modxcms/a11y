@@ -1,77 +1,169 @@
 Ext.namespace('MODx.a11y');
 
 function uberBarMovement(key,el,elp) {
-		
+
 	   	//console.log("keycode: "+key);
 	    //console.log("elp: "+elp);
+	    //console.log("el: "+el);
 
-		if(elp == "limenu-site" || elp == "limenu-media" || elp == "limenu-components" || elp == "limenu-manage" || elp == "limenu-user" || elp == "limenu-admin" || elp == "limenu-about"){ 
-			
+		if(elp == "limenu-site" || elp == "limenu-media" || elp == "limenu-components" || elp == "limenu-manage" || elp == "limenu-user" || elp == "limenu-admin" || elp == "limenu-about"){
+
 			//its a main dropdown
-			
+
 		    var subNavEl = Ext.get(elp).select('.modx-subnav');
-			var rootItem = subNavEl.item(0); 
-			
+			var rootItem = subNavEl.item(0);
+
 			if(key == 40){ //down
-				if( rootItem.isVisible() ){ 
+				if( rootItem.isVisible() ){
 					//console.log("subnav already has class .open");
 				} else {
-					rootItem.addClass('open'); 	
+					rootItem.addClass('open');
 					Ext.each(rootItem.query("li"), function(item,idx){
 			            item.setAttribute('tabindex', "-1");
 			            if(idx==0){item.focus();}
 			        });
 				}
 			}
-			
-			if(key == 9){ //tab
+
+			if(key == 39){ //right
 				if(rootItem){ rootItem.removeClass('open'); }
 				//clear all child tabindexes
 				Ext.each(Ext.get('modx-topnav').query('.modx-subnav li'), function(item,idx){
 			        item.removeAttribute('tabindex');
-			    });	
+			    });
+			    var nextLi = Ext.get(elp).next('li');
+			    if(nextLi){
+			        var nextLichild = nextLi.dom.childNodes[1];
+			        nextLichild.focus();
+			    } else {
+			        //it might be "manage" or "help"
+			        if(elp == "limenu-manage"){var userLi = Ext.get("limenu-user");  userLi.dom.childNodes[1].focus();}
+			        if(elp == "limenu-about"){var gotoContent = Ext.get("modx-content"); gotoContent.focus();}
+			    }
+
 			}
-			
-	    } else {
-		    
-		    //its a child li
-		    
-		    var elRootParent = Ext.get(el).parent('.top');
-		    var elUlParent = Ext.get(el).parent('.modx-subnav');
-		    var elLink = Ext.get(el).query('a');
-		    var elHref = elLink[0]["href"];
-			
-			var elPrevLi = Ext.get(el).prev('li');
-			var elNextLi = Ext.get(el).next('li');
-		    
-		    if(key == 13){ //enter
-				window.open(elHref,'_self');
-			}    
-		    
-		    if(key == 9){ //tab
+
+			if(key == 37){ //left
+				if(rootItem){ rootItem.removeClass('open'); }
 				//clear all child tabindexes
 				Ext.each(Ext.get('modx-topnav').query('.modx-subnav li'), function(item,idx){
 			        item.removeAttribute('tabindex');
 			    });
-			    elUlParent.removeClass('open');
-				elRootParent.next('.top').focus();
+			    var prevLi = Ext.get(elp).prev('li');
+			    if(prevLi){
+			        var prevLichild = prevLi.dom.childNodes[1];
+			        prevLichild.focus();
+			    } else {
+			        //it might be "user"
+			        if(elp == "limenu-user"){var userLi = Ext.get("limenu-manage");  userLi.dom.childNodes[1].focus();}
+			    }
+
 			}
-			
-			if(key == 40 || key == 39){ //down or right
-				elNextLi.focus();
+
+			if(key == 9){ //tab
+			    var gotoContent = Ext.get("modx-content");
+			    gotoContent.focus();
 			}
-			
-			if(key == 38 || key == 37){ //up or left
-				elPrevLi.focus();
-			}
-				
-	    }  
-	    
+
+	    } else {
+
+		    //its a child li
+		    var elRootParent = Ext.get(el).parent();
+		    //console.log(elRootParent);
+		    if( Ext.get(el).parent('.top') ){
+    		    var elRootParent = Ext.get(el).parent('.top');
+    		    var elUlParent = Ext.get(el).parent('.modx-subnav');
+    		    var elLink = Ext.get(el).query('a');
+    		    var elHref = elLink[0]["href"];
+
+    			var elPrevLi = Ext.get(el).prev('li');
+    			var elNextLi = Ext.get(el).next('li');
+
+    		    if(key == 13){ //enter
+    				window.open(elHref,'_self');
+    			}
+
+    		    if(key == 39){ // right
+    				//clear all child tabindexes
+    				Ext.each(Ext.get('modx-topnav').query('.modx-subnav li'), function(item,idx){
+    			        item.removeAttribute('tabindex');
+    			    });
+    			    elUlParent.removeClass('open');
+    				var testNextDom = elRootParent.next('.top');
+    				if(testNextDom){
+    			        elRootParent.next('.top').dom.childNodes[1].focus();
+    			    } else {
+    			        //it might be "manage" or "help"
+    			        if(elRootParent.id == "limenu-manage"){var userLi = Ext.get("limenu-user");  userLi.dom.childNodes[1].focus();}
+    			        if(elRootParent.id == "limenu-admin"){var userLi = Ext.get("limenu-about");  userLi.dom.childNodes[1].focus();}
+    			        if(elRootParent.id == "limenu-about"){var gotoContent = Ext.get("modx-content"); gotoContent.focus();}
+    			    }
+    			}
+
+    			if(key == 37){ // left
+    				//clear all child tabindexes
+    				Ext.each(Ext.get('modx-topnav').query('.modx-subnav li'), function(item,idx){
+    			        item.removeAttribute('tabindex');
+    			    });
+    			    elUlParent.removeClass('open');
+    			    var testPrevDom = elRootParent.prev('.top');
+    			    if(testPrevDom){
+    			        elRootParent.prev('.top').dom.childNodes[1].focus();
+    			    } else {
+    				    //it might be "user"
+    			        if(elRootParent.id == "limenu-user"){var userLi = Ext.get("limenu-manage");  userLi.dom.childNodes[1].focus();}
+    			    }
+    			}
+
+    			if(key == 40){ //down
+    				if(elNextLi){
+    				    elNextLi.focus();
+    				} else {
+    				    //might be bottom of li
+    				    //might be #reports
+    				    if(el == "reports"){ var reportSub = Ext.get("site_schedule"); reportSub.focus(); }
+    				}
+    			}
+
+    			if(key == 38){ //up
+    				if(elPrevLi){
+    			        elPrevLi.focus();
+    			    } else {
+    			        if(el == "site_schedule"){ var reportSub = Ext.get("reports"); reportSub.focus(); }
+    			    }
+    			}
+            } else { //eof its a child li
+                //its a 3rd level
+                var elLink = Ext.get(el).query('a');
+    		    var elHref = elLink[0]["href"];
+
+    			var elPrevLi = Ext.get(el).prev('li');
+    			var elNextLi = Ext.get(el).next('li');
+
+    		    if(key == 13){ //enter
+    				window.open(elHref,'_self');
+    			}
+
+                if(key == 40){ //down
+    				elNextLi.focus();
+    			}
+
+    			if(key == 38){ //up
+    			    if(elPrevLi){
+    			        elPrevLi.focus();
+    			    } else {
+    			        if(el == "site_schedule"){ var reportSub = Ext.get("reports"); reportSub.focus(); }
+    			    }
+    			}
+            }
+
+	    }  // eof if main dropdown or else child
+
 } // eof uberBarMovement
-    
+
 MODx.a11y = Ext.apply(Ext.a11y, {
     init: function() {
-	    
+
 		Ext.get('modx-topnav').on('keydown', function(e){
 			if(e.within(this)){
 				var liTarget = e.target.id; // new_resource - after the rootItem focus otherwise empty
@@ -82,7 +174,7 @@ MODx.a11y = Ext.apply(Ext.a11y, {
                 uberBarMovement(activeKey,liTarget,liTargetParent);
             }
 		});
-		
+
 		Ext.get('modx-user-menu').on('keydown', function(e){
 			if(e.within(this)){
 				var liTarget = e.target.id; // new_resource - after the rootItem focus otherwise empty
@@ -93,14 +185,14 @@ MODx.a11y = Ext.apply(Ext.a11y, {
                 uberBarMovement(activeKey,liTarget,liTargetParent);
             }
 		});
-		
-		 
+
+
         /*give help an ID by editing line 175 in /controllers/
         Ext.get('help-link').on({
             'keydown':this.clearSubNavOpen
         });
         */
-        
+
         /* search actions - @dubrod - not needed since i moved the whole search element up
         Ext.get('modx-uberbar').on({
             'focus':function(){
@@ -111,7 +203,7 @@ MODx.a11y = Ext.apply(Ext.a11y, {
             }
         });
         */
-        
+
         this.initFont();
     }
 
