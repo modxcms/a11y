@@ -428,19 +428,25 @@ Ext.override(Ext.TabPanel, {
     initTab: function(item, index) {
         this.tabOriginals.initTab.call(this, item, index);
 
-        item.tabEl.setAttribute('tabindex', '-1');
-        item.tabEl.setAttribute('aria-selected', 'false');
+        var tabParent = Ext.get(item.tabEl.id).parent().parent().parent(); //i know this is weird
+        if(tabParent.id == "modx-resource-vtabs-header"){
+            //this is most likely a Template Variable Tab Panel and for some reason its not reading fields and labels for TV inputs when the below gets set
+        } else {
 
-        item.on('render', function(tab) {
-            tab.el.dom.setAttribute('aria-labelledby', tab.tabEl.id);
-            tab.el.dom.setAttribute('role', 'tabpanel');
-            tab.el.dom.setAttribute('aria-hidden', 'true');
+            item.tabEl.setAttribute('tabindex', '-1');
+            item.tabEl.setAttribute('aria-selected', 'false');
 
-            tab.el.insertFirst({
-                tag: 'h2',
-                cls: 'sr-only',
-                html: tab.title
-            });
-        }, this, {single: true});
+            item.on('render', function(tab) {
+                tab.el.dom.setAttribute('aria-labelledby', tab.tabEl.id);
+                tab.el.dom.setAttribute('role', 'tabpanel');
+                tab.el.dom.setAttribute('aria-hidden', 'true');
+
+                tab.el.insertFirst({
+                    tag: 'h2',
+                    cls: 'sr-only',
+                    html: tab.title
+                });
+            }, this, {single: true});
+        }
     }
 });
