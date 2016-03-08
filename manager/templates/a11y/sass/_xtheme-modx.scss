@@ -838,7 +838,7 @@ td.x-date-mp-sep {
       position:relative;
       &:before{
           position:absolute;
-          content: "You opened the context menu";
+          content: "Context menu open, press down arrow to select item";
       }
   }
 }
