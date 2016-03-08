@@ -67,7 +67,7 @@ Ext.extend(MODx.menuEntry, Ext.Panel, {
             MODx.a11y.ARIA.setProperty(me.getEl().id, 'tabindex', 0);
             MODx.a11y.ARIA.setProperty(this.getEl().id, 'aria-expanded', false);
         }
-        
+
         me.el.on('keydown', function(e){
             if (!me.collapsed && (e.getKey() == Ext.EventObject.DOWN)) {
                 e.preventDefault();
@@ -78,9 +78,9 @@ Ext.extend(MODx.menuEntry, Ext.Panel, {
                 } catch (err) {
                     me.items.items[0].items.items[0].root.select();
                 }
-            }                 
+            }
         });
-        
+
         me.el.on('keypress', function(e) {
             if (e.getKey() == Ext.EventObject.ENTER) {
                 if (me.collapsed) {
@@ -109,7 +109,7 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
         if (MODx.perm.resource_tree) {
             items.push(this.handleRecord({
                 title: _('resources')
-                ,titleTpl: '<h2><i class="icon icon-sitemap"></i><span class="title">{title}</span></h2>'
+                ,titleTpl: '<h2><i class="icon icon-sitemap"></i><span class="title">{title} <span class="sr-only">Press Shift F10 for Context Menu</span></span></h2>'
                 ,stateId: 'nav-resource-tree'
                 ,defaults: {
                     remoteToolbar: false
@@ -253,7 +253,7 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
 	        }
             ,stopEvent: true
         });
-            
+
         k.addBinding({
             key: Ext.EventObject.T
             ,ctrl: true
@@ -283,7 +283,7 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
             ,scope: this
             ,stopEvent: true
         });
-        
+
         // ctrl + f6 to switch regions
         k.addBinding({
             key: Ext.EventObject.F6
@@ -296,9 +296,9 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
             keymap: k
         });
     }
-    
+
     ,currentRegion: null
-    
+
     ,focusNextRegion: function(){
         switch (this.currentRegion) {
             case 'leftbar':
@@ -312,9 +312,9 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
             default:
                 Ext.Element.fly('modx-leftbar').dom.focus();
                 this.currentRegion = 'leftbar';
-        }  
+        }
     }
-    
+
     /**
      * Wrapper method to get the navigation container
      *
