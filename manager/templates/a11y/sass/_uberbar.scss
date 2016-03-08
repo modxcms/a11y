@@ -1,6 +1,6 @@
 /* MODX MANAGER SEARCH */
 #mgr-search-wrapper{
-	float:left; 
+	float:left;
 	/*position: absolute;*/
 	/*margin-right:-310px;*/
 	right: 0;
@@ -22,13 +22,13 @@
 	 margin-top: 8px;
  }
 
-#modx-navbar #modx-manager-search { 
+#modx-navbar #modx-manager-search {
   float: left;
   padding: 11px 8px 5px 10px;
   height: 38px;
   min-width:120px;
   @include media($gtDesktop) {
-  min-width:194px; 
+  min-width:194px;
   }
   > {
       .x-form-field-trigger-wrap {
@@ -56,11 +56,12 @@
   width: 47px;
   background-color: #444;
   background-image: none;
-  
+
   &:before{
 	  top: 30%; //centers icon
 	  //content: "\f002"; //search icon
 	  content: "Search";
+	  font-family: "Helvetica Neue", Helvetica, arial, tahoma, sans-serif;
   }
 }
 
@@ -79,7 +80,7 @@
 #modx-manager-search .x-form-field-trigger-wrap {
   height: auto;
   background-image: none;
-  
+
 
   .x-form-text {
     text-shadow: none;
