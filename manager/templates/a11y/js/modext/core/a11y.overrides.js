@@ -99,6 +99,27 @@ Ext.onReady(function() {
             var unpublishedTimeInput = Ext.get("modx-resource-unpub-date-time");
             if(unpublishedTimeInput){ unpublishedTimeInput.dom.setAttribute('aria-label', "Un Published Time"); }
 
+            var isfolderCheckbox = Ext.get("modx-resource-isfolder");
+            if(isfolderCheckbox){ isfolderCheckbox.dom.setAttribute('aria-label', "Is this a folder"); }
+
+            var searchableCheckbox = Ext.get("modx-resource-searchable");
+            if(searchableCheckbox){ searchableCheckbox.dom.setAttribute('aria-label', "Is this searchable"); }
+
+            var richtextCheckbox = Ext.get("modx-resource-richtext");
+            if(richtextCheckbox){ richtextCheckbox.dom.setAttribute('aria-label', "Show Rich Text Editor"); }
+
+            var freezeuriCheckbox = Ext.get("modx-resource-uri-override");
+            if(freezeuriCheckbox){ freezeuriCheckbox.dom.setAttribute('aria-label', "Freeze this URI"); }
+
+            var cacheableCheckbox = Ext.get("modx-resource-cacheable");
+            if(cacheableCheckbox){ cacheableCheckbox.dom.setAttribute('aria-label', "Is this cacheable"); }
+
+            var syncsiteCheckbox = Ext.get("modx-resource-syncsite");
+            if(syncsiteCheckbox){ syncsiteCheckbox.dom.setAttribute('aria-label', "Empty cache on save"); }
+
+            var deletedCheckbox = Ext.get("modx-resource-deleted");
+            if(deletedCheckbox){ deletedCheckbox.dom.setAttribute('aria-label', "Deleted"); }
+
             /* ONE ELEMENT AT A TIME - @dubrod
             var hidemenuBox = Ext.getCmp('modx-resource-hidemenu');
             if (hidemenuBox) {
