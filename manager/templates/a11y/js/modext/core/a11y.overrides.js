@@ -11,7 +11,7 @@ Ext.onReady(function() {
                 , anchor: '100%'
             };
         }
-        
+
         ,setup: function() {
             if (!this.initialized) {
                 this.getForm().setValues(this.config.record);
@@ -70,21 +70,21 @@ Ext.onReady(function() {
             MODx.sleep(4); /* delay load event to allow FC rules to move before loading RTE */
             if (MODx.afterTVLoad) { MODx.afterTVLoad(); }
             this.fireEvent('load');
-            
+
             var form = this.getForm();
             form.findField('pagetitle').el.dom.setAttribute('aria-required', true);
-            
+
             var content = Ext.getCmp('modx-resource-content');
-            
+
             if (content) {
                 var contentTitle = content.header.dom.getElementsByClassName('x-panel-header-text')[0];
                 contentTitle.innerHTML = '<h2>' + contentTitle.innerHTML + '</h2>';
             }
-            
+
             /* ONE ELEMENT AT A TIME - @dubrod
             var hidemenuBox = Ext.getCmp('modx-resource-hidemenu');
             if (hidemenuBox) {
-	            
+
 	            hidemenuBox.on('focus', function(){
 		            thisToggId = this.id;
 	                var thisToggEl = document.getElementById(thisToggId);
@@ -95,13 +95,13 @@ Ext.onReady(function() {
 								hidemenuBox.setValue(0);
 			                } else {
 				                hidemenuBox.setValue(1);
-			                }			                
+			                }
 		                }
 		            };
 	            });
             }
             */
-            
+
         }
     });
 
@@ -124,7 +124,7 @@ Ext.onReady(function() {
                             var fisv = f.items.items[fld].validate();
                             if (!fisv) {
                                 f.items.items[fld].markInvalid();
-                                invalidField = f.items.items[fld]; 
+                                invalidField = f.items.items[fld];
                                 isv = false;
                             }
                         }
@@ -172,7 +172,7 @@ Ext.onReady(function() {
                 Ext.applyIf(params, o.baseParams || {});
                 MODx.loadPage('?' + Ext.urlEncode(params));
             }
-            
+
             return false;
         }
     });
@@ -215,7 +215,7 @@ Ext.form.MessageTargets = {
                 field.errorEl.dom.setAttribute('aria-live', 'assertive');
 
                 field.el.dom.setAttribute('aria-describedby', field.errorEl.id);
-                
+
                 field.on('resize', field.alignErrorEl, field);
                 field.on('destroy', function(){
                     Ext.destroy(this.errorEl);
@@ -270,21 +270,21 @@ Ext.form.MessageTargets = {
             }
         }
     }
-       
+
 };
 
 Ext.override(Ext.form.Checkbox,{
     checkboxOriginals: {
         initComponent: Ext.form.Checkbox.prototype.initComponent
     },
-    
+
     initComponent : function(){
         this.checkboxOriginals.initComponent.call(this);
-        
+
         this.on('specialkey', function(checkbox, e){
             if (e.getKey() == Ext.EventObject.ENTER) {
                 this.setValue(!this.getValue())
-            }          
+            }
         });
     }
 });
@@ -314,20 +314,20 @@ Ext.override(Ext.Panel, {
                 this.bwrap.removeClass("hide");
             });
 
-            this.tools.toggle.dom.setAttribute('aria-label', "Hide Field");
+            this.tools.toggle.dom.setAttribute('aria-label', "Hide " + (this.title || '') + " Field");
             this.tools.toggle.dom.setAttribute('tabindex', "0");
-            
+
             this.tools.toggle.dom.setAttribute('aria-expanded', !this.collapsed);
             this.tools.toggle.dom.setAttribute('aria-controls', this.bwrap.dom.id);
             if (this.title) {
                 this.bwrap.dom.setAttribute('aria-label', this.title);
             }
-            
+
             this.tools.toggle.insertFirst({
                 tag: 'div',
                 cls: 'sr-only',
                 html: 'Hide ' + (this.title || '') + ' Field'
-            });   
+            });
         }
     }
 });
@@ -359,7 +359,7 @@ Ext.override(Ext.TabPanel, {
                 }
             }
         });
-        
+
         this.on('render', function() {
             this.strip.on('keydown', function(e) {
                 if (e.getKey() == Ext.EventObject.RIGHT) {
@@ -368,14 +368,14 @@ Ext.override(Ext.TabPanel, {
                         this.activeTab.tabEl.focus();
                     } catch (err) {}
                 }
-                
+
                 if (e.getKey() == Ext.EventObject.LEFT) {
                     try {
                         this.setActiveTab(this.items.indexOf(this.activeTab) - 1);
                         this.activeTab.tabEl.focus();
                     } catch (err) {}
                 }
-            }, this);                 
+            }, this);
         }, this, {single: true})
     },
 
