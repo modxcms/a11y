@@ -109,7 +109,7 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
         if (MODx.perm.resource_tree) {
             items.push(this.handleRecord({
                 title: _('resources')
-                ,titleTpl: '<h2><i class="icon icon-sitemap"></i><span class="title">{title} <span class="sr-only">Press Shift F10 for Context Menu</span></span></h2>'
+                ,titleTpl: '<h2><i class="icon icon-sitemap"></i><span class="title">{title} <span class="sr-only">Press Down Arrow to Enter, Press Shift F10 on any item for Context Menu</span></span></h2>'
                 ,stateId: 'nav-resource-tree'
                 ,defaults: {
                     remoteToolbar: false
@@ -128,7 +128,7 @@ Ext.extend(MODx.Layout.Default, MODx.Layout, {
         if (MODx.perm.element_tree) {
             items.push(this.handleRecord({
                 title: _('elements')
-                ,titleTpl: '<h2><i class="icon icon-bars"></i><span class="title">{title}</span></h2>'
+                ,titleTpl: '<h2><i class="icon icon-bars"></i><span class="title">{title} <span class="sr-only">Press Down Arrow to Enter, Press Shift F10 on any item for Context Menu</span></span></h2>'
                 ,stateId: 'nav-element-tree'
                 ,defaults: {
                     remoteToolbar: false

@@ -833,6 +833,14 @@ td.x-date-mp-sep {
 }
 .x-menu-floating {
   border-color: #C7C7C7;
+
+  .x-menu-focus{
+      position:relative;
+      &:before{
+          position:absolute;
+          content: "You opened the context menu";
+      }
+  }
 }
 .x-menu-nosep {
   background-image: none;
@@ -1097,7 +1105,7 @@ a.x-menu-item {
   background-color: transparent;
   padding: 15px 0 1px 0; /* override extjs default theme rule, padding bottom 1px to not cut off buttons box-shadow */
   //border-top: 1px solid #FAFAFA;
-  
+
   td.x-toolbar-cell {
     padding: 0; /* override extjs default theme rule */
   }
@@ -1155,7 +1163,7 @@ a.x-menu-item {
   margin: 0 3px 0 0;
   position: relative;
   transition: all 0.3s;
-  width: 18px; 
+  width: 18px;
   height: 18px;
 
   &:after {
@@ -1175,7 +1183,7 @@ a.x-menu-item {
   }
 
   &.x-tool-toggle {
-	
+
 	color: #333;
 
     &:after {
@@ -1184,7 +1192,7 @@ a.x-menu-item {
     }
 
     &:hover {
-	  color: #FFF;  
+	  color: #FFF;
 
 
       &:after {
@@ -1244,7 +1252,7 @@ a.x-menu-item {
   }
 
   &.x-tool-pin {
-    
+
     &:after {
       content: $fa-var-circle-o;
     }
@@ -1258,7 +1266,7 @@ a.x-menu-item {
   }
 
   &.x-tool-unpin {
-    
+
     &:after {
       content: $fa-var-dot-circle-o;
     }
@@ -1272,7 +1280,7 @@ a.x-menu-item {
   }
 
   &.x-tool-right {
-    
+
     &:after {
       content: $fa-var-chevron-right;
       padding-left: 1px;
@@ -1280,7 +1288,7 @@ a.x-menu-item {
   }
 
   &.x-tool-left {
-    
+
     &:after {
       content: $fa-var-chevron-left;
       padding-right: 2px;
@@ -1288,7 +1296,7 @@ a.x-menu-item {
   }
 
   &.x-tool-up {
-    
+
     &:after {
       content: $fa-var-chevron-up;
       padding-top: 1px;
@@ -1296,7 +1304,7 @@ a.x-menu-item {
   }
 
   &.x-tool-down {
-    
+
     &:after {
       content: $fa-var-chevron-down;
       padding-top: 1px;
@@ -1304,14 +1312,14 @@ a.x-menu-item {
   }
 
   &.x-tool-minus {
-    
+
     &:after {
       content: $fa-var-minus;
     }
   }
 
   &.x-tool-plus {
-    
+
     &:after {
       content: $fa-var-plus;
     }
@@ -1763,7 +1771,7 @@ body.x-body-masked .x-window-plain .x-window-mc {
         border-radius: 0;
         overflow: visible;
         padding: 0;
-      } 
+      }
     }
 
 
