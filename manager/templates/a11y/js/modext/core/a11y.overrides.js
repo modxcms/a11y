@@ -81,6 +81,24 @@ Ext.onReady(function() {
                 contentTitle.innerHTML = '<h2>' + contentTitle.innerHTML + '</h2>';
             }
 
+            var publishedOnInput = Ext.get("modx-resource-publishedon-date");
+            if(publishedOnInput){ publishedOnInput.dom.setAttribute('aria-label', "Published On Date"); }
+
+            var publishedOnTimeInput = Ext.get("modx-resource-publishedon-time");
+            if(publishedOnTimeInput){ publishedOnTimeInput.dom.setAttribute('aria-label', "Published On Time"); }
+
+            var publishedDateInput = Ext.get("modx-resource-pub-date-date");
+            if(publishedDateInput){ publishedDateInput.dom.setAttribute('aria-label', "Published Date"); }
+
+            var publishedTimeInput = Ext.get("modx-resource-pub-date-time");
+            if(publishedTimeInput){ publishedTimeInput.dom.setAttribute('aria-label', "Published Time"); }
+
+            var unpublishedDateInput = Ext.get("modx-resource-unpub-date-date");
+            if(unpublishedDateInput){ unpublishedDateInput.dom.setAttribute('aria-label', "Un Published Date"); }
+
+            var unpublishedTimeInput = Ext.get("modx-resource-unpub-date-time");
+            if(unpublishedTimeInput){ unpublishedTimeInput.dom.setAttribute('aria-label', "Un Published Time"); }
+
             /* ONE ELEMENT AT A TIME - @dubrod
             var hidemenuBox = Ext.getCmp('modx-resource-hidemenu');
             if (hidemenuBox) {
