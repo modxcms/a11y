@@ -1,3 +1,6 @@
+/*font is too big for 80px input now */
+input#modx-resource-publishedon-date{font-size:14px;}
+
 textarea {
   overflow: auto;
 }
@@ -1166,7 +1169,7 @@ input::-moz-focus-inner {
           color: $buttonColor;
           opacity: 0.4;
         }
-        
+
         button:before {
           line-height: 20px;
           top: 0; left: 0; right: 0;
@@ -1268,7 +1271,7 @@ input::-moz-focus-inner {
 
 /* this is the dropdown list to select the options, it's outside of the main superboxselect wrapper */
 /*.x-superboxselect-list {
-  
+
 }*/
 
 /* The date TV calendar styles */
@@ -1344,7 +1347,7 @@ input::-moz-focus-inner {
 .x-date-mp-ybtn a.x-date-mp-prev {
   &:before {
     content: $fa-var-caret-left;
-  }  
+  }
 }
 .x-date-inner {
   margin: 0 auto;
