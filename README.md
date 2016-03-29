@@ -16,6 +16,11 @@ This project is being crowdfunded, with intial seed funding sponsored by The Ohi
 
 [Visit the Wiki page](https://github.com/modxcms/a11y/wiki/Keyboard-Shortcuts)
 
+## Keyboard Navigation
+
+[Visit the Wiki page](https://github.com/modxcms/a11y/wiki/Keyboard-Navigation)
+
+
 ## Road Map
 ### 1.0
 * Keyboard Navigation
