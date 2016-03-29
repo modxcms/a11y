@@ -10,6 +10,36 @@ The purpose of this project is to make MODX a first class citizen in the accessi
 
 This project is being crowdfunded, with intial seed funding sponsored by The Ohio State University. Learn more at http://a11y.modx.com/
 
+---
+
+## Keyboard Shortcuts
+
+[Visit the Wiki page](https://github.com/modxcms/a11y/wiki/Keyboard-Shortcuts)
+
+## Road Map
+### 1.0
+* Keyboard Navigation
+* ARIA roles, states, and properties for all the major areas of the Manager UI
+* Visual Contrast to meet WCAG guidelines
+* Clean up text presentation for screen readers
+* Focus indication
+* Dashboard Widgets:
+  * Enable Dyslexia Font
+  * Font Size Increase / Decrease
+  * Theme Switcher
+* Packaged Installation
+
+### 2.0
+* Modal Support
+* Resource X-Tab Strip Navigation
+* X-Grid Data Table Keyboard Navigation
+* Better Text Error Handling on form inputs
+* Additional Translations
+
+This theme will be available as an extra and the testing releases will be available on [GitHub's repo](https://github.com/modxcms/a11y/releases)
+
+---
+
 ## Get Involved
 
 We would love the world to contribute to this project. Before submitting a new issue or opening a new Pull Request, please search to see if the same issue/PR already exists.
@@ -69,25 +99,3 @@ We try to follow [Semantic Versioning](http://semver.org/), so if you are submit
 
     ### Related issue(s)/PR(s)
     Let us know if this is related to any issue/pull request (see https://github.com/blog/1506-closing-issues-via-pull-requests)
-
-## Road Map
-###1.0
-* Keyboard Navigation
-* ARIA roles, states, and properties for all the major areas of the Manager UI
-* Visual Contrast to meet WCAG guidelines
-* Clean up text presentation for screen readers
-* Focus indication
-* Dashboard Widgets:
-  * Enable Dyslexia Font 
-  * Font Size Increase / Decrease 
-  * Theme Switcher 
-* Packaged Installation
-
-###2.0
-* Modal Support
-* Resource X-Tab Strip Navigation
-* X-Grid Data Table Keyboard Navigation
-* Better Text Error Handling on form inputs
-* Additional Translations
-
-This theme will be available as an extra and the testing releases will be available on [GitHub's repo](https://github.com/modxcms/a11y/releases)
